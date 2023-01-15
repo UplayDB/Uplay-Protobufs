@@ -20,12 +20,12 @@
     <PackageTags>uplay,ubisoft,protobuf</PackageTags>
     <Version>137.0.10799.0</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <AssemblyOriginatorKeyFile>../Sign.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>../../Sign.snk</AssemblyOriginatorKeyFile>
     <PackageReleaseNotes>Check changelog.txt</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="changelog.txt">
+    <EmbeddedResource Include="..\changelog.txt">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
@@ -35,7 +35,7 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="README.md">
+    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
