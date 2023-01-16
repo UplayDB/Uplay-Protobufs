@@ -4,3 +4,9 @@ Uplay / Ubisoft Connect protobufs. (C#)
 Generating .dll and provide a Libary for Applications.
 
 Dependend on Google.Protobuf!
+
+### Version
+
+Current version description is:
+
+UbisoftLatestVersion.Revision
