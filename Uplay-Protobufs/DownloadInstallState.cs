@@ -24,7 +24,7 @@ namespace Uplay.DownloadInstallState {
     static DownloadInstallStateReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cih1cGNfZHVtcF8xMC9kb3dubG9hZF9pbnN0YWxsX3N0YXRlLnByb3RvEiJt",
+            "Cih1cGNfZHVtcF8xMi9kb3dubG9hZF9pbnN0YWxsX3N0YXRlLnByb3RvEiJt",
             "Zy5wcm90b2NvbC5kb3dubG9hZF9pbnN0YWxsX3N0YXRlIi4KB0xpY2Vuc2US",
             "EgoKaWRlbnRpZmllchgBIAIoCRIPCgd2ZXJzaW9uGAIgAigNIlQKCUluc3Rh",
             "bGxlchISCgppZGVudGlmaWVyGAEgAigJEhgKEG1hbmlmZXN0X3ZlcnNpb24Y",
@@ -37,7 +37,7 @@ namespace Uplay.DownloadInstallState {
             "aG9ydGN1dBIMCgRuYW1lGAEgAigJIjEKDVRleHRGaWxlRW50cnkSEAoIZmls",
             "ZU5hbWUYASACKAkSDgoGbG9jYWxlGAIgAigJImIKDFRleHRGaWxlTGlzdBIQ",
             "Cghyb290UGF0aBgBIAEoCRJACgVmaWxlcxgCIAMoCzIxLm1nLnByb3RvY29s",
-            "LmRvd25sb2FkX2luc3RhbGxfc3RhdGUuVGV4dEZpbGVFbnRyeSLIBwoURG93",
+            "LmRvd25sb2FkX2luc3RhbGxfc3RhdGUuVGV4dEZpbGVFbnRyeSL8BwoURG93",
             "bmxvYWRJbnN0YWxsU3RhdGUSFQoNbWFuaWZlc3Rfc2hhMRgBIAEoCRIYChBk",
             "b3dubG9hZGluZ19zaGExGAogASgJEg8KB3ZlcnNpb24YAiABKA0SGQoRc2Vs",
             "ZWN0ZWRfbGFuZ3VhZ2UYAyABKAkSPQoIbGljZW5zZXMYBCADKAsyKy5tZy5w",
@@ -59,7 +59,8 @@ namespace Uplay.DownloadInstallState {
             "KAkSGwoTaW5zdGFsbGVkX2xhbmd1YWdlcxgaIAMoCRIYChBpbnN0YWxsZWRf",
             "YWRkb25zGBsgAygNEhAKCHVwbGF5X2lkGBwgASgNEiYKHmludmFsaWRhdGVf",
             "Z2FtZV90b2tlbl9yZXF1aXJlZBgdIAEoCBIkChVlcGljX3J1bl9pbnN0YWxs",
-            "YXRpb24YHiABKAg6BWZhbHNl"));
+            "YXRpb24YHiABKAg6BWZhbHNlEjIKI2ZvcmNlX2NoZWNrX2xpY2Vuc2VzX29u",
+            "X25leHRfbGF1bmNoGB8gASgIOgVmYWxzZQ=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -70,7 +71,7 @@ namespace Uplay.DownloadInstallState {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadInstallState.Shortcut), global::Uplay.DownloadInstallState.Shortcut.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadInstallState.TextFileEntry), global::Uplay.DownloadInstallState.TextFileEntry.Parser, new[]{ "FileName", "Locale" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadInstallState.TextFileList), global::Uplay.DownloadInstallState.TextFileList.Parser, new[]{ "RootPath", "Files" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadInstallState.DownloadInstallState), global::Uplay.DownloadInstallState.DownloadInstallState.Parser, new[]{ "ManifestSha1", "DownloadingSha1", "Version", "SelectedLanguage", "Licenses", "Installers", "Chunks", "ShortcutName", "Shortcuts", "RegistryEntries", "Languages", "DownloadingLanguages", "PatchRequired", "BytesDownloadedOnPatchStart", "RequiredBytesDownloadedOnPatchStart", "GameName", "ReadmeFiles", "ManualFiles", "GameVersion", "InstalledLanguages", "InstalledAddons", "UplayId", "InvalidateGameTokenRequired", "EpicRunInstallation" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadInstallState.DownloadInstallState), global::Uplay.DownloadInstallState.DownloadInstallState.Parser, new[]{ "ManifestSha1", "DownloadingSha1", "Version", "SelectedLanguage", "Licenses", "Installers", "Chunks", "ShortcutName", "Shortcuts", "RegistryEntries", "Languages", "DownloadingLanguages", "PatchRequired", "BytesDownloadedOnPatchStart", "RequiredBytesDownloadedOnPatchStart", "GameName", "ReadmeFiles", "ManualFiles", "GameVersion", "InstalledLanguages", "InstalledAddons", "UplayId", "InvalidateGameTokenRequired", "EpicRunInstallation", "ForceCheckLicensesOnNextLaunch" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2240,6 +2241,7 @@ namespace Uplay.DownloadInstallState {
       uplayId_ = other.uplayId_;
       invalidateGameTokenRequired_ = other.invalidateGameTokenRequired_;
       epicRunInstallation_ = other.epicRunInstallation_;
+      forceCheckLicensesOnNextLaunch_ = other.forceCheckLicensesOnNextLaunch_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2717,6 +2719,33 @@ namespace Uplay.DownloadInstallState {
       _hasBits0 &= ~64;
     }
 
+    /// <summary>Field number for the "force_check_licenses_on_next_launch" field.</summary>
+    public const int ForceCheckLicensesOnNextLaunchFieldNumber = 31;
+    private readonly static bool ForceCheckLicensesOnNextLaunchDefaultValue = false;
+
+    private bool forceCheckLicensesOnNextLaunch_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ForceCheckLicensesOnNextLaunch {
+      get { if ((_hasBits0 & 128) != 0) { return forceCheckLicensesOnNextLaunch_; } else { return ForceCheckLicensesOnNextLaunchDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        forceCheckLicensesOnNextLaunch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "force_check_licenses_on_next_launch" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasForceCheckLicensesOnNextLaunch {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "force_check_licenses_on_next_launch" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearForceCheckLicensesOnNextLaunch() {
+      _hasBits0 &= ~128;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2756,6 +2785,7 @@ namespace Uplay.DownloadInstallState {
       if (UplayId != other.UplayId) return false;
       if (InvalidateGameTokenRequired != other.InvalidateGameTokenRequired) return false;
       if (EpicRunInstallation != other.EpicRunInstallation) return false;
+      if (ForceCheckLicensesOnNextLaunch != other.ForceCheckLicensesOnNextLaunch) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2787,6 +2817,7 @@ namespace Uplay.DownloadInstallState {
       if (HasUplayId) hash ^= UplayId.GetHashCode();
       if (HasInvalidateGameTokenRequired) hash ^= InvalidateGameTokenRequired.GetHashCode();
       if (HasEpicRunInstallation) hash ^= EpicRunInstallation.GetHashCode();
+      if (HasForceCheckLicensesOnNextLaunch) hash ^= ForceCheckLicensesOnNextLaunch.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2874,6 +2905,10 @@ namespace Uplay.DownloadInstallState {
         output.WriteRawTag(240, 1);
         output.WriteBool(EpicRunInstallation);
       }
+      if (HasForceCheckLicensesOnNextLaunch) {
+        output.WriteRawTag(248, 1);
+        output.WriteBool(ForceCheckLicensesOnNextLaunch);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2953,6 +2988,10 @@ namespace Uplay.DownloadInstallState {
         output.WriteRawTag(240, 1);
         output.WriteBool(EpicRunInstallation);
       }
+      if (HasForceCheckLicensesOnNextLaunch) {
+        output.WriteRawTag(248, 1);
+        output.WriteBool(ForceCheckLicensesOnNextLaunch);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3015,6 +3054,9 @@ namespace Uplay.DownloadInstallState {
         size += 2 + 1;
       }
       if (HasEpicRunInstallation) {
+        size += 2 + 1;
+      }
+      if (HasForceCheckLicensesOnNextLaunch) {
         size += 2 + 1;
       }
       if (_unknownFields != null) {
@@ -3088,6 +3130,9 @@ namespace Uplay.DownloadInstallState {
       }
       if (other.HasEpicRunInstallation) {
         EpicRunInstallation = other.EpicRunInstallation;
+      }
+      if (other.HasForceCheckLicensesOnNextLaunch) {
+        ForceCheckLicensesOnNextLaunch = other.ForceCheckLicensesOnNextLaunch;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3207,6 +3252,10 @@ namespace Uplay.DownloadInstallState {
             EpicRunInstallation = input.ReadBool();
             break;
           }
+          case 248: {
+            ForceCheckLicensesOnNextLaunch = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -3323,6 +3372,10 @@ namespace Uplay.DownloadInstallState {
           }
           case 240: {
             EpicRunInstallation = input.ReadBool();
+            break;
+          }
+          case 248: {
+            ForceCheckLicensesOnNextLaunch = input.ReadBool();
             break;
           }
         }

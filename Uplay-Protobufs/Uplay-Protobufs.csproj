@@ -12,13 +12,13 @@
     <Authors>UplayDB,SlejmUr</Authors>
     <Product>$(AssemblyName)</Product>
     <Description>Uplay protobuf files in C#</Description>
-    <Copyright>Copyright © UplayDB Team 2022</Copyright>
+    <Copyright>Copyright © UplayDB Team</Copyright>
     <PackageProjectUrl>https://github.com/UplayDB/Uplay-Protobufs</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/UplayDB/Uplay-Protobufs</RepositoryUrl>
     <PackageTags>uplay,ubisoft,protobuf</PackageTags>
-    <Version>137.0.10799.0</Version>
+    <Version>138.0.10807.0</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <AssemblyOriginatorKeyFile>../../Sign.snk</AssemblyOriginatorKeyFile>
     <PackageReleaseNotes>Check changelog.txt</PackageReleaseNotes>
@@ -43,6 +43,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.21.10" />
+    <PackageReference Include="Google.Protobuf" Version="3.21.12" />
   </ItemGroup>
 </Project>
