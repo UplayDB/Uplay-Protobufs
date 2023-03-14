@@ -24,7 +24,7 @@ namespace Uplay.Download {
     static DownloadReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chp1cGNfZHVtcF8xMC9kb3dubG9hZC5wcm90bxIUbWcucHJvdG9jb2wuZG93",
+            "Chp1cGNfZHVtcF8xNS9kb3dubG9hZC5wcm90bxIUbWcucHJvdG9jb2wuZG93",
             "bmxvYWQiSwoNTGljZW5zZUxvY2FsZRIQCghsYW5ndWFnZRgBIAIoCRIMCgRz",
             "aGExGAIgAigMEgwKBHRleHQYAyABKAkSDAoEbmFtZRgEIAEoCSKZAQoHTGlj",
             "ZW5zZRISCgppZGVudGlmaWVyGAEgAigJEg8KB3ZlcnNpb24YAiACKA0SNAoH",
@@ -60,74 +60,72 @@ namespace Uplay.Download {
             "b3RvY29sLmRvd25sb2FkLlBsYXRmb3JtVHlwZSIgChFVbmluc3RhbGxSZWdp",
             "c3RyeRILCgNrZXkYASACKAkiVQoFU2xpY2USDAoEc2l6ZRgBIAIoDRIUCgxk",
             "b3dubG9hZFNpemUYAiABKA0SFAoMZG93bmxvYWRTaGExGAMgASgMEhIKCmZp",
-            "bGVPZmZzZXQYBCABKAQilgEKBEZpbGUSDAoEbmFtZRgBIAIoCRIMCgRzaXpl",
+            "bGVPZmZzZXQYBCABKAQiiAEKBEZpbGUSDAoEbmFtZRgBIAIoCRIMCgRzaXpl",
             "GAIgAigEEg0KBWlzRGlyGAMgAigIEg4KBnNsaWNlcxgEIAMoDBIPCgd2ZXJz",
-            "aW9uGAUgASgNEhIKCnBhZGRlZFNpemUYBiABKAQSLgoJc2xpY2VMaXN0GAcg",
-            "AygLMhsubWcucHJvdG9jb2wuZG93bmxvYWQuU2xpY2UigQIKBUNodW5rEgoK",
-            "AmlkGAEgAigNEjMKBHR5cGUYAiACKA4yJS5tZy5wcm90b2NvbC5kb3dubG9h",
-            "ZC5DaHVuay5DaHVua1R5cGUSKQoFZmlsZXMYAyADKAsyGi5tZy5wcm90b2Nv",
-            "bC5kb3dubG9hZC5GaWxlEg8KB3VwbGF5SWQYBCABKA0SEAoIbGFuZ3VhZ2UY",
-            "BSABKAkSDAoEZGlzYxgGIAEoCRIMCgR0YWdzGAcgASgJEhAKCHVwbGF5SWRz",
-            "GAggAygNIjsKCUNodW5rVHlwZRIWChJDaHVua1R5cGVfUmVxdWlyZWQQABIW",
-            "ChJDaHVua1R5cGVfT3B0aW9uYWwQASJ0Cg1NZXRhRGF0YUNodW5rEg8KB3Vw",
-            "bGF5SWQYASABKA0SEAoIbGFuZ3VhZ2UYAiABKAkSEwoLYnl0ZXNPbkRpc2sY",
-            "AyACKAQSGQoRcGFkZGVkQnl0ZXNPbkRpc2sYBCABKAQSEAoIdXBsYXlJZHMY",
-            "BSADKA0iMQoNVGV4dEZpbGVFbnRyeRIQCghmaWxlTmFtZRgBIAIoCRIOCgZs",
-            "b2NhbGUYAiACKAkiVAoMVGV4dEZpbGVMaXN0EhAKCHJvb3RQYXRoGAEgASgJ",
-            "EjIKBWZpbGVzGAIgAygLMiMubWcucHJvdG9jb2wuZG93bmxvYWQuVGV4dEZp",
-            "bGVFbnRyeSIqCghMYW5ndWFnZRIMCgRjb2RlGAEgASgJEhAKCHVwbGF5SWRz",
-            "GAIgAygNIuIBCgxTbGljZXJDb25maWcSQQoKc2xpY2VyVHlwZRgBIAEoDjIt",
-            "Lm1nLnByb3RvY29sLmRvd25sb2FkLlNsaWNlckNvbmZpZy5TbGljZXJUeXBl",
-            "EhkKEW1pblNsaWNlU2l6ZUJ5dGVzGAIgASgNEh4KFmV4cGVjdGVkU2xpY2VT",
-            "aXplQnl0ZXMYAyABKA0SGQoRbWF4U2xpY2VTaXplQnl0ZXMYBCABKA0SFQoN",
-            "Y29uZmlnVmVyc2lvbhgFIAEoDSIiCgpTbGljZXJUeXBlEgcKA0ZzYxABEgsK",
-            "B0Zhc3RDZGMQAiLbCAoITWFuaWZlc3QSLwoIbGljZW5zZXMYASADKAsyHS5t",
-            "Zy5wcm90b2NvbC5kb3dubG9hZC5MaWNlbnNlEjUKC2luc3RhbGxSdW5zGAIg",
-            "AygLMiAubWcucHJvdG9jb2wuZG93bmxvYWQuSW5zdGFsbFJ1bhI+Cg9pbnN0",
-            "YWxsUmVnaXN0cnkYBSADKAsyJS5tZy5wcm90b2NvbC5kb3dubG9hZC5JbnN0",
-            "YWxsUmVnaXN0cnkSOQoNdW5pbnN0YWxsUnVucxgDIAMoCzIiLm1nLnByb3Rv",
-            "Y29sLmRvd25sb2FkLlVuaW5zdGFsbFJ1bhJCChF1bmluc3RhbGxSZWdpc3Ry",
-            "eRgGIAMoCzInLm1nLnByb3RvY29sLmRvd25sb2FkLlVuaW5zdGFsbFJlZ2lz",
-            "dHJ5EisKBmNodW5rcxgEIAMoCzIbLm1nLnByb3RvY29sLmRvd25sb2FkLkNo",
-            "dW5rEhUKDWNodW5rc1ZlcnNpb24YByABKA0SGwoTc2xpY2VTaXplRGVwcmVj",
-            "YXRlZBgIIAEoDRJGChNpbnN0YWxsR2FtZUV4cGxvcmVyGAkgAygLMikubWcu",
-            "cHJvdG9jb2wuZG93bmxvYWQuSW5zdGFsbEdhbWVFeHBsb3JlchJHChRpbnN0",
-            "YWxsRmlyZXdhbGxSdWxlcxgKIAMoCzIpLm1nLnByb3RvY29sLmRvd25sb2Fk",
-            "Lkluc3RhbGxGaXJld2FsbFJ1bGUSSAoUaW5zdGFsbENvbXBhdGliaWxpdHkY",
-            "CyADKAsyKi5tZy5wcm90b2NvbC5kb3dubG9hZC5JbnN0YWxsQ29tcGF0aWJp",
-            "bGl0eRIXCg9sZWdhY3lJbnN0YWxsZXIYDCABKAkSGwoTZGVwcmVjYXRlZExh",
-            "bmd1YWdlcxgNIAMoCRIdChVpc0VuY3J5cHRlZERlcHJlY2F0ZWQYDiABKAgS",
-            "IQoZcGFkZGVkU2xpY2VTaXplRGVwcmVjYXRlZBgPIAEoDRIVCg1wYXRjaFJl",
-            "cXVpcmVkGBAgASgIEhQKDGlzQ29tcHJlc3NlZBgRIAEoCBI3CgtyZWFkbWVG",
-            "aWxlcxgSIAEoCzIiLm1nLnByb3RvY29sLmRvd25sb2FkLlRleHRGaWxlTGlz",
-            "dBI3CgttYW51YWxGaWxlcxgTIAEoCzIiLm1nLnByb3RvY29sLmRvd25sb2Fk",
-            "LlRleHRGaWxlTGlzdBITCgtnYW1lVmVyc2lvbhgUIAEoCRJCChFjb21wcmVz",
-            "c2lvbk1ldGhvZBgVIAEoDjInLm1nLnByb3RvY29sLmRvd25sb2FkLkNvbXBy",
-            "ZXNzaW9uTWV0aG9kEg8KB3ZlcnNpb24YFiABKA0SMQoJbGFuZ3VhZ2VzGBcg",
-            "AygLMh4ubWcucHJvdG9jb2wuZG93bmxvYWQuTGFuZ3VhZ2USOAoMc2xpY2Vy",
-            "Q29uZmlnGBggASgLMiIubWcucHJvdG9jb2wuZG93bmxvYWQuU2xpY2VyQ29u",
-            "ZmlnIkMKEE1hbmlmZXN0TGljZW5zZXMSLwoIbGljZW5zZXMYASADKAsyHS5t",
-            "Zy5wcm90b2NvbC5kb3dubG9hZC5MaWNlbnNlIroCChBNYW5pZmVzdE1ldGFE",
-            "YXRhEi8KCGxpY2Vuc2VzGAEgAygLMh0ubWcucHJvdG9jb2wuZG93bmxvYWQu",
-            "TGljZW5zZRITCgtieXRlc09uRGlzaxgCIAIoBBIXCg9ieXRlc1RvRG93bmxv",
-            "YWQYAyACKAQSGwoTZGVwcmVjYXRlZExhbmd1YWdlcxgFIAMoCRIVCg1jaHVu",
-            "a3NWZXJzaW9uGAYgASgNEhAKCHVwbGF5SWRzGAcgAygNEjMKBmNodW5rcxgI",
-            "IAMoCzIjLm1nLnByb3RvY29sLmRvd25sb2FkLk1ldGFEYXRhQ2h1bmsSGQoR",
-            "cGFkZGVkQnl0ZXNPbkRpc2sYCSABKAQSMQoJbGFuZ3VhZ2VzGAogAygLMh4u",
-            "bWcucHJvdG9jb2wuZG93bmxvYWQuTGFuZ3VhZ2UqPwoNTGljZW5zZUZvcm1h",
-            "dBIWChJMaWNlbnNlRm9ybWF0X1RleHQQARIWChJMaWNlbnNlRm9ybWF0X0h0",
-            "bWwQAiqbAQoIUGxhdGZvcm0SFgoSUGxhdGZvcm1fV2luZG93c1hQEAESGQoV",
-            "UGxhdGZvcm1fV2luZG93c1Zpc3RhEAISFQoRUGxhdGZvcm1fV2luZG93czcQ",
-            "AxIVChFQbGF0Zm9ybV9XaW5kb3dzOBAEEhYKElBsYXRmb3JtX1dpbmRvd3Mx",
-            "MBAFEhYKElBsYXRmb3JtX1dpbmRvd3M4MRAGKjoKDFBsYXRmb3JtVHlwZRIU",
-            "ChBQbGF0Zm9ybVR5cGVfeDg2EAESFAoQUGxhdGZvcm1UeXBlX3g2NBACKn8K",
-            "D0ZpcmV3YWxsUHJvZmlsZRIaChZGaXJld2FsbFByb2ZpbGVfRG9tYWluEAES",
-            "GwoXRmlyZXdhbGxQcm9maWxlX1ByaXZhdGUQAhIaChZGaXJld2FsbFByb2Zp",
-            "bGVfUHVibGljEAMSFwoTRmlyZXdhbGxQcm9maWxlX0FsbBAEKkYKEEZpcmV3",
-            "YWxsUHJvdG9jb2wSGAoURmlyZXdhbGxQcm90b2NvbF9UQ1AQARIYChRGaXJl",
-            "d2FsbFByb3RvY29sX1VEUBACKmsKEUNvbXByZXNzaW9uTWV0aG9kEh0KGUNv",
-            "bXByZXNzaW9uTWV0aG9kX0RlZmxhdGUQARIbChdDb21wcmVzc2lvbk1ldGhv",
-            "ZF9MemhhbRACEhoKFkNvbXByZXNzaW9uTWV0aG9kX1pzdGQQAw=="));
+            "aW9uGAUgASgNEi4KCXNsaWNlTGlzdBgHIAMoCzIbLm1nLnByb3RvY29sLmRv",
+            "d25sb2FkLlNsaWNlSgQIBhAHIoECCgVDaHVuaxIKCgJpZBgBIAIoDRIzCgR0",
+            "eXBlGAIgAigOMiUubWcucHJvdG9jb2wuZG93bmxvYWQuQ2h1bmsuQ2h1bmtU",
+            "eXBlEikKBWZpbGVzGAMgAygLMhoubWcucHJvdG9jb2wuZG93bmxvYWQuRmls",
+            "ZRIPCgd1cGxheUlkGAQgASgNEhAKCGxhbmd1YWdlGAUgASgJEgwKBGRpc2MY",
+            "BiABKAkSDAoEdGFncxgHIAEoCRIQCgh1cGxheUlkcxgIIAMoDSI7CglDaHVu",
+            "a1R5cGUSFgoSQ2h1bmtUeXBlX1JlcXVpcmVkEAASFgoSQ2h1bmtUeXBlX09w",
+            "dGlvbmFsEAEiXwoNTWV0YURhdGFDaHVuaxIPCgd1cGxheUlkGAEgASgNEhAK",
+            "CGxhbmd1YWdlGAIgASgJEhMKC2J5dGVzT25EaXNrGAMgAigEEhAKCHVwbGF5",
+            "SWRzGAUgAygNSgQIBBAFIjEKDVRleHRGaWxlRW50cnkSEAoIZmlsZU5hbWUY",
+            "ASACKAkSDgoGbG9jYWxlGAIgAigJIlQKDFRleHRGaWxlTGlzdBIQCghyb290",
+            "UGF0aBgBIAEoCRIyCgVmaWxlcxgCIAMoCzIjLm1nLnByb3RvY29sLmRvd25s",
+            "b2FkLlRleHRGaWxlRW50cnkiKgoITGFuZ3VhZ2USDAoEY29kZRgBIAEoCRIQ",
+            "Cgh1cGxheUlkcxgCIAMoDSLiAQoMU2xpY2VyQ29uZmlnEkEKCnNsaWNlclR5",
+            "cGUYASABKA4yLS5tZy5wcm90b2NvbC5kb3dubG9hZC5TbGljZXJDb25maWcu",
+            "U2xpY2VyVHlwZRIZChFtaW5TbGljZVNpemVCeXRlcxgCIAEoDRIeChZleHBl",
+            "Y3RlZFNsaWNlU2l6ZUJ5dGVzGAMgASgNEhkKEW1heFNsaWNlU2l6ZUJ5dGVz",
+            "GAQgASgNEhUKDWNvbmZpZ1ZlcnNpb24YBSABKA0iIgoKU2xpY2VyVHlwZRIH",
+            "CgNGc2MQARILCgdGYXN0Q2RjEAIipQgKCE1hbmlmZXN0Ei8KCGxpY2Vuc2Vz",
+            "GAEgAygLMh0ubWcucHJvdG9jb2wuZG93bmxvYWQuTGljZW5zZRI1CgtpbnN0",
+            "YWxsUnVucxgCIAMoCzIgLm1nLnByb3RvY29sLmRvd25sb2FkLkluc3RhbGxS",
+            "dW4SPgoPaW5zdGFsbFJlZ2lzdHJ5GAUgAygLMiUubWcucHJvdG9jb2wuZG93",
+            "bmxvYWQuSW5zdGFsbFJlZ2lzdHJ5EjkKDXVuaW5zdGFsbFJ1bnMYAyADKAsy",
+            "Ii5tZy5wcm90b2NvbC5kb3dubG9hZC5Vbmluc3RhbGxSdW4SQgoRdW5pbnN0",
+            "YWxsUmVnaXN0cnkYBiADKAsyJy5tZy5wcm90b2NvbC5kb3dubG9hZC5Vbmlu",
+            "c3RhbGxSZWdpc3RyeRIrCgZjaHVua3MYBCADKAsyGy5tZy5wcm90b2NvbC5k",
+            "b3dubG9hZC5DaHVuaxIVCg1jaHVua3NWZXJzaW9uGAcgASgNEhsKE3NsaWNl",
+            "U2l6ZURlcHJlY2F0ZWQYCCABKA0SRgoTaW5zdGFsbEdhbWVFeHBsb3JlchgJ",
+            "IAMoCzIpLm1nLnByb3RvY29sLmRvd25sb2FkLkluc3RhbGxHYW1lRXhwbG9y",
+            "ZXISRwoUaW5zdGFsbEZpcmV3YWxsUnVsZXMYCiADKAsyKS5tZy5wcm90b2Nv",
+            "bC5kb3dubG9hZC5JbnN0YWxsRmlyZXdhbGxSdWxlEkgKFGluc3RhbGxDb21w",
+            "YXRpYmlsaXR5GAsgAygLMioubWcucHJvdG9jb2wuZG93bmxvYWQuSW5zdGFs",
+            "bENvbXBhdGliaWxpdHkSFwoPbGVnYWN5SW5zdGFsbGVyGAwgASgJEhsKE2Rl",
+            "cHJlY2F0ZWRMYW5ndWFnZXMYDSADKAkSFQoNcGF0Y2hSZXF1aXJlZBgQIAEo",
+            "CBIUCgxpc0NvbXByZXNzZWQYESABKAgSNwoLcmVhZG1lRmlsZXMYEiABKAsy",
+            "Ii5tZy5wcm90b2NvbC5kb3dubG9hZC5UZXh0RmlsZUxpc3QSNwoLbWFudWFs",
+            "RmlsZXMYEyABKAsyIi5tZy5wcm90b2NvbC5kb3dubG9hZC5UZXh0RmlsZUxp",
+            "c3QSEwoLZ2FtZVZlcnNpb24YFCABKAkSQgoRY29tcHJlc3Npb25NZXRob2QY",
+            "FSABKA4yJy5tZy5wcm90b2NvbC5kb3dubG9hZC5Db21wcmVzc2lvbk1ldGhv",
+            "ZBIPCgd2ZXJzaW9uGBYgASgNEjEKCWxhbmd1YWdlcxgXIAMoCzIeLm1nLnBy",
+            "b3RvY29sLmRvd25sb2FkLkxhbmd1YWdlEjgKDHNsaWNlckNvbmZpZxgYIAEo",
+            "CzIiLm1nLnByb3RvY29sLmRvd25sb2FkLlNsaWNlckNvbmZpZ0oECA4QD0oE",
+            "CA8QECJDChBNYW5pZmVzdExpY2Vuc2VzEi8KCGxpY2Vuc2VzGAEgAygLMh0u",
+            "bWcucHJvdG9jb2wuZG93bmxvYWQuTGljZW5zZSKlAgoQTWFuaWZlc3RNZXRh",
+            "RGF0YRIvCghsaWNlbnNlcxgBIAMoCzIdLm1nLnByb3RvY29sLmRvd25sb2Fk",
+            "LkxpY2Vuc2USEwoLYnl0ZXNPbkRpc2sYAiACKAQSFwoPYnl0ZXNUb0Rvd25s",
+            "b2FkGAMgAigEEhsKE2RlcHJlY2F0ZWRMYW5ndWFnZXMYBSADKAkSFQoNY2h1",
+            "bmtzVmVyc2lvbhgGIAEoDRIQCgh1cGxheUlkcxgHIAMoDRIzCgZjaHVua3MY",
+            "CCADKAsyIy5tZy5wcm90b2NvbC5kb3dubG9hZC5NZXRhRGF0YUNodW5rEjEK",
+            "CWxhbmd1YWdlcxgKIAMoCzIeLm1nLnByb3RvY29sLmRvd25sb2FkLkxhbmd1",
+            "YWdlSgQICRAKKj8KDUxpY2Vuc2VGb3JtYXQSFgoSTGljZW5zZUZvcm1hdF9U",
+            "ZXh0EAESFgoSTGljZW5zZUZvcm1hdF9IdG1sEAIqmwEKCFBsYXRmb3JtEhYK",
+            "ElBsYXRmb3JtX1dpbmRvd3NYUBABEhkKFVBsYXRmb3JtX1dpbmRvd3NWaXN0",
+            "YRACEhUKEVBsYXRmb3JtX1dpbmRvd3M3EAMSFQoRUGxhdGZvcm1fV2luZG93",
+            "czgQBBIWChJQbGF0Zm9ybV9XaW5kb3dzMTAQBRIWChJQbGF0Zm9ybV9XaW5k",
+            "b3dzODEQBio6CgxQbGF0Zm9ybVR5cGUSFAoQUGxhdGZvcm1UeXBlX3g4NhAB",
+            "EhQKEFBsYXRmb3JtVHlwZV94NjQQAip/Cg9GaXJld2FsbFByb2ZpbGUSGgoW",
+            "RmlyZXdhbGxQcm9maWxlX0RvbWFpbhABEhsKF0ZpcmV3YWxsUHJvZmlsZV9Q",
+            "cml2YXRlEAISGgoWRmlyZXdhbGxQcm9maWxlX1B1YmxpYxADEhcKE0ZpcmV3",
+            "YWxsUHJvZmlsZV9BbGwQBCpGChBGaXJld2FsbFByb3RvY29sEhgKFEZpcmV3",
+            "YWxsUHJvdG9jb2xfVENQEAESGAoURmlyZXdhbGxQcm90b2NvbF9VRFAQAipr",
+            "ChFDb21wcmVzc2lvbk1ldGhvZBIdChlDb21wcmVzc2lvbk1ldGhvZF9EZWZs",
+            "YXRlEAESGwoXQ29tcHJlc3Npb25NZXRob2RfTHpoYW0QAhIaChZDb21wcmVz",
+            "c2lvbk1ldGhvZF9ac3RkEAM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Uplay.Download.LicenseFormat), typeof(global::Uplay.Download.Platform), typeof(global::Uplay.Download.PlatformType), typeof(global::Uplay.Download.FirewallProfile), typeof(global::Uplay.Download.FirewallProtocol), typeof(global::Uplay.Download.CompressionMethod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -143,16 +141,16 @@ namespace Uplay.Download {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.UninstallRun), global::Uplay.Download.UninstallRun.Parser, new[]{ "Exe", "WorkingDir", "Arguments", "Platform", "PlatformType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.UninstallRegistry), global::Uplay.Download.UninstallRegistry.Parser, new[]{ "Key" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.Slice), global::Uplay.Download.Slice.Parser, new[]{ "Size", "DownloadSize", "DownloadSha1", "FileOffset" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.File), global::Uplay.Download.File.Parser, new[]{ "Name", "Size", "IsDir", "Slices", "Version", "PaddedSize", "SliceList" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.File), global::Uplay.Download.File.Parser, new[]{ "Name", "Size", "IsDir", "Slices", "Version", "SliceList" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.Chunk), global::Uplay.Download.Chunk.Parser, new[]{ "Id", "Type", "Files", "UplayId", "Language", "Disc", "Tags", "UplayIds" }, null, new[]{ typeof(global::Uplay.Download.Chunk.Types.ChunkType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.MetaDataChunk), global::Uplay.Download.MetaDataChunk.Parser, new[]{ "UplayId", "Language", "BytesOnDisk", "PaddedBytesOnDisk", "UplayIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.MetaDataChunk), global::Uplay.Download.MetaDataChunk.Parser, new[]{ "UplayId", "Language", "BytesOnDisk", "UplayIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.TextFileEntry), global::Uplay.Download.TextFileEntry.Parser, new[]{ "FileName", "Locale" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.TextFileList), global::Uplay.Download.TextFileList.Parser, new[]{ "RootPath", "Files" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.Language), global::Uplay.Download.Language.Parser, new[]{ "Code", "UplayIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.SlicerConfig), global::Uplay.Download.SlicerConfig.Parser, new[]{ "SlicerType", "MinSliceSizeBytes", "ExpectedSliceSizeBytes", "MaxSliceSizeBytes", "ConfigVersion" }, null, new[]{ typeof(global::Uplay.Download.SlicerConfig.Types.SlicerType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.Manifest), global::Uplay.Download.Manifest.Parser, new[]{ "Licenses", "InstallRuns", "InstallRegistry", "UninstallRuns", "UninstallRegistry", "Chunks", "ChunksVersion", "SliceSizeDeprecated", "InstallGameExplorer", "InstallFirewallRules", "InstallCompatibility", "LegacyInstaller", "DeprecatedLanguages", "IsEncryptedDeprecated", "PaddedSliceSizeDeprecated", "PatchRequired", "IsCompressed", "ReadmeFiles", "ManualFiles", "GameVersion", "CompressionMethod", "Version", "Languages", "SlicerConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.Manifest), global::Uplay.Download.Manifest.Parser, new[]{ "Licenses", "InstallRuns", "InstallRegistry", "UninstallRuns", "UninstallRegistry", "Chunks", "ChunksVersion", "SliceSizeDeprecated", "InstallGameExplorer", "InstallFirewallRules", "InstallCompatibility", "LegacyInstaller", "DeprecatedLanguages", "PatchRequired", "IsCompressed", "ReadmeFiles", "ManualFiles", "GameVersion", "CompressionMethod", "Version", "Languages", "SlicerConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.ManifestLicenses), global::Uplay.Download.ManifestLicenses.Parser, new[]{ "Licenses" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.ManifestMetaData), global::Uplay.Download.ManifestMetaData.Parser, new[]{ "Licenses", "BytesOnDisk", "BytesToDownload", "DeprecatedLanguages", "ChunksVersion", "UplayIds", "Chunks", "PaddedBytesOnDisk", "Languages" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Download.ManifestMetaData), global::Uplay.Download.ManifestMetaData.Parser, new[]{ "Licenses", "BytesOnDisk", "BytesToDownload", "DeprecatedLanguages", "ChunksVersion", "UplayIds", "Chunks", "Languages" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4436,7 +4434,6 @@ namespace Uplay.Download {
       isDir_ = other.isDir_;
       slices_ = other.slices_.Clone();
       version_ = other.version_;
-      paddedSize_ = other.paddedSize_;
       sliceList_ = other.sliceList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -4565,33 +4562,6 @@ namespace Uplay.Download {
       _hasBits0 &= ~4;
     }
 
-    /// <summary>Field number for the "paddedSize" field.</summary>
-    public const int PaddedSizeFieldNumber = 6;
-    private readonly static ulong PaddedSizeDefaultValue = 0UL;
-
-    private ulong paddedSize_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong PaddedSize {
-      get { if ((_hasBits0 & 8) != 0) { return paddedSize_; } else { return PaddedSizeDefaultValue; } }
-      set {
-        _hasBits0 |= 8;
-        paddedSize_ = value;
-      }
-    }
-    /// <summary>Gets whether the "paddedSize" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasPaddedSize {
-      get { return (_hasBits0 & 8) != 0; }
-    }
-    /// <summary>Clears the value of the "paddedSize" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearPaddedSize() {
-      _hasBits0 &= ~8;
-    }
-
     /// <summary>Field number for the "sliceList" field.</summary>
     public const int SliceListFieldNumber = 7;
     private static readonly pb::FieldCodec<global::Uplay.Download.Slice> _repeated_sliceList_codec
@@ -4623,7 +4593,6 @@ namespace Uplay.Download {
       if (IsDir != other.IsDir) return false;
       if(!slices_.Equals(other.slices_)) return false;
       if (Version != other.Version) return false;
-      if (PaddedSize != other.PaddedSize) return false;
       if(!sliceList_.Equals(other.sliceList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4637,7 +4606,6 @@ namespace Uplay.Download {
       if (HasIsDir) hash ^= IsDir.GetHashCode();
       hash ^= slices_.GetHashCode();
       if (HasVersion) hash ^= Version.GetHashCode();
-      if (HasPaddedSize) hash ^= PaddedSize.GetHashCode();
       hash ^= sliceList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4674,10 +4642,6 @@ namespace Uplay.Download {
         output.WriteRawTag(40);
         output.WriteUInt32(Version);
       }
-      if (HasPaddedSize) {
-        output.WriteRawTag(48);
-        output.WriteUInt64(PaddedSize);
-      }
       sliceList_.WriteTo(output, _repeated_sliceList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4706,10 +4670,6 @@ namespace Uplay.Download {
         output.WriteRawTag(40);
         output.WriteUInt32(Version);
       }
-      if (HasPaddedSize) {
-        output.WriteRawTag(48);
-        output.WriteUInt64(PaddedSize);
-      }
       sliceList_.WriteTo(ref output, _repeated_sliceList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4733,9 +4693,6 @@ namespace Uplay.Download {
       size += slices_.CalculateSize(_repeated_slices_codec);
       if (HasVersion) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Version);
-      }
-      if (HasPaddedSize) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(PaddedSize);
       }
       size += sliceList_.CalculateSize(_repeated_sliceList_codec);
       if (_unknownFields != null) {
@@ -4762,9 +4719,6 @@ namespace Uplay.Download {
       slices_.Add(other.slices_);
       if (other.HasVersion) {
         Version = other.Version;
-      }
-      if (other.HasPaddedSize) {
-        PaddedSize = other.PaddedSize;
       }
       sliceList_.Add(other.sliceList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4800,10 +4754,6 @@ namespace Uplay.Download {
           }
           case 40: {
             Version = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            PaddedSize = input.ReadUInt64();
             break;
           }
           case 58: {
@@ -4843,10 +4793,6 @@ namespace Uplay.Download {
           }
           case 40: {
             Version = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            PaddedSize = input.ReadUInt64();
             break;
           }
           case 58: {
@@ -5429,7 +5375,6 @@ namespace Uplay.Download {
       uplayId_ = other.uplayId_;
       language_ = other.language_;
       bytesOnDisk_ = other.bytesOnDisk_;
-      paddedBytesOnDisk_ = other.paddedBytesOnDisk_;
       uplayIds_ = other.uplayIds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -5520,33 +5465,6 @@ namespace Uplay.Download {
       _hasBits0 &= ~2;
     }
 
-    /// <summary>Field number for the "paddedBytesOnDisk" field.</summary>
-    public const int PaddedBytesOnDiskFieldNumber = 4;
-    private readonly static ulong PaddedBytesOnDiskDefaultValue = 0UL;
-
-    private ulong paddedBytesOnDisk_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong PaddedBytesOnDisk {
-      get { if ((_hasBits0 & 4) != 0) { return paddedBytesOnDisk_; } else { return PaddedBytesOnDiskDefaultValue; } }
-      set {
-        _hasBits0 |= 4;
-        paddedBytesOnDisk_ = value;
-      }
-    }
-    /// <summary>Gets whether the "paddedBytesOnDisk" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasPaddedBytesOnDisk {
-      get { return (_hasBits0 & 4) != 0; }
-    }
-    /// <summary>Clears the value of the "paddedBytesOnDisk" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearPaddedBytesOnDisk() {
-      _hasBits0 &= ~4;
-    }
-
     /// <summary>Field number for the "uplayIds" field.</summary>
     public const int UplayIdsFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_uplayIds_codec
@@ -5576,7 +5494,6 @@ namespace Uplay.Download {
       if (UplayId != other.UplayId) return false;
       if (Language != other.Language) return false;
       if (BytesOnDisk != other.BytesOnDisk) return false;
-      if (PaddedBytesOnDisk != other.PaddedBytesOnDisk) return false;
       if(!uplayIds_.Equals(other.uplayIds_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5588,7 +5505,6 @@ namespace Uplay.Download {
       if (HasUplayId) hash ^= UplayId.GetHashCode();
       if (HasLanguage) hash ^= Language.GetHashCode();
       if (HasBytesOnDisk) hash ^= BytesOnDisk.GetHashCode();
-      if (HasPaddedBytesOnDisk) hash ^= PaddedBytesOnDisk.GetHashCode();
       hash ^= uplayIds_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5620,10 +5536,6 @@ namespace Uplay.Download {
         output.WriteRawTag(24);
         output.WriteUInt64(BytesOnDisk);
       }
-      if (HasPaddedBytesOnDisk) {
-        output.WriteRawTag(32);
-        output.WriteUInt64(PaddedBytesOnDisk);
-      }
       uplayIds_.WriteTo(output, _repeated_uplayIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5647,10 +5559,6 @@ namespace Uplay.Download {
         output.WriteRawTag(24);
         output.WriteUInt64(BytesOnDisk);
       }
-      if (HasPaddedBytesOnDisk) {
-        output.WriteRawTag(32);
-        output.WriteUInt64(PaddedBytesOnDisk);
-      }
       uplayIds_.WriteTo(ref output, _repeated_uplayIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5670,9 +5578,6 @@ namespace Uplay.Download {
       }
       if (HasBytesOnDisk) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(BytesOnDisk);
-      }
-      if (HasPaddedBytesOnDisk) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(PaddedBytesOnDisk);
       }
       size += uplayIds_.CalculateSize(_repeated_uplayIds_codec);
       if (_unknownFields != null) {
@@ -5695,9 +5600,6 @@ namespace Uplay.Download {
       }
       if (other.HasBytesOnDisk) {
         BytesOnDisk = other.BytesOnDisk;
-      }
-      if (other.HasPaddedBytesOnDisk) {
-        PaddedBytesOnDisk = other.PaddedBytesOnDisk;
       }
       uplayIds_.Add(other.uplayIds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -5725,10 +5627,6 @@ namespace Uplay.Download {
           }
           case 24: {
             BytesOnDisk = input.ReadUInt64();
-            break;
-          }
-          case 32: {
-            PaddedBytesOnDisk = input.ReadUInt64();
             break;
           }
           case 42:
@@ -5761,10 +5659,6 @@ namespace Uplay.Download {
           }
           case 24: {
             BytesOnDisk = input.ReadUInt64();
-            break;
-          }
-          case 32: {
-            PaddedBytesOnDisk = input.ReadUInt64();
             break;
           }
           case 42:
@@ -6969,8 +6863,6 @@ namespace Uplay.Download {
       installCompatibility_ = other.installCompatibility_.Clone();
       legacyInstaller_ = other.legacyInstaller_;
       deprecatedLanguages_ = other.deprecatedLanguages_.Clone();
-      isEncryptedDeprecated_ = other.isEncryptedDeprecated_;
-      paddedSliceSizeDeprecated_ = other.paddedSliceSizeDeprecated_;
       patchRequired_ = other.patchRequired_;
       isCompressed_ = other.isCompressed_;
       readmeFiles_ = other.readmeFiles_ != null ? other.readmeFiles_.Clone() : null;
@@ -7179,60 +7071,6 @@ namespace Uplay.Download {
       get { return deprecatedLanguages_; }
     }
 
-    /// <summary>Field number for the "isEncryptedDeprecated" field.</summary>
-    public const int IsEncryptedDeprecatedFieldNumber = 14;
-    private readonly static bool IsEncryptedDeprecatedDefaultValue = false;
-
-    private bool isEncryptedDeprecated_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsEncryptedDeprecated {
-      get { if ((_hasBits0 & 4) != 0) { return isEncryptedDeprecated_; } else { return IsEncryptedDeprecatedDefaultValue; } }
-      set {
-        _hasBits0 |= 4;
-        isEncryptedDeprecated_ = value;
-      }
-    }
-    /// <summary>Gets whether the "isEncryptedDeprecated" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasIsEncryptedDeprecated {
-      get { return (_hasBits0 & 4) != 0; }
-    }
-    /// <summary>Clears the value of the "isEncryptedDeprecated" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearIsEncryptedDeprecated() {
-      _hasBits0 &= ~4;
-    }
-
-    /// <summary>Field number for the "paddedSliceSizeDeprecated" field.</summary>
-    public const int PaddedSliceSizeDeprecatedFieldNumber = 15;
-    private readonly static uint PaddedSliceSizeDeprecatedDefaultValue = 0;
-
-    private uint paddedSliceSizeDeprecated_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PaddedSliceSizeDeprecated {
-      get { if ((_hasBits0 & 8) != 0) { return paddedSliceSizeDeprecated_; } else { return PaddedSliceSizeDeprecatedDefaultValue; } }
-      set {
-        _hasBits0 |= 8;
-        paddedSliceSizeDeprecated_ = value;
-      }
-    }
-    /// <summary>Gets whether the "paddedSliceSizeDeprecated" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasPaddedSliceSizeDeprecated {
-      get { return (_hasBits0 & 8) != 0; }
-    }
-    /// <summary>Clears the value of the "paddedSliceSizeDeprecated" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearPaddedSliceSizeDeprecated() {
-      _hasBits0 &= ~8;
-    }
-
     /// <summary>Field number for the "patchRequired" field.</summary>
     public const int PatchRequiredFieldNumber = 16;
     private readonly static bool PatchRequiredDefaultValue = false;
@@ -7241,9 +7079,9 @@ namespace Uplay.Download {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PatchRequired {
-      get { if ((_hasBits0 & 16) != 0) { return patchRequired_; } else { return PatchRequiredDefaultValue; } }
+      get { if ((_hasBits0 & 4) != 0) { return patchRequired_; } else { return PatchRequiredDefaultValue; } }
       set {
-        _hasBits0 |= 16;
+        _hasBits0 |= 4;
         patchRequired_ = value;
       }
     }
@@ -7251,13 +7089,13 @@ namespace Uplay.Download {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasPatchRequired {
-      get { return (_hasBits0 & 16) != 0; }
+      get { return (_hasBits0 & 4) != 0; }
     }
     /// <summary>Clears the value of the "patchRequired" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPatchRequired() {
-      _hasBits0 &= ~16;
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "isCompressed" field.</summary>
@@ -7268,9 +7106,9 @@ namespace Uplay.Download {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IsCompressed {
-      get { if ((_hasBits0 & 32) != 0) { return isCompressed_; } else { return IsCompressedDefaultValue; } }
+      get { if ((_hasBits0 & 8) != 0) { return isCompressed_; } else { return IsCompressedDefaultValue; } }
       set {
-        _hasBits0 |= 32;
+        _hasBits0 |= 8;
         isCompressed_ = value;
       }
     }
@@ -7278,13 +7116,13 @@ namespace Uplay.Download {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasIsCompressed {
-      get { return (_hasBits0 & 32) != 0; }
+      get { return (_hasBits0 & 8) != 0; }
     }
     /// <summary>Clears the value of the "isCompressed" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearIsCompressed() {
-      _hasBits0 &= ~32;
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "readmeFiles" field.</summary>
@@ -7345,9 +7183,9 @@ namespace Uplay.Download {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Uplay.Download.CompressionMethod CompressionMethod {
-      get { if ((_hasBits0 & 64) != 0) { return compressionMethod_; } else { return CompressionMethodDefaultValue; } }
+      get { if ((_hasBits0 & 16) != 0) { return compressionMethod_; } else { return CompressionMethodDefaultValue; } }
       set {
-        _hasBits0 |= 64;
+        _hasBits0 |= 16;
         compressionMethod_ = value;
       }
     }
@@ -7355,13 +7193,13 @@ namespace Uplay.Download {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasCompressionMethod {
-      get { return (_hasBits0 & 64) != 0; }
+      get { return (_hasBits0 & 16) != 0; }
     }
     /// <summary>Clears the value of the "compressionMethod" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearCompressionMethod() {
-      _hasBits0 &= ~64;
+      _hasBits0 &= ~16;
     }
 
     /// <summary>Field number for the "version" field.</summary>
@@ -7372,9 +7210,9 @@ namespace Uplay.Download {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint Version {
-      get { if ((_hasBits0 & 128) != 0) { return version_; } else { return VersionDefaultValue; } }
+      get { if ((_hasBits0 & 32) != 0) { return version_; } else { return VersionDefaultValue; } }
       set {
-        _hasBits0 |= 128;
+        _hasBits0 |= 32;
         version_ = value;
       }
     }
@@ -7382,13 +7220,13 @@ namespace Uplay.Download {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasVersion {
-      get { return (_hasBits0 & 128) != 0; }
+      get { return (_hasBits0 & 32) != 0; }
     }
     /// <summary>Clears the value of the "version" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearVersion() {
-      _hasBits0 &= ~128;
+      _hasBits0 &= ~32;
     }
 
     /// <summary>Field number for the "languages" field.</summary>
@@ -7442,8 +7280,6 @@ namespace Uplay.Download {
       if(!installCompatibility_.Equals(other.installCompatibility_)) return false;
       if (LegacyInstaller != other.LegacyInstaller) return false;
       if(!deprecatedLanguages_.Equals(other.deprecatedLanguages_)) return false;
-      if (IsEncryptedDeprecated != other.IsEncryptedDeprecated) return false;
-      if (PaddedSliceSizeDeprecated != other.PaddedSliceSizeDeprecated) return false;
       if (PatchRequired != other.PatchRequired) return false;
       if (IsCompressed != other.IsCompressed) return false;
       if (!object.Equals(ReadmeFiles, other.ReadmeFiles)) return false;
@@ -7473,8 +7309,6 @@ namespace Uplay.Download {
       hash ^= installCompatibility_.GetHashCode();
       if (HasLegacyInstaller) hash ^= LegacyInstaller.GetHashCode();
       hash ^= deprecatedLanguages_.GetHashCode();
-      if (HasIsEncryptedDeprecated) hash ^= IsEncryptedDeprecated.GetHashCode();
-      if (HasPaddedSliceSizeDeprecated) hash ^= PaddedSliceSizeDeprecated.GetHashCode();
       if (HasPatchRequired) hash ^= PatchRequired.GetHashCode();
       if (HasIsCompressed) hash ^= IsCompressed.GetHashCode();
       if (readmeFiles_ != null) hash ^= ReadmeFiles.GetHashCode();
@@ -7524,14 +7358,6 @@ namespace Uplay.Download {
         output.WriteString(LegacyInstaller);
       }
       deprecatedLanguages_.WriteTo(output, _repeated_deprecatedLanguages_codec);
-      if (HasIsEncryptedDeprecated) {
-        output.WriteRawTag(112);
-        output.WriteBool(IsEncryptedDeprecated);
-      }
-      if (HasPaddedSliceSizeDeprecated) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(PaddedSliceSizeDeprecated);
-      }
       if (HasPatchRequired) {
         output.WriteRawTag(128, 1);
         output.WriteBool(PatchRequired);
@@ -7597,14 +7423,6 @@ namespace Uplay.Download {
         output.WriteString(LegacyInstaller);
       }
       deprecatedLanguages_.WriteTo(ref output, _repeated_deprecatedLanguages_codec);
-      if (HasIsEncryptedDeprecated) {
-        output.WriteRawTag(112);
-        output.WriteBool(IsEncryptedDeprecated);
-      }
-      if (HasPaddedSliceSizeDeprecated) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(PaddedSliceSizeDeprecated);
-      }
       if (HasPatchRequired) {
         output.WriteRawTag(128, 1);
         output.WriteBool(PatchRequired);
@@ -7667,12 +7485,6 @@ namespace Uplay.Download {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(LegacyInstaller);
       }
       size += deprecatedLanguages_.CalculateSize(_repeated_deprecatedLanguages_codec);
-      if (HasIsEncryptedDeprecated) {
-        size += 1 + 1;
-      }
-      if (HasPaddedSliceSizeDeprecated) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PaddedSliceSizeDeprecated);
-      }
       if (HasPatchRequired) {
         size += 2 + 1;
       }
@@ -7729,12 +7541,6 @@ namespace Uplay.Download {
         LegacyInstaller = other.LegacyInstaller;
       }
       deprecatedLanguages_.Add(other.deprecatedLanguages_);
-      if (other.HasIsEncryptedDeprecated) {
-        IsEncryptedDeprecated = other.IsEncryptedDeprecated;
-      }
-      if (other.HasPaddedSliceSizeDeprecated) {
-        PaddedSliceSizeDeprecated = other.PaddedSliceSizeDeprecated;
-      }
       if (other.HasPatchRequired) {
         PatchRequired = other.PatchRequired;
       }
@@ -7834,14 +7640,6 @@ namespace Uplay.Download {
           }
           case 106: {
             deprecatedLanguages_.AddEntriesFrom(input, _repeated_deprecatedLanguages_codec);
-            break;
-          }
-          case 112: {
-            IsEncryptedDeprecated = input.ReadBool();
-            break;
-          }
-          case 120: {
-            PaddedSliceSizeDeprecated = input.ReadUInt32();
             break;
           }
           case 128: {
@@ -7954,14 +7752,6 @@ namespace Uplay.Download {
           }
           case 106: {
             deprecatedLanguages_.AddEntriesFrom(ref input, _repeated_deprecatedLanguages_codec);
-            break;
-          }
-          case 112: {
-            IsEncryptedDeprecated = input.ReadBool();
-            break;
-          }
-          case 120: {
-            PaddedSliceSizeDeprecated = input.ReadUInt32();
             break;
           }
           case 128: {
@@ -8237,7 +8027,6 @@ namespace Uplay.Download {
       chunksVersion_ = other.chunksVersion_;
       uplayIds_ = other.uplayIds_.Clone();
       chunks_ = other.chunks_.Clone();
-      paddedBytesOnDisk_ = other.paddedBytesOnDisk_;
       languages_ = other.languages_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -8373,33 +8162,6 @@ namespace Uplay.Download {
       get { return chunks_; }
     }
 
-    /// <summary>Field number for the "paddedBytesOnDisk" field.</summary>
-    public const int PaddedBytesOnDiskFieldNumber = 9;
-    private readonly static ulong PaddedBytesOnDiskDefaultValue = 0UL;
-
-    private ulong paddedBytesOnDisk_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong PaddedBytesOnDisk {
-      get { if ((_hasBits0 & 8) != 0) { return paddedBytesOnDisk_; } else { return PaddedBytesOnDiskDefaultValue; } }
-      set {
-        _hasBits0 |= 8;
-        paddedBytesOnDisk_ = value;
-      }
-    }
-    /// <summary>Gets whether the "paddedBytesOnDisk" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasPaddedBytesOnDisk {
-      get { return (_hasBits0 & 8) != 0; }
-    }
-    /// <summary>Clears the value of the "paddedBytesOnDisk" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearPaddedBytesOnDisk() {
-      _hasBits0 &= ~8;
-    }
-
     /// <summary>Field number for the "languages" field.</summary>
     public const int LanguagesFieldNumber = 10;
     private static readonly pb::FieldCodec<global::Uplay.Download.Language> _repeated_languages_codec
@@ -8433,7 +8195,6 @@ namespace Uplay.Download {
       if (ChunksVersion != other.ChunksVersion) return false;
       if(!uplayIds_.Equals(other.uplayIds_)) return false;
       if(!chunks_.Equals(other.chunks_)) return false;
-      if (PaddedBytesOnDisk != other.PaddedBytesOnDisk) return false;
       if(!languages_.Equals(other.languages_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -8449,7 +8210,6 @@ namespace Uplay.Download {
       if (HasChunksVersion) hash ^= ChunksVersion.GetHashCode();
       hash ^= uplayIds_.GetHashCode();
       hash ^= chunks_.GetHashCode();
-      if (HasPaddedBytesOnDisk) hash ^= PaddedBytesOnDisk.GetHashCode();
       hash ^= languages_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8485,10 +8245,6 @@ namespace Uplay.Download {
       }
       uplayIds_.WriteTo(output, _repeated_uplayIds_codec);
       chunks_.WriteTo(output, _repeated_chunks_codec);
-      if (HasPaddedBytesOnDisk) {
-        output.WriteRawTag(72);
-        output.WriteUInt64(PaddedBytesOnDisk);
-      }
       languages_.WriteTo(output, _repeated_languages_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -8516,10 +8272,6 @@ namespace Uplay.Download {
       }
       uplayIds_.WriteTo(ref output, _repeated_uplayIds_codec);
       chunks_.WriteTo(ref output, _repeated_chunks_codec);
-      if (HasPaddedBytesOnDisk) {
-        output.WriteRawTag(72);
-        output.WriteUInt64(PaddedBytesOnDisk);
-      }
       languages_.WriteTo(ref output, _repeated_languages_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -8544,9 +8296,6 @@ namespace Uplay.Download {
       }
       size += uplayIds_.CalculateSize(_repeated_uplayIds_codec);
       size += chunks_.CalculateSize(_repeated_chunks_codec);
-      if (HasPaddedBytesOnDisk) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(PaddedBytesOnDisk);
-      }
       size += languages_.CalculateSize(_repeated_languages_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8573,9 +8322,6 @@ namespace Uplay.Download {
       }
       uplayIds_.Add(other.uplayIds_);
       chunks_.Add(other.chunks_);
-      if (other.HasPaddedBytesOnDisk) {
-        PaddedBytesOnDisk = other.PaddedBytesOnDisk;
-      }
       languages_.Add(other.languages_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8619,10 +8365,6 @@ namespace Uplay.Download {
           }
           case 66: {
             chunks_.AddEntriesFrom(input, _repeated_chunks_codec);
-            break;
-          }
-          case 72: {
-            PaddedBytesOnDisk = input.ReadUInt64();
             break;
           }
           case 82: {
@@ -8671,10 +8413,6 @@ namespace Uplay.Download {
           }
           case 66: {
             chunks_.AddEntriesFrom(ref input, _repeated_chunks_codec);
-            break;
-          }
-          case 72: {
-            PaddedBytesOnDisk = input.ReadUInt64();
             break;
           }
           case 82: {

@@ -24,8 +24,8 @@ namespace Uplay.DownloadCache {
     static DownloadCacheReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiB1cGNfZHVtcF8xMC9kb3dubG9hZF9jYWNoZS5wcm90bxIabWcucHJvdG9j",
-            "b2wuZG93bmxvYWRfY2FjaGUi6QcKCERvd25sb2FkEhIKCnByb2R1Y3RfaWQY",
+            "CiB1cGNfZHVtcF8xNS9kb3dubG9hZF9jYWNoZS5wcm90bxIabWcucHJvdG9j",
+            "b2wuZG93bmxvYWRfY2FjaGUi9gcKCERvd25sb2FkEhIKCnByb2R1Y3RfaWQY",
             "ASACKA0SEwoLbWFuaWZlc3RfaWQYAiACKAkSSAoNZG93bmxvYWRfdHlwZRgD",
             "IAIoDjIxLm1nLnByb3RvY29sLmRvd25sb2FkX2NhY2hlLkRvd25sb2FkLkRv",
             "d25sb2FkVHlwZRJKCg5kb3dubG9hZF9zdGF0ZRgFIAIoDjIyLm1nLnByb3Rv",
@@ -44,12 +44,13 @@ namespace Uplay.DownloadCache {
             "ZBADEh4KGkRvd25sb2FkU3RhdGVfTmV0d29ya0Vycm9yEAQSGQoVRG93bmxv",
             "YWRTdGF0ZV9GYWlsdXJlEAUSGwoXRG93bmxvYWRTdGF0ZV9DYW5jZWxsZWQQ",
             "BhIbChdEb3dubG9hZFN0YXRlX0NvbXBsZXRlZBAHEiYKIkRvd25sb2FkU3Rh",
-            "dHVzX0FsbG9jYXRpbmdEaXNrU3BhY2UQCCKKAQoRRG93bmxvYWRJbml0aWF0",
+            "dHVzX0FsbG9jYXRpbmdEaXNrU3BhY2UQCCKXAQoRRG93bmxvYWRJbml0aWF0",
             "b3ISCwoHVW5rbm93bhAAEhQKEEJyYW5kZWRJbnN0YWxsZXIQARISCg5MYXVu",
             "Y2hQcm90b2NvbBACEhMKD0luc3RhbGxQcm90b2NvbBADEhkKFUluc3RhbGxQ",
-            "cm90b2NvbFJldGFpbBAEEg4KCkJldGFDbGllbnQQBSJaCg1Eb3dubG9hZENh",
-            "Y2hlEhEKCWlzX3BhdXNlZBgBIAIoCBI2Cghkb3dubG9hZBgCIAMoCzIkLm1n",
-            "LnByb3RvY29sLmRvd25sb2FkX2NhY2hlLkRvd25sb2Fk"));
+            "cm90b2NvbFJldGFpbBAEEg4KCkJldGFDbGllbnQQBRILCgdYYm94QXBwEAYi",
+            "WgoNRG93bmxvYWRDYWNoZRIRCglpc19wYXVzZWQYASACKAgSNgoIZG93bmxv",
+            "YWQYAiADKAsyJC5tZy5wcm90b2NvbC5kb3dubG9hZF9jYWNoZS5Eb3dubG9h",
+            "ZA=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -659,6 +660,7 @@ namespace Uplay.DownloadCache {
         [pbr::OriginalName("InstallProtocol")] InstallProtocol = 3,
         [pbr::OriginalName("InstallProtocolRetail")] InstallProtocolRetail = 4,
         [pbr::OriginalName("BetaClient")] BetaClient = 5,
+        [pbr::OriginalName("XboxApp")] XboxApp = 6,
       }
 
     }

@@ -1,5 +1,17 @@
 --------------------------------------------------------------
- 138.0.10824.0		2023 Feb 22 -
+ 139.0.10836.0		2023 Mar 14 -
+--------------------------------------------------------------
+* Updated to latest protobufs (139.0.0.10836)
+* Download.cs Updated
+* DownloadCache.cs Updated
+* DownloadInstallState.cs Updated
+* Overlay.cs Updated
+* WegameService.cs Updated
+* GameCatalogExtension.cs Added
+
+
+--------------------------------------------------------------
+ 138.0.10824.0		2023 Feb 22 - Mar 14
 --------------------------------------------------------------
 * Updated to latest protobufs (138.3.0.10824)
 * Statistics.cs Updated

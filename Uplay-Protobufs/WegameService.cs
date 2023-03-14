@@ -24,7 +24,7 @@ namespace Uplay.WegameService {
     static WegameServiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiB1cGNfZHVtcF8xMC93ZWdhbWVfc2VydmljZS5wcm90bxIabWcucHJvdG9j",
+            "CiB1cGNfZHVtcF8xNS93ZWdhbWVfc2VydmljZS5wcm90bxIabWcucHJvdG9j",
             "b2wud2VnYW1lX3NlcnZpY2UiRwoNUGxheWVyUHJvZmlsZRIPCgdyYWlsX2lk",
             "GAEgASgJEhEKCW5pY2tfbmFtZRgCIAEoCRISCgphdmF0YXJfdXJsGAMgASgJ",
             "InQKDUZyaWVuZFByb2ZpbGUSDwoHcmFpbF9pZBgBIAEoCRIRCgluaWNrX25h",
@@ -57,43 +57,43 @@ namespace Uplay.WegameService {
             "EhkKFVByb2R1Y3RUeXBlX0dlbmVyYXRvchADEhoKFlByb2R1Y3RUeXBlX0lu",
             "R2FtZUNvaW4QBCJYChRHZXRJbmdhbWVJdGVtSW5mb1JzcBJACgxpbmdhbWVf",
             "aXRlbXMYASADKAsyKi5tZy5wcm90b2NvbC53ZWdhbWVfc2VydmljZS5Jbmdh",
-            "bWVJdGVtSW5mbyKXAQobR2V0SW5nYW1lSXRlbUNoZWNrb3V0VXJsUmVxEg8K",
+            "bWVJdGVtSW5mbyKoAQobR2V0SW5nYW1lSXRlbUNoZWNrb3V0VXJsUmVxEg8K",
             "B3JhaWxfaWQYASABKAkSFgoOc2Vzc2lvbl90aWNrZXQYAiABKAkSGQoRd2Vn",
             "YW1lX3Byb2R1Y3RfaWQYAyABKAQSHgoWaW5nYW1lX2l0ZW1fcGFja2FnZV9p",
-            "ZBgEIAEoDRIUCgx1cmxfcmVkaXJlY3QYBSABKAkiOgobR2V0SW5nYW1lSXRl",
-            "bUNoZWNrb3V0VXJsUnNwEhsKE3dlZ2FtZV9jaGVja291dF91cmwYASABKAki",
-            "kwQKA1JlcRISCgpyZXF1ZXN0X2lkGAEgASgNEkoKFGdldF91c2VyX3JhaWxf",
-            "aWRfcmVxGAIgASgLMiwubWcucHJvdG9jb2wud2VnYW1lX3NlcnZpY2UuR2V0",
-            "VXNlclJhaWxJZFJlcRJPChZnZXRfcGxheWVyX3Byb2ZpbGVfcmVxGAMgASgL",
-            "Mi8ubWcucHJvdG9jb2wud2VnYW1lX3NlcnZpY2UuR2V0UGxheWVyUHJvZmls",
-            "ZVJlcRJRChdnZXRfZnJpZW5kX3Byb2ZpbGVzX3JlcRgEIAEoCzIwLm1nLnBy",
-            "b3RvY29sLndlZ2FtZV9zZXJ2aWNlLkdldEZyaWVuZFByb2ZpbGVzUmVxElIK",
-            "GGdldF9pbmdhbWVfaXRlbV9pbmZvX3JlcRgFIAEoCzIwLm1nLnByb3RvY29s",
-            "LndlZ2FtZV9zZXJ2aWNlLkdldEluZ2FtZUl0ZW1JbmZvUmVxEmEKIGdldF9p",
-            "bmdhbWVfaXRlbV9jaGVja291dF91cmxfcmVxGAYgASgLMjcubWcucHJvdG9j",
-            "b2wud2VnYW1lX3NlcnZpY2UuR2V0SW5nYW1lSXRlbUNoZWNrb3V0VXJsUmVx",
-            "ElEKF2dldF9wbGF5ZXJfcHJvZmlsZXNfcmVxGAcgASgLMjAubWcucHJvdG9j",
-            "b2wud2VnYW1lX3NlcnZpY2UuR2V0UGxheWVyUHJvZmlsZXNSZXEixwQKA1Jz",
-            "cBISCgpyZXF1ZXN0X2lkGAEgASgNEjIKBnN0YXR1cxgCIAEoDjIiLm1nLnBy",
-            "b3RvY29sLndlZ2FtZV9zZXJ2aWNlLlN0YXR1cxJKChRnZXRfdXNlcl9yYWls",
-            "X2lkX3JzcBgDIAEoCzIsLm1nLnByb3RvY29sLndlZ2FtZV9zZXJ2aWNlLkdl",
-            "dFVzZXJSYWlsSWRSc3ASTwoWZ2V0X3BsYXllcl9wcm9maWxlX3JzcBgEIAEo",
-            "CzIvLm1nLnByb3RvY29sLndlZ2FtZV9zZXJ2aWNlLkdldFBsYXllclByb2Zp",
-            "bGVSc3ASUQoXZ2V0X2ZyaWVuZF9wcm9maWxlc19yc3AYBSABKAsyMC5tZy5w",
-            "cm90b2NvbC53ZWdhbWVfc2VydmljZS5HZXRGcmllbmRQcm9maWxlc1JzcBJS",
-            "ChhnZXRfaW5nYW1lX2l0ZW1faW5mb19yc3AYBiABKAsyMC5tZy5wcm90b2Nv",
-            "bC53ZWdhbWVfc2VydmljZS5HZXRJbmdhbWVJdGVtSW5mb1JzcBJhCiBnZXRf",
-            "aW5nYW1lX2l0ZW1fY2hlY2tvdXRfdXJsX3JzcBgHIAEoCzI3Lm1nLnByb3Rv",
-            "Y29sLndlZ2FtZV9zZXJ2aWNlLkdldEluZ2FtZUl0ZW1DaGVja291dFVybFJz",
-            "cBJRChdnZXRfcGxheWVyX3Byb2ZpbGVzX3JzcBgIIAEoCzIwLm1nLnByb3Rv",
-            "Y29sLndlZ2FtZV9zZXJ2aWNlLkdldFBsYXllclByb2ZpbGVzUnNwIjwKCFVw",
-            "c3RyZWFtEjAKB3JlcXVlc3QYASABKAsyHy5tZy5wcm90b2NvbC53ZWdhbWVf",
-            "c2VydmljZS5SZXEiPwoKRG93bnN0cmVhbRIxCghyZXNwb25zZRgBIAEoCzIf",
-            "Lm1nLnByb3RvY29sLndlZ2FtZV9zZXJ2aWNlLlJzcCqgAQoGU3RhdHVzEhIK",
-            "DlN0YXR1c19Vbmtub3duEAASDQoJU3RhdHVzX09rEAESFgoSU3RhdHVzX0Vt",
-            "cHR5UmVzdWx0EAISGAoUU3RhdHVzX0ludGVybmFsRXJyb3IQAxIRCg1TdGF0",
-            "dXNfRGVuaWVkEAQSEwoPU3RhdHVzX1RpbWVkT3V0EAUSGQoVU3RhdHVzX1Bh",
-            "cmFtZXRlckVycm9yEAZiBnByb3RvMw=="));
+            "ZBgEIAEoDRIUCgx1cmxfcmVkaXJlY3QYBSABKAkSDwoHem9uZV9pZBgGIAEo",
+            "CSI6ChtHZXRJbmdhbWVJdGVtQ2hlY2tvdXRVcmxSc3ASGwoTd2VnYW1lX2No",
+            "ZWNrb3V0X3VybBgBIAEoCSKTBAoDUmVxEhIKCnJlcXVlc3RfaWQYASABKA0S",
+            "SgoUZ2V0X3VzZXJfcmFpbF9pZF9yZXEYAiABKAsyLC5tZy5wcm90b2NvbC53",
+            "ZWdhbWVfc2VydmljZS5HZXRVc2VyUmFpbElkUmVxEk8KFmdldF9wbGF5ZXJf",
+            "cHJvZmlsZV9yZXEYAyABKAsyLy5tZy5wcm90b2NvbC53ZWdhbWVfc2Vydmlj",
+            "ZS5HZXRQbGF5ZXJQcm9maWxlUmVxElEKF2dldF9mcmllbmRfcHJvZmlsZXNf",
+            "cmVxGAQgASgLMjAubWcucHJvdG9jb2wud2VnYW1lX3NlcnZpY2UuR2V0RnJp",
+            "ZW5kUHJvZmlsZXNSZXESUgoYZ2V0X2luZ2FtZV9pdGVtX2luZm9fcmVxGAUg",
+            "ASgLMjAubWcucHJvdG9jb2wud2VnYW1lX3NlcnZpY2UuR2V0SW5nYW1lSXRl",
+            "bUluZm9SZXESYQogZ2V0X2luZ2FtZV9pdGVtX2NoZWNrb3V0X3VybF9yZXEY",
+            "BiABKAsyNy5tZy5wcm90b2NvbC53ZWdhbWVfc2VydmljZS5HZXRJbmdhbWVJ",
+            "dGVtQ2hlY2tvdXRVcmxSZXESUQoXZ2V0X3BsYXllcl9wcm9maWxlc19yZXEY",
+            "ByABKAsyMC5tZy5wcm90b2NvbC53ZWdhbWVfc2VydmljZS5HZXRQbGF5ZXJQ",
+            "cm9maWxlc1JlcSLHBAoDUnNwEhIKCnJlcXVlc3RfaWQYASABKA0SMgoGc3Rh",
+            "dHVzGAIgASgOMiIubWcucHJvdG9jb2wud2VnYW1lX3NlcnZpY2UuU3RhdHVz",
+            "EkoKFGdldF91c2VyX3JhaWxfaWRfcnNwGAMgASgLMiwubWcucHJvdG9jb2wu",
+            "d2VnYW1lX3NlcnZpY2UuR2V0VXNlclJhaWxJZFJzcBJPChZnZXRfcGxheWVy",
+            "X3Byb2ZpbGVfcnNwGAQgASgLMi8ubWcucHJvdG9jb2wud2VnYW1lX3NlcnZp",
+            "Y2UuR2V0UGxheWVyUHJvZmlsZVJzcBJRChdnZXRfZnJpZW5kX3Byb2ZpbGVz",
+            "X3JzcBgFIAEoCzIwLm1nLnByb3RvY29sLndlZ2FtZV9zZXJ2aWNlLkdldEZy",
+            "aWVuZFByb2ZpbGVzUnNwElIKGGdldF9pbmdhbWVfaXRlbV9pbmZvX3JzcBgG",
+            "IAEoCzIwLm1nLnByb3RvY29sLndlZ2FtZV9zZXJ2aWNlLkdldEluZ2FtZUl0",
+            "ZW1JbmZvUnNwEmEKIGdldF9pbmdhbWVfaXRlbV9jaGVja291dF91cmxfcnNw",
+            "GAcgASgLMjcubWcucHJvdG9jb2wud2VnYW1lX3NlcnZpY2UuR2V0SW5nYW1l",
+            "SXRlbUNoZWNrb3V0VXJsUnNwElEKF2dldF9wbGF5ZXJfcHJvZmlsZXNfcnNw",
+            "GAggASgLMjAubWcucHJvdG9jb2wud2VnYW1lX3NlcnZpY2UuR2V0UGxheWVy",
+            "UHJvZmlsZXNSc3AiPAoIVXBzdHJlYW0SMAoHcmVxdWVzdBgBIAEoCzIfLm1n",
+            "LnByb3RvY29sLndlZ2FtZV9zZXJ2aWNlLlJlcSI/CgpEb3duc3RyZWFtEjEK",
+            "CHJlc3BvbnNlGAEgASgLMh8ubWcucHJvdG9jb2wud2VnYW1lX3NlcnZpY2Uu",
+            "UnNwKqABCgZTdGF0dXMSEgoOU3RhdHVzX1Vua25vd24QABINCglTdGF0dXNf",
+            "T2sQARIWChJTdGF0dXNfRW1wdHlSZXN1bHQQAhIYChRTdGF0dXNfSW50ZXJu",
+            "YWxFcnJvchADEhEKDVN0YXR1c19EZW5pZWQQBBITCg9TdGF0dXNfVGltZWRP",
+            "dXQQBRIZChVTdGF0dXNfUGFyYW1ldGVyRXJyb3IQBmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Uplay.WegameService.Status), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -110,7 +110,7 @@ namespace Uplay.WegameService {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.WegameService.GetIngameItemInfoReq), global::Uplay.WegameService.GetIngameItemInfoReq.Parser, new[]{ "WegameProductId", "CommonId", "IngameItemPackageIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.WegameService.IngameItemInfo), global::Uplay.WegameService.IngameItemInfo.Parser, new[]{ "IngameItemPackageId", "PackOriginalPrice", "PackDiscountPrice", "CurrencyType", "PackConfiguration", "ProductType" }, null, new[]{ typeof(global::Uplay.WegameService.IngameItemInfo.Types.ProductType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.WegameService.GetIngameItemInfoRsp), global::Uplay.WegameService.GetIngameItemInfoRsp.Parser, new[]{ "IngameItems" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.WegameService.GetIngameItemCheckoutUrlReq), global::Uplay.WegameService.GetIngameItemCheckoutUrlReq.Parser, new[]{ "RailId", "SessionTicket", "WegameProductId", "IngameItemPackageId", "UrlRedirect" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.WegameService.GetIngameItemCheckoutUrlReq), global::Uplay.WegameService.GetIngameItemCheckoutUrlReq.Parser, new[]{ "RailId", "SessionTicket", "WegameProductId", "IngameItemPackageId", "UrlRedirect", "ZoneId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.WegameService.GetIngameItemCheckoutUrlRsp), global::Uplay.WegameService.GetIngameItemCheckoutUrlRsp.Parser, new[]{ "WegameCheckoutUrl" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.WegameService.Req), global::Uplay.WegameService.Req.Parser, new[]{ "RequestId", "GetUserRailIdReq", "GetPlayerProfileReq", "GetFriendProfilesReq", "GetIngameItemInfoReq", "GetIngameItemCheckoutUrlReq", "GetPlayerProfilesReq" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.WegameService.Rsp), global::Uplay.WegameService.Rsp.Parser, new[]{ "RequestId", "Status", "GetUserRailIdRsp", "GetPlayerProfileRsp", "GetFriendProfilesRsp", "GetIngameItemInfoRsp", "GetIngameItemCheckoutUrlRsp", "GetPlayerProfilesRsp" }, null, null, null, null),
@@ -3438,6 +3438,7 @@ namespace Uplay.WegameService {
       wegameProductId_ = other.wegameProductId_;
       ingameItemPackageId_ = other.ingameItemPackageId_;
       urlRedirect_ = other.urlRedirect_;
+      zoneId_ = other.zoneId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3507,6 +3508,18 @@ namespace Uplay.WegameService {
       }
     }
 
+    /// <summary>Field number for the "zone_id" field.</summary>
+    public const int ZoneIdFieldNumber = 6;
+    private string zoneId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ZoneId {
+      get { return zoneId_; }
+      set {
+        zoneId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3527,6 +3540,7 @@ namespace Uplay.WegameService {
       if (WegameProductId != other.WegameProductId) return false;
       if (IngameItemPackageId != other.IngameItemPackageId) return false;
       if (UrlRedirect != other.UrlRedirect) return false;
+      if (ZoneId != other.ZoneId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3539,6 +3553,7 @@ namespace Uplay.WegameService {
       if (WegameProductId != 0UL) hash ^= WegameProductId.GetHashCode();
       if (IngameItemPackageId != 0) hash ^= IngameItemPackageId.GetHashCode();
       if (UrlRedirect.Length != 0) hash ^= UrlRedirect.GetHashCode();
+      if (ZoneId.Length != 0) hash ^= ZoneId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3577,6 +3592,10 @@ namespace Uplay.WegameService {
         output.WriteRawTag(42);
         output.WriteString(UrlRedirect);
       }
+      if (ZoneId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ZoneId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3607,6 +3626,10 @@ namespace Uplay.WegameService {
         output.WriteRawTag(42);
         output.WriteString(UrlRedirect);
       }
+      if (ZoneId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ZoneId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3631,6 +3654,9 @@ namespace Uplay.WegameService {
       }
       if (UrlRedirect.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UrlRedirect);
+      }
+      if (ZoneId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ZoneId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3658,6 +3684,9 @@ namespace Uplay.WegameService {
       }
       if (other.UrlRedirect.Length != 0) {
         UrlRedirect = other.UrlRedirect;
+      }
+      if (other.ZoneId.Length != 0) {
+        ZoneId = other.ZoneId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3694,6 +3723,10 @@ namespace Uplay.WegameService {
             UrlRedirect = input.ReadString();
             break;
           }
+          case 50: {
+            ZoneId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3727,6 +3760,10 @@ namespace Uplay.WegameService {
           }
           case 42: {
             UrlRedirect = input.ReadString();
+            break;
+          }
+          case 50: {
+            ZoneId = input.ReadString();
             break;
           }
         }
