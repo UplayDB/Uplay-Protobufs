@@ -25,57 +25,57 @@ namespace Uplay.Settings {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVjb21tb25fc2V0dGluZ3MucHJvdG8SFG1nLnByb3RvY29sLnNldHRpbmdz",
-            "GiBnb29nbGUvcHJvdG9idWYvZGVzY3JpcHRvci5wcm90byLWAgoEVXNlchIb",
-            "Cg1zeW5jc2F2ZWdhbWVzGAEgASgIOgR0cnVlEhYKB29mZmxpbmUYAiABKAg6",
-            "BWZhbHNlElMKDWNsb3NlYmVoYXZpb3IYAyABKA4yIy5tZy5wcm90b2NvbC5z",
-            "ZXR0aW5ncy5DbG9zZUJlaGF2aW9yOhdDbG9zZUJlaGF2aW9yX1VuZGVmaW5l",
-            "ZBJHCgtsYW5kaW5ncGFnZRgEIAEoDjIhLm1nLnByb3RvY29sLnNldHRpbmdz",
-            "LkxhbmRpbmdQYWdlOg9MYW5kaW5nUGFnZU5ld3MSJQoWc3RhcnRfb25fd2lu",
-            "ZG93c19zdGFydBgFIAEoCDoFZmFsc2USLAoebm9uX2ZyaWVuZF9nYW1lX2lu",
-            "dml0ZV9lbmFibGVkGAYgASgIOgR0cnVlEiYKF2xhbmRpbmdwYWdlX3NldF9i",
-            "eV91c2VyGAcgASgIOgVmYWxzZSJ7CgdPdmVybGF5EhUKB2VuYWJsZWQYASAB",
-            "KAg6BHRydWUSHgoPZm9yY2V1bmhvb2tnYW1lGAIgASgIOgVmYWxzZRIaCgtm",
-            "cHNfZW5hYmxlZBgDIAEoCDoFZmFsc2USHQoPd2FybmluZ19lbmFibGVkGAQg",
-            "ASgIOgR0cnVlIh8KCExhbmd1YWdlEhMKBGNvZGUYASABKAk6BWVuLVVTIu0B",
-            "CgRNaXNjEhwKFGluc3RhbGxlcl9jYWNoZV9wYXRoGAEgASgJEhwKFHNjcmVl",
-            "bnNob3Rfcm9vdF9wYXRoGAIgASgJEjEKImVuYWJsZV9zY3JlZW5zaG90c19v",
-            "bl9hY2hpZXZlbWVudHMYAyABKAg6BWZhbHNlEh4KFmdhbWVfaW5zdGFsbGF0",
-            "aW9uX3BhdGgYBCABKAkSJAoWZW5hYmxlX2F1dG9fd2FsbF9wb3N0cxgFIAEo",
-            "CDoEdHJ1ZRIwCiFzYXZlX3NjcmVlbnNob3RfdW5jb21wcmVzc2VkX2NvcHkY",
-            "BiABKAg6BWZhbHNlImoKCFBvc2l0aW9uEg8KBGxlZnQYASABKA06ATASDgoD",
-            "dG9wGAIgASgNOgEwEhAKBXdpZHRoGAMgASgNOgEwEhEKBmhlaWdodBgEIAEo",
-            "DToBMBIYCgltYXhpbWl6ZWQYBSABKAg6BWZhbHNlIokBChFNb2RlbGVzc1Bv",
-            "c2l0aW9ucxI2Cg5mcmllbmRzX3dpbmRvdxgBIAEoCzIeLm1nLnByb3RvY29s",
-            "LnNldHRpbmdzLlBvc2l0aW9uEjwKFGNvbnZlcnNhdGlvbnNfd2luZG93GAIg",
-            "ASgLMh4ubWcucHJvdG9jb2wuc2V0dGluZ3MuUG9zaXRpb24iLQoHTWFzdGVy",
-            "cxIQCgh1c2VybmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSJtCgZIb3Rr",
-            "ZXkSEgoHa2V5Q29kZRgBIAEoDToBMBIXCghhbHRTdGF0ZRgCIAEoCDoFZmFs",
-            "c2USGQoKc2hpZnRTdGF0ZRgDIAEoCDoFZmFsc2USGwoMY29udHJvbFN0YXRl",
-            "GAQgASgIOgVmYWxzZSJiCglEb3dubG9hZHMSFwoFbGltaXQYASABKAQ6CDEw",
-            "MDAwMDAwEhsKDGxpbWl0RW5hYmxlZBgCIAEoCDoFZmFsc2USHwoRcGF1c2VP",
-            "bkdhbWVMYXVuY2gYAyABKAg6BHRydWUiHQoFQmV0YXMSFAoFb3B0SW4YASAB",
-            "KAg6BWZhbHNlIiUKDEF1dG9QYXRjaGluZxIVCgdlbmFibGVkGAEgASgIOgR0",
-            "cnVlIiIKCVNwb3RsaWdodBIVCgdlbmFibGVkGAEgASgIOgR0cnVlIjIKDUNv",
-            "bnZlcnNhdGlvbnMSIQoSdGFza2JhclRhYnNFbmFibGVkGAEgASgIOgVmYWxz",
-            "ZSIcCgRFcGljEhQKDGV4Y2hhbmdlQ29kZRgBIAEoCSIsChBCcmFuZGVkSW5z",
-            "dGFsbGVyEhgKEHBlbmRpbmdfcHJvdG9jb2wYASABKAkiJQoLQ29ubmVjdFZp",
-            "ZXcSFgoHZW5hYmxlZBgBIAEoCDoFZmFsc2UixgIKCVNoYXJlUGxheRITCgdi",
-            "aXRyYXRlGAEgASgNOgIyMBIfChFkaXNwbGF5T25ib2FyZGluZxgCIAEoCDoE",
-            "dHJ1ZRIrCh1tb3VzZUFuZEtleWJvYXJkQWNjZXNzQWxsb3dlZBgDIAEoCDoE",
-            "dHJ1ZRIiChRnYW1lcGFkQWNjZXNzQWxsb3dlZBgEIAEoCDoEdHJ1ZRIfChFk",
-            "aXNwbGF5V2l6YXJkVG91chgFIAEoCDoEdHJ1ZRIqCh9sYXN0VGltZUZlZWRC",
-            "YWNrV2luZG93RGlzcGxheWVkGAYgASgNOgEwEhsKEG5iQnV5R2FtZVJlZnVz",
-            "ZWQYByABKA06ATASHQoSbmJGZWVkYmFja1VuZmlsbGVkGAggASgNOgEwEhgK",
-            "CnJlc29sdXRpb24YCSABKA06BDEwODASDwoDZnBzGAogASgNOgI2MCIkCgpS",
-            "ZW1vdGVQbGF5EhYKB2FsbG93ZWQYASABKAg6BWZhbHNlKmEKDUNsb3NlQmVo",
-            "YXZpb3ISGwoXQ2xvc2VCZWhhdmlvcl9VbmRlZmluZWQQABIXChNDbG9zZUJl",
-            "aGF2aW9yX0Nsb3NlEAESGgoWQ2xvc2VCZWhhdmlvcl9NaW5pbWl6ZRACKnEK",
-            "C0xhbmRpbmdQYWdlEhMKD0xhbmRpbmdQYWdlTmV3cxAAEhQKEExhbmRpbmdQ",
-            "YWdlR2FtZXMQARIdChlMYW5kaW5nUGFnZUxhc3RQbGF5ZWRHYW1lEAISGAoU",
-            "TGFuZGluZ1BhZ2VVcGxheVBsdXMQAzo9ChRkaXNhYmxlU3RhdHNUcmFja2lu",
-            "ZxIdLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE9wdGlvbnMY0IYDIAEoCDpGChtk",
-            "aXNhYmxlTWVzc2FnZVN0YXRzVHJhY2tpbmcSHy5nb29nbGUucHJvdG9idWYu",
-            "TWVzc2FnZU9wdGlvbnMY0YYDIAEoCA=="));
+            "GhBkZXNjcmlwdG9yLnByb3RvItYCCgRVc2VyEhsKDXN5bmNzYXZlZ2FtZXMY",
+            "ASABKAg6BHRydWUSFgoHb2ZmbGluZRgCIAEoCDoFZmFsc2USUwoNY2xvc2Vi",
+            "ZWhhdmlvchgDIAEoDjIjLm1nLnByb3RvY29sLnNldHRpbmdzLkNsb3NlQmVo",
+            "YXZpb3I6F0Nsb3NlQmVoYXZpb3JfVW5kZWZpbmVkEkcKC2xhbmRpbmdwYWdl",
+            "GAQgASgOMiEubWcucHJvdG9jb2wuc2V0dGluZ3MuTGFuZGluZ1BhZ2U6D0xh",
+            "bmRpbmdQYWdlTmV3cxIlChZzdGFydF9vbl93aW5kb3dzX3N0YXJ0GAUgASgI",
+            "OgVmYWxzZRIsCh5ub25fZnJpZW5kX2dhbWVfaW52aXRlX2VuYWJsZWQYBiAB",
+            "KAg6BHRydWUSJgoXbGFuZGluZ3BhZ2Vfc2V0X2J5X3VzZXIYByABKAg6BWZh",
+            "bHNlInsKB092ZXJsYXkSFQoHZW5hYmxlZBgBIAEoCDoEdHJ1ZRIeCg9mb3Jj",
+            "ZXVuaG9va2dhbWUYAiABKAg6BWZhbHNlEhoKC2Zwc19lbmFibGVkGAMgASgI",
+            "OgVmYWxzZRIdCg93YXJuaW5nX2VuYWJsZWQYBCABKAg6BHRydWUiHwoITGFu",
+            "Z3VhZ2USEwoEY29kZRgBIAEoCToFZW4tVVMi7QEKBE1pc2MSHAoUaW5zdGFs",
+            "bGVyX2NhY2hlX3BhdGgYASABKAkSHAoUc2NyZWVuc2hvdF9yb290X3BhdGgY",
+            "AiABKAkSMQoiZW5hYmxlX3NjcmVlbnNob3RzX29uX2FjaGlldmVtZW50cxgD",
+            "IAEoCDoFZmFsc2USHgoWZ2FtZV9pbnN0YWxsYXRpb25fcGF0aBgEIAEoCRIk",
+            "ChZlbmFibGVfYXV0b193YWxsX3Bvc3RzGAUgASgIOgR0cnVlEjAKIXNhdmVf",
+            "c2NyZWVuc2hvdF91bmNvbXByZXNzZWRfY29weRgGIAEoCDoFZmFsc2UiagoI",
+            "UG9zaXRpb24SDwoEbGVmdBgBIAEoDToBMBIOCgN0b3AYAiABKA06ATASEAoF",
+            "d2lkdGgYAyABKA06ATASEQoGaGVpZ2h0GAQgASgNOgEwEhgKCW1heGltaXpl",
+            "ZBgFIAEoCDoFZmFsc2UiiQEKEU1vZGVsZXNzUG9zaXRpb25zEjYKDmZyaWVu",
+            "ZHNfd2luZG93GAEgASgLMh4ubWcucHJvdG9jb2wuc2V0dGluZ3MuUG9zaXRp",
+            "b24SPAoUY29udmVyc2F0aW9uc193aW5kb3cYAiABKAsyHi5tZy5wcm90b2Nv",
+            "bC5zZXR0aW5ncy5Qb3NpdGlvbiItCgdNYXN0ZXJzEhAKCHVzZXJuYW1lGAEg",
+            "ASgJEhAKCHBhc3N3b3JkGAIgASgJIm0KBkhvdGtleRISCgdrZXlDb2RlGAEg",
+            "ASgNOgEwEhcKCGFsdFN0YXRlGAIgASgIOgVmYWxzZRIZCgpzaGlmdFN0YXRl",
+            "GAMgASgIOgVmYWxzZRIbCgxjb250cm9sU3RhdGUYBCABKAg6BWZhbHNlImIK",
+            "CURvd25sb2FkcxIXCgVsaW1pdBgBIAEoBDoIMTAwMDAwMDASGwoMbGltaXRF",
+            "bmFibGVkGAIgASgIOgVmYWxzZRIfChFwYXVzZU9uR2FtZUxhdW5jaBgDIAEo",
+            "CDoEdHJ1ZSIdCgVCZXRhcxIUCgVvcHRJbhgBIAEoCDoFZmFsc2UiJQoMQXV0",
+            "b1BhdGNoaW5nEhUKB2VuYWJsZWQYASABKAg6BHRydWUiIgoJU3BvdGxpZ2h0",
+            "EhUKB2VuYWJsZWQYASABKAg6BHRydWUiMgoNQ29udmVyc2F0aW9ucxIhChJ0",
+            "YXNrYmFyVGFic0VuYWJsZWQYASABKAg6BWZhbHNlIhwKBEVwaWMSFAoMZXhj",
+            "aGFuZ2VDb2RlGAEgASgJIiwKEEJyYW5kZWRJbnN0YWxsZXISGAoQcGVuZGlu",
+            "Z19wcm90b2NvbBgBIAEoCSJFCgtDb25uZWN0VmlldxIWCgdlbmFibGVkGAEg",
+            "ASgIOgVmYWxzZRIeCg9kZWZhdWx0X29wdF9vdXQYAiABKAg6BWZhbHNlIsYC",
+            "CglTaGFyZVBsYXkSEwoHYml0cmF0ZRgBIAEoDToCMjASHwoRZGlzcGxheU9u",
+            "Ym9hcmRpbmcYAiABKAg6BHRydWUSKwodbW91c2VBbmRLZXlib2FyZEFjY2Vz",
+            "c0FsbG93ZWQYAyABKAg6BHRydWUSIgoUZ2FtZXBhZEFjY2Vzc0FsbG93ZWQY",
+            "BCABKAg6BHRydWUSHwoRZGlzcGxheVdpemFyZFRvdXIYBSABKAg6BHRydWUS",
+            "KgofbGFzdFRpbWVGZWVkQmFja1dpbmRvd0Rpc3BsYXllZBgGIAEoDToBMBIb",
+            "ChBuYkJ1eUdhbWVSZWZ1c2VkGAcgASgNOgEwEh0KEm5iRmVlZGJhY2tVbmZp",
+            "bGxlZBgIIAEoDToBMBIYCgpyZXNvbHV0aW9uGAkgASgNOgQxMDgwEg8KA2Zw",
+            "cxgKIAEoDToCNjAiJAoKUmVtb3RlUGxheRIWCgdhbGxvd2VkGAEgASgIOgVm",
+            "YWxzZSphCg1DbG9zZUJlaGF2aW9yEhsKF0Nsb3NlQmVoYXZpb3JfVW5kZWZp",
+            "bmVkEAASFwoTQ2xvc2VCZWhhdmlvcl9DbG9zZRABEhoKFkNsb3NlQmVoYXZp",
+            "b3JfTWluaW1pemUQAipxCgtMYW5kaW5nUGFnZRITCg9MYW5kaW5nUGFnZU5l",
+            "d3MQABIUChBMYW5kaW5nUGFnZUdhbWVzEAESHQoZTGFuZGluZ1BhZ2VMYXN0",
+            "UGxheWVkR2FtZRACEhgKFExhbmRpbmdQYWdlVXBsYXlQbHVzEAM6PQoUZGlz",
+            "YWJsZVN0YXRzVHJhY2tpbmcSHS5nb29nbGUucHJvdG9idWYuRmllbGRPcHRp",
+            "b25zGNCGAyABKAg6RgobZGlzYWJsZU1lc3NhZ2VTdGF0c1RyYWNraW5nEh8u",
+            "Z29vZ2xlLnByb3RvYnVmLk1lc3NhZ2VPcHRpb25zGNGGAyABKAg="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Uplay.Settings.CloseBehavior), typeof(global::Uplay.Settings.LandingPage), }, new pb::Extension[] { CommonSettingsExtensions.DisableStatsTracking, CommonSettingsExtensions.DisableMessageStatsTracking }, new pbr::GeneratedClrTypeInfo[] {
@@ -94,7 +94,7 @@ namespace Uplay.Settings {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Settings.Conversations), global::Uplay.Settings.Conversations.Parser, new[]{ "TaskbarTabsEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Settings.Epic), global::Uplay.Settings.Epic.Parser, new[]{ "ExchangeCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Settings.BrandedInstaller), global::Uplay.Settings.BrandedInstaller.Parser, new[]{ "PendingProtocol" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Settings.ConnectView), global::Uplay.Settings.ConnectView.Parser, new[]{ "Enabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Settings.ConnectView), global::Uplay.Settings.ConnectView.Parser, new[]{ "Enabled", "DefaultOptOut" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Settings.SharePlay), global::Uplay.Settings.SharePlay.Parser, new[]{ "Bitrate", "DisplayOnboarding", "MouseAndKeyboardAccessAllowed", "GamepadAccessAllowed", "DisplayWizardTour", "LastTimeFeedBackWindowDisplayed", "NbBuyGameRefused", "NbFeedbackUnfilled", "Resolution", "Fps" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Settings.RemotePlay), global::Uplay.Settings.RemotePlay.Parser, new[]{ "Allowed" }, null, null, null, null)
           }));
@@ -4524,6 +4524,7 @@ namespace Uplay.Settings {
     public ConnectView(ConnectView other) : this() {
       _hasBits0 = other._hasBits0;
       enabled_ = other.enabled_;
+      defaultOptOut_ = other.defaultOptOut_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4560,6 +4561,33 @@ namespace Uplay.Settings {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "default_opt_out" field.</summary>
+    public const int DefaultOptOutFieldNumber = 2;
+    private readonly static bool DefaultOptOutDefaultValue = false;
+
+    private bool defaultOptOut_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DefaultOptOut {
+      get { if ((_hasBits0 & 2) != 0) { return defaultOptOut_; } else { return DefaultOptOutDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        defaultOptOut_ = value;
+      }
+    }
+    /// <summary>Gets whether the "default_opt_out" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDefaultOptOut {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "default_opt_out" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDefaultOptOut() {
+      _hasBits0 &= ~2;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4576,6 +4604,7 @@ namespace Uplay.Settings {
         return true;
       }
       if (Enabled != other.Enabled) return false;
+      if (DefaultOptOut != other.DefaultOptOut) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4584,6 +4613,7 @@ namespace Uplay.Settings {
     public override int GetHashCode() {
       int hash = 1;
       if (HasEnabled) hash ^= Enabled.GetHashCode();
+      if (HasDefaultOptOut) hash ^= DefaultOptOut.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4606,6 +4636,10 @@ namespace Uplay.Settings {
         output.WriteRawTag(8);
         output.WriteBool(Enabled);
       }
+      if (HasDefaultOptOut) {
+        output.WriteRawTag(16);
+        output.WriteBool(DefaultOptOut);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4620,6 +4654,10 @@ namespace Uplay.Settings {
         output.WriteRawTag(8);
         output.WriteBool(Enabled);
       }
+      if (HasDefaultOptOut) {
+        output.WriteRawTag(16);
+        output.WriteBool(DefaultOptOut);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4631,6 +4669,9 @@ namespace Uplay.Settings {
     public int CalculateSize() {
       int size = 0;
       if (HasEnabled) {
+        size += 1 + 1;
+      }
+      if (HasDefaultOptOut) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -4647,6 +4688,9 @@ namespace Uplay.Settings {
       }
       if (other.HasEnabled) {
         Enabled = other.Enabled;
+      }
+      if (other.HasDefaultOptOut) {
+        DefaultOptOut = other.DefaultOptOut;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4667,6 +4711,10 @@ namespace Uplay.Settings {
             Enabled = input.ReadBool();
             break;
           }
+          case 16: {
+            DefaultOptOut = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -4684,6 +4732,10 @@ namespace Uplay.Settings {
             break;
           case 8: {
             Enabled = input.ReadBool();
+            break;
+          }
+          case 16: {
+            DefaultOptOut = input.ReadBool();
             break;
           }
         }

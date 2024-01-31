@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+	<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <SignAssembly>True</SignAssembly>
@@ -18,7 +18,7 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/UplayDB/Uplay-Protobufs</RepositoryUrl>
     <PackageTags>uplay,ubisoft,protobuf</PackageTags>
-    <Version>140.0.10857.0</Version>
+    <Version>149.2.11028.0</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <AssemblyOriginatorKeyFile>../../Sign.snk</AssemblyOriginatorKeyFile>
     <PackageReleaseNotes>Check changelog.txt</PackageReleaseNotes>
@@ -43,6 +43,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.22.1" />
+    <PackageReference Include="Google.Protobuf" Version="3.25.2" />
   </ItemGroup>
 </Project>

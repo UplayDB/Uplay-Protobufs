@@ -24,219 +24,223 @@ namespace Uplay.Overlay {
     static OverlayReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chl1cGNfZHVtcF8xNS9vdmVybGF5LnByb3RvEhNtZy5wcm90b2NvbC5vdmVy",
-            "bGF5IhUKE0dldENvbmZpZ3VyYXRpb25SZXEiKwoTR2V0Q29uZmlndXJhdGlv",
-            "blJzcBIUCgxsaWJyYXJ5X3BhdGgYASACKAkiNgoIU3RhcnRSZXESDQoFd2lk",
-            "dGgYASACKA0SDgoGaGVpZ2h0GAIgAigNEgsKA3BpZBgDIAIoDSLHAQoPU3Rh",
-            "cnRTdWNjZXNzUnNwEhoKEnNoYXJlZF9tZW1vcnlfbmFtZRgBIAIoCRIgChhz",
-            "aGFyZWRfbWVtb3J5X211dGV4X25hbWUYAiACKAkSEgoKcHJvZHVjdF9pZBgD",
-            "IAIoDRIiChp1YmlzZXJ2aWNlc19hcHBsaWNhdGlvbl9pZBgEIAEoCRIcChR1",
-            "YmlzZXJ2aWNlc19zcGFjZV9pZBgFIAEoCRIgChh2aXJ0dWFsX2NvbnRyb2xz",
-            "X2VuYWJsZWQYBiABKAgiEQoPU3RhcnRGYWlsdXJlUnNwIoABCghTdGFydFJz",
-            "cBI5CgtzdWNjZXNzX3JzcBgBIAEoCzIkLm1nLnByb3RvY29sLm92ZXJsYXku",
-            "U3RhcnRTdWNjZXNzUnNwEjkKC2ZhaWx1cmVfcnNwGAIgASgLMiQubWcucHJv",
-            "dG9jb2wub3ZlcmxheS5TdGFydEZhaWx1cmVSc3AiKgoJUmVzaXplUmVxEg0K",
-            "BXdpZHRoGAEgAigNEg4KBmhlaWdodBgCIAIoDSJQChBSZXNpemVTdWNjZXNz",
-            "UnNwEhoKEnNoYXJlZF9tZW1vcnlfbmFtZRgBIAIoCRIgChhzaGFyZWRfbWVt",
-            "b3J5X211dGV4X25hbWUYAiACKAkiEgoQUmVzaXplRmFpbHVyZVJzcCKDAQoJ",
-            "UmVzaXplUnNwEjoKC3N1Y2Nlc3NfcnNwGAEgASgLMiUubWcucHJvdG9jb2wu",
-            "b3ZlcmxheS5SZXNpemVTdWNjZXNzUnNwEjoKC2ZhaWx1cmVfcnNwGAIgASgL",
-            "MiUubWcucHJvdG9jb2wub3ZlcmxheS5SZXNpemVGYWlsdXJlUnNwIm8KCVJl",
-            "Y3RhbmdsZRIVCg10b3BfbGVmdF9wb3NYGAEgAigNEhUKDXRvcF9sZWZ0X3Bv",
-            "c1kYAiACKA0SGQoRYm90dG9tX3JpZ2h0X3Bvc1gYAyACKA0SGQoRYm90dG9t",
-            "X3JpZ2h0X3Bvc1kYBCACKA0iWgoOVmlld1VwZGF0ZWRSc3ASNwoPZGlydHlS",
-            "ZWN0YW5nbGVzGAEgAygLMh4ubWcucHJvdG9jb2wub3ZlcmxheS5SZWN0YW5n",
-            "bGUSDwoHdmVyc2lvbhgCIAIoDSIeCg1Gb2N1c0V2ZW50UmVxEg0KBWZvY3Vz",
-            "GAEgASgIIkcKEldpbjMyS2V5TWVzc2FnZVJlcRIPCgdtZXNzYWdlGAEgAigF",
-            "Eg8KB3dfcGFyYW0YAiACKAUSDwoHbF9wYXJhbRgDIAIoBSKnAQoQQXBwbGVL",
-            "ZXlFdmVudFJlcRIMCgR0eXBlGAEgAigFEhUKDW1vZGlmaWVyRmxhZ3MYAiAC",
-            "KAUSEQoJdGltZXN0YW1wGAMgAigBEhIKCmNoYXJhY3RlcnMYBCACKAkSIwob",
-            "Y2hhcmFjdGVyc0lnbm9yaW5nTW9kaWZpZXJzGAUgAigJEhEKCWlzQVJlcGVh",
-            "dBgGIAIoBRIPCgdrZXlDb2RlGAcgAigNIicKFU1vdXNlQnV0dG9uUHJlc3Nl",
-            "ZFJlcRIOCgZidXR0b24YASACKAUiKAoWTW91c2VCdXR0b25SZWxlYXNlZFJl",
-            "cRIOCgZidXR0b24YASACKAUiJQoTTW91c2VEb3VibGVDbGlja1JlcRIOCgZi",
-            "dXR0b24YASACKAUiTAoNTW91c2VNb3ZlZFJlcRIJCgF4GAEgAigFEgkKAXkY",
-            "AiACKAUSEQoJbW9kaWZpZXJzGAMgASgFEhIKCmlzX3ZpcnR1YWwYBCABKAgi",
-            "OAoSTW91c2VXaGVlbE1vdmVkUmVxEhAKCHNjcm9sbF94GAEgAigFEhAKCHNj",
-            "cm9sbF95GAIgAigFIicKDUxhbmdDaGFuZ2VSZXESFgoObGFuZ0FiYnJldmlh",
-            "dGUYASABKAkiCwoJU2hvd1VpUmVxIgwKCkNsb3NlVWlSZXEiDgoMUmVmcmVz",
-            "aFVpUmVxIhAKDkJ1ZmZlclJlYWR5UmVxIjIKEENyZWF0ZVByb2Nlc3NSZXES",
-            "CwoDcGlkGAEgAigNEhEKCXN0YXJ0ZXJJZBgCIAIoDSIfChBDcmVhdGVQcm9j",
-            "ZXNzUnNwEgsKA3BpZBgBIAIoDSIqChJWaWRlb0ZyYW1lUmVhZHlSZXESFAoM",
-            "YnVmZmVyX2luZGV4GAEgAigNIi0KFVZpZGVvRnJhbWVSZWxlYXNlZFJzcBIU",
-            "CgxidWZmZXJfaW5kZXgYASACKA0ibAoVQ2FwdHVyZVNjcmVlbnNob3RQdXNo",
-            "EhMKC2ZyYW1lX3dpZHRoGAEgAigNEhQKDGZyYW1lX2hlaWdodBgCIAIoDRIT",
-            "CgtidWZmZXJfbmFtZRgDIAIoCRITCgtidWZmZXJfc2l6ZRgEIAIoDSIfCgxV",
-            "aU9wZW5lZFB1c2gSDwoHc3VjY2VzcxgBIAIoCCIfCgxVaUNsb3NlZFB1c2gS",
-            "DwoHc3VjY2VzcxgBIAIoCCIZChdJTUVDbGVhckNvbXBvc2l0aW9uUHVzaCI6",
-            "ChZJTUVTZWxlY3RDYW5kaWRhdGVQdXNoEiAKGHNlbGVjdGVkX2NhbmRpZGF0",
-            "ZV9pbmRleBgBIAIoDSIlChBDdXJzb3JDaGFuZ2VQdXNoEhEKCWN1cnNvcl9p",
-            "ZBgBIAIoDSLRAQoWU3RyZWFtaW5nSG9zdFN0YXJ0UHVzaBISCgpzZXNzaW9u",
-            "X2lkGAEgAigJEhIKCnViaV90aWNrZXQYAiACKAkSDgoGYXBwX2lkGAMgAigJ",
-            "EgsKA2VudhgEIAIoCRIPCgdiaXRyYXRlGAUgAigNEhIKCnJlc29sdXRpb24Y",
-            "BiACKA0SCwoDZnBzGAcgAigNEhEKCWdhbWVfbmFtZRgIIAIoCRIUCgxndWVz",
-            "dHNfbGltaXQYCSACKA0SFwoPaG9zdF9wcm9maWxlX2lkGAogAigJIqoBChpT",
-            "dHJlYW1pbmdIb3N0U3RhcnRSZXNwb25zZRIOCgZyZXN1bHQYASACKAgSFAoM",
-            "aG9zdF9wZWVyX2lkGAIgASgJEj8KDHN0YXJ0X2NvbmZpZxgDIAEoCzIpLm1n",
-            "LnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5nU3RhcnRDb25maWcSEQoJZXJy",
-            "b3JfbXNnGAQgASgJEhIKCmVycm9yX2NvZGUYBSABKAUiZAodU3RyZWFtaW5n",
-            "SG9zdEd1ZXN0UGVybWlzc2lvbnMSDwoHZ2FtZXBhZBgBIAIoCBIQCghrZXli",
-            "b2FyZBgCIAIoCBINCgVtb3VzZRgDIAIoCBIRCglpbW1lcnNpdmUYBCACKAgi",
-            "bQoiU3RyZWFtaW5nSG9zdEd1ZXN0U2V0dGluZ3NSZXNwb25zZRJHCgtwZXJt",
-            "aXNzaW9ucxgBIAIoCzIyLm1nLnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5n",
-            "SG9zdEd1ZXN0UGVybWlzc2lvbnMipwEKHlN0cmVhbWluZ0hvc3RHdWVzdENv",
-            "bm5lY3RlZFJlcRIQCghndWVzdF9pZBgBIAIoDRISCgpwcm9maWxlX2lkGAIg",
-            "AigJEkkKCHNldHRpbmdzGAMgAigLMjcubWcucHJvdG9jb2wub3ZlcmxheS5T",
-            "dHJlYW1pbmdIb3N0R3Vlc3RTZXR0aW5nc1Jlc3BvbnNlEhQKDGNvbm5lY3Rl",
-            "ZF90cxgEIAIoBCJJCiFTdHJlYW1pbmdIb3N0R3Vlc3REaXNjb25uZWN0ZWRS",
-            "ZXESEAoIZ3Vlc3RfaWQYASACKA0SEgoKcHJvZmlsZV9pZBgCIAIoCSIXChVT",
-            "dHJlYW1pbmdIb3N0U3RvcFB1c2giKQoVU3RyZWFtaW5nSG9zdEtpY2tQdXNo",
-            "EhAKCGd1ZXN0X2lkGAEgAigNIkkKFVN0cmVhbWluZ1NldHRpbmdzUHVzaBIP",
-            "CgdiaXRyYXRlGAEgAigNEhIKCnJlc29sdXRpb24YAiACKA0SCwoDZnBzGAMg",
-            "AigNImoKHFN0cmVhbWluZ0hvc3RQZXJtaXNzaW9uc1B1c2gSEQoJY2xpZW50",
-            "X2lkGAEgAigNEh4KFm1vdXNlX2tleWJvYXJkX2FsbG93ZWQYAiACKAgSFwoP",
-            "Z2FtZXBhZF9hbGxvd2VkGAMgAigIInQKFFN0cmVhbWluZ1N0YXJ0Q29uZmln",
-            "Eg0KBXdpZHRoGAEgASgNEg4KBmhlaWdodBgCIAEoDRIPCgdiaXRyYXRlGAMg",
-            "ASgNEhgKEGlzX2F1ZGlvX2VuYWJsZWQYBCABKAgSEgoKaXNfZm9jdXNlZBgF",
-            "IAEoCCImChRTdHJlYW1pbmdIb3N0U3RvcFJlcRIOCgZyZXN1bHQYASACKAgi",
-            "JgoUU3RyZWFtaW5nU2V0dGluZ3NSZXESDgoGcmVzdWx0GAEgAigNIjoKE1N0",
-            "cmVhbWluZ0xhdGVuY3lSZXESDwoHbGF0ZW5jeRgBIAIoDRISCgpwcm9maWxl",
-            "X2lkGAIgAigJIk4KF1N0cmVhbWluZ0hvc3RNZXRyaWNzUmVxEg8KB2xhdGVu",
-            "Y3kYASACKA0SDwoHYml0cmF0ZRgCIAIoAhIRCgljbGllbnRfaWQYAyACKA0i",
-            "WAoUU3RyZWFtaW5nVkdQRXZlbnRSZXESDgoGc291cmNlGAEgAigNEhIKCnBy",
-            "b2ZpbGVfaWQYAiACKAkSHAoUc3RyZWFtaW5nX2dhbWVwYWRfaWQYAyACKA0i",
-            "cQocU3RyZWFtaW5nSG9zdENyZWF0ZVRva2VuUHVzaBITCgt1c2FnZV9saW1p",
-            "dBgBIAIoDRISCgpleHBpcmF0aW9uGAIgAigNEhIKCnByb2ZpbGVfaWQYAyAC",
-            "KAkSFAoMdG9rZW5fbnVtYmVyGAQgAigNIlIKG1N0cmVhbWluZ0hvc3RDcmVh",
-            "dGVUb2tlblJlcRIOCgZyZXN1bHQYASACKAgSDQoFdG9rZW4YAiACKAkSFAoM",
-            "dG9rZW5fbnVtYmVyGAMgAigNIkMKHFN0cmVhbWluZ0hvc3REZWNvZGVUb2tl",
-            "blB1c2gSDQoFdG9rZW4YASACKAkSFAoMdG9rZW5fbnVtYmVyGAIgAigNIowB",
-            "ChtTdHJlYW1pbmdIb3N0RGVjb2RlVG9rZW5SZXESDgoGcmVzdWx0GAEgAigI",
-            "Eg4KBmFwcF9pZBgCIAIoCRIQCghzcGFjZV9pZBgDIAIoCRISCgpwcm9kdWN0",
-            "X2lkGAQgAigNEhQKDHRva2VuX251bWJlchgFIAIoDRIRCglnYW1lX25hbWUY",
-            "BiACKAkiJgoVU3RyZWFtaW5nSG9zdEZvY3VzUmVxEg0KBWZvY3VzGAEgAigI",
-            "IlYKKVN0cmVhbWluZ0hvc3RVcGRhdGVHdWVzdFJlbWFpbmluZ1RpbWVQdXNo",
-            "EhEKCWNsaWVudF9pZBgBIAIoDRIWCg5yZW1haW5pbmdfdGltZRgCIAIoDSJ3",
-            "CihTdHJlYW1pbmdIb3N0VXBkYXRlR3Vlc3RSZW1haW5pbmdUaW1lUmVxEg4K",
-            "BnJlc3VsdBgBIAIoCBIUCgxob3N0X3BlZXJfaWQYAiACKAkSEQoJZXJyb3Jf",
-            "bXNnGAMgAigJEhIKCmVycm9yX2NvZGUYBCACKAUiFwoVU3RyZWFtaW5nSG9z",
-            "dFJlYWR5UmVxIjEKG1N0cmVhbWluZ0hvc3RTaWduYWxFcnJvclJlcRISCgpl",
-            "cnJvcl9jb2RlGAEgAigNIlMKGFN0cmVhbWluZ0hvc3RTREtFdmVudFJlcRIQ",
-            "CghzZXZlcml0eRgBIAIoDRIPCgdtZXNzYWdlGAIgAigJEhQKDGhvc3RfcGVl",
-            "cl9pZBgDIAIoCSIpChJTY3JlZW5zaG90UmVhZHlSZXESEwoLaXNWdWxrYW5I",
-            "RFIYASACKAgiHQobU2NyZWVuc2hvdENhcHR1cmVGYWlsdXJlUmVxIhgKFlZp",
-            "ZGVvQ2FwdHVyZUZhaWx1cmVSZXEiHQoNSU1FQ29tbWl0VGV4dBIMCgR0ZXh0",
-            "GAEgASgJImsKF0lNRUNvbXBvc2l0aW9uVW5kZXJsaW5lEgwKBGZyb20YASAB",
-            "KAUSCgoCdG8YAiABKAUSDQoFY29sb3IYAyABKA0SGAoQYmFja2dyb3VuZF9j",
-            "b2xvchgEIAEoDRINCgV0aGljaxgFIAEoBSKBAQoUSU1FU2V0Q29tcG9zaXRp",
-            "b25SZXESDAoEdGV4dBgBIAEoCRIZChFjb21wb3NpdGlvbl9zdGFydBgCIAEo",
-            "BRJACgp1bmRlcmxpbmVzGAMgAygLMiwubWcucHJvdG9jb2wub3ZlcmxheS5J",
-            "TUVDb21wb3NpdGlvblVuZGVybGluZSIZChdJTUVDYW5jZWxDb21wb3NpdGlv",
-            "blJlcSJEChZJTUVVcGRhdGVDYW5kaWRhdGVzUmVxEhIKCmNhbmRpZGF0ZXMY",
-            "ASADKAkSFgoOc2VsZWN0ZWRfaW5kZXgYAiABKA0iyhYKA1JlcRIwCglzdGFy",
-            "dF9yZXEYASABKAsyHS5tZy5wcm90b2NvbC5vdmVybGF5LlN0YXJ0UmVxEjIK",
-            "CnJlc2l6ZV9yZXEYAiABKAsyHi5tZy5wcm90b2NvbC5vdmVybGF5LlJlc2l6",
-            "ZVJlcRJHChZ3aW5fMzJfa2V5X21lc3NhZ2VfcmVxGAMgASgLMicubWcucHJv",
-            "dG9jb2wub3ZlcmxheS5XaW4zMktleU1lc3NhZ2VSZXESQgoTYXBwbGVfa2V5",
-            "X2V2ZW50X3JlcRgEIAEoCzIlLm1nLnByb3RvY29sLm92ZXJsYXkuQXBwbGVL",
-            "ZXlFdmVudFJlcRJMChhtb3VzZV9idXR0b25fcHJlc3NlZF9yZXEYBSABKAsy",
-            "Ki5tZy5wcm90b2NvbC5vdmVybGF5Lk1vdXNlQnV0dG9uUHJlc3NlZFJlcRJO",
-            "Chltb3VzZV9idXR0b25fcmVsZWFzZWRfcmVxGAYgASgLMisubWcucHJvdG9j",
-            "b2wub3ZlcmxheS5Nb3VzZUJ1dHRvblJlbGVhc2VkUmVxEjsKD21vdXNlX21v",
-            "dmVkX3JlcRgHIAEoCzIiLm1nLnByb3RvY29sLm92ZXJsYXkuTW91c2VNb3Zl",
-            "ZFJlcRJGChVtb3VzZV93aGVlbF9tb3ZlZF9yZXEYCCABKAsyJy5tZy5wcm90",
-            "b2NvbC5vdmVybGF5Lk1vdXNlV2hlZWxNb3ZlZFJlcRI1CgxjbG9zZV91aV9y",
-            "ZXEYCiABKAsyHy5tZy5wcm90b2NvbC5vdmVybGF5LkNsb3NlVWlSZXESOQoO",
-            "cmVmcmVzaF91aV9yZXEYCyABKAsyIS5tZy5wcm90b2NvbC5vdmVybGF5LlJl",
-            "ZnJlc2hVaVJlcRJHChVnZXRfY29uZmlndXJhdGlvbl9yZXEYDCABKAsyKC5t",
-            "Zy5wcm90b2NvbC5vdmVybGF5LkdldENvbmZpZ3VyYXRpb25SZXESSAoWbW91",
-            "c2VfZG91YmxlX2NsaWNrX3JlcRgOIAEoCzIoLm1nLnByb3RvY29sLm92ZXJs",
-            "YXkuTW91c2VEb3VibGVDbGlja1JlcRI9ChBidWZmZXJfcmVhZHlfcmVxGA8g",
-            "ASgLMiMubWcucHJvdG9jb2wub3ZlcmxheS5CdWZmZXJSZWFkeVJlcRJGChV2",
-            "aWRlb19mcmFtZV9yZWFkeV9yZXEYECABKAsyJy5tZy5wcm90b2NvbC5vdmVy",
-            "bGF5LlZpZGVvRnJhbWVSZWFkeVJlcRJFChRzY3JlZW5zaG90X3JlYWR5X3Jl",
-            "cRgRIAEoCzInLm1nLnByb3RvY29sLm92ZXJsYXkuU2NyZWVuc2hvdFJlYWR5",
-            "UmVxElgKHnNjcmVlbnNob3RfY2FwdHVyZV9mYWlsdXJlX3JlcRgSIAEoCzIw",
-            "Lm1nLnByb3RvY29sLm92ZXJsYXkuU2NyZWVuc2hvdENhcHR1cmVGYWlsdXJl",
-            "UmVxEk4KGXZpZGVvX2NhcHR1cmVfZmFpbHVyZV9yZXEYEyABKAsyKy5tZy5w",
-            "cm90b2NvbC5vdmVybGF5LlZpZGVvQ2FwdHVyZUZhaWx1cmVSZXESOwoPbGFu",
-            "Z19jaGFuZ2VfcmVxGBQgASgLMiIubWcucHJvdG9jb2wub3ZlcmxheS5MYW5n",
-            "Q2hhbmdlUmVxEjkKDnVwZGF0ZV9mcHNfcmVxGBUgASgLMiEubWcucHJvdG9j",
-            "b2wub3ZlcmxheS5VcGRhdGVGcHNSZXESOwoPZm9jdXNfZXZlbnRfcmVxGBYg",
-            "ASgLMiIubWcucHJvdG9jb2wub3ZlcmxheS5Gb2N1c0V2ZW50UmVxEj8KE2lt",
-            "ZV9jb21taXRfdGV4dF9yZXEYFyABKAsyIi5tZy5wcm90b2NvbC5vdmVybGF5",
-            "LklNRUNvbW1pdFRleHQSSgoXaW1lX3NldF9jb21wb3NpdGlvbl9yZXEYGCAB",
-            "KAsyKS5tZy5wcm90b2NvbC5vdmVybGF5LklNRVNldENvbXBvc2l0aW9uUmVx",
-            "ElAKGmltZV9jYW5jZWxfY29tcG9zaXRpb25fcmVxGBkgASgLMiwubWcucHJv",
-            "dG9jb2wub3ZlcmxheS5JTUVDYW5jZWxDb21wb3NpdGlvblJlcRJOChlpbWVf",
-            "dXBkYXRlX2NhbmRpZGF0ZXNfcmVxGBogASgLMisubWcucHJvdG9jb2wub3Zl",
-            "cmxheS5JTUVVcGRhdGVDYW5kaWRhdGVzUmVxEkkKFnN0cmVhbWluZ19zZXR0",
-            "aW5nc19yZXEYGyABKAsyKS5tZy5wcm90b2NvbC5vdmVybGF5LlN0cmVhbWlu",
-            "Z1NldHRpbmdzUmVxElYKHXN0cmVhbWluZ19ob3N0X3N0YXJ0X3Jlc3BvbnNl",
-            "GB0gASgLMi8ubWcucHJvdG9jb2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0U3Rh",
-            "cnRSZXNwb25zZRJfCiJzdHJlYW1pbmdfaG9zdF9ndWVzdF9jb25uZWN0ZWRf",
-            "cmVxGB4gASgLMjMubWcucHJvdG9jb2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0",
-            "R3Vlc3RDb25uZWN0ZWRSZXESZQolc3RyZWFtaW5nX2hvc3RfZ3Vlc3RfZGlz",
-            "Y29ubmVjdGVkX3JlcRgfIAEoCzI2Lm1nLnByb3RvY29sLm92ZXJsYXkuU3Ry",
-            "ZWFtaW5nSG9zdEd1ZXN0RGlzY29ubmVjdGVkUmVxEkoKF3N0cmVhbWluZ19o",
-            "b3N0X3N0b3BfcmVxGCAgASgLMikubWcucHJvdG9jb2wub3ZlcmxheS5TdHJl",
-            "YW1pbmdIb3N0U3RvcFJlcRJQChpzdHJlYW1pbmdfaG9zdF9tZXRyaWNzX3Jl",
-            "cRghIAMoCzIsLm1nLnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5nSG9zdE1l",
-            "dHJpY3NSZXESSgoXc3RyZWFtaW5nX3ZncF9ldmVudF9yZXEYIiABKAsyKS5t",
-            "Zy5wcm90b2NvbC5vdmVybGF5LlN0cmVhbWluZ1ZHUEV2ZW50UmVxElkKH3N0",
-            "cmVhbWluZ19ob3N0X2NyZWF0ZV90b2tlbl9yZXEYIyABKAsyMC5tZy5wcm90",
-            "b2NvbC5vdmVybGF5LlN0cmVhbWluZ0hvc3RDcmVhdGVUb2tlblJlcRJZCh9z",
-            "dHJlYW1pbmdfaG9zdF9kZWNvZGVfdG9rZW5fcmVxGCQgASgLMjAubWcucHJv",
-            "dG9jb2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0RGVjb2RlVG9rZW5SZXESTAoY",
-            "c3RyZWFtaW5nX2hvc3RfZm9jdXNfcmVxGCUgASgLMioubWcucHJvdG9jb2wu",
-            "b3ZlcmxheS5TdHJlYW1pbmdIb3N0Rm9jdXNSZXESdQouc3RyZWFtaW5nX2hv",
-            "c3RfdXBkYXRlX2d1ZXN0X3JlbWFpbmluZ190aW1lX3JlcRgmIAEoCzI9Lm1n",
-            "LnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5nSG9zdFVwZGF0ZUd1ZXN0UmVt",
-            "YWluaW5nVGltZVJlcRJMChhzdHJlYW1pbmdfaG9zdF9yZWFkeV9yZXEYJyAB",
-            "KAsyKi5tZy5wcm90b2NvbC5vdmVybGF5LlN0cmVhbWluZ0hvc3RSZWFkeVJl",
-            "cRJZCh9zdHJlYW1pbmdfaG9zdF9zaWduYWxfZXJyb3JfcmVxGCggASgLMjAu",
-            "bWcucHJvdG9jb2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0U2lnbmFsRXJyb3JS",
-            "ZXESUwocc3RyZWFtaW5nX2hvc3Rfc2RrX2V2ZW50X3JlcRgpIAEoCzItLm1n",
-            "LnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5nSG9zdFNES0V2ZW50UmVxIsEC",
-            "CgNSc3ASMAoJc3RhcnRfcnNwGAEgASgLMh0ubWcucHJvdG9jb2wub3Zlcmxh",
-            "eS5TdGFydFJzcBIyCgpyZXNpemVfcnNwGAIgASgLMh4ubWcucHJvdG9jb2wu",
-            "b3ZlcmxheS5SZXNpemVSc3ASPQoQdmlld191cGRhdGVkX3JzcBgDIAEoCzIj",
-            "Lm1nLnByb3RvY29sLm92ZXJsYXkuVmlld1VwZGF0ZWRSc3ASRwoVZ2V0X2Nv",
-            "bmZpZ3VyYXRpb25fcnNwGAQgASgLMigubWcucHJvdG9jb2wub3ZlcmxheS5H",
-            "ZXRDb25maWd1cmF0aW9uUnNwEkwKGHZpZGVvX2ZyYW1lX3JlbGVhc2VkX3Jz",
-            "cBgGIAEoCzIqLm1nLnByb3RvY29sLm92ZXJsYXkuVmlkZW9GcmFtZVJlbGVh",
-            "c2VkUnNwIg8KDU11bHRpcGxlTG9naW4iEAoOVXNlckJhbm5lZFB1c2gipgkK",
-            "BFB1c2gSOgoObXVsdGlwbGVfbG9naW4YASABKAsyIi5tZy5wcm90b2NvbC5v",
-            "dmVybGF5Lk11bHRpcGxlTG9naW4SRgoSY2FwdHVyZV9zY3JlZW5zaG90GAIg",
-            "ASgLMioubWcucHJvdG9jb2wub3ZlcmxheS5DYXB0dXJlU2NyZWVuc2hvdFB1",
-            "c2gSPAoNY3Vyc29yX2NoYW5nZRgDIAEoCzIlLm1nLnByb3RvY29sLm92ZXJs",
-            "YXkuQ3Vyc29yQ2hhbmdlUHVzaBI4Cgt1c2VyX2Jhbm5lZBgEIAEoCzIjLm1n",
-            "LnByb3RvY29sLm92ZXJsYXkuVXNlckJhbm5lZFB1c2gSNAoJdWlfb3BlbmVk",
-            "GAUgASgLMiEubWcucHJvdG9jb2wub3ZlcmxheS5VaU9wZW5lZFB1c2gSNAoJ",
-            "dWlfY2xvc2VkGAYgASgLMiEubWcucHJvdG9jb2wub3ZlcmxheS5VaUNsb3Nl",
-            "ZFB1c2gSSwoVaW1lX2NsZWFyX2NvbXBvc2l0aW9uGAcgASgLMiwubWcucHJv",
-            "dG9jb2wub3ZlcmxheS5JTUVDbGVhckNvbXBvc2l0aW9uUHVzaBJJChRpbWVf",
-            "c2VsZWN0X2NhbmRpZGF0ZRgIIAEoCzIrLm1nLnByb3RvY29sLm92ZXJsYXku",
-            "SU1FU2VsZWN0Q2FuZGlkYXRlUHVzaBJGChJzdHJlYW1pbmdfc2V0dGluZ3MY",
-            "CSABKAsyKi5tZy5wcm90b2NvbC5vdmVybGF5LlN0cmVhbWluZ1NldHRpbmdz",
-            "UHVzaBJJChRzdHJlYW1pbmdfaG9zdF9zdGFydBgKIAEoCzIrLm1nLnByb3Rv",
-            "Y29sLm92ZXJsYXkuU3RyZWFtaW5nSG9zdFN0YXJ0UHVzaBJHChNzdHJlYW1p",
-            "bmdfaG9zdF9zdG9wGAsgASgLMioubWcucHJvdG9jb2wub3ZlcmxheS5TdHJl",
-            "YW1pbmdIb3N0U3RvcFB1c2gSRwoTc3RyZWFtaW5nX2hvc3Rfa2ljaxgMIAEo",
-            "CzIqLm1nLnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5nSG9zdEtpY2tQdXNo",
-            "ElUKGnN0cmVhbWluZ19ob3N0X3Blcm1pc3Npb25zGA0gASgLMjEubWcucHJv",
-            "dG9jb2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0UGVybWlzc2lvbnNQdXNoElYK",
-            "G3N0cmVhbWluZ19ob3N0X2NyZWF0ZV90b2tlbhgOIAEoCzIxLm1nLnByb3Rv",
-            "Y29sLm92ZXJsYXkuU3RyZWFtaW5nSG9zdENyZWF0ZVRva2VuUHVzaBJWChtz",
-            "dHJlYW1pbmdfaG9zdF9kZWNvZGVfdG9rZW4YDyABKAsyMS5tZy5wcm90b2Nv",
-            "bC5vdmVybGF5LlN0cmVhbWluZ0hvc3REZWNvZGVUb2tlblB1c2gScgoqc3Ry",
-            "ZWFtaW5nX2hvc3RfdXBkYXRlX2d1ZXN0X3JlbWFpbmluZ190aW1lGBAgASgL",
-            "Mj4ubWcucHJvdG9jb2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0VXBkYXRlR3Vl",
-            "c3RSZW1haW5pbmdUaW1lUHVzaCIxCghVcHN0cmVhbRIlCgNyZXEYASABKAsy",
-            "GC5tZy5wcm90b2NvbC5vdmVybGF5LlJlcSJcCgpEb3duc3RyZWFtEicKBHB1",
-            "c2gYASABKAsyGS5tZy5wcm90b2NvbC5vdmVybGF5LlB1c2gSJQoDcnNwGAIg",
-            "ASgLMhgubWcucHJvdG9jb2wub3ZlcmxheS5Sc3AiGwoMVXBkYXRlRnBzUmVx",
-            "EgsKA2ZwcxgBIAIoDQ=="));
+            "Cg1vdmVybGF5LnByb3RvEhNtZy5wcm90b2NvbC5vdmVybGF5IhUKE0dldENv",
+            "bmZpZ3VyYXRpb25SZXEiKwoTR2V0Q29uZmlndXJhdGlvblJzcBIUCgxsaWJy",
+            "YXJ5X3BhdGgYASACKAkiNgoIU3RhcnRSZXESDQoFd2lkdGgYASACKA0SDgoG",
+            "aGVpZ2h0GAIgAigNEgsKA3BpZBgDIAIoDSLHAQoPU3RhcnRTdWNjZXNzUnNw",
+            "EhoKEnNoYXJlZF9tZW1vcnlfbmFtZRgBIAIoCRIgChhzaGFyZWRfbWVtb3J5",
+            "X211dGV4X25hbWUYAiACKAkSEgoKcHJvZHVjdF9pZBgDIAIoDRIiChp1Ymlz",
+            "ZXJ2aWNlc19hcHBsaWNhdGlvbl9pZBgEIAEoCRIcChR1YmlzZXJ2aWNlc19z",
+            "cGFjZV9pZBgFIAEoCRIgChh2aXJ0dWFsX2NvbnRyb2xzX2VuYWJsZWQYBiAB",
+            "KAgiEQoPU3RhcnRGYWlsdXJlUnNwIoABCghTdGFydFJzcBI5CgtzdWNjZXNz",
+            "X3JzcBgBIAEoCzIkLm1nLnByb3RvY29sLm92ZXJsYXkuU3RhcnRTdWNjZXNz",
+            "UnNwEjkKC2ZhaWx1cmVfcnNwGAIgASgLMiQubWcucHJvdG9jb2wub3Zlcmxh",
+            "eS5TdGFydEZhaWx1cmVSc3AiKgoJUmVzaXplUmVxEg0KBXdpZHRoGAEgAigN",
+            "Eg4KBmhlaWdodBgCIAIoDSJQChBSZXNpemVTdWNjZXNzUnNwEhoKEnNoYXJl",
+            "ZF9tZW1vcnlfbmFtZRgBIAIoCRIgChhzaGFyZWRfbWVtb3J5X211dGV4X25h",
+            "bWUYAiACKAkiEgoQUmVzaXplRmFpbHVyZVJzcCKDAQoJUmVzaXplUnNwEjoK",
+            "C3N1Y2Nlc3NfcnNwGAEgASgLMiUubWcucHJvdG9jb2wub3ZlcmxheS5SZXNp",
+            "emVTdWNjZXNzUnNwEjoKC2ZhaWx1cmVfcnNwGAIgASgLMiUubWcucHJvdG9j",
+            "b2wub3ZlcmxheS5SZXNpemVGYWlsdXJlUnNwIm8KCVJlY3RhbmdsZRIVCg10",
+            "b3BfbGVmdF9wb3NYGAEgAigNEhUKDXRvcF9sZWZ0X3Bvc1kYAiACKA0SGQoR",
+            "Ym90dG9tX3JpZ2h0X3Bvc1gYAyACKA0SGQoRYm90dG9tX3JpZ2h0X3Bvc1kY",
+            "BCACKA0iWgoOVmlld1VwZGF0ZWRSc3ASNwoPZGlydHlSZWN0YW5nbGVzGAEg",
+            "AygLMh4ubWcucHJvdG9jb2wub3ZlcmxheS5SZWN0YW5nbGUSDwoHdmVyc2lv",
+            "bhgCIAIoDSIeCg1Gb2N1c0V2ZW50UmVxEg0KBWZvY3VzGAEgASgIIkcKEldp",
+            "bjMyS2V5TWVzc2FnZVJlcRIPCgdtZXNzYWdlGAEgAigFEg8KB3dfcGFyYW0Y",
+            "AiACKAUSDwoHbF9wYXJhbRgDIAIoBSKnAQoQQXBwbGVLZXlFdmVudFJlcRIM",
+            "CgR0eXBlGAEgAigFEhUKDW1vZGlmaWVyRmxhZ3MYAiACKAUSEQoJdGltZXN0",
+            "YW1wGAMgAigBEhIKCmNoYXJhY3RlcnMYBCACKAkSIwobY2hhcmFjdGVyc0ln",
+            "bm9yaW5nTW9kaWZpZXJzGAUgAigJEhEKCWlzQVJlcGVhdBgGIAIoBRIPCgdr",
+            "ZXlDb2RlGAcgAigNIicKFU1vdXNlQnV0dG9uUHJlc3NlZFJlcRIOCgZidXR0",
+            "b24YASACKAUiKAoWTW91c2VCdXR0b25SZWxlYXNlZFJlcRIOCgZidXR0b24Y",
+            "ASACKAUiJQoTTW91c2VEb3VibGVDbGlja1JlcRIOCgZidXR0b24YASACKAUi",
+            "TAoNTW91c2VNb3ZlZFJlcRIJCgF4GAEgAigFEgkKAXkYAiACKAUSEQoJbW9k",
+            "aWZpZXJzGAMgASgFEhIKCmlzX3ZpcnR1YWwYBCABKAgiOAoSTW91c2VXaGVl",
+            "bE1vdmVkUmVxEhAKCHNjcm9sbF94GAEgAigFEhAKCHNjcm9sbF95GAIgAigF",
+            "IicKDUxhbmdDaGFuZ2VSZXESFgoObGFuZ0FiYnJldmlhdGUYASABKAkiCwoJ",
+            "U2hvd1VpUmVxIgwKCkNsb3NlVWlSZXEiDgoMUmVmcmVzaFVpUmVxIhAKDkJ1",
+            "ZmZlclJlYWR5UmVxIjIKEENyZWF0ZVByb2Nlc3NSZXESCwoDcGlkGAEgAigN",
+            "EhEKCXN0YXJ0ZXJJZBgCIAIoDSIfChBDcmVhdGVQcm9jZXNzUnNwEgsKA3Bp",
+            "ZBgBIAIoDSIqChJWaWRlb0ZyYW1lUmVhZHlSZXESFAoMYnVmZmVyX2luZGV4",
+            "GAEgAigNIi0KFVZpZGVvRnJhbWVSZWxlYXNlZFJzcBIUCgxidWZmZXJfaW5k",
+            "ZXgYASACKA0ibAoVQ2FwdHVyZVNjcmVlbnNob3RQdXNoEhMKC2ZyYW1lX3dp",
+            "ZHRoGAEgAigNEhQKDGZyYW1lX2hlaWdodBgCIAIoDRITCgtidWZmZXJfbmFt",
+            "ZRgDIAIoCRITCgtidWZmZXJfc2l6ZRgEIAIoDSIfCgxVaU9wZW5lZFB1c2gS",
+            "DwoHc3VjY2VzcxgBIAIoCCIfCgxVaUNsb3NlZFB1c2gSDwoHc3VjY2VzcxgB",
+            "IAIoCCIZChdJTUVDbGVhckNvbXBvc2l0aW9uUHVzaCI6ChZJTUVTZWxlY3RD",
+            "YW5kaWRhdGVQdXNoEiAKGHNlbGVjdGVkX2NhbmRpZGF0ZV9pbmRleBgBIAIo",
+            "DSIlChBDdXJzb3JDaGFuZ2VQdXNoEhEKCWN1cnNvcl9pZBgBIAIoDSLRAQoW",
+            "U3RyZWFtaW5nSG9zdFN0YXJ0UHVzaBISCgpzZXNzaW9uX2lkGAEgAigJEhIK",
+            "CnViaV90aWNrZXQYAiACKAkSDgoGYXBwX2lkGAMgAigJEgsKA2VudhgEIAIo",
+            "CRIPCgdiaXRyYXRlGAUgAigNEhIKCnJlc29sdXRpb24YBiACKA0SCwoDZnBz",
+            "GAcgAigNEhEKCWdhbWVfbmFtZRgIIAIoCRIUCgxndWVzdHNfbGltaXQYCSAC",
+            "KA0SFwoPaG9zdF9wcm9maWxlX2lkGAogAigJIqoBChpTdHJlYW1pbmdIb3N0",
+            "U3RhcnRSZXNwb25zZRIOCgZyZXN1bHQYASACKAgSFAoMaG9zdF9wZWVyX2lk",
+            "GAIgASgJEj8KDHN0YXJ0X2NvbmZpZxgDIAEoCzIpLm1nLnByb3RvY29sLm92",
+            "ZXJsYXkuU3RyZWFtaW5nU3RhcnRDb25maWcSEQoJZXJyb3JfbXNnGAQgASgJ",
+            "EhIKCmVycm9yX2NvZGUYBSABKAUiZAodU3RyZWFtaW5nSG9zdEd1ZXN0UGVy",
+            "bWlzc2lvbnMSDwoHZ2FtZXBhZBgBIAIoCBIQCghrZXlib2FyZBgCIAIoCBIN",
+            "CgVtb3VzZRgDIAIoCBIRCglpbW1lcnNpdmUYBCACKAgibQoiU3RyZWFtaW5n",
+            "SG9zdEd1ZXN0U2V0dGluZ3NSZXNwb25zZRJHCgtwZXJtaXNzaW9ucxgBIAIo",
+            "CzIyLm1nLnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5nSG9zdEd1ZXN0UGVy",
+            "bWlzc2lvbnMipwEKHlN0cmVhbWluZ0hvc3RHdWVzdENvbm5lY3RlZFJlcRIQ",
+            "CghndWVzdF9pZBgBIAIoDRISCgpwcm9maWxlX2lkGAIgAigJEkkKCHNldHRp",
+            "bmdzGAMgAigLMjcubWcucHJvdG9jb2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0",
+            "R3Vlc3RTZXR0aW5nc1Jlc3BvbnNlEhQKDGNvbm5lY3RlZF90cxgEIAIoBCJJ",
+            "CiFTdHJlYW1pbmdIb3N0R3Vlc3REaXNjb25uZWN0ZWRSZXESEAoIZ3Vlc3Rf",
+            "aWQYASACKA0SEgoKcHJvZmlsZV9pZBgCIAIoCSIXChVTdHJlYW1pbmdIb3N0",
+            "U3RvcFB1c2giKQoVU3RyZWFtaW5nSG9zdEtpY2tQdXNoEhAKCGd1ZXN0X2lk",
+            "GAEgAigNIkkKFVN0cmVhbWluZ1NldHRpbmdzUHVzaBIPCgdiaXRyYXRlGAEg",
+            "AigNEhIKCnJlc29sdXRpb24YAiACKA0SCwoDZnBzGAMgAigNImoKHFN0cmVh",
+            "bWluZ0hvc3RQZXJtaXNzaW9uc1B1c2gSEQoJY2xpZW50X2lkGAEgAigNEh4K",
+            "Fm1vdXNlX2tleWJvYXJkX2FsbG93ZWQYAiACKAgSFwoPZ2FtZXBhZF9hbGxv",
+            "d2VkGAMgAigIInQKFFN0cmVhbWluZ1N0YXJ0Q29uZmlnEg0KBXdpZHRoGAEg",
+            "ASgNEg4KBmhlaWdodBgCIAEoDRIPCgdiaXRyYXRlGAMgASgNEhgKEGlzX2F1",
+            "ZGlvX2VuYWJsZWQYBCABKAgSEgoKaXNfZm9jdXNlZBgFIAEoCCImChRTdHJl",
+            "YW1pbmdIb3N0U3RvcFJlcRIOCgZyZXN1bHQYASACKAgiJgoUU3RyZWFtaW5n",
+            "U2V0dGluZ3NSZXESDgoGcmVzdWx0GAEgAigNIjoKE1N0cmVhbWluZ0xhdGVu",
+            "Y3lSZXESDwoHbGF0ZW5jeRgBIAIoDRISCgpwcm9maWxlX2lkGAIgAigJIk4K",
+            "F1N0cmVhbWluZ0hvc3RNZXRyaWNzUmVxEg8KB2xhdGVuY3kYASACKA0SDwoH",
+            "Yml0cmF0ZRgCIAIoAhIRCgljbGllbnRfaWQYAyACKA0iaQoUU3RyZWFtaW5n",
+            "VkdQRXZlbnRSZXESDgoGc291cmNlGAEgAigNEhIKCnByb2ZpbGVfaWQYAiAC",
+            "KAkSHAoUc3RyZWFtaW5nX2dhbWVwYWRfaWQYAyACKA0SDwoHdmlkX3BpZBgE",
+            "IAIoDSJxChxTdHJlYW1pbmdIb3N0Q3JlYXRlVG9rZW5QdXNoEhMKC3VzYWdl",
+            "X2xpbWl0GAEgAigNEhIKCmV4cGlyYXRpb24YAiACKA0SEgoKcHJvZmlsZV9p",
+            "ZBgDIAIoCRIUCgx0b2tlbl9udW1iZXIYBCACKA0iUgobU3RyZWFtaW5nSG9z",
+            "dENyZWF0ZVRva2VuUmVxEg4KBnJlc3VsdBgBIAIoCBINCgV0b2tlbhgCIAIo",
+            "CRIUCgx0b2tlbl9udW1iZXIYAyACKA0iQwocU3RyZWFtaW5nSG9zdERlY29k",
+            "ZVRva2VuUHVzaBINCgV0b2tlbhgBIAIoCRIUCgx0b2tlbl9udW1iZXIYAiAC",
+            "KA0ijAEKG1N0cmVhbWluZ0hvc3REZWNvZGVUb2tlblJlcRIOCgZyZXN1bHQY",
+            "ASACKAgSDgoGYXBwX2lkGAIgAigJEhAKCHNwYWNlX2lkGAMgAigJEhIKCnBy",
+            "b2R1Y3RfaWQYBCACKA0SFAoMdG9rZW5fbnVtYmVyGAUgAigNEhEKCWdhbWVf",
+            "bmFtZRgGIAIoCSImChVTdHJlYW1pbmdIb3N0Rm9jdXNSZXESDQoFZm9jdXMY",
+            "ASACKAgiVgopU3RyZWFtaW5nSG9zdFVwZGF0ZUd1ZXN0UmVtYWluaW5nVGlt",
+            "ZVB1c2gSEQoJY2xpZW50X2lkGAEgAigNEhYKDnJlbWFpbmluZ190aW1lGAIg",
+            "AigNIncKKFN0cmVhbWluZ0hvc3RVcGRhdGVHdWVzdFJlbWFpbmluZ1RpbWVS",
+            "ZXESDgoGcmVzdWx0GAEgAigIEhQKDGhvc3RfcGVlcl9pZBgCIAIoCRIRCgll",
+            "cnJvcl9tc2cYAyACKAkSEgoKZXJyb3JfY29kZRgEIAIoBSJMCiJTdHJlYW1p",
+            "bmdIb3N0VXBkYXRlQ3JlZGVudGlhbHNQdXNoEhIKCnViaV90aWNrZXQYASAC",
+            "KAkSEgoKc2Vzc2lvbl9pZBgCIAIoCSIXChVTdHJlYW1pbmdIb3N0UmVhZHlS",
+            "ZXEiMQobU3RyZWFtaW5nSG9zdFNpZ25hbEVycm9yUmVxEhIKCmVycm9yX2Nv",
+            "ZGUYASACKAUiUwoYU3RyZWFtaW5nSG9zdFNES0V2ZW50UmVxEhAKCHNldmVy",
+            "aXR5GAEgAigNEg8KB21lc3NhZ2UYAiACKAkSFAoMaG9zdF9wZWVyX2lkGAMg",
+            "AigJIikKElNjcmVlbnNob3RSZWFkeVJlcRITCgtpc1Z1bGthbkhEUhgBIAIo",
+            "CCIdChtTY3JlZW5zaG90Q2FwdHVyZUZhaWx1cmVSZXEiGAoWVmlkZW9DYXB0",
+            "dXJlRmFpbHVyZVJlcSIdCg1JTUVDb21taXRUZXh0EgwKBHRleHQYASABKAki",
+            "awoXSU1FQ29tcG9zaXRpb25VbmRlcmxpbmUSDAoEZnJvbRgBIAEoBRIKCgJ0",
+            "bxgCIAEoBRINCgVjb2xvchgDIAEoDRIYChBiYWNrZ3JvdW5kX2NvbG9yGAQg",
+            "ASgNEg0KBXRoaWNrGAUgASgFIoEBChRJTUVTZXRDb21wb3NpdGlvblJlcRIM",
+            "CgR0ZXh0GAEgASgJEhkKEWNvbXBvc2l0aW9uX3N0YXJ0GAIgASgFEkAKCnVu",
+            "ZGVybGluZXMYAyADKAsyLC5tZy5wcm90b2NvbC5vdmVybGF5LklNRUNvbXBv",
+            "c2l0aW9uVW5kZXJsaW5lIhkKF0lNRUNhbmNlbENvbXBvc2l0aW9uUmVxIkQK",
+            "FklNRVVwZGF0ZUNhbmRpZGF0ZXNSZXESEgoKY2FuZGlkYXRlcxgBIAMoCRIW",
+            "Cg5zZWxlY3RlZF9pbmRleBgCIAEoDSLKFgoDUmVxEjAKCXN0YXJ0X3JlcRgB",
+            "IAEoCzIdLm1nLnByb3RvY29sLm92ZXJsYXkuU3RhcnRSZXESMgoKcmVzaXpl",
+            "X3JlcRgCIAEoCzIeLm1nLnByb3RvY29sLm92ZXJsYXkuUmVzaXplUmVxEkcK",
+            "Fndpbl8zMl9rZXlfbWVzc2FnZV9yZXEYAyABKAsyJy5tZy5wcm90b2NvbC5v",
+            "dmVybGF5LldpbjMyS2V5TWVzc2FnZVJlcRJCChNhcHBsZV9rZXlfZXZlbnRf",
+            "cmVxGAQgASgLMiUubWcucHJvdG9jb2wub3ZlcmxheS5BcHBsZUtleUV2ZW50",
+            "UmVxEkwKGG1vdXNlX2J1dHRvbl9wcmVzc2VkX3JlcRgFIAEoCzIqLm1nLnBy",
+            "b3RvY29sLm92ZXJsYXkuTW91c2VCdXR0b25QcmVzc2VkUmVxEk4KGW1vdXNl",
+            "X2J1dHRvbl9yZWxlYXNlZF9yZXEYBiABKAsyKy5tZy5wcm90b2NvbC5vdmVy",
+            "bGF5Lk1vdXNlQnV0dG9uUmVsZWFzZWRSZXESOwoPbW91c2VfbW92ZWRfcmVx",
+            "GAcgASgLMiIubWcucHJvdG9jb2wub3ZlcmxheS5Nb3VzZU1vdmVkUmVxEkYK",
+            "FW1vdXNlX3doZWVsX21vdmVkX3JlcRgIIAEoCzInLm1nLnByb3RvY29sLm92",
+            "ZXJsYXkuTW91c2VXaGVlbE1vdmVkUmVxEjUKDGNsb3NlX3VpX3JlcRgKIAEo",
+            "CzIfLm1nLnByb3RvY29sLm92ZXJsYXkuQ2xvc2VVaVJlcRI5Cg5yZWZyZXNo",
+            "X3VpX3JlcRgLIAEoCzIhLm1nLnByb3RvY29sLm92ZXJsYXkuUmVmcmVzaFVp",
+            "UmVxEkcKFWdldF9jb25maWd1cmF0aW9uX3JlcRgMIAEoCzIoLm1nLnByb3Rv",
+            "Y29sLm92ZXJsYXkuR2V0Q29uZmlndXJhdGlvblJlcRJIChZtb3VzZV9kb3Vi",
+            "bGVfY2xpY2tfcmVxGA4gASgLMigubWcucHJvdG9jb2wub3ZlcmxheS5Nb3Vz",
+            "ZURvdWJsZUNsaWNrUmVxEj0KEGJ1ZmZlcl9yZWFkeV9yZXEYDyABKAsyIy5t",
+            "Zy5wcm90b2NvbC5vdmVybGF5LkJ1ZmZlclJlYWR5UmVxEkYKFXZpZGVvX2Zy",
+            "YW1lX3JlYWR5X3JlcRgQIAEoCzInLm1nLnByb3RvY29sLm92ZXJsYXkuVmlk",
+            "ZW9GcmFtZVJlYWR5UmVxEkUKFHNjcmVlbnNob3RfcmVhZHlfcmVxGBEgASgL",
+            "MicubWcucHJvdG9jb2wub3ZlcmxheS5TY3JlZW5zaG90UmVhZHlSZXESWAoe",
+            "c2NyZWVuc2hvdF9jYXB0dXJlX2ZhaWx1cmVfcmVxGBIgASgLMjAubWcucHJv",
+            "dG9jb2wub3ZlcmxheS5TY3JlZW5zaG90Q2FwdHVyZUZhaWx1cmVSZXESTgoZ",
+            "dmlkZW9fY2FwdHVyZV9mYWlsdXJlX3JlcRgTIAEoCzIrLm1nLnByb3RvY29s",
+            "Lm92ZXJsYXkuVmlkZW9DYXB0dXJlRmFpbHVyZVJlcRI7Cg9sYW5nX2NoYW5n",
+            "ZV9yZXEYFCABKAsyIi5tZy5wcm90b2NvbC5vdmVybGF5LkxhbmdDaGFuZ2VS",
+            "ZXESOQoOdXBkYXRlX2Zwc19yZXEYFSABKAsyIS5tZy5wcm90b2NvbC5vdmVy",
+            "bGF5LlVwZGF0ZUZwc1JlcRI7Cg9mb2N1c19ldmVudF9yZXEYFiABKAsyIi5t",
+            "Zy5wcm90b2NvbC5vdmVybGF5LkZvY3VzRXZlbnRSZXESPwoTaW1lX2NvbW1p",
+            "dF90ZXh0X3JlcRgXIAEoCzIiLm1nLnByb3RvY29sLm92ZXJsYXkuSU1FQ29t",
+            "bWl0VGV4dBJKChdpbWVfc2V0X2NvbXBvc2l0aW9uX3JlcRgYIAEoCzIpLm1n",
+            "LnByb3RvY29sLm92ZXJsYXkuSU1FU2V0Q29tcG9zaXRpb25SZXESUAoaaW1l",
+            "X2NhbmNlbF9jb21wb3NpdGlvbl9yZXEYGSABKAsyLC5tZy5wcm90b2NvbC5v",
+            "dmVybGF5LklNRUNhbmNlbENvbXBvc2l0aW9uUmVxEk4KGWltZV91cGRhdGVf",
+            "Y2FuZGlkYXRlc19yZXEYGiABKAsyKy5tZy5wcm90b2NvbC5vdmVybGF5LklN",
+            "RVVwZGF0ZUNhbmRpZGF0ZXNSZXESSQoWc3RyZWFtaW5nX3NldHRpbmdzX3Jl",
+            "cRgbIAEoCzIpLm1nLnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5nU2V0dGlu",
+            "Z3NSZXESVgodc3RyZWFtaW5nX2hvc3Rfc3RhcnRfcmVzcG9uc2UYHSABKAsy",
+            "Ly5tZy5wcm90b2NvbC5vdmVybGF5LlN0cmVhbWluZ0hvc3RTdGFydFJlc3Bv",
+            "bnNlEl8KInN0cmVhbWluZ19ob3N0X2d1ZXN0X2Nvbm5lY3RlZF9yZXEYHiAB",
+            "KAsyMy5tZy5wcm90b2NvbC5vdmVybGF5LlN0cmVhbWluZ0hvc3RHdWVzdENv",
+            "bm5lY3RlZFJlcRJlCiVzdHJlYW1pbmdfaG9zdF9ndWVzdF9kaXNjb25uZWN0",
+            "ZWRfcmVxGB8gASgLMjYubWcucHJvdG9jb2wub3ZlcmxheS5TdHJlYW1pbmdI",
+            "b3N0R3Vlc3REaXNjb25uZWN0ZWRSZXESSgoXc3RyZWFtaW5nX2hvc3Rfc3Rv",
+            "cF9yZXEYICABKAsyKS5tZy5wcm90b2NvbC5vdmVybGF5LlN0cmVhbWluZ0hv",
+            "c3RTdG9wUmVxElAKGnN0cmVhbWluZ19ob3N0X21ldHJpY3NfcmVxGCEgAygL",
+            "MiwubWcucHJvdG9jb2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0TWV0cmljc1Jl",
+            "cRJKChdzdHJlYW1pbmdfdmdwX2V2ZW50X3JlcRgiIAEoCzIpLm1nLnByb3Rv",
+            "Y29sLm92ZXJsYXkuU3RyZWFtaW5nVkdQRXZlbnRSZXESWQofc3RyZWFtaW5n",
+            "X2hvc3RfY3JlYXRlX3Rva2VuX3JlcRgjIAEoCzIwLm1nLnByb3RvY29sLm92",
+            "ZXJsYXkuU3RyZWFtaW5nSG9zdENyZWF0ZVRva2VuUmVxElkKH3N0cmVhbWlu",
+            "Z19ob3N0X2RlY29kZV90b2tlbl9yZXEYJCABKAsyMC5tZy5wcm90b2NvbC5v",
+            "dmVybGF5LlN0cmVhbWluZ0hvc3REZWNvZGVUb2tlblJlcRJMChhzdHJlYW1p",
+            "bmdfaG9zdF9mb2N1c19yZXEYJSABKAsyKi5tZy5wcm90b2NvbC5vdmVybGF5",
+            "LlN0cmVhbWluZ0hvc3RGb2N1c1JlcRJ1Ci5zdHJlYW1pbmdfaG9zdF91cGRh",
+            "dGVfZ3Vlc3RfcmVtYWluaW5nX3RpbWVfcmVxGCYgASgLMj0ubWcucHJvdG9j",
+            "b2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0VXBkYXRlR3Vlc3RSZW1haW5pbmdU",
+            "aW1lUmVxEkwKGHN0cmVhbWluZ19ob3N0X3JlYWR5X3JlcRgnIAEoCzIqLm1n",
+            "LnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5nSG9zdFJlYWR5UmVxElkKH3N0",
+            "cmVhbWluZ19ob3N0X3NpZ25hbF9lcnJvcl9yZXEYKCABKAsyMC5tZy5wcm90",
+            "b2NvbC5vdmVybGF5LlN0cmVhbWluZ0hvc3RTaWduYWxFcnJvclJlcRJTChxz",
+            "dHJlYW1pbmdfaG9zdF9zZGtfZXZlbnRfcmVxGCkgASgLMi0ubWcucHJvdG9j",
+            "b2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0U0RLRXZlbnRSZXEiwQIKA1JzcBIw",
+            "CglzdGFydF9yc3AYASABKAsyHS5tZy5wcm90b2NvbC5vdmVybGF5LlN0YXJ0",
+            "UnNwEjIKCnJlc2l6ZV9yc3AYAiABKAsyHi5tZy5wcm90b2NvbC5vdmVybGF5",
+            "LlJlc2l6ZVJzcBI9ChB2aWV3X3VwZGF0ZWRfcnNwGAMgASgLMiMubWcucHJv",
+            "dG9jb2wub3ZlcmxheS5WaWV3VXBkYXRlZFJzcBJHChVnZXRfY29uZmlndXJh",
+            "dGlvbl9yc3AYBCABKAsyKC5tZy5wcm90b2NvbC5vdmVybGF5LkdldENvbmZp",
+            "Z3VyYXRpb25Sc3ASTAoYdmlkZW9fZnJhbWVfcmVsZWFzZWRfcnNwGAYgASgL",
+            "MioubWcucHJvdG9jb2wub3ZlcmxheS5WaWRlb0ZyYW1lUmVsZWFzZWRSc3Ai",
+            "DwoNTXVsdGlwbGVMb2dpbiIQCg5Vc2VyQmFubmVkUHVzaCKKCgoEUHVzaBI6",
+            "Cg5tdWx0aXBsZV9sb2dpbhgBIAEoCzIiLm1nLnByb3RvY29sLm92ZXJsYXku",
+            "TXVsdGlwbGVMb2dpbhJGChJjYXB0dXJlX3NjcmVlbnNob3QYAiABKAsyKi5t",
+            "Zy5wcm90b2NvbC5vdmVybGF5LkNhcHR1cmVTY3JlZW5zaG90UHVzaBI8Cg1j",
+            "dXJzb3JfY2hhbmdlGAMgASgLMiUubWcucHJvdG9jb2wub3ZlcmxheS5DdXJz",
+            "b3JDaGFuZ2VQdXNoEjgKC3VzZXJfYmFubmVkGAQgASgLMiMubWcucHJvdG9j",
+            "b2wub3ZlcmxheS5Vc2VyQmFubmVkUHVzaBI0Cgl1aV9vcGVuZWQYBSABKAsy",
+            "IS5tZy5wcm90b2NvbC5vdmVybGF5LlVpT3BlbmVkUHVzaBI0Cgl1aV9jbG9z",
+            "ZWQYBiABKAsyIS5tZy5wcm90b2NvbC5vdmVybGF5LlVpQ2xvc2VkUHVzaBJL",
+            "ChVpbWVfY2xlYXJfY29tcG9zaXRpb24YByABKAsyLC5tZy5wcm90b2NvbC5v",
+            "dmVybGF5LklNRUNsZWFyQ29tcG9zaXRpb25QdXNoEkkKFGltZV9zZWxlY3Rf",
+            "Y2FuZGlkYXRlGAggASgLMisubWcucHJvdG9jb2wub3ZlcmxheS5JTUVTZWxl",
+            "Y3RDYW5kaWRhdGVQdXNoEkYKEnN0cmVhbWluZ19zZXR0aW5ncxgJIAEoCzIq",
+            "Lm1nLnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5nU2V0dGluZ3NQdXNoEkkK",
+            "FHN0cmVhbWluZ19ob3N0X3N0YXJ0GAogASgLMisubWcucHJvdG9jb2wub3Zl",
+            "cmxheS5TdHJlYW1pbmdIb3N0U3RhcnRQdXNoEkcKE3N0cmVhbWluZ19ob3N0",
+            "X3N0b3AYCyABKAsyKi5tZy5wcm90b2NvbC5vdmVybGF5LlN0cmVhbWluZ0hv",
+            "c3RTdG9wUHVzaBJHChNzdHJlYW1pbmdfaG9zdF9raWNrGAwgASgLMioubWcu",
+            "cHJvdG9jb2wub3ZlcmxheS5TdHJlYW1pbmdIb3N0S2lja1B1c2gSVQoac3Ry",
+            "ZWFtaW5nX2hvc3RfcGVybWlzc2lvbnMYDSABKAsyMS5tZy5wcm90b2NvbC5v",
+            "dmVybGF5LlN0cmVhbWluZ0hvc3RQZXJtaXNzaW9uc1B1c2gSVgobc3RyZWFt",
+            "aW5nX2hvc3RfY3JlYXRlX3Rva2VuGA4gASgLMjEubWcucHJvdG9jb2wub3Zl",
+            "cmxheS5TdHJlYW1pbmdIb3N0Q3JlYXRlVG9rZW5QdXNoElYKG3N0cmVhbWlu",
+            "Z19ob3N0X2RlY29kZV90b2tlbhgPIAEoCzIxLm1nLnByb3RvY29sLm92ZXJs",
+            "YXkuU3RyZWFtaW5nSG9zdERlY29kZVRva2VuUHVzaBJyCipzdHJlYW1pbmdf",
+            "aG9zdF91cGRhdGVfZ3Vlc3RfcmVtYWluaW5nX3RpbWUYECABKAsyPi5tZy5w",
+            "cm90b2NvbC5vdmVybGF5LlN0cmVhbWluZ0hvc3RVcGRhdGVHdWVzdFJlbWFp",
+            "bmluZ1RpbWVQdXNoEmIKIXN0cmVhbWluZ19ob3N0X3VwZGF0ZV9jcmVkZW50",
+            "aWFscxgRIAEoCzI3Lm1nLnByb3RvY29sLm92ZXJsYXkuU3RyZWFtaW5nSG9z",
+            "dFVwZGF0ZUNyZWRlbnRpYWxzUHVzaCIxCghVcHN0cmVhbRIlCgNyZXEYASAB",
+            "KAsyGC5tZy5wcm90b2NvbC5vdmVybGF5LlJlcSJcCgpEb3duc3RyZWFtEicK",
+            "BHB1c2gYASABKAsyGS5tZy5wcm90b2NvbC5vdmVybGF5LlB1c2gSJQoDcnNw",
+            "GAIgASgLMhgubWcucHJvdG9jb2wub3ZlcmxheS5Sc3AiGwoMVXBkYXRlRnBz",
+            "UmVxEgsKA2ZwcxgBIAIoDQ=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -290,7 +294,7 @@ namespace Uplay.Overlay {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingSettingsReq), global::Uplay.Overlay.StreamingSettingsReq.Parser, new[]{ "Result" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingLatencyReq), global::Uplay.Overlay.StreamingLatencyReq.Parser, new[]{ "Latency", "ProfileId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostMetricsReq), global::Uplay.Overlay.StreamingHostMetricsReq.Parser, new[]{ "Latency", "Bitrate", "ClientId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingVGPEventReq), global::Uplay.Overlay.StreamingVGPEventReq.Parser, new[]{ "Source", "ProfileId", "StreamingGamepadId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingVGPEventReq), global::Uplay.Overlay.StreamingVGPEventReq.Parser, new[]{ "Source", "ProfileId", "StreamingGamepadId", "VidPid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostCreateTokenPush), global::Uplay.Overlay.StreamingHostCreateTokenPush.Parser, new[]{ "UsageLimit", "Expiration", "ProfileId", "TokenNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostCreateTokenReq), global::Uplay.Overlay.StreamingHostCreateTokenReq.Parser, new[]{ "Result", "Token", "TokenNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostDecodeTokenPush), global::Uplay.Overlay.StreamingHostDecodeTokenPush.Parser, new[]{ "Token", "TokenNumber" }, null, null, null, null),
@@ -298,6 +302,7 @@ namespace Uplay.Overlay {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostFocusReq), global::Uplay.Overlay.StreamingHostFocusReq.Parser, new[]{ "Focus" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostUpdateGuestRemainingTimePush), global::Uplay.Overlay.StreamingHostUpdateGuestRemainingTimePush.Parser, new[]{ "ClientId", "RemainingTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostUpdateGuestRemainingTimeReq), global::Uplay.Overlay.StreamingHostUpdateGuestRemainingTimeReq.Parser, new[]{ "Result", "HostPeerId", "ErrorMsg", "ErrorCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostUpdateCredentialsPush), global::Uplay.Overlay.StreamingHostUpdateCredentialsPush.Parser, new[]{ "UbiTicket", "SessionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostReadyReq), global::Uplay.Overlay.StreamingHostReadyReq.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostSignalErrorReq), global::Uplay.Overlay.StreamingHostSignalErrorReq.Parser, new[]{ "ErrorCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.StreamingHostSDKEventReq), global::Uplay.Overlay.StreamingHostSDKEventReq.Parser, new[]{ "Severity", "Message", "HostPeerId" }, null, null, null, null),
@@ -313,7 +318,7 @@ namespace Uplay.Overlay {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.Rsp), global::Uplay.Overlay.Rsp.Parser, new[]{ "StartRsp", "ResizeRsp", "ViewUpdatedRsp", "GetConfigurationRsp", "VideoFrameReleasedRsp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.MultipleLogin), global::Uplay.Overlay.MultipleLogin.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.UserBannedPush), global::Uplay.Overlay.UserBannedPush.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.Push), global::Uplay.Overlay.Push.Parser, new[]{ "MultipleLogin", "CaptureScreenshot", "CursorChange", "UserBanned", "UiOpened", "UiClosed", "ImeClearComposition", "ImeSelectCandidate", "StreamingSettings", "StreamingHostStart", "StreamingHostStop", "StreamingHostKick", "StreamingHostPermissions", "StreamingHostCreateToken", "StreamingHostDecodeToken", "StreamingHostUpdateGuestRemainingTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.Push), global::Uplay.Overlay.Push.Parser, new[]{ "MultipleLogin", "CaptureScreenshot", "CursorChange", "UserBanned", "UiOpened", "UiClosed", "ImeClearComposition", "ImeSelectCandidate", "StreamingSettings", "StreamingHostStart", "StreamingHostStop", "StreamingHostKick", "StreamingHostPermissions", "StreamingHostCreateToken", "StreamingHostDecodeToken", "StreamingHostUpdateGuestRemainingTime", "StreamingHostUpdateCredentials" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.Upstream), global::Uplay.Overlay.Upstream.Parser, new[]{ "Req" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.Downstream), global::Uplay.Overlay.Downstream.Parser, new[]{ "Push", "Rsp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Overlay.UpdateFpsReq), global::Uplay.Overlay.UpdateFpsReq.Parser, new[]{ "Fps" }, null, null, null, null)
@@ -13298,6 +13303,7 @@ namespace Uplay.Overlay {
       source_ = other.source_;
       profileId_ = other.profileId_;
       streamingGamepadId_ = other.streamingGamepadId_;
+      vidPid_ = other.vidPid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -13387,6 +13393,33 @@ namespace Uplay.Overlay {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "vid_pid" field.</summary>
+    public const int VidPidFieldNumber = 4;
+    private readonly static uint VidPidDefaultValue = 0;
+
+    private uint vidPid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint VidPid {
+      get { if ((_hasBits0 & 4) != 0) { return vidPid_; } else { return VidPidDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        vidPid_ = value;
+      }
+    }
+    /// <summary>Gets whether the "vid_pid" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVidPid {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "vid_pid" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVidPid() {
+      _hasBits0 &= ~4;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -13405,6 +13438,7 @@ namespace Uplay.Overlay {
       if (Source != other.Source) return false;
       if (ProfileId != other.ProfileId) return false;
       if (StreamingGamepadId != other.StreamingGamepadId) return false;
+      if (VidPid != other.VidPid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -13415,6 +13449,7 @@ namespace Uplay.Overlay {
       if (HasSource) hash ^= Source.GetHashCode();
       if (HasProfileId) hash ^= ProfileId.GetHashCode();
       if (HasStreamingGamepadId) hash ^= StreamingGamepadId.GetHashCode();
+      if (HasVidPid) hash ^= VidPid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -13445,6 +13480,10 @@ namespace Uplay.Overlay {
         output.WriteRawTag(24);
         output.WriteUInt32(StreamingGamepadId);
       }
+      if (HasVidPid) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(VidPid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -13467,6 +13506,10 @@ namespace Uplay.Overlay {
         output.WriteRawTag(24);
         output.WriteUInt32(StreamingGamepadId);
       }
+      if (HasVidPid) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(VidPid);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -13485,6 +13528,9 @@ namespace Uplay.Overlay {
       }
       if (HasStreamingGamepadId) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StreamingGamepadId);
+      }
+      if (HasVidPid) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(VidPid);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -13506,6 +13552,9 @@ namespace Uplay.Overlay {
       }
       if (other.HasStreamingGamepadId) {
         StreamingGamepadId = other.StreamingGamepadId;
+      }
+      if (other.HasVidPid) {
+        VidPid = other.VidPid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -13534,6 +13583,10 @@ namespace Uplay.Overlay {
             StreamingGamepadId = input.ReadUInt32();
             break;
           }
+          case 32: {
+            VidPid = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -13559,6 +13612,10 @@ namespace Uplay.Overlay {
           }
           case 24: {
             StreamingGamepadId = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            VidPid = input.ReadUInt32();
             break;
           }
         }
@@ -15782,6 +15839,260 @@ namespace Uplay.Overlay {
 
   }
 
+  public sealed partial class StreamingHostUpdateCredentialsPush : pb::IMessage<StreamingHostUpdateCredentialsPush>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StreamingHostUpdateCredentialsPush> _parser = new pb::MessageParser<StreamingHostUpdateCredentialsPush>(() => new StreamingHostUpdateCredentialsPush());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StreamingHostUpdateCredentialsPush> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[58]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamingHostUpdateCredentialsPush() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamingHostUpdateCredentialsPush(StreamingHostUpdateCredentialsPush other) : this() {
+      ubiTicket_ = other.ubiTicket_;
+      sessionId_ = other.sessionId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamingHostUpdateCredentialsPush Clone() {
+      return new StreamingHostUpdateCredentialsPush(this);
+    }
+
+    /// <summary>Field number for the "ubi_ticket" field.</summary>
+    public const int UbiTicketFieldNumber = 1;
+    private readonly static string UbiTicketDefaultValue = "";
+
+    private string ubiTicket_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UbiTicket {
+      get { return ubiTicket_ ?? UbiTicketDefaultValue; }
+      set {
+        ubiTicket_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "ubi_ticket" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUbiTicket {
+      get { return ubiTicket_ != null; }
+    }
+    /// <summary>Clears the value of the "ubi_ticket" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUbiTicket() {
+      ubiTicket_ = null;
+    }
+
+    /// <summary>Field number for the "session_id" field.</summary>
+    public const int SessionIdFieldNumber = 2;
+    private readonly static string SessionIdDefaultValue = "";
+
+    private string sessionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SessionId {
+      get { return sessionId_ ?? SessionIdDefaultValue; }
+      set {
+        sessionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "session_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSessionId {
+      get { return sessionId_ != null; }
+    }
+    /// <summary>Clears the value of the "session_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSessionId() {
+      sessionId_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StreamingHostUpdateCredentialsPush);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StreamingHostUpdateCredentialsPush other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UbiTicket != other.UbiTicket) return false;
+      if (SessionId != other.SessionId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasUbiTicket) hash ^= UbiTicket.GetHashCode();
+      if (HasSessionId) hash ^= SessionId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasUbiTicket) {
+        output.WriteRawTag(10);
+        output.WriteString(UbiTicket);
+      }
+      if (HasSessionId) {
+        output.WriteRawTag(18);
+        output.WriteString(SessionId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasUbiTicket) {
+        output.WriteRawTag(10);
+        output.WriteString(UbiTicket);
+      }
+      if (HasSessionId) {
+        output.WriteRawTag(18);
+        output.WriteString(SessionId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasUbiTicket) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UbiTicket);
+      }
+      if (HasSessionId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StreamingHostUpdateCredentialsPush other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasUbiTicket) {
+        UbiTicket = other.UbiTicket;
+      }
+      if (other.HasSessionId) {
+        SessionId = other.SessionId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            UbiTicket = input.ReadString();
+            break;
+          }
+          case 18: {
+            SessionId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            UbiTicket = input.ReadString();
+            break;
+          }
+          case 18: {
+            SessionId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class StreamingHostReadyReq : pb::IMessage<StreamingHostReadyReq>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -15796,7 +16107,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[58]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[59]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15949,7 +16260,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[59]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[60]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15982,12 +16293,12 @@ namespace Uplay.Overlay {
 
     /// <summary>Field number for the "error_code" field.</summary>
     public const int ErrorCodeFieldNumber = 1;
-    private readonly static uint ErrorCodeDefaultValue = 0;
+    private readonly static int ErrorCodeDefaultValue = 0;
 
-    private uint errorCode_;
+    private int errorCode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ErrorCode {
+    public int ErrorCode {
       get { if ((_hasBits0 & 1) != 0) { return errorCode_; } else { return ErrorCodeDefaultValue; } }
       set {
         _hasBits0 |= 1;
@@ -16051,7 +16362,7 @@ namespace Uplay.Overlay {
     #else
       if (HasErrorCode) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ErrorCode);
+        output.WriteInt32(ErrorCode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -16065,7 +16376,7 @@ namespace Uplay.Overlay {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HasErrorCode) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ErrorCode);
+        output.WriteInt32(ErrorCode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -16078,7 +16389,7 @@ namespace Uplay.Overlay {
     public int CalculateSize() {
       int size = 0;
       if (HasErrorCode) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ErrorCode);
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ErrorCode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -16111,7 +16422,7 @@ namespace Uplay.Overlay {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ErrorCode = input.ReadUInt32();
+            ErrorCode = input.ReadInt32();
             break;
           }
         }
@@ -16130,7 +16441,7 @@ namespace Uplay.Overlay {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ErrorCode = input.ReadUInt32();
+            ErrorCode = input.ReadInt32();
             break;
           }
         }
@@ -16155,7 +16466,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[60]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[61]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16463,7 +16774,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[61]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[62]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16668,7 +16979,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[62]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[63]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16820,7 +17131,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[63]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[64]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16972,7 +17283,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[64]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[65]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17176,7 +17487,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[65]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[66]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17590,7 +17901,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[66]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[67]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17872,7 +18183,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[67]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[68]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18025,7 +18336,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[68]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[69]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18256,7 +18567,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[69]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[70]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20136,7 +20447,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[70]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[71]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20518,7 +20829,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[71]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[72]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20670,7 +20981,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[72]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[73]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20822,7 +21133,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[73]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[74]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20858,6 +21169,7 @@ namespace Uplay.Overlay {
       streamingHostCreateToken_ = other.streamingHostCreateToken_ != null ? other.streamingHostCreateToken_.Clone() : null;
       streamingHostDecodeToken_ = other.streamingHostDecodeToken_ != null ? other.streamingHostDecodeToken_.Clone() : null;
       streamingHostUpdateGuestRemainingTime_ = other.streamingHostUpdateGuestRemainingTime_ != null ? other.streamingHostUpdateGuestRemainingTime_.Clone() : null;
+      streamingHostUpdateCredentials_ = other.streamingHostUpdateCredentials_ != null ? other.streamingHostUpdateCredentials_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -21059,6 +21371,18 @@ namespace Uplay.Overlay {
       }
     }
 
+    /// <summary>Field number for the "streaming_host_update_credentials" field.</summary>
+    public const int StreamingHostUpdateCredentialsFieldNumber = 17;
+    private global::Uplay.Overlay.StreamingHostUpdateCredentialsPush streamingHostUpdateCredentials_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.Overlay.StreamingHostUpdateCredentialsPush StreamingHostUpdateCredentials {
+      get { return streamingHostUpdateCredentials_; }
+      set {
+        streamingHostUpdateCredentials_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -21090,6 +21414,7 @@ namespace Uplay.Overlay {
       if (!object.Equals(StreamingHostCreateToken, other.StreamingHostCreateToken)) return false;
       if (!object.Equals(StreamingHostDecodeToken, other.StreamingHostDecodeToken)) return false;
       if (!object.Equals(StreamingHostUpdateGuestRemainingTime, other.StreamingHostUpdateGuestRemainingTime)) return false;
+      if (!object.Equals(StreamingHostUpdateCredentials, other.StreamingHostUpdateCredentials)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -21113,6 +21438,7 @@ namespace Uplay.Overlay {
       if (streamingHostCreateToken_ != null) hash ^= StreamingHostCreateToken.GetHashCode();
       if (streamingHostDecodeToken_ != null) hash ^= StreamingHostDecodeToken.GetHashCode();
       if (streamingHostUpdateGuestRemainingTime_ != null) hash ^= StreamingHostUpdateGuestRemainingTime.GetHashCode();
+      if (streamingHostUpdateCredentials_ != null) hash ^= StreamingHostUpdateCredentials.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -21195,6 +21521,10 @@ namespace Uplay.Overlay {
         output.WriteRawTag(130, 1);
         output.WriteMessage(StreamingHostUpdateGuestRemainingTime);
       }
+      if (streamingHostUpdateCredentials_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(StreamingHostUpdateCredentials);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -21269,6 +21599,10 @@ namespace Uplay.Overlay {
         output.WriteRawTag(130, 1);
         output.WriteMessage(StreamingHostUpdateGuestRemainingTime);
       }
+      if (streamingHostUpdateCredentials_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(StreamingHostUpdateCredentials);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -21326,6 +21660,9 @@ namespace Uplay.Overlay {
       }
       if (streamingHostUpdateGuestRemainingTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(StreamingHostUpdateGuestRemainingTime);
+      }
+      if (streamingHostUpdateCredentials_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(StreamingHostUpdateCredentials);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -21434,6 +21771,12 @@ namespace Uplay.Overlay {
           StreamingHostUpdateGuestRemainingTime = new global::Uplay.Overlay.StreamingHostUpdateGuestRemainingTimePush();
         }
         StreamingHostUpdateGuestRemainingTime.MergeFrom(other.StreamingHostUpdateGuestRemainingTime);
+      }
+      if (other.streamingHostUpdateCredentials_ != null) {
+        if (streamingHostUpdateCredentials_ == null) {
+          StreamingHostUpdateCredentials = new global::Uplay.Overlay.StreamingHostUpdateCredentialsPush();
+        }
+        StreamingHostUpdateCredentials.MergeFrom(other.StreamingHostUpdateCredentials);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -21560,6 +21903,13 @@ namespace Uplay.Overlay {
               StreamingHostUpdateGuestRemainingTime = new global::Uplay.Overlay.StreamingHostUpdateGuestRemainingTimePush();
             }
             input.ReadMessage(StreamingHostUpdateGuestRemainingTime);
+            break;
+          }
+          case 138: {
+            if (streamingHostUpdateCredentials_ == null) {
+              StreamingHostUpdateCredentials = new global::Uplay.Overlay.StreamingHostUpdateCredentialsPush();
+            }
+            input.ReadMessage(StreamingHostUpdateCredentials);
             break;
           }
         }
@@ -21689,6 +22039,13 @@ namespace Uplay.Overlay {
             input.ReadMessage(StreamingHostUpdateGuestRemainingTime);
             break;
           }
+          case 138: {
+            if (streamingHostUpdateCredentials_ == null) {
+              StreamingHostUpdateCredentials = new global::Uplay.Overlay.StreamingHostUpdateCredentialsPush();
+            }
+            input.ReadMessage(StreamingHostUpdateCredentials);
+            break;
+          }
         }
       }
     }
@@ -21710,7 +22067,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[74]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[75]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21908,7 +22265,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[75]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[76]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22153,7 +22510,7 @@ namespace Uplay.Overlay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[76]; }
+      get { return global::Uplay.Overlay.OverlayReflection.Descriptor.MessageTypes[77]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

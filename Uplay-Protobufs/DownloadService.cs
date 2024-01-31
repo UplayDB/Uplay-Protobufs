@@ -24,40 +24,40 @@ namespace Uplay.DownloadService {
     static DownloadServiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJ1cGNfZHVtcF8xMC9kb3dubG9hZF9zZXJ2aWNlLnByb3RvEhxtZy5wcm90",
-            "b2NvbC5kb3dubG9hZF9zZXJ2aWNlIocBCgZVcmxSZXESQgoMdXJsX3JlcXVl",
-            "c3RzGAEgAygLMiwubWcucHJvdG9jb2wuZG93bmxvYWRfc2VydmljZS5VcmxS",
-            "ZXEuUmVxdWVzdBo5CgdSZXF1ZXN0EhIKCnByb2R1Y3RfaWQYASABKA0SGgoS",
-            "cmVsYXRpdmVfZmlsZV9wYXRoGAIgAygJIs4CCgZVcmxSc3ASRwoNdXJsX3Jl",
-            "c3BvbnNlcxgBIAMoCzIwLm1nLnByb3RvY29sLmRvd25sb2FkX3NlcnZpY2Uu",
-            "VXJsUnNwLlVybFJlc3BvbnNlEhMKC3R0bF9zZWNvbmRzGAIgASgNGpQBCgtV",
-            "cmxSZXNwb25zZRI7CgZyZXN1bHQYASABKA4yKy5tZy5wcm90b2NvbC5kb3du",
-            "bG9hZF9zZXJ2aWNlLlVybFJzcC5SZXN1bHQSSAoNZG93bmxvYWRfdXJscxgC",
-            "IAMoCzIxLm1nLnByb3RvY29sLmRvd25sb2FkX3NlcnZpY2UuVXJsUnNwLkRv",
-            "d25sb2FkVXJscxocCgxEb3dubG9hZFVybHMSDAoEdXJscxgBIAMoCSIxCgZS",
-            "ZXN1bHQSEgoOUmVzdWx0X1N1Y2Nlc3MQABITCg9SZXN1bHRfTm90T3duZWQQ",
-            "ASJ2Cg1Jbml0aWFsaXplUmVxEhIKCnByb2R1Y3RfaWQYASABKA0SEQoJYnJh",
-            "bmNoX2lkGAIgASgNEhIKCmV4cGlyYXRpb24YAyABKAQSEQoJc2lnbmF0dXJl",
-            "GAQgASgJEhcKD293bmVyc2hpcF90b2tlbhgFIAEoCSIbCg1Jbml0aWFsaXpl",
-            "UnNwEgoKAm9rGAEgASgIItIBCgNSZXESEgoKcmVxdWVzdF9pZBgBIAEoDRJD",
-            "Cg5pbml0aWFsaXplX3JlcRgCIAEoCzIrLm1nLnByb3RvY29sLmRvd25sb2Fk",
-            "X3NlcnZpY2UuSW5pdGlhbGl6ZVJlcRI1Cgd1cmxfcmVxGAMgASgLMiQubWcu",
-            "cHJvdG9jb2wuZG93bmxvYWRfc2VydmljZS5VcmxSZXESOwoNdXJsX3JlcV9j",
-            "b3ZpZBgEIAEoCzIkLm1nLnByb3RvY29sLmRvd25sb2FkX3NlcnZpY2UuVXJs",
-            "UmVxIpUBCgNSc3ASEgoKcmVxdWVzdF9pZBgBIAEoDRJDCg5pbml0aWFsaXpl",
-            "X3JzcBgCIAEoCzIrLm1nLnByb3RvY29sLmRvd25sb2FkX3NlcnZpY2UuSW5p",
-            "dGlhbGl6ZVJzcBI1Cgd1cmxfcnNwGAMgASgLMiQubWcucHJvdG9jb2wuZG93",
-            "bmxvYWRfc2VydmljZS5VcmxSc3AiPgoIVXBzdHJlYW0SMgoHcmVxdWVzdBgB",
-            "IAEoCzIhLm1nLnByb3RvY29sLmRvd25sb2FkX3NlcnZpY2UuUmVxIkEKCkRv",
-            "d25zdHJlYW0SMwoIcmVzcG9uc2UYASABKAsyIS5tZy5wcm90b2NvbC5kb3du",
-            "bG9hZF9zZXJ2aWNlLlJzcGIGcHJvdG8z"));
+            "ChZkb3dubG9hZF9zZXJ2aWNlLnByb3RvEhxtZy5wcm90b2NvbC5kb3dubG9h",
+            "ZF9zZXJ2aWNlIocBCgZVcmxSZXESQgoMdXJsX3JlcXVlc3RzGAEgAygLMiwu",
+            "bWcucHJvdG9jb2wuZG93bmxvYWRfc2VydmljZS5VcmxSZXEuUmVxdWVzdBo5",
+            "CgdSZXF1ZXN0EhIKCnByb2R1Y3RfaWQYASABKA0SGgoScmVsYXRpdmVfZmls",
+            "ZV9wYXRoGAIgAygJIs4CCgZVcmxSc3ASRwoNdXJsX3Jlc3BvbnNlcxgBIAMo",
+            "CzIwLm1nLnByb3RvY29sLmRvd25sb2FkX3NlcnZpY2UuVXJsUnNwLlVybFJl",
+            "c3BvbnNlEhMKC3R0bF9zZWNvbmRzGAIgASgNGpQBCgtVcmxSZXNwb25zZRI7",
+            "CgZyZXN1bHQYASABKA4yKy5tZy5wcm90b2NvbC5kb3dubG9hZF9zZXJ2aWNl",
+            "LlVybFJzcC5SZXN1bHQSSAoNZG93bmxvYWRfdXJscxgCIAMoCzIxLm1nLnBy",
+            "b3RvY29sLmRvd25sb2FkX3NlcnZpY2UuVXJsUnNwLkRvd25sb2FkVXJscxoc",
+            "CgxEb3dubG9hZFVybHMSDAoEdXJscxgBIAMoCSIxCgZSZXN1bHQSEgoOUmVz",
+            "dWx0X1N1Y2Nlc3MQABITCg9SZXN1bHRfTm90T3duZWQQASKKAQoNSW5pdGlh",
+            "bGl6ZVJlcRISCgpwcm9kdWN0X2lkGAEgASgNEhEKCWJyYW5jaF9pZBgCIAEo",
+            "DRISCgpleHBpcmF0aW9uGAMgASgEEhEKCXNpZ25hdHVyZRgEIAEoCRIXCg9v",
+            "d25lcnNoaXBfdG9rZW4YBSABKAkSEgoKbmV0d29ya19pZBgGIAEoCSIbCg1J",
+            "bml0aWFsaXplUnNwEgoKAm9rGAEgASgIItIBCgNSZXESEgoKcmVxdWVzdF9p",
+            "ZBgBIAEoDRJDCg5pbml0aWFsaXplX3JlcRgCIAEoCzIrLm1nLnByb3RvY29s",
+            "LmRvd25sb2FkX3NlcnZpY2UuSW5pdGlhbGl6ZVJlcRI1Cgd1cmxfcmVxGAMg",
+            "ASgLMiQubWcucHJvdG9jb2wuZG93bmxvYWRfc2VydmljZS5VcmxSZXESOwoN",
+            "dXJsX3JlcV9jb3ZpZBgEIAEoCzIkLm1nLnByb3RvY29sLmRvd25sb2FkX3Nl",
+            "cnZpY2UuVXJsUmVxIpUBCgNSc3ASEgoKcmVxdWVzdF9pZBgBIAEoDRJDCg5p",
+            "bml0aWFsaXplX3JzcBgCIAEoCzIrLm1nLnByb3RvY29sLmRvd25sb2FkX3Nl",
+            "cnZpY2UuSW5pdGlhbGl6ZVJzcBI1Cgd1cmxfcnNwGAMgASgLMiQubWcucHJv",
+            "dG9jb2wuZG93bmxvYWRfc2VydmljZS5VcmxSc3AiPgoIVXBzdHJlYW0SMgoH",
+            "cmVxdWVzdBgBIAEoCzIhLm1nLnByb3RvY29sLmRvd25sb2FkX3NlcnZpY2Uu",
+            "UmVxIkEKCkRvd25zdHJlYW0SMwoIcmVzcG9uc2UYASABKAsyIS5tZy5wcm90",
+            "b2NvbC5kb3dubG9hZF9zZXJ2aWNlLlJzcGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadService.UrlReq), global::Uplay.DownloadService.UrlReq.Parser, new[]{ "UrlRequests" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadService.UrlReq.Types.Request), global::Uplay.DownloadService.UrlReq.Types.Request.Parser, new[]{ "ProductId", "RelativeFilePath" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadService.UrlRsp), global::Uplay.DownloadService.UrlRsp.Parser, new[]{ "UrlResponses", "TtlSeconds" }, null, new[]{ typeof(global::Uplay.DownloadService.UrlRsp.Types.Result) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadService.UrlRsp.Types.UrlResponse), global::Uplay.DownloadService.UrlRsp.Types.UrlResponse.Parser, new[]{ "Result", "DownloadUrls" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadService.UrlRsp.Types.DownloadUrls), global::Uplay.DownloadService.UrlRsp.Types.DownloadUrls.Parser, new[]{ "Urls" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadService.InitializeReq), global::Uplay.DownloadService.InitializeReq.Parser, new[]{ "ProductId", "BranchId", "Expiration", "Signature", "OwnershipToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadService.InitializeReq), global::Uplay.DownloadService.InitializeReq.Parser, new[]{ "ProductId", "BranchId", "Expiration", "Signature", "OwnershipToken", "NetworkId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadService.InitializeRsp), global::Uplay.DownloadService.InitializeRsp.Parser, new[]{ "Ok" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadService.Req), global::Uplay.DownloadService.Req.Parser, new[]{ "RequestId", "InitializeReq", "UrlReq", "UrlReqCovid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.DownloadService.Rsp), global::Uplay.DownloadService.Rsp.Parser, new[]{ "RequestId", "InitializeRsp", "UrlRsp" }, null, null, null, null),
@@ -1130,6 +1130,7 @@ namespace Uplay.DownloadService {
       expiration_ = other.expiration_;
       signature_ = other.signature_;
       ownershipToken_ = other.ownershipToken_;
+      networkId_ = other.networkId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1199,6 +1200,18 @@ namespace Uplay.DownloadService {
       }
     }
 
+    /// <summary>Field number for the "network_id" field.</summary>
+    public const int NetworkIdFieldNumber = 6;
+    private string networkId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NetworkId {
+      get { return networkId_; }
+      set {
+        networkId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1219,6 +1232,7 @@ namespace Uplay.DownloadService {
       if (Expiration != other.Expiration) return false;
       if (Signature != other.Signature) return false;
       if (OwnershipToken != other.OwnershipToken) return false;
+      if (NetworkId != other.NetworkId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1231,6 +1245,7 @@ namespace Uplay.DownloadService {
       if (Expiration != 0UL) hash ^= Expiration.GetHashCode();
       if (Signature.Length != 0) hash ^= Signature.GetHashCode();
       if (OwnershipToken.Length != 0) hash ^= OwnershipToken.GetHashCode();
+      if (NetworkId.Length != 0) hash ^= NetworkId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1269,6 +1284,10 @@ namespace Uplay.DownloadService {
         output.WriteRawTag(42);
         output.WriteString(OwnershipToken);
       }
+      if (NetworkId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(NetworkId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1299,6 +1318,10 @@ namespace Uplay.DownloadService {
         output.WriteRawTag(42);
         output.WriteString(OwnershipToken);
       }
+      if (NetworkId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(NetworkId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1323,6 +1346,9 @@ namespace Uplay.DownloadService {
       }
       if (OwnershipToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OwnershipToken);
+      }
+      if (NetworkId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NetworkId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1350,6 +1376,9 @@ namespace Uplay.DownloadService {
       }
       if (other.OwnershipToken.Length != 0) {
         OwnershipToken = other.OwnershipToken;
+      }
+      if (other.NetworkId.Length != 0) {
+        NetworkId = other.NetworkId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1386,6 +1415,10 @@ namespace Uplay.DownloadService {
             OwnershipToken = input.ReadString();
             break;
           }
+          case 50: {
+            NetworkId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1419,6 +1452,10 @@ namespace Uplay.DownloadService {
           }
           case 42: {
             OwnershipToken = input.ReadString();
+            break;
+          }
+          case 50: {
+            NetworkId = input.ReadString();
             break;
           }
         }

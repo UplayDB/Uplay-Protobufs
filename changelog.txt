@@ -1,5 +1,25 @@
 --------------------------------------------------------------
- 140.0.10857.0		2023 Apr 13 -
+ 149.2.11028.0		2024 Jan 31 -
+--------------------------------------------------------------
+* Update from 10872 to 1
+* Updated Google.Protobuf
+
+
+--------------------------------------------------------------
+ 142.0.10872.0		2023 May 31 - 2024 Jan 31
+--------------------------------------------------------------
+* Update from 10857 to 10872
+* ControlPanel.cs Deleted
+* DownloadService.cs Updated
+* Ownership.cs Updated
+* Statistics.cs Updated
+* Overlay.cs Updated
+* Mini update to all files
+* Updated Google.Protobuf
+
+
+--------------------------------------------------------------
+ 140.0.10857.0		2023 Apr 13 - May 31
 --------------------------------------------------------------
 * Update from 10843 to 10857
 * GameCatalogExtension.cs Updated
