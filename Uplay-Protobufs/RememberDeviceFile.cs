@@ -24,13 +24,13 @@ namespace Uplay.RememberDeviceFile {
     static RememberDeviceFileReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpyZW1lbWJlcl9kZXZpY2VfZmlsZS5wcm90bxIgbWcucHJvdG9jb2wucmVt",
-            "ZW1iZXJfZGV2aWNlX2ZpbGUicwoEVXNlchIUCgphY2NvdW50X2lkGAEgASgJ",
-            "SAASFAoKZW1haWxfaGFzaBgCIAEoCUgBEhMKCXJkX3RpY2tldBgDIAEoCUgC",
-            "Qg0KC19hY2NvdW50X2lkQg0KC19lbWFpbF9oYXNoQgwKCl9yZF90aWNrZXQi",
-            "ZgoOVXNlckxvZ2luQ2FjaGUSNQoFdXNlcnMYAiADKAsyJi5tZy5wcm90b2Nv",
-            "bC5yZW1lbWJlcl9kZXZpY2VfZmlsZS5Vc2VyEhEKB3ZlcnNpb24YASABKA1I",
-            "AEIKCghfdmVyc2lvbmIGcHJvdG8z"));
+            "CiB1cGxheS9yZW1lbWJlcl9kZXZpY2VfZmlsZS5wcm90bxIgbWcucHJvdG9j",
+            "b2wucmVtZW1iZXJfZGV2aWNlX2ZpbGUicwoEVXNlchIUCgphY2NvdW50X2lk",
+            "GAEgASgJSAASFAoKZW1haWxfaGFzaBgCIAEoCUgBEhMKCXJkX3RpY2tldBgD",
+            "IAEoCUgCQg0KC19hY2NvdW50X2lkQg0KC19lbWFpbF9oYXNoQgwKCl9yZF90",
+            "aWNrZXQiZgoOVXNlckxvZ2luQ2FjaGUSNQoFdXNlcnMYAiADKAsyJi5tZy5w",
+            "cm90b2NvbC5yZW1lbWJlcl9kZXZpY2VfZmlsZS5Vc2VyEhEKB3ZlcnNpb24Y",
+            "ASABKA1IAEIKCghfdmVyc2lvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

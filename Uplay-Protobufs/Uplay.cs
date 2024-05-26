@@ -24,42 +24,46 @@ namespace Uplay.Uplay {
     static UplayReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgtVcGxheS5wcm90bxIRbWcucHJvdG9jb2wudXBsYXkiOAoLQWNoaWV2ZW1l",
-            "bnQSFgoOYWNoaWV2ZW1lbnRfaWQYASACKA0SEQoJdGltZXN0YW1wGAIgASgE",
-            "IkQKDEFjaGlldmVtZW50cxI0CgxhY2hpZXZlbWVudHMYASADKAsyHi5tZy5w",
-            "cm90b2NvbC51cGxheS5BY2hpZXZlbWVudCIyCgdQcm9kdWN0EhIKCnByb2R1",
-            "Y3RfaWQYASACKAkSEwoLcGxhdGZvcm1faWQYAiACKAkieQoTUHJvZHVjdEFj",
-            "aGlldmVtZW50cxIrCgdwcm9kdWN0GAEgAigLMhoubWcucHJvdG9jb2wudXBs",
-            "YXkuUHJvZHVjdBI1CgxhY2hpZXZlbWVudHMYAiACKAsyHy5tZy5wcm90b2Nv",
-            "bC51cGxheS5BY2hpZXZlbWVudHMiVwoPQWNoaWV2ZW1lbnRCbG9iEkQKFHBy",
-            "b2R1Y3RfYWNoaWV2ZW1lbnRzGAEgAygLMiYubWcucHJvdG9jb2wudXBsYXku",
-            "UHJvZHVjdEFjaGlldmVtZW50cyImCg9BdXRoZW50aWNhdGVSZXESEwoLb3Ji",
-            "aXRfdG9rZW4YASACKAkiIgoPQXV0aGVudGljYXRlUnNwEg8KB3N1Y2Nlc3MY",
-            "ASACKAgiVAoUV3JpdGVBY2hpZXZlbWVudHNSZXESPAoQYWNoaWV2ZW1lbnRf",
-            "YmxvYhgBIAEoCzIiLm1nLnByb3RvY29sLnVwbGF5LkFjaGlldmVtZW50Qmxv",
-            "YiIWChRXcml0ZUFjaGlldmVtZW50c1JzcCJTChNSZWFkQWNoaWV2ZW1lbnRz",
-            "UmVxEg8KB3VzZXJfaWQYASABKAkSKwoHcHJvZHVjdBgCIAEoCzIaLm1nLnBy",
-            "b3RvY29sLnVwbGF5LlByb2R1Y3QiZAoTUmVhZEFjaGlldmVtZW50c1JzcBIP",
-            "Cgd1c2VyX2lkGAEgAigJEjwKEGFjaGlldmVtZW50X2Jsb2IYAiACKAsyIi5t",
-            "Zy5wcm90b2NvbC51cGxheS5BY2hpZXZlbWVudEJsb2Ii5wEKA1JlcRISCgpy",
-            "ZXF1ZXN0X2lkGAEgAigNEjwKEGF1dGhlbnRpY2F0ZV9yZXEYAiABKAsyIi5t",
-            "Zy5wcm90b2NvbC51cGxheS5BdXRoZW50aWNhdGVSZXESRQoVcmVhZF9hY2hp",
-            "ZXZlbWVudHNfcmVxGAMgASgLMiYubWcucHJvdG9jb2wudXBsYXkuUmVhZEFj",
-            "aGlldmVtZW50c1JlcRJHChZ3cml0ZV9hY2hpZXZlbWVudHNfcmVxGAQgASgL",
-            "MicubWcucHJvdG9jb2wudXBsYXkuV3JpdGVBY2hpZXZlbWVudHNSZXEi5wEK",
-            "A1JzcBISCgpyZXF1ZXN0X2lkGAEgAigNEjwKEGF1dGhlbnRpY2F0ZV9yc3AY",
-            "AiABKAsyIi5tZy5wcm90b2NvbC51cGxheS5BdXRoZW50aWNhdGVSc3ASRQoV",
-            "cmVhZF9hY2hpZXZlbWVudHNfcnNwGAMgASgLMiYubWcucHJvdG9jb2wudXBs",
-            "YXkuUmVhZEFjaGlldmVtZW50c1JzcBJHChZ3cml0ZV9hY2hpZXZlbWVudHNf",
-            "cnNwGAQgASgLMicubWcucHJvdG9jb2wudXBsYXkuV3JpdGVBY2hpZXZlbWVu",
-            "dHNSc3A="));
+            "ChF1cGxheS9VcGxheS5wcm90bxIRbWcucHJvdG9jb2wudXBsYXkiOAoLQWNo",
+            "aWV2ZW1lbnQSFgoOYWNoaWV2ZW1lbnRfaWQYASACKA0SEQoJdGltZXN0YW1w",
+            "GAIgASgEIkQKDEFjaGlldmVtZW50cxI0CgxhY2hpZXZlbWVudHMYASADKAsy",
+            "Hi5tZy5wcm90b2NvbC51cGxheS5BY2hpZXZlbWVudCJECgdQcm9kdWN0EhIK",
+            "CnByb2R1Y3RfaWQYASACKAkSEwoLcGxhdGZvcm1faWQYAiACKAkSEAoIc3Bh",
+            "Y2VfaWQYAyABKAkiOgoMU3RlYW1Db250ZXh0EhYKDmFwcGxpY2F0aW9uX2lk",
+            "GAEgASgNEhIKCmFjY291bnRfaWQYAiABKAkisQEKE1Byb2R1Y3RBY2hpZXZl",
+            "bWVudHMSKwoHcHJvZHVjdBgBIAIoCzIaLm1nLnByb3RvY29sLnVwbGF5LlBy",
+            "b2R1Y3QSNQoMYWNoaWV2ZW1lbnRzGAIgAigLMh8ubWcucHJvdG9jb2wudXBs",
+            "YXkuQWNoaWV2ZW1lbnRzEjYKDXN0ZWFtX2NvbnRleHQYAyABKAsyHy5tZy5w",
+            "cm90b2NvbC51cGxheS5TdGVhbUNvbnRleHQiVwoPQWNoaWV2ZW1lbnRCbG9i",
+            "EkQKFHByb2R1Y3RfYWNoaWV2ZW1lbnRzGAEgAygLMiYubWcucHJvdG9jb2wu",
+            "dXBsYXkuUHJvZHVjdEFjaGlldmVtZW50cyImCg9BdXRoZW50aWNhdGVSZXES",
+            "EwoLb3JiaXRfdG9rZW4YASACKAkiIgoPQXV0aGVudGljYXRlUnNwEg8KB3N1",
+            "Y2Nlc3MYASACKAgiVAoUV3JpdGVBY2hpZXZlbWVudHNSZXESPAoQYWNoaWV2",
+            "ZW1lbnRfYmxvYhgBIAEoCzIiLm1nLnByb3RvY29sLnVwbGF5LkFjaGlldmVt",
+            "ZW50QmxvYiIWChRXcml0ZUFjaGlldmVtZW50c1JzcCJTChNSZWFkQWNoaWV2",
+            "ZW1lbnRzUmVxEg8KB3VzZXJfaWQYASABKAkSKwoHcHJvZHVjdBgCIAEoCzIa",
+            "Lm1nLnByb3RvY29sLnVwbGF5LlByb2R1Y3QiZAoTUmVhZEFjaGlldmVtZW50",
+            "c1JzcBIPCgd1c2VyX2lkGAEgAigJEjwKEGFjaGlldmVtZW50X2Jsb2IYAiAC",
+            "KAsyIi5tZy5wcm90b2NvbC51cGxheS5BY2hpZXZlbWVudEJsb2Ii5wEKA1Jl",
+            "cRISCgpyZXF1ZXN0X2lkGAEgAigNEjwKEGF1dGhlbnRpY2F0ZV9yZXEYAiAB",
+            "KAsyIi5tZy5wcm90b2NvbC51cGxheS5BdXRoZW50aWNhdGVSZXESRQoVcmVh",
+            "ZF9hY2hpZXZlbWVudHNfcmVxGAMgASgLMiYubWcucHJvdG9jb2wudXBsYXku",
+            "UmVhZEFjaGlldmVtZW50c1JlcRJHChZ3cml0ZV9hY2hpZXZlbWVudHNfcmVx",
+            "GAQgASgLMicubWcucHJvdG9jb2wudXBsYXkuV3JpdGVBY2hpZXZlbWVudHNS",
+            "ZXEi5wEKA1JzcBISCgpyZXF1ZXN0X2lkGAEgAigNEjwKEGF1dGhlbnRpY2F0",
+            "ZV9yc3AYAiABKAsyIi5tZy5wcm90b2NvbC51cGxheS5BdXRoZW50aWNhdGVS",
+            "c3ASRQoVcmVhZF9hY2hpZXZlbWVudHNfcnNwGAMgASgLMiYubWcucHJvdG9j",
+            "b2wudXBsYXkuUmVhZEFjaGlldmVtZW50c1JzcBJHChZ3cml0ZV9hY2hpZXZl",
+            "bWVudHNfcnNwGAQgASgLMicubWcucHJvdG9jb2wudXBsYXkuV3JpdGVBY2hp",
+            "ZXZlbWVudHNSc3A="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplay.Achievement), global::Uplay.Uplay.Achievement.Parser, new[]{ "AchievementId", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplay.Achievements), global::Uplay.Uplay.Achievements.Parser, new[]{ "Achievements_" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplay.Product), global::Uplay.Uplay.Product.Parser, new[]{ "ProductId", "PlatformId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplay.ProductAchievements), global::Uplay.Uplay.ProductAchievements.Parser, new[]{ "Product", "Achievements" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplay.Product), global::Uplay.Uplay.Product.Parser, new[]{ "ProductId", "PlatformId", "SpaceId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplay.SteamContext), global::Uplay.Uplay.SteamContext.Parser, new[]{ "ApplicationId", "AccountId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplay.ProductAchievements), global::Uplay.Uplay.ProductAchievements.Parser, new[]{ "Product", "Achievements", "SteamContext" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplay.AchievementBlob), global::Uplay.Uplay.AchievementBlob.Parser, new[]{ "ProductAchievements" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplay.AuthenticateReq), global::Uplay.Uplay.AuthenticateReq.Parser, new[]{ "OrbitToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplay.AuthenticateRsp), global::Uplay.Uplay.AuthenticateRsp.Parser, new[]{ "Success" }, null, null, null, null),
@@ -547,6 +551,7 @@ namespace Uplay.Uplay {
     public Product(Product other) : this() {
       productId_ = other.productId_;
       platformId_ = other.platformId_;
+      spaceId_ = other.spaceId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -608,6 +613,32 @@ namespace Uplay.Uplay {
       platformId_ = null;
     }
 
+    /// <summary>Field number for the "space_id" field.</summary>
+    public const int SpaceIdFieldNumber = 3;
+    private readonly static string SpaceIdDefaultValue = "";
+
+    private string spaceId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SpaceId {
+      get { return spaceId_ ?? SpaceIdDefaultValue; }
+      set {
+        spaceId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "space_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSpaceId {
+      get { return spaceId_ != null; }
+    }
+    /// <summary>Clears the value of the "space_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSpaceId() {
+      spaceId_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -625,6 +656,7 @@ namespace Uplay.Uplay {
       }
       if (ProductId != other.ProductId) return false;
       if (PlatformId != other.PlatformId) return false;
+      if (SpaceId != other.SpaceId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -634,6 +666,7 @@ namespace Uplay.Uplay {
       int hash = 1;
       if (HasProductId) hash ^= ProductId.GetHashCode();
       if (HasPlatformId) hash ^= PlatformId.GetHashCode();
+      if (HasSpaceId) hash ^= SpaceId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -660,6 +693,10 @@ namespace Uplay.Uplay {
         output.WriteRawTag(18);
         output.WriteString(PlatformId);
       }
+      if (HasSpaceId) {
+        output.WriteRawTag(26);
+        output.WriteString(SpaceId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -678,6 +715,10 @@ namespace Uplay.Uplay {
         output.WriteRawTag(18);
         output.WriteString(PlatformId);
       }
+      if (HasSpaceId) {
+        output.WriteRawTag(26);
+        output.WriteString(SpaceId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -693,6 +734,9 @@ namespace Uplay.Uplay {
       }
       if (HasPlatformId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PlatformId);
+      }
+      if (HasSpaceId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SpaceId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -711,6 +755,9 @@ namespace Uplay.Uplay {
       }
       if (other.HasPlatformId) {
         PlatformId = other.PlatformId;
+      }
+      if (other.HasSpaceId) {
+        SpaceId = other.SpaceId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -733,6 +780,10 @@ namespace Uplay.Uplay {
           }
           case 18: {
             PlatformId = input.ReadString();
+            break;
+          }
+          case 26: {
+            SpaceId = input.ReadString();
             break;
           }
         }
@@ -758,6 +809,267 @@ namespace Uplay.Uplay {
             PlatformId = input.ReadString();
             break;
           }
+          case 26: {
+            SpaceId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class SteamContext : pb::IMessage<SteamContext>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SteamContext> _parser = new pb::MessageParser<SteamContext>(() => new SteamContext());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SteamContext> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SteamContext() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SteamContext(SteamContext other) : this() {
+      _hasBits0 = other._hasBits0;
+      applicationId_ = other.applicationId_;
+      accountId_ = other.accountId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SteamContext Clone() {
+      return new SteamContext(this);
+    }
+
+    /// <summary>Field number for the "application_id" field.</summary>
+    public const int ApplicationIdFieldNumber = 1;
+    private readonly static uint ApplicationIdDefaultValue = 0;
+
+    private uint applicationId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ApplicationId {
+      get { if ((_hasBits0 & 1) != 0) { return applicationId_; } else { return ApplicationIdDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        applicationId_ = value;
+      }
+    }
+    /// <summary>Gets whether the "application_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasApplicationId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "application_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearApplicationId() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "account_id" field.</summary>
+    public const int AccountIdFieldNumber = 2;
+    private readonly static string AccountIdDefaultValue = "";
+
+    private string accountId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AccountId {
+      get { return accountId_ ?? AccountIdDefaultValue; }
+      set {
+        accountId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "account_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAccountId {
+      get { return accountId_ != null; }
+    }
+    /// <summary>Clears the value of the "account_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAccountId() {
+      accountId_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SteamContext);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SteamContext other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ApplicationId != other.ApplicationId) return false;
+      if (AccountId != other.AccountId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasApplicationId) hash ^= ApplicationId.GetHashCode();
+      if (HasAccountId) hash ^= AccountId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasApplicationId) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ApplicationId);
+      }
+      if (HasAccountId) {
+        output.WriteRawTag(18);
+        output.WriteString(AccountId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasApplicationId) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ApplicationId);
+      }
+      if (HasAccountId) {
+        output.WriteRawTag(18);
+        output.WriteString(AccountId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasApplicationId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ApplicationId);
+      }
+      if (HasAccountId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AccountId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SteamContext other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasApplicationId) {
+        ApplicationId = other.ApplicationId;
+      }
+      if (other.HasAccountId) {
+        AccountId = other.AccountId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            ApplicationId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            AccountId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ApplicationId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            AccountId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -779,7 +1091,7 @@ namespace Uplay.Uplay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -801,6 +1113,7 @@ namespace Uplay.Uplay {
     public ProductAchievements(ProductAchievements other) : this() {
       product_ = other.product_ != null ? other.product_.Clone() : null;
       achievements_ = other.achievements_ != null ? other.achievements_.Clone() : null;
+      steamContext_ = other.steamContext_ != null ? other.steamContext_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -834,6 +1147,18 @@ namespace Uplay.Uplay {
       }
     }
 
+    /// <summary>Field number for the "steam_context" field.</summary>
+    public const int SteamContextFieldNumber = 3;
+    private global::Uplay.Uplay.SteamContext steamContext_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.Uplay.SteamContext SteamContext {
+      get { return steamContext_; }
+      set {
+        steamContext_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -851,6 +1176,7 @@ namespace Uplay.Uplay {
       }
       if (!object.Equals(Product, other.Product)) return false;
       if (!object.Equals(Achievements, other.Achievements)) return false;
+      if (!object.Equals(SteamContext, other.SteamContext)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -860,6 +1186,7 @@ namespace Uplay.Uplay {
       int hash = 1;
       if (product_ != null) hash ^= Product.GetHashCode();
       if (achievements_ != null) hash ^= Achievements.GetHashCode();
+      if (steamContext_ != null) hash ^= SteamContext.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -886,6 +1213,10 @@ namespace Uplay.Uplay {
         output.WriteRawTag(18);
         output.WriteMessage(Achievements);
       }
+      if (steamContext_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SteamContext);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -904,6 +1235,10 @@ namespace Uplay.Uplay {
         output.WriteRawTag(18);
         output.WriteMessage(Achievements);
       }
+      if (steamContext_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(SteamContext);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -919,6 +1254,9 @@ namespace Uplay.Uplay {
       }
       if (achievements_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Achievements);
+      }
+      if (steamContext_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SteamContext);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -943,6 +1281,12 @@ namespace Uplay.Uplay {
           Achievements = new global::Uplay.Uplay.Achievements();
         }
         Achievements.MergeFrom(other.Achievements);
+      }
+      if (other.steamContext_ != null) {
+        if (steamContext_ == null) {
+          SteamContext = new global::Uplay.Uplay.SteamContext();
+        }
+        SteamContext.MergeFrom(other.SteamContext);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -971,6 +1315,13 @@ namespace Uplay.Uplay {
               Achievements = new global::Uplay.Uplay.Achievements();
             }
             input.ReadMessage(Achievements);
+            break;
+          }
+          case 26: {
+            if (steamContext_ == null) {
+              SteamContext = new global::Uplay.Uplay.SteamContext();
+            }
+            input.ReadMessage(SteamContext);
             break;
           }
         }
@@ -1002,6 +1353,13 @@ namespace Uplay.Uplay {
             input.ReadMessage(Achievements);
             break;
           }
+          case 26: {
+            if (steamContext_ == null) {
+              SteamContext = new global::Uplay.Uplay.SteamContext();
+            }
+            input.ReadMessage(SteamContext);
+            break;
+          }
         }
       }
     }
@@ -1023,7 +1381,7 @@ namespace Uplay.Uplay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1201,7 +1559,7 @@ namespace Uplay.Uplay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1405,7 +1763,7 @@ namespace Uplay.Uplay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1610,7 +1968,7 @@ namespace Uplay.Uplay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1808,7 +2166,7 @@ namespace Uplay.Uplay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1960,7 +2318,7 @@ namespace Uplay.Uplay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2209,7 +2567,7 @@ namespace Uplay.Uplay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2459,7 +2817,7 @@ namespace Uplay.Uplay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2803,7 +3161,7 @@ namespace Uplay.Uplay {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Uplay.Uplay.UplayReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

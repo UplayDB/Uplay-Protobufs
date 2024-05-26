@@ -24,11 +24,11 @@ namespace Uplay.ConversationsCache {
     static ConversationsCacheReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chljb252ZXJzYXRpb25zX2NhY2hlLnByb3RvEh9tZy5wcm90b2NvbC5jb252",
-            "ZXJzYXRpb25zX2NhY2hlIjkKEkNvbnZlcnNhdGlvbnNDYWNoZRIPCgd2ZXJz",
-            "aW9uGAEgAigNEhIKCmNoYW5uZWxJZHMYAiADKAkqQgoZQ29udmVyc2F0aW9u",
-            "c0NhY2hlVmVyc2lvbhIlCiFDb252ZXJzYXRpb25zQ2FjaGVWZXJzaW9uX0Rl",
-            "ZmF1bHQQAg=="));
+            "Ch91cGxheS9jb252ZXJzYXRpb25zX2NhY2hlLnByb3RvEh9tZy5wcm90b2Nv",
+            "bC5jb252ZXJzYXRpb25zX2NhY2hlIjkKEkNvbnZlcnNhdGlvbnNDYWNoZRIP",
+            "Cgd2ZXJzaW9uGAEgAigNEhIKCmNoYW5uZWxJZHMYAiADKAkqQgoZQ29udmVy",
+            "c2F0aW9uc0NhY2hlVmVyc2lvbhIlCiFDb252ZXJzYXRpb25zQ2FjaGVWZXJz",
+            "aW9uX0RlZmF1bHQQAg=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Uplay.ConversationsCache.ConversationsCacheVersion), }, null, new pbr::GeneratedClrTypeInfo[] {

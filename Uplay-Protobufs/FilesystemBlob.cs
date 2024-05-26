@@ -24,12 +24,12 @@ namespace Uplay.FilesystemBlob {
     static FilesystemBlobReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVmaWxlc3lzdGVtX2Jsb2IucHJvdG8SG21nLnByb3RvY29sLmZpbGVzeXN0",
-            "ZW1fYmxvYiIlCgRGaWxlEgwKBG5hbWUYASACKAkSDwoHY29udGVudBgCIAIo",
-            "DCKIAQoJRGlyZWN0b3J5EgwKBG5hbWUYASACKAkSOwoLZGlyZWN0b3JpZXMY",
-            "AiADKAsyJi5tZy5wcm90b2NvbC5maWxlc3lzdGVtX2Jsb2IuRGlyZWN0b3J5",
-            "EjAKBWZpbGVzGAMgAygLMiEubWcucHJvdG9jb2wuZmlsZXN5c3RlbV9ibG9i",
-            "LkZpbGU="));
+            "Cht1cGxheS9maWxlc3lzdGVtX2Jsb2IucHJvdG8SG21nLnByb3RvY29sLmZp",
+            "bGVzeXN0ZW1fYmxvYiIlCgRGaWxlEgwKBG5hbWUYASACKAkSDwoHY29udGVu",
+            "dBgCIAIoDCKIAQoJRGlyZWN0b3J5EgwKBG5hbWUYASACKAkSOwoLZGlyZWN0",
+            "b3JpZXMYAiADKAsyJi5tZy5wcm90b2NvbC5maWxlc3lzdGVtX2Jsb2IuRGly",
+            "ZWN0b3J5EjAKBWZpbGVzGAMgAygLMiEubWcucHJvdG9jb2wuZmlsZXN5c3Rl",
+            "bV9ibG9iLkZpbGU="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

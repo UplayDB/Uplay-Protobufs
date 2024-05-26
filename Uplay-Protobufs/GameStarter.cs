@@ -24,74 +24,78 @@ namespace Uplay.GameStarter {
     static GameStarterReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJnYW1lX3N0YXJ0ZXIucHJvdG8SGG1nLnByb3RvY29sLmdhbWVfc3RhcnRl",
-            "ciIvChFSaWNoUHJlc2VuY2VUb2tlbhILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAkiXQoTRGlzY29yZFJpY2hQcmVzZW5jZRIOCgZhcHBfaWQYASABKAkS",
-            "EwoLbGFyZ2VfaW1hZ2UYAiABKAkSEwoLc21hbGxfaW1hZ2UYAyABKAkSDAoE",
-            "dGV4dBgFIAEoCSI6ChRTdGVhbVByb29mT2ZQdXJjaGFzZRISCgpzdGVhbUFw",
-            "cElkGAEgAigNEg4KBnRpY2tldBgCIAIoCSJWCgpPY3VsdXNJbmZvEg0KBWFw",
-            "cElkGAEgASgJEg4KBnVzZXJJZBgCIAEoCRIUCgxvY3VsdXNVc2VySWQYAyAB",
-            "KAkSEwoLYWNjZXNzVG9rZW4YBCABKAkiIQoKTnZpZGlhSW5mbxITCgthY2Nl",
-            "c3NUb2tlbhgBIAEoCSIiCgpXZUdhbWVJbmZvEhQKDHJhaWxfZ2FtZV9pZBgB",
-            "IAEoBCKNBgoIU3RhcnRSZXESFwoPbGF1bmNoZXJWZXJzaW9uGAEgAigNEg8K",
-            "B3VwbGF5SWQYAiACKA0SEQoJc3RlYW1HYW1lGAMgAigIEhMKC2dhbWVWZXJz",
-            "aW9uGAQgAigNEhEKCXByb2R1Y3RJZBgFIAEoDRIYChBzaW11bGF0aW9uQ29u",
-            "ZmlnGAcgASgJEhMKC3N0ZWFtVGlja2V0GAggASgJEg8KB3N0ZWFtSWQYCSAB",
-            "KAkSFgoOZXhlY3V0YWJsZVBhdGgYCiABKAkSGwoTZXhlY3V0YWJsZUFyZ3Vt",
-            "ZW50cxgLIAEoCRIRCgl0aW1lU3RhcnQYDCABKAQSGgoSc3RlYW1GcmVlUGFj",
-            "a2FnZUlkGA0gASgNEh4KFnN0ZWFtUmVxdWlyZWRQcm9kdWN0SWQYDiABKA0S",
-            "TAoUc3RlYW1Qcm9vZk9mUHVyY2hhc2UYDyADKAsyLi5tZy5wcm90b2NvbC5n",
-            "YW1lX3N0YXJ0ZXIuU3RlYW1Qcm9vZk9mUHVyY2hhc2USOAoKb2N1bHVzSW5m",
-            "bxgQIAEoCzIkLm1nLnByb3RvY29sLmdhbWVfc3RhcnRlci5PY3VsdXNJbmZv",
-            "Ej0KCHBsYXRmb3JtGBEgASgOMisubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVy",
-            "LlN0YXJ0UmVxLlBsYXRmb3JtEhQKDHN0ZWFtT3duZXJJZBgSIAEoCRI4Cgpu",
-            "dmlkaWFJbmZvGBMgASgLMiQubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLk52",
-            "aWRpYUluZm8SOAoKd2VHYW1lSW5mbxgUIAEoCzIkLm1nLnByb3RvY29sLmdh",
-            "bWVfc3RhcnRlci5XZUdhbWVJbmZvIoYBCghQbGF0Zm9ybRISCg5QbGF0Zm9y",
-            "bV9VcGxheRABEhIKDlBsYXRmb3JtX1N0ZWFtEAISEwoPUGxhdGZvcm1fT2N1",
-            "bHVzEAMSEwoPUGxhdGZvcm1fTnZpZGlhEAQSEwoPUGxhdGZvcm1fU3dpdGNo",
-            "EAUSEwoPUGxhdGZvcm1fV2VHYW1lEAYiPgoVSG90a2V5U3RhdGVDaGFuZ2Vk",
-            "UmVxEhIKCmhvdGtleVR5cGUYASACKAUSEQoJaXNQcmVzc2VkGAIgAigIImkK",
-            "BkhvdGtleRISCgpob3RrZXlUeXBlGAEgAigFEg8KB2tleUNvZGUYAiACKA0S",
-            "EAoIYWx0U3RhdGUYAyACKAgSEgoKc2hpZnRTdGF0ZRgEIAIoCBIUCgxjb250",
-            "cm9sU3RhdGUYBSACKAgiPAoHSG90a2V5cxIxCgdob3RrZXlzGAEgAygLMiAu",
-            "bWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLkhvdGtleSLOAwoPU3RhcnRHcmFu",
-            "dGVkUnNwEhYKDm92ZXJsYXlFbmFibGVkGAEgAigIEhQKDHdpbmRvd2VkTW9k",
-            "ZRgCIAIoCBIWCg5leGVjdXRhYmxlUGF0aBgDIAEoCRIYChB3b3JraW5nRGly",
-            "ZWN0b3J5GAQgASgJEhEKCWFyZ3VtZW50cxgFIAEoCRIbChNhZGRpdGlvbmFs",
-            "QXJndW1lbnRzGAYgASgJEhYKDnVwbGF5QXJndW1lbnRzGAcgASgJEmAKFm92",
-            "ZXJsYXlJbmplY3Rpb25NZXRob2QYCCABKA4yQC5tZy5wcm90b2NvbC5nYW1l",
-            "X3N0YXJ0ZXIuU3RhcnRHcmFudGVkUnNwLk92ZXJsYXlJbmplY3Rpb25NZXRo",
-            "b2QSMgoHaG90a2V5cxgJIAEoCzIhLm1nLnByb3RvY29sLmdhbWVfc3RhcnRl",
-            "ci5Ib3RrZXlzIn0KFk92ZXJsYXlJbmplY3Rpb25NZXRob2QSHwobT3Zlcmxh",
-            "eUluamVjdGlvbk1ldGhvZF9Ob25lEAESIgoeT3ZlcmxheUluamVjdGlvbk1l",
-            "dGhvZF9EZWZhdWx0EAISHgoaT3ZlcmxheUluamVjdGlvbk1ldGhvZF9TREsQ",
-            "AyJyCg5TdGFydERlbmllZFJzcBI/CgZyZWFzb24YASABKA4yLy5tZy5wcm90",
-            "b2NvbC5nYW1lX3N0YXJ0ZXIuU3RhcnREZW5pZWRSc3AuUmVhc29uIh8KBlJl",
-            "YXNvbhIVChFHYW1lUGF0Y2hSZXF1aXJlZBAAIhMKEVVwZGF0ZVJlcXVpcmVk",
-            "UnNwIhEKD0NvbmZpcm1hdGlvblJzcCKLAQoDUmVxEjQKCHN0YXJ0UmVxGAEg",
-            "ASgLMiIubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlN0YXJ0UmVxEk4KFWhv",
-            "dGtleVN0YXRlQ2hhbmdlZFJlcRgDIAEoCzIvLm1nLnByb3RvY29sLmdhbWVf",
-            "c3RhcnRlci5Ib3RrZXlTdGF0ZUNoYW5nZWRSZXEiDwoNUmVjb25uZWN0UHVz",
-            "aCIdChtVc2VySW50ZXJhY3Rpb25SZXF1aXJlZFB1c2giNwoUU3RlYW1PdmVy",
-            "bGF5U2hvd1B1c2gSCwoDdXJsGAEgASgJEhIKCnN0ZWFtQXBwSWQYAiABKA0i",
-            "RwoRVXBkYXRlSG90S2V5c1B1c2gSMgoHaG90a2V5cxgBIAIoCzIhLm1nLnBy",
-            "b3RvY29sLmdhbWVfc3RhcnRlci5Ib3RrZXlzIrgCCgRQdXNoEj4KDXJlY29u",
-            "bmVjdFB1c2gYAiABKAsyJy5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuUmVj",
-            "b25uZWN0UHVzaBJaCht1c2VySW50ZXJhY3Rpb25SZXF1aXJlZFB1c2gYAyAB",
-            "KAsyNS5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuVXNlckludGVyYWN0aW9u",
-            "UmVxdWlyZWRQdXNoEkwKFHN0ZWFtT3ZlcmxheVNob3dQdXNoGAQgASgLMi4u",
-            "bWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlN0ZWFtT3ZlcmxheVNob3dQdXNo",
-            "EkYKEXVwZGF0ZUhvdEtleXNQdXNoGAUgASgLMisubWcucHJvdG9jb2wuZ2Ft",
-            "ZV9zdGFydGVyLlVwZGF0ZUhvdEtleXNQdXNoItcBCgNSc3ASQgoPc3RhcnRH",
-            "cmFudGVkUnNwGAEgASgLMikubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlN0",
-            "YXJ0R3JhbnRlZFJzcBJACg5zdGFydERlbmllZFJzcBgCIAEoCzIoLm1nLnBy",
-            "b3RvY29sLmdhbWVfc3RhcnRlci5TdGFydERlbmllZFJzcBJKChNkaXNjb3Jk",
-            "UmljaFByZXNlbmNlGAMgASgLMi0ubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVy",
-            "LkRpc2NvcmRSaWNoUHJlc2VuY2UiNgoIVXBzdHJlYW0SKgoDcmVxGAEgASgL",
-            "Mh0ubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlJlcSJmCgpEb3duc3RyZWFt",
-            "EiwKBHB1c2gYASABKAsyHi5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuUHVz",
-            "aBIqCgNyc3AYAiABKAsyHS5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuUnNw"));
+            "Chh1cGxheS9nYW1lX3N0YXJ0ZXIucHJvdG8SGG1nLnByb3RvY29sLmdhbWVf",
+            "c3RhcnRlciIvChFSaWNoUHJlc2VuY2VUb2tlbhILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAkiXQoTRGlzY29yZFJpY2hQcmVzZW5jZRIOCgZhcHBfaWQY",
+            "ASABKAkSEwoLbGFyZ2VfaW1hZ2UYAiABKAkSEwoLc21hbGxfaW1hZ2UYAyAB",
+            "KAkSDAoEdGV4dBgFIAEoCSI6ChRTdGVhbVByb29mT2ZQdXJjaGFzZRISCgpz",
+            "dGVhbUFwcElkGAEgAigNEg4KBnRpY2tldBgCIAIoCSJWCgpPY3VsdXNJbmZv",
+            "Eg0KBWFwcElkGAEgASgJEg4KBnVzZXJJZBgCIAEoCRIUCgxvY3VsdXNVc2Vy",
+            "SWQYAyABKAkSEwoLYWNjZXNzVG9rZW4YBCABKAkiIQoKTnZpZGlhSW5mbxIT",
+            "CgthY2Nlc3NUb2tlbhgBIAEoCSIiCgpXZUdhbWVJbmZvEhQKDHJhaWxfZ2Ft",
+            "ZV9pZBgBIAEoBCL4AQoJU3RlYW1JbmZvEhYKDnN0ZWFtUHJvZmlsZUlkGAEg",
+            "ASgJEhMKC3N0ZWFtVGlja2V0GAIgASgJEh8KF3N0ZWFtR2FtZU93bmVyUHJv",
+            "ZmlsZUlkGAMgASgJEhMKC3N0ZWFtR2FtZUlkGAQgASgNEhoKEnN0ZWFtRnJl",
+            "ZVBhY2thZ2VJZBgFIAEoDRIeChZzdGVhbVJlcXVpcmVkUHJvZHVjdElkGAYg",
+            "ASgNEkwKFHN0ZWFtUHJvb2ZPZlB1cmNoYXNlGAcgAygLMi4ubWcucHJvdG9j",
+            "b2wuZ2FtZV9zdGFydGVyLlN0ZWFtUHJvb2ZPZlB1cmNoYXNlIqIFCghTdGFy",
+            "dFJlcRIXCg9sYXVuY2hlclZlcnNpb24YASACKA0SDwoHdXBsYXlJZBgCIAIo",
+            "DRITCgtnYW1lVmVyc2lvbhgEIAIoDRIRCglwcm9kdWN0SWQYBSABKA0SGAoQ",
+            "c2ltdWxhdGlvbkNvbmZpZxgHIAEoCRIWCg5leGVjdXRhYmxlUGF0aBgKIAEo",
+            "CRIbChNleGVjdXRhYmxlQXJndW1lbnRzGAsgASgJEhEKCXRpbWVTdGFydBgM",
+            "IAEoBBI4CgpvY3VsdXNJbmZvGBAgASgLMiQubWcucHJvdG9jb2wuZ2FtZV9z",
+            "dGFydGVyLk9jdWx1c0luZm8SPQoIcGxhdGZvcm0YESABKA4yKy5tZy5wcm90",
+            "b2NvbC5nYW1lX3N0YXJ0ZXIuU3RhcnRSZXEuUGxhdGZvcm0SOAoKbnZpZGlh",
+            "SW5mbxgTIAEoCzIkLm1nLnByb3RvY29sLmdhbWVfc3RhcnRlci5OdmlkaWFJ",
+            "bmZvEjgKCndlR2FtZUluZm8YFCABKAsyJC5tZy5wcm90b2NvbC5nYW1lX3N0",
+            "YXJ0ZXIuV2VHYW1lSW5mbxI2CglzdGVhbUluZm8YFiABKAsyIy5tZy5wcm90",
+            "b2NvbC5nYW1lX3N0YXJ0ZXIuU3RlYW1JbmZvIoYBCghQbGF0Zm9ybRISCg5Q",
+            "bGF0Zm9ybV9VcGxheRABEhIKDlBsYXRmb3JtX1N0ZWFtEAISEwoPUGxhdGZv",
+            "cm1fT2N1bHVzEAMSEwoPUGxhdGZvcm1fTnZpZGlhEAQSEwoPUGxhdGZvcm1f",
+            "U3dpdGNoEAUSEwoPUGxhdGZvcm1fV2VHYW1lEAZKBAgDEARKBAgGEAdKBAgI",
+            "EAlKBAgJEApKBAgNEA5KBAgOEA9KBAgPEBBKBAgSEBNKBAgVEBYiPgoVSG90",
+            "a2V5U3RhdGVDaGFuZ2VkUmVxEhIKCmhvdGtleVR5cGUYASACKAUSEQoJaXNQ",
+            "cmVzc2VkGAIgAigIImkKBkhvdGtleRISCgpob3RrZXlUeXBlGAEgAigFEg8K",
+            "B2tleUNvZGUYAiACKA0SEAoIYWx0U3RhdGUYAyACKAgSEgoKc2hpZnRTdGF0",
+            "ZRgEIAIoCBIUCgxjb250cm9sU3RhdGUYBSACKAgiPAoHSG90a2V5cxIxCgdo",
+            "b3RrZXlzGAEgAygLMiAubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLkhvdGtl",
+            "eSLOAwoPU3RhcnRHcmFudGVkUnNwEhYKDm92ZXJsYXlFbmFibGVkGAEgAigI",
+            "EhQKDHdpbmRvd2VkTW9kZRgCIAIoCBIWCg5leGVjdXRhYmxlUGF0aBgDIAEo",
+            "CRIYChB3b3JraW5nRGlyZWN0b3J5GAQgASgJEhEKCWFyZ3VtZW50cxgFIAEo",
+            "CRIbChNhZGRpdGlvbmFsQXJndW1lbnRzGAYgASgJEhYKDnVwbGF5QXJndW1l",
+            "bnRzGAcgASgJEmAKFm92ZXJsYXlJbmplY3Rpb25NZXRob2QYCCABKA4yQC5t",
+            "Zy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuU3RhcnRHcmFudGVkUnNwLk92ZXJs",
+            "YXlJbmplY3Rpb25NZXRob2QSMgoHaG90a2V5cxgJIAEoCzIhLm1nLnByb3Rv",
+            "Y29sLmdhbWVfc3RhcnRlci5Ib3RrZXlzIn0KFk92ZXJsYXlJbmplY3Rpb25N",
+            "ZXRob2QSHwobT3ZlcmxheUluamVjdGlvbk1ldGhvZF9Ob25lEAESIgoeT3Zl",
+            "cmxheUluamVjdGlvbk1ldGhvZF9EZWZhdWx0EAISHgoaT3ZlcmxheUluamVj",
+            "dGlvbk1ldGhvZF9TREsQAyJyCg5TdGFydERlbmllZFJzcBI/CgZyZWFzb24Y",
+            "ASABKA4yLy5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuU3RhcnREZW5pZWRS",
+            "c3AuUmVhc29uIh8KBlJlYXNvbhIVChFHYW1lUGF0Y2hSZXF1aXJlZBAAIhMK",
+            "EVVwZGF0ZVJlcXVpcmVkUnNwIhEKD0NvbmZpcm1hdGlvblJzcCKLAQoDUmVx",
+            "EjQKCHN0YXJ0UmVxGAEgASgLMiIubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVy",
+            "LlN0YXJ0UmVxEk4KFWhvdGtleVN0YXRlQ2hhbmdlZFJlcRgDIAEoCzIvLm1n",
+            "LnByb3RvY29sLmdhbWVfc3RhcnRlci5Ib3RrZXlTdGF0ZUNoYW5nZWRSZXEi",
+            "DwoNUmVjb25uZWN0UHVzaCIdChtVc2VySW50ZXJhY3Rpb25SZXF1aXJlZFB1",
+            "c2giNwoUU3RlYW1PdmVybGF5U2hvd1B1c2gSCwoDdXJsGAEgASgJEhIKCnN0",
+            "ZWFtQXBwSWQYAiABKA0iRwoRVXBkYXRlSG90S2V5c1B1c2gSMgoHaG90a2V5",
+            "cxgBIAIoCzIhLm1nLnByb3RvY29sLmdhbWVfc3RhcnRlci5Ib3RrZXlzIrgC",
+            "CgRQdXNoEj4KDXJlY29ubmVjdFB1c2gYAiABKAsyJy5tZy5wcm90b2NvbC5n",
+            "YW1lX3N0YXJ0ZXIuUmVjb25uZWN0UHVzaBJaCht1c2VySW50ZXJhY3Rpb25S",
+            "ZXF1aXJlZFB1c2gYAyABKAsyNS5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIu",
+            "VXNlckludGVyYWN0aW9uUmVxdWlyZWRQdXNoEkwKFHN0ZWFtT3ZlcmxheVNo",
+            "b3dQdXNoGAQgASgLMi4ubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlN0ZWFt",
+            "T3ZlcmxheVNob3dQdXNoEkYKEXVwZGF0ZUhvdEtleXNQdXNoGAUgASgLMisu",
+            "bWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlVwZGF0ZUhvdEtleXNQdXNoItcB",
+            "CgNSc3ASQgoPc3RhcnRHcmFudGVkUnNwGAEgASgLMikubWcucHJvdG9jb2wu",
+            "Z2FtZV9zdGFydGVyLlN0YXJ0R3JhbnRlZFJzcBJACg5zdGFydERlbmllZFJz",
+            "cBgCIAEoCzIoLm1nLnByb3RvY29sLmdhbWVfc3RhcnRlci5TdGFydERlbmll",
+            "ZFJzcBJKChNkaXNjb3JkUmljaFByZXNlbmNlGAMgASgLMi0ubWcucHJvdG9j",
+            "b2wuZ2FtZV9zdGFydGVyLkRpc2NvcmRSaWNoUHJlc2VuY2UiNgoIVXBzdHJl",
+            "YW0SKgoDcmVxGAEgASgLMh0ubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlJl",
+            "cSJmCgpEb3duc3RyZWFtEiwKBHB1c2gYASABKAsyHi5tZy5wcm90b2NvbC5n",
+            "YW1lX3N0YXJ0ZXIuUHVzaBIqCgNyc3AYAiABKAsyHS5tZy5wcm90b2NvbC5n",
+            "YW1lX3N0YXJ0ZXIuUnNw"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -101,7 +105,8 @@ namespace Uplay.GameStarter {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.OculusInfo), global::Uplay.GameStarter.OculusInfo.Parser, new[]{ "AppId", "UserId", "OculusUserId", "AccessToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.NvidiaInfo), global::Uplay.GameStarter.NvidiaInfo.Parser, new[]{ "AccessToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.WeGameInfo), global::Uplay.GameStarter.WeGameInfo.Parser, new[]{ "RailGameId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.StartReq), global::Uplay.GameStarter.StartReq.Parser, new[]{ "LauncherVersion", "UplayId", "SteamGame", "GameVersion", "ProductId", "SimulationConfig", "SteamTicket", "SteamId", "ExecutablePath", "ExecutableArguments", "TimeStart", "SteamFreePackageId", "SteamRequiredProductId", "SteamProofOfPurchase", "OculusInfo", "Platform", "SteamOwnerId", "NvidiaInfo", "WeGameInfo" }, null, new[]{ typeof(global::Uplay.GameStarter.StartReq.Types.Platform) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.SteamInfo), global::Uplay.GameStarter.SteamInfo.Parser, new[]{ "SteamProfileId", "SteamTicket", "SteamGameOwnerProfileId", "SteamGameId", "SteamFreePackageId", "SteamRequiredProductId", "SteamProofOfPurchase" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.StartReq), global::Uplay.GameStarter.StartReq.Parser, new[]{ "LauncherVersion", "UplayId", "GameVersion", "ProductId", "SimulationConfig", "ExecutablePath", "ExecutableArguments", "TimeStart", "OculusInfo", "Platform", "NvidiaInfo", "WeGameInfo", "SteamInfo" }, null, new[]{ typeof(global::Uplay.GameStarter.StartReq.Types.Platform) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.HotkeyStateChangedReq), global::Uplay.GameStarter.HotkeyStateChangedReq.Parser, new[]{ "HotkeyType", "IsPressed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.Hotkey), global::Uplay.GameStarter.Hotkey.Parser, new[]{ "HotkeyType", "KeyCode", "AltState", "ShiftState", "ControlState" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.Hotkeys), global::Uplay.GameStarter.Hotkeys.Parser, new[]{ "Hotkeys_" }, null, null, null, null),
@@ -1756,6 +1761,495 @@ namespace Uplay.GameStarter {
 
   }
 
+  public sealed partial class SteamInfo : pb::IMessage<SteamInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SteamInfo> _parser = new pb::MessageParser<SteamInfo>(() => new SteamInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SteamInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SteamInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SteamInfo(SteamInfo other) : this() {
+      _hasBits0 = other._hasBits0;
+      steamProfileId_ = other.steamProfileId_;
+      steamTicket_ = other.steamTicket_;
+      steamGameOwnerProfileId_ = other.steamGameOwnerProfileId_;
+      steamGameId_ = other.steamGameId_;
+      steamFreePackageId_ = other.steamFreePackageId_;
+      steamRequiredProductId_ = other.steamRequiredProductId_;
+      steamProofOfPurchase_ = other.steamProofOfPurchase_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SteamInfo Clone() {
+      return new SteamInfo(this);
+    }
+
+    /// <summary>Field number for the "steamProfileId" field.</summary>
+    public const int SteamProfileIdFieldNumber = 1;
+    private readonly static string SteamProfileIdDefaultValue = "";
+
+    private string steamProfileId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SteamProfileId {
+      get { return steamProfileId_ ?? SteamProfileIdDefaultValue; }
+      set {
+        steamProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "steamProfileId" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSteamProfileId {
+      get { return steamProfileId_ != null; }
+    }
+    /// <summary>Clears the value of the "steamProfileId" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSteamProfileId() {
+      steamProfileId_ = null;
+    }
+
+    /// <summary>Field number for the "steamTicket" field.</summary>
+    public const int SteamTicketFieldNumber = 2;
+    private readonly static string SteamTicketDefaultValue = "";
+
+    private string steamTicket_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SteamTicket {
+      get { return steamTicket_ ?? SteamTicketDefaultValue; }
+      set {
+        steamTicket_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "steamTicket" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSteamTicket {
+      get { return steamTicket_ != null; }
+    }
+    /// <summary>Clears the value of the "steamTicket" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSteamTicket() {
+      steamTicket_ = null;
+    }
+
+    /// <summary>Field number for the "steamGameOwnerProfileId" field.</summary>
+    public const int SteamGameOwnerProfileIdFieldNumber = 3;
+    private readonly static string SteamGameOwnerProfileIdDefaultValue = "";
+
+    private string steamGameOwnerProfileId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SteamGameOwnerProfileId {
+      get { return steamGameOwnerProfileId_ ?? SteamGameOwnerProfileIdDefaultValue; }
+      set {
+        steamGameOwnerProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "steamGameOwnerProfileId" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSteamGameOwnerProfileId {
+      get { return steamGameOwnerProfileId_ != null; }
+    }
+    /// <summary>Clears the value of the "steamGameOwnerProfileId" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSteamGameOwnerProfileId() {
+      steamGameOwnerProfileId_ = null;
+    }
+
+    /// <summary>Field number for the "steamGameId" field.</summary>
+    public const int SteamGameIdFieldNumber = 4;
+    private readonly static uint SteamGameIdDefaultValue = 0;
+
+    private uint steamGameId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SteamGameId {
+      get { if ((_hasBits0 & 1) != 0) { return steamGameId_; } else { return SteamGameIdDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        steamGameId_ = value;
+      }
+    }
+    /// <summary>Gets whether the "steamGameId" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSteamGameId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "steamGameId" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSteamGameId() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "steamFreePackageId" field.</summary>
+    public const int SteamFreePackageIdFieldNumber = 5;
+    private readonly static uint SteamFreePackageIdDefaultValue = 0;
+
+    private uint steamFreePackageId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SteamFreePackageId {
+      get { if ((_hasBits0 & 2) != 0) { return steamFreePackageId_; } else { return SteamFreePackageIdDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        steamFreePackageId_ = value;
+      }
+    }
+    /// <summary>Gets whether the "steamFreePackageId" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSteamFreePackageId {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "steamFreePackageId" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSteamFreePackageId() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "steamRequiredProductId" field.</summary>
+    public const int SteamRequiredProductIdFieldNumber = 6;
+    private readonly static uint SteamRequiredProductIdDefaultValue = 0;
+
+    private uint steamRequiredProductId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SteamRequiredProductId {
+      get { if ((_hasBits0 & 4) != 0) { return steamRequiredProductId_; } else { return SteamRequiredProductIdDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        steamRequiredProductId_ = value;
+      }
+    }
+    /// <summary>Gets whether the "steamRequiredProductId" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSteamRequiredProductId {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "steamRequiredProductId" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSteamRequiredProductId() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "steamProofOfPurchase" field.</summary>
+    public const int SteamProofOfPurchaseFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Uplay.GameStarter.SteamProofOfPurchase> _repeated_steamProofOfPurchase_codec
+        = pb::FieldCodec.ForMessage(58, global::Uplay.GameStarter.SteamProofOfPurchase.Parser);
+    private readonly pbc::RepeatedField<global::Uplay.GameStarter.SteamProofOfPurchase> steamProofOfPurchase_ = new pbc::RepeatedField<global::Uplay.GameStarter.SteamProofOfPurchase>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Uplay.GameStarter.SteamProofOfPurchase> SteamProofOfPurchase {
+      get { return steamProofOfPurchase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SteamInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SteamInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SteamProfileId != other.SteamProfileId) return false;
+      if (SteamTicket != other.SteamTicket) return false;
+      if (SteamGameOwnerProfileId != other.SteamGameOwnerProfileId) return false;
+      if (SteamGameId != other.SteamGameId) return false;
+      if (SteamFreePackageId != other.SteamFreePackageId) return false;
+      if (SteamRequiredProductId != other.SteamRequiredProductId) return false;
+      if(!steamProofOfPurchase_.Equals(other.steamProofOfPurchase_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasSteamProfileId) hash ^= SteamProfileId.GetHashCode();
+      if (HasSteamTicket) hash ^= SteamTicket.GetHashCode();
+      if (HasSteamGameOwnerProfileId) hash ^= SteamGameOwnerProfileId.GetHashCode();
+      if (HasSteamGameId) hash ^= SteamGameId.GetHashCode();
+      if (HasSteamFreePackageId) hash ^= SteamFreePackageId.GetHashCode();
+      if (HasSteamRequiredProductId) hash ^= SteamRequiredProductId.GetHashCode();
+      hash ^= steamProofOfPurchase_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasSteamProfileId) {
+        output.WriteRawTag(10);
+        output.WriteString(SteamProfileId);
+      }
+      if (HasSteamTicket) {
+        output.WriteRawTag(18);
+        output.WriteString(SteamTicket);
+      }
+      if (HasSteamGameOwnerProfileId) {
+        output.WriteRawTag(26);
+        output.WriteString(SteamGameOwnerProfileId);
+      }
+      if (HasSteamGameId) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SteamGameId);
+      }
+      if (HasSteamFreePackageId) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(SteamFreePackageId);
+      }
+      if (HasSteamRequiredProductId) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(SteamRequiredProductId);
+      }
+      steamProofOfPurchase_.WriteTo(output, _repeated_steamProofOfPurchase_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasSteamProfileId) {
+        output.WriteRawTag(10);
+        output.WriteString(SteamProfileId);
+      }
+      if (HasSteamTicket) {
+        output.WriteRawTag(18);
+        output.WriteString(SteamTicket);
+      }
+      if (HasSteamGameOwnerProfileId) {
+        output.WriteRawTag(26);
+        output.WriteString(SteamGameOwnerProfileId);
+      }
+      if (HasSteamGameId) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SteamGameId);
+      }
+      if (HasSteamFreePackageId) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(SteamFreePackageId);
+      }
+      if (HasSteamRequiredProductId) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(SteamRequiredProductId);
+      }
+      steamProofOfPurchase_.WriteTo(ref output, _repeated_steamProofOfPurchase_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasSteamProfileId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SteamProfileId);
+      }
+      if (HasSteamTicket) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SteamTicket);
+      }
+      if (HasSteamGameOwnerProfileId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SteamGameOwnerProfileId);
+      }
+      if (HasSteamGameId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SteamGameId);
+      }
+      if (HasSteamFreePackageId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SteamFreePackageId);
+      }
+      if (HasSteamRequiredProductId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SteamRequiredProductId);
+      }
+      size += steamProofOfPurchase_.CalculateSize(_repeated_steamProofOfPurchase_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SteamInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasSteamProfileId) {
+        SteamProfileId = other.SteamProfileId;
+      }
+      if (other.HasSteamTicket) {
+        SteamTicket = other.SteamTicket;
+      }
+      if (other.HasSteamGameOwnerProfileId) {
+        SteamGameOwnerProfileId = other.SteamGameOwnerProfileId;
+      }
+      if (other.HasSteamGameId) {
+        SteamGameId = other.SteamGameId;
+      }
+      if (other.HasSteamFreePackageId) {
+        SteamFreePackageId = other.SteamFreePackageId;
+      }
+      if (other.HasSteamRequiredProductId) {
+        SteamRequiredProductId = other.SteamRequiredProductId;
+      }
+      steamProofOfPurchase_.Add(other.steamProofOfPurchase_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SteamProfileId = input.ReadString();
+            break;
+          }
+          case 18: {
+            SteamTicket = input.ReadString();
+            break;
+          }
+          case 26: {
+            SteamGameOwnerProfileId = input.ReadString();
+            break;
+          }
+          case 32: {
+            SteamGameId = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            SteamFreePackageId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            SteamRequiredProductId = input.ReadUInt32();
+            break;
+          }
+          case 58: {
+            steamProofOfPurchase_.AddEntriesFrom(input, _repeated_steamProofOfPurchase_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SteamProfileId = input.ReadString();
+            break;
+          }
+          case 18: {
+            SteamTicket = input.ReadString();
+            break;
+          }
+          case 26: {
+            SteamGameOwnerProfileId = input.ReadString();
+            break;
+          }
+          case 32: {
+            SteamGameId = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            SteamFreePackageId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            SteamRequiredProductId = input.ReadUInt32();
+            break;
+          }
+          case 58: {
+            steamProofOfPurchase_.AddEntriesFrom(ref input, _repeated_steamProofOfPurchase_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class StartReq : pb::IMessage<StartReq>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1771,7 +2265,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1794,23 +2288,17 @@ namespace Uplay.GameStarter {
       _hasBits0 = other._hasBits0;
       launcherVersion_ = other.launcherVersion_;
       uplayId_ = other.uplayId_;
-      steamGame_ = other.steamGame_;
       gameVersion_ = other.gameVersion_;
       productId_ = other.productId_;
       simulationConfig_ = other.simulationConfig_;
-      steamTicket_ = other.steamTicket_;
-      steamId_ = other.steamId_;
       executablePath_ = other.executablePath_;
       executableArguments_ = other.executableArguments_;
       timeStart_ = other.timeStart_;
-      steamFreePackageId_ = other.steamFreePackageId_;
-      steamRequiredProductId_ = other.steamRequiredProductId_;
-      steamProofOfPurchase_ = other.steamProofOfPurchase_.Clone();
       oculusInfo_ = other.oculusInfo_ != null ? other.oculusInfo_.Clone() : null;
       platform_ = other.platform_;
-      steamOwnerId_ = other.steamOwnerId_;
       nvidiaInfo_ = other.nvidiaInfo_ != null ? other.nvidiaInfo_.Clone() : null;
       weGameInfo_ = other.weGameInfo_ != null ? other.weGameInfo_.Clone() : null;
+      steamInfo_ = other.steamInfo_ != null ? other.steamInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1874,33 +2362,6 @@ namespace Uplay.GameStarter {
       _hasBits0 &= ~2;
     }
 
-    /// <summary>Field number for the "steamGame" field.</summary>
-    public const int SteamGameFieldNumber = 3;
-    private readonly static bool SteamGameDefaultValue = false;
-
-    private bool steamGame_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool SteamGame {
-      get { if ((_hasBits0 & 4) != 0) { return steamGame_; } else { return SteamGameDefaultValue; } }
-      set {
-        _hasBits0 |= 4;
-        steamGame_ = value;
-      }
-    }
-    /// <summary>Gets whether the "steamGame" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasSteamGame {
-      get { return (_hasBits0 & 4) != 0; }
-    }
-    /// <summary>Clears the value of the "steamGame" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearSteamGame() {
-      _hasBits0 &= ~4;
-    }
-
     /// <summary>Field number for the "gameVersion" field.</summary>
     public const int GameVersionFieldNumber = 4;
     private readonly static uint GameVersionDefaultValue = 0;
@@ -1909,9 +2370,9 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint GameVersion {
-      get { if ((_hasBits0 & 8) != 0) { return gameVersion_; } else { return GameVersionDefaultValue; } }
+      get { if ((_hasBits0 & 4) != 0) { return gameVersion_; } else { return GameVersionDefaultValue; } }
       set {
-        _hasBits0 |= 8;
+        _hasBits0 |= 4;
         gameVersion_ = value;
       }
     }
@@ -1919,13 +2380,13 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasGameVersion {
-      get { return (_hasBits0 & 8) != 0; }
+      get { return (_hasBits0 & 4) != 0; }
     }
     /// <summary>Clears the value of the "gameVersion" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearGameVersion() {
-      _hasBits0 &= ~8;
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "productId" field.</summary>
@@ -1936,9 +2397,9 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint ProductId {
-      get { if ((_hasBits0 & 16) != 0) { return productId_; } else { return ProductIdDefaultValue; } }
+      get { if ((_hasBits0 & 8) != 0) { return productId_; } else { return ProductIdDefaultValue; } }
       set {
-        _hasBits0 |= 16;
+        _hasBits0 |= 8;
         productId_ = value;
       }
     }
@@ -1946,13 +2407,13 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasProductId {
-      get { return (_hasBits0 & 16) != 0; }
+      get { return (_hasBits0 & 8) != 0; }
     }
     /// <summary>Clears the value of the "productId" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearProductId() {
-      _hasBits0 &= ~16;
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "simulationConfig" field.</summary>
@@ -1979,58 +2440,6 @@ namespace Uplay.GameStarter {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearSimulationConfig() {
       simulationConfig_ = null;
-    }
-
-    /// <summary>Field number for the "steamTicket" field.</summary>
-    public const int SteamTicketFieldNumber = 8;
-    private readonly static string SteamTicketDefaultValue = "";
-
-    private string steamTicket_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SteamTicket {
-      get { return steamTicket_ ?? SteamTicketDefaultValue; }
-      set {
-        steamTicket_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "steamTicket" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasSteamTicket {
-      get { return steamTicket_ != null; }
-    }
-    /// <summary>Clears the value of the "steamTicket" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearSteamTicket() {
-      steamTicket_ = null;
-    }
-
-    /// <summary>Field number for the "steamId" field.</summary>
-    public const int SteamIdFieldNumber = 9;
-    private readonly static string SteamIdDefaultValue = "";
-
-    private string steamId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SteamId {
-      get { return steamId_ ?? SteamIdDefaultValue; }
-      set {
-        steamId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "steamId" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasSteamId {
-      get { return steamId_ != null; }
-    }
-    /// <summary>Clears the value of the "steamId" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearSteamId() {
-      steamId_ = null;
     }
 
     /// <summary>Field number for the "executablePath" field.</summary>
@@ -2093,9 +2502,9 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ulong TimeStart {
-      get { if ((_hasBits0 & 32) != 0) { return timeStart_; } else { return TimeStartDefaultValue; } }
+      get { if ((_hasBits0 & 16) != 0) { return timeStart_; } else { return TimeStartDefaultValue; } }
       set {
-        _hasBits0 |= 32;
+        _hasBits0 |= 16;
         timeStart_ = value;
       }
     }
@@ -2103,78 +2512,13 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasTimeStart {
-      get { return (_hasBits0 & 32) != 0; }
+      get { return (_hasBits0 & 16) != 0; }
     }
     /// <summary>Clears the value of the "timeStart" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTimeStart() {
-      _hasBits0 &= ~32;
-    }
-
-    /// <summary>Field number for the "steamFreePackageId" field.</summary>
-    public const int SteamFreePackageIdFieldNumber = 13;
-    private readonly static uint SteamFreePackageIdDefaultValue = 0;
-
-    private uint steamFreePackageId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SteamFreePackageId {
-      get { if ((_hasBits0 & 64) != 0) { return steamFreePackageId_; } else { return SteamFreePackageIdDefaultValue; } }
-      set {
-        _hasBits0 |= 64;
-        steamFreePackageId_ = value;
-      }
-    }
-    /// <summary>Gets whether the "steamFreePackageId" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasSteamFreePackageId {
-      get { return (_hasBits0 & 64) != 0; }
-    }
-    /// <summary>Clears the value of the "steamFreePackageId" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearSteamFreePackageId() {
-      _hasBits0 &= ~64;
-    }
-
-    /// <summary>Field number for the "steamRequiredProductId" field.</summary>
-    public const int SteamRequiredProductIdFieldNumber = 14;
-    private readonly static uint SteamRequiredProductIdDefaultValue = 0;
-
-    private uint steamRequiredProductId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SteamRequiredProductId {
-      get { if ((_hasBits0 & 128) != 0) { return steamRequiredProductId_; } else { return SteamRequiredProductIdDefaultValue; } }
-      set {
-        _hasBits0 |= 128;
-        steamRequiredProductId_ = value;
-      }
-    }
-    /// <summary>Gets whether the "steamRequiredProductId" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasSteamRequiredProductId {
-      get { return (_hasBits0 & 128) != 0; }
-    }
-    /// <summary>Clears the value of the "steamRequiredProductId" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearSteamRequiredProductId() {
-      _hasBits0 &= ~128;
-    }
-
-    /// <summary>Field number for the "steamProofOfPurchase" field.</summary>
-    public const int SteamProofOfPurchaseFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::Uplay.GameStarter.SteamProofOfPurchase> _repeated_steamProofOfPurchase_codec
-        = pb::FieldCodec.ForMessage(122, global::Uplay.GameStarter.SteamProofOfPurchase.Parser);
-    private readonly pbc::RepeatedField<global::Uplay.GameStarter.SteamProofOfPurchase> steamProofOfPurchase_ = new pbc::RepeatedField<global::Uplay.GameStarter.SteamProofOfPurchase>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Uplay.GameStarter.SteamProofOfPurchase> SteamProofOfPurchase {
-      get { return steamProofOfPurchase_; }
+      _hasBits0 &= ~16;
     }
 
     /// <summary>Field number for the "oculusInfo" field.</summary>
@@ -2197,9 +2541,9 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Uplay.GameStarter.StartReq.Types.Platform Platform {
-      get { if ((_hasBits0 & 256) != 0) { return platform_; } else { return PlatformDefaultValue; } }
+      get { if ((_hasBits0 & 32) != 0) { return platform_; } else { return PlatformDefaultValue; } }
       set {
-        _hasBits0 |= 256;
+        _hasBits0 |= 32;
         platform_ = value;
       }
     }
@@ -2207,39 +2551,13 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasPlatform {
-      get { return (_hasBits0 & 256) != 0; }
+      get { return (_hasBits0 & 32) != 0; }
     }
     /// <summary>Clears the value of the "platform" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPlatform() {
-      _hasBits0 &= ~256;
-    }
-
-    /// <summary>Field number for the "steamOwnerId" field.</summary>
-    public const int SteamOwnerIdFieldNumber = 18;
-    private readonly static string SteamOwnerIdDefaultValue = "";
-
-    private string steamOwnerId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SteamOwnerId {
-      get { return steamOwnerId_ ?? SteamOwnerIdDefaultValue; }
-      set {
-        steamOwnerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "steamOwnerId" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasSteamOwnerId {
-      get { return steamOwnerId_ != null; }
-    }
-    /// <summary>Clears the value of the "steamOwnerId" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearSteamOwnerId() {
-      steamOwnerId_ = null;
+      _hasBits0 &= ~32;
     }
 
     /// <summary>Field number for the "nvidiaInfo" field.</summary>
@@ -2266,6 +2584,18 @@ namespace Uplay.GameStarter {
       }
     }
 
+    /// <summary>Field number for the "steamInfo" field.</summary>
+    public const int SteamInfoFieldNumber = 22;
+    private global::Uplay.GameStarter.SteamInfo steamInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.GameStarter.SteamInfo SteamInfo {
+      get { return steamInfo_; }
+      set {
+        steamInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2283,23 +2613,17 @@ namespace Uplay.GameStarter {
       }
       if (LauncherVersion != other.LauncherVersion) return false;
       if (UplayId != other.UplayId) return false;
-      if (SteamGame != other.SteamGame) return false;
       if (GameVersion != other.GameVersion) return false;
       if (ProductId != other.ProductId) return false;
       if (SimulationConfig != other.SimulationConfig) return false;
-      if (SteamTicket != other.SteamTicket) return false;
-      if (SteamId != other.SteamId) return false;
       if (ExecutablePath != other.ExecutablePath) return false;
       if (ExecutableArguments != other.ExecutableArguments) return false;
       if (TimeStart != other.TimeStart) return false;
-      if (SteamFreePackageId != other.SteamFreePackageId) return false;
-      if (SteamRequiredProductId != other.SteamRequiredProductId) return false;
-      if(!steamProofOfPurchase_.Equals(other.steamProofOfPurchase_)) return false;
       if (!object.Equals(OculusInfo, other.OculusInfo)) return false;
       if (Platform != other.Platform) return false;
-      if (SteamOwnerId != other.SteamOwnerId) return false;
       if (!object.Equals(NvidiaInfo, other.NvidiaInfo)) return false;
       if (!object.Equals(WeGameInfo, other.WeGameInfo)) return false;
+      if (!object.Equals(SteamInfo, other.SteamInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2309,23 +2633,17 @@ namespace Uplay.GameStarter {
       int hash = 1;
       if (HasLauncherVersion) hash ^= LauncherVersion.GetHashCode();
       if (HasUplayId) hash ^= UplayId.GetHashCode();
-      if (HasSteamGame) hash ^= SteamGame.GetHashCode();
       if (HasGameVersion) hash ^= GameVersion.GetHashCode();
       if (HasProductId) hash ^= ProductId.GetHashCode();
       if (HasSimulationConfig) hash ^= SimulationConfig.GetHashCode();
-      if (HasSteamTicket) hash ^= SteamTicket.GetHashCode();
-      if (HasSteamId) hash ^= SteamId.GetHashCode();
       if (HasExecutablePath) hash ^= ExecutablePath.GetHashCode();
       if (HasExecutableArguments) hash ^= ExecutableArguments.GetHashCode();
       if (HasTimeStart) hash ^= TimeStart.GetHashCode();
-      if (HasSteamFreePackageId) hash ^= SteamFreePackageId.GetHashCode();
-      if (HasSteamRequiredProductId) hash ^= SteamRequiredProductId.GetHashCode();
-      hash ^= steamProofOfPurchase_.GetHashCode();
       if (oculusInfo_ != null) hash ^= OculusInfo.GetHashCode();
       if (HasPlatform) hash ^= Platform.GetHashCode();
-      if (HasSteamOwnerId) hash ^= SteamOwnerId.GetHashCode();
       if (nvidiaInfo_ != null) hash ^= NvidiaInfo.GetHashCode();
       if (weGameInfo_ != null) hash ^= WeGameInfo.GetHashCode();
+      if (steamInfo_ != null) hash ^= SteamInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2352,10 +2670,6 @@ namespace Uplay.GameStarter {
         output.WriteRawTag(16);
         output.WriteUInt32(UplayId);
       }
-      if (HasSteamGame) {
-        output.WriteRawTag(24);
-        output.WriteBool(SteamGame);
-      }
       if (HasGameVersion) {
         output.WriteRawTag(32);
         output.WriteUInt32(GameVersion);
@@ -2367,14 +2681,6 @@ namespace Uplay.GameStarter {
       if (HasSimulationConfig) {
         output.WriteRawTag(58);
         output.WriteString(SimulationConfig);
-      }
-      if (HasSteamTicket) {
-        output.WriteRawTag(66);
-        output.WriteString(SteamTicket);
-      }
-      if (HasSteamId) {
-        output.WriteRawTag(74);
-        output.WriteString(SteamId);
       }
       if (HasExecutablePath) {
         output.WriteRawTag(82);
@@ -2388,15 +2694,6 @@ namespace Uplay.GameStarter {
         output.WriteRawTag(96);
         output.WriteUInt64(TimeStart);
       }
-      if (HasSteamFreePackageId) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(SteamFreePackageId);
-      }
-      if (HasSteamRequiredProductId) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(SteamRequiredProductId);
-      }
-      steamProofOfPurchase_.WriteTo(output, _repeated_steamProofOfPurchase_codec);
       if (oculusInfo_ != null) {
         output.WriteRawTag(130, 1);
         output.WriteMessage(OculusInfo);
@@ -2405,10 +2702,6 @@ namespace Uplay.GameStarter {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) Platform);
       }
-      if (HasSteamOwnerId) {
-        output.WriteRawTag(146, 1);
-        output.WriteString(SteamOwnerId);
-      }
       if (nvidiaInfo_ != null) {
         output.WriteRawTag(154, 1);
         output.WriteMessage(NvidiaInfo);
@@ -2416,6 +2709,10 @@ namespace Uplay.GameStarter {
       if (weGameInfo_ != null) {
         output.WriteRawTag(162, 1);
         output.WriteMessage(WeGameInfo);
+      }
+      if (steamInfo_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(SteamInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -2435,10 +2732,6 @@ namespace Uplay.GameStarter {
         output.WriteRawTag(16);
         output.WriteUInt32(UplayId);
       }
-      if (HasSteamGame) {
-        output.WriteRawTag(24);
-        output.WriteBool(SteamGame);
-      }
       if (HasGameVersion) {
         output.WriteRawTag(32);
         output.WriteUInt32(GameVersion);
@@ -2450,14 +2743,6 @@ namespace Uplay.GameStarter {
       if (HasSimulationConfig) {
         output.WriteRawTag(58);
         output.WriteString(SimulationConfig);
-      }
-      if (HasSteamTicket) {
-        output.WriteRawTag(66);
-        output.WriteString(SteamTicket);
-      }
-      if (HasSteamId) {
-        output.WriteRawTag(74);
-        output.WriteString(SteamId);
       }
       if (HasExecutablePath) {
         output.WriteRawTag(82);
@@ -2471,15 +2756,6 @@ namespace Uplay.GameStarter {
         output.WriteRawTag(96);
         output.WriteUInt64(TimeStart);
       }
-      if (HasSteamFreePackageId) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(SteamFreePackageId);
-      }
-      if (HasSteamRequiredProductId) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(SteamRequiredProductId);
-      }
-      steamProofOfPurchase_.WriteTo(ref output, _repeated_steamProofOfPurchase_codec);
       if (oculusInfo_ != null) {
         output.WriteRawTag(130, 1);
         output.WriteMessage(OculusInfo);
@@ -2488,10 +2764,6 @@ namespace Uplay.GameStarter {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) Platform);
       }
-      if (HasSteamOwnerId) {
-        output.WriteRawTag(146, 1);
-        output.WriteString(SteamOwnerId);
-      }
       if (nvidiaInfo_ != null) {
         output.WriteRawTag(154, 1);
         output.WriteMessage(NvidiaInfo);
@@ -2499,6 +2771,10 @@ namespace Uplay.GameStarter {
       if (weGameInfo_ != null) {
         output.WriteRawTag(162, 1);
         output.WriteMessage(WeGameInfo);
+      }
+      if (steamInfo_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(SteamInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -2516,9 +2792,6 @@ namespace Uplay.GameStarter {
       if (HasUplayId) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UplayId);
       }
-      if (HasSteamGame) {
-        size += 1 + 1;
-      }
       if (HasGameVersion) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameVersion);
       }
@@ -2527,12 +2800,6 @@ namespace Uplay.GameStarter {
       }
       if (HasSimulationConfig) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SimulationConfig);
-      }
-      if (HasSteamTicket) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SteamTicket);
-      }
-      if (HasSteamId) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SteamId);
       }
       if (HasExecutablePath) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExecutablePath);
@@ -2543,27 +2810,20 @@ namespace Uplay.GameStarter {
       if (HasTimeStart) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(TimeStart);
       }
-      if (HasSteamFreePackageId) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SteamFreePackageId);
-      }
-      if (HasSteamRequiredProductId) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SteamRequiredProductId);
-      }
-      size += steamProofOfPurchase_.CalculateSize(_repeated_steamProofOfPurchase_codec);
       if (oculusInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(OculusInfo);
       }
       if (HasPlatform) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Platform);
       }
-      if (HasSteamOwnerId) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(SteamOwnerId);
-      }
       if (nvidiaInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(NvidiaInfo);
       }
       if (weGameInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(WeGameInfo);
+      }
+      if (steamInfo_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SteamInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2583,9 +2843,6 @@ namespace Uplay.GameStarter {
       if (other.HasUplayId) {
         UplayId = other.UplayId;
       }
-      if (other.HasSteamGame) {
-        SteamGame = other.SteamGame;
-      }
       if (other.HasGameVersion) {
         GameVersion = other.GameVersion;
       }
@@ -2594,12 +2851,6 @@ namespace Uplay.GameStarter {
       }
       if (other.HasSimulationConfig) {
         SimulationConfig = other.SimulationConfig;
-      }
-      if (other.HasSteamTicket) {
-        SteamTicket = other.SteamTicket;
-      }
-      if (other.HasSteamId) {
-        SteamId = other.SteamId;
       }
       if (other.HasExecutablePath) {
         ExecutablePath = other.ExecutablePath;
@@ -2610,13 +2861,6 @@ namespace Uplay.GameStarter {
       if (other.HasTimeStart) {
         TimeStart = other.TimeStart;
       }
-      if (other.HasSteamFreePackageId) {
-        SteamFreePackageId = other.SteamFreePackageId;
-      }
-      if (other.HasSteamRequiredProductId) {
-        SteamRequiredProductId = other.SteamRequiredProductId;
-      }
-      steamProofOfPurchase_.Add(other.steamProofOfPurchase_);
       if (other.oculusInfo_ != null) {
         if (oculusInfo_ == null) {
           OculusInfo = new global::Uplay.GameStarter.OculusInfo();
@@ -2625,9 +2869,6 @@ namespace Uplay.GameStarter {
       }
       if (other.HasPlatform) {
         Platform = other.Platform;
-      }
-      if (other.HasSteamOwnerId) {
-        SteamOwnerId = other.SteamOwnerId;
       }
       if (other.nvidiaInfo_ != null) {
         if (nvidiaInfo_ == null) {
@@ -2640,6 +2881,12 @@ namespace Uplay.GameStarter {
           WeGameInfo = new global::Uplay.GameStarter.WeGameInfo();
         }
         WeGameInfo.MergeFrom(other.WeGameInfo);
+      }
+      if (other.steamInfo_ != null) {
+        if (steamInfo_ == null) {
+          SteamInfo = new global::Uplay.GameStarter.SteamInfo();
+        }
+        SteamInfo.MergeFrom(other.SteamInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2664,10 +2911,6 @@ namespace Uplay.GameStarter {
             UplayId = input.ReadUInt32();
             break;
           }
-          case 24: {
-            SteamGame = input.ReadBool();
-            break;
-          }
           case 32: {
             GameVersion = input.ReadUInt32();
             break;
@@ -2678,14 +2921,6 @@ namespace Uplay.GameStarter {
           }
           case 58: {
             SimulationConfig = input.ReadString();
-            break;
-          }
-          case 66: {
-            SteamTicket = input.ReadString();
-            break;
-          }
-          case 74: {
-            SteamId = input.ReadString();
             break;
           }
           case 82: {
@@ -2700,18 +2935,6 @@ namespace Uplay.GameStarter {
             TimeStart = input.ReadUInt64();
             break;
           }
-          case 104: {
-            SteamFreePackageId = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            SteamRequiredProductId = input.ReadUInt32();
-            break;
-          }
-          case 122: {
-            steamProofOfPurchase_.AddEntriesFrom(input, _repeated_steamProofOfPurchase_codec);
-            break;
-          }
           case 130: {
             if (oculusInfo_ == null) {
               OculusInfo = new global::Uplay.GameStarter.OculusInfo();
@@ -2721,10 +2944,6 @@ namespace Uplay.GameStarter {
           }
           case 136: {
             Platform = (global::Uplay.GameStarter.StartReq.Types.Platform) input.ReadEnum();
-            break;
-          }
-          case 146: {
-            SteamOwnerId = input.ReadString();
             break;
           }
           case 154: {
@@ -2739,6 +2958,13 @@ namespace Uplay.GameStarter {
               WeGameInfo = new global::Uplay.GameStarter.WeGameInfo();
             }
             input.ReadMessage(WeGameInfo);
+            break;
+          }
+          case 178: {
+            if (steamInfo_ == null) {
+              SteamInfo = new global::Uplay.GameStarter.SteamInfo();
+            }
+            input.ReadMessage(SteamInfo);
             break;
           }
         }
@@ -2764,10 +2990,6 @@ namespace Uplay.GameStarter {
             UplayId = input.ReadUInt32();
             break;
           }
-          case 24: {
-            SteamGame = input.ReadBool();
-            break;
-          }
           case 32: {
             GameVersion = input.ReadUInt32();
             break;
@@ -2778,14 +3000,6 @@ namespace Uplay.GameStarter {
           }
           case 58: {
             SimulationConfig = input.ReadString();
-            break;
-          }
-          case 66: {
-            SteamTicket = input.ReadString();
-            break;
-          }
-          case 74: {
-            SteamId = input.ReadString();
             break;
           }
           case 82: {
@@ -2800,18 +3014,6 @@ namespace Uplay.GameStarter {
             TimeStart = input.ReadUInt64();
             break;
           }
-          case 104: {
-            SteamFreePackageId = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            SteamRequiredProductId = input.ReadUInt32();
-            break;
-          }
-          case 122: {
-            steamProofOfPurchase_.AddEntriesFrom(ref input, _repeated_steamProofOfPurchase_codec);
-            break;
-          }
           case 130: {
             if (oculusInfo_ == null) {
               OculusInfo = new global::Uplay.GameStarter.OculusInfo();
@@ -2821,10 +3023,6 @@ namespace Uplay.GameStarter {
           }
           case 136: {
             Platform = (global::Uplay.GameStarter.StartReq.Types.Platform) input.ReadEnum();
-            break;
-          }
-          case 146: {
-            SteamOwnerId = input.ReadString();
             break;
           }
           case 154: {
@@ -2839,6 +3037,13 @@ namespace Uplay.GameStarter {
               WeGameInfo = new global::Uplay.GameStarter.WeGameInfo();
             }
             input.ReadMessage(WeGameInfo);
+            break;
+          }
+          case 178: {
+            if (steamInfo_ == null) {
+              SteamInfo = new global::Uplay.GameStarter.SteamInfo();
+            }
+            input.ReadMessage(SteamInfo);
             break;
           }
         }
@@ -2880,7 +3085,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3138,7 +3343,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3551,7 +3756,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3730,7 +3935,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4355,7 +4560,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4572,7 +4777,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4724,7 +4929,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4876,7 +5081,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5120,7 +5325,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5272,7 +5477,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5425,7 +5630,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5681,7 +5886,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5879,7 +6084,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6215,7 +6420,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6505,7 +6710,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6703,7 +6908,7 @@ namespace Uplay.GameStarter {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Uplay.GameStarter.GameStarterReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

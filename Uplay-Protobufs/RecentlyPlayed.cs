@@ -24,11 +24,11 @@ namespace Uplay.RecentlyPlayed {
     static RecentlyPlayedReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVyZWNlbnRseV9wbGF5ZWQucHJvdG8SG21nLnByb3RvY29sLnJlY2VudGx5",
-            "X3BsYXllZCJDCg9HYW1lU2Vzc2lvbkluZm8SEQoJcHJvZHVjdElkGAEgAigN",
-            "Eh0KFXNlc3Npb25FbmRlZFRpbWVzdGFtcBgCIAIoBCJSChNSZWNlbnRseVBs",
-            "YXllZEdhbWVzEjsKBWdhbWVzGAEgAygLMiwubWcucHJvdG9jb2wucmVjZW50",
-            "bHlfcGxheWVkLkdhbWVTZXNzaW9uSW5mbw=="));
+            "Cht1cGxheS9yZWNlbnRseV9wbGF5ZWQucHJvdG8SG21nLnByb3RvY29sLnJl",
+            "Y2VudGx5X3BsYXllZCJDCg9HYW1lU2Vzc2lvbkluZm8SEQoJcHJvZHVjdElk",
+            "GAEgAigNEh0KFXNlc3Npb25FbmRlZFRpbWVzdGFtcBgCIAIoBCJSChNSZWNl",
+            "bnRseVBsYXllZEdhbWVzEjsKBWdhbWVzGAEgAygLMiwubWcucHJvdG9jb2wu",
+            "cmVjZW50bHlfcGxheWVkLkdhbWVTZXNzaW9uSW5mbw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

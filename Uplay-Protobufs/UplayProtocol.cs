@@ -24,9 +24,9 @@ namespace Uplay.Uplayprotocol {
     static UplayProtocolReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChR1cGxheV9wcm90b2NvbC5wcm90bxIZbWcucHJvdG9jb2wudXBsYXlwcm90",
-            "b2NvbCIsCgNSZXESEAoIcHJvdG9jb2wYASACKAkSEwoLZW52aXJvbm1lbnQY",
-            "AiABKAkiBQoDUnNw"));
+            "Chp1cGxheS91cGxheV9wcm90b2NvbC5wcm90bxIZbWcucHJvdG9jb2wudXBs",
+            "YXlwcm90b2NvbCIsCgNSZXESEAoIcHJvdG9jb2wYASACKAkSEwoLZW52aXJv",
+            "bm1lbnQYAiABKAkiBQoDUnNw"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

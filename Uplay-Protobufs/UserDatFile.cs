@@ -24,34 +24,37 @@ namespace Uplay.UserDatFile {
     static UserDatFileReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChN1c2VyX2RhdF9maWxlLnByb3RvEhltZy5wcm90b2NvbC51c2VyX2RhdF9m",
-            "aWxlIo0DCghVc2VySW5mbxISCgh1c2VybmFtZRgBIAEoCUgAEhgKDnViaV9h",
-            "Y2NvdW50X2lkGAMgASgJSAESDwoFZW1haWwYBSABKAlIAhIOCgRuYW1lGAYg",
-            "ASgJSAMSFwoNcGFzc3dvcmRfc2FsdBgIIAEoDEgEEhcKDXBhc3N3b3JkX2hh",
-            "c2gYByABKAxIBRIeChRtaWdyYXRpb25fZW1haWxfaGFzaBgJIAEoCUgGEhwK",
-            "EnJlbWVtYmVyX21lX3RpY2tldBgKIAEoCUgHEiAKFmhhc2hfaXRlcmF0aW9u",
-            "c19vZmZzZXQYCyABKA1ICEILCglfdXNlcm5hbWVCEQoPX3ViaV9hY2NvdW50",
-            "X2lkQggKBl9lbWFpbEIHCgVfbmFtZUIQCg5fcGFzc3dvcmRfc2FsdEIQCg5f",
-            "cGFzc3dvcmRfaGFzaEIXChVfbWlncmF0aW9uX2VtYWlsX2hhc2hCFQoTX3Jl",
-            "bWVtYmVyX21lX3RpY2tldEIZChdfaGFzaF9pdGVyYXRpb25zX29mZnNldCJW",
-            "CiBMZWdhY3lWdWxuZXJhYmxlVW52ZXJzaW9uZWRDYWNoZRIyCgV1c2VycxgB",
-            "IAMoCzIjLm1nLnByb3RvY29sLnVzZXJfZGF0X2ZpbGUuVXNlckluZm8inQEK",
-            "DFN0YXJ0dXBFbnRyeRIYCg5pc19yZW1lbWJlcl9tZRgBIAEoCEgAEiAKFmlz",
-            "X3Jlc3RhcnRfY3JlZGVudGlhbHMYAiABKAhIARIUCgp1c2VyX2luZGV4GAMg",
-            "ASgNSAJCEQoPX2lzX3JlbWVtYmVyX21lQhkKF19pc19yZXN0YXJ0X2NyZWRl",
-            "bnRpYWxzQg0KC191c2VyX2luZGV4IpoBChBFbnZpcm9ubWVudENhY2hlEjIK",
-            "BXVzZXJzGAEgAygLMiMubWcucHJvdG9jb2wudXNlcl9kYXRfZmlsZS5Vc2Vy",
-            "SW5mbxJACg1zdGFydHVwX2VudHJ5GAIgASgLMicubWcucHJvdG9jb2wudXNl",
-            "cl9kYXRfZmlsZS5TdGFydHVwRW50cnlIAEIQCg5fc3RhcnR1cF9lbnRyeSLV",
-            "AQoFQ2FjaGUSOwoEcHJvZBgBIAEoCzIrLm1nLnByb3RvY29sLnVzZXJfZGF0",
-            "X2ZpbGUuRW52aXJvbm1lbnRDYWNoZUgAEjoKA3VhdBgCIAEoCzIrLm1nLnBy",
-            "b3RvY29sLnVzZXJfZGF0X2ZpbGUuRW52aXJvbm1lbnRDYWNoZUgBEjoKA2Rl",
-            "dhgDIAEoCzIrLm1nLnByb3RvY29sLnVzZXJfZGF0X2ZpbGUuRW52aXJvbm1l",
-            "bnRDYWNoZUgCQgcKBV9wcm9kQgYKBF91YXRCBgoEX2RldmIGcHJvdG8z"));
+            "Chl1cGxheS91c2VyX2RhdF9maWxlLnByb3RvEhltZy5wcm90b2NvbC51c2Vy",
+            "X2RhdF9maWxlIvsDCghVc2VySW5mbxISCgh1c2VybmFtZRgBIAEoCUgAEhgK",
+            "DnViaV9hY2NvdW50X2lkGAMgASgJSAESDwoFZW1haWwYBSABKAlIAhIOCgRu",
+            "YW1lGAYgASgJSAMSFwoNcGFzc3dvcmRfc2FsdBgIIAEoDEgEEhcKDXBhc3N3",
+            "b3JkX2hhc2gYByABKAxIBRIeChRtaWdyYXRpb25fZW1haWxfaGFzaBgJIAEo",
+            "CUgGEhwKEnJlbWVtYmVyX21lX3RpY2tldBgKIAEoCUgHEiAKFmhhc2hfaXRl",
+            "cmF0aW9uc19vZmZzZXQYCyABKA1ICBIYCg51YmlfcHJvZmlsZV9pZBgMIAEo",
+            "CUgJEiIKGHN0ZWFtX3Nlc3Npb25fcHJvZmlsZV9pZBgNIAEoCUgKQgsKCV91",
+            "c2VybmFtZUIRCg9fdWJpX2FjY291bnRfaWRCCAoGX2VtYWlsQgcKBV9uYW1l",
+            "QhAKDl9wYXNzd29yZF9zYWx0QhAKDl9wYXNzd29yZF9oYXNoQhcKFV9taWdy",
+            "YXRpb25fZW1haWxfaGFzaEIVChNfcmVtZW1iZXJfbWVfdGlja2V0QhkKF19o",
+            "YXNoX2l0ZXJhdGlvbnNfb2Zmc2V0QhEKD191YmlfcHJvZmlsZV9pZEIbChlf",
+            "c3RlYW1fc2Vzc2lvbl9wcm9maWxlX2lkIlYKIExlZ2FjeVZ1bG5lcmFibGVV",
+            "bnZlcnNpb25lZENhY2hlEjIKBXVzZXJzGAEgAygLMiMubWcucHJvdG9jb2wu",
+            "dXNlcl9kYXRfZmlsZS5Vc2VySW5mbyKdAQoMU3RhcnR1cEVudHJ5EhgKDmlz",
+            "X3JlbWVtYmVyX21lGAEgASgISAASIAoWaXNfcmVzdGFydF9jcmVkZW50aWFs",
+            "cxgCIAEoCEgBEhQKCnVzZXJfaW5kZXgYAyABKA1IAkIRCg9faXNfcmVtZW1i",
+            "ZXJfbWVCGQoXX2lzX3Jlc3RhcnRfY3JlZGVudGlhbHNCDQoLX3VzZXJfaW5k",
+            "ZXgimgEKEEVudmlyb25tZW50Q2FjaGUSMgoFdXNlcnMYASADKAsyIy5tZy5w",
+            "cm90b2NvbC51c2VyX2RhdF9maWxlLlVzZXJJbmZvEkAKDXN0YXJ0dXBfZW50",
+            "cnkYAiABKAsyJy5tZy5wcm90b2NvbC51c2VyX2RhdF9maWxlLlN0YXJ0dXBF",
+            "bnRyeUgAQhAKDl9zdGFydHVwX2VudHJ5ItUBCgVDYWNoZRI7CgRwcm9kGAEg",
+            "ASgLMisubWcucHJvdG9jb2wudXNlcl9kYXRfZmlsZS5FbnZpcm9ubWVudENh",
+            "Y2hlSAASOgoDdWF0GAIgASgLMisubWcucHJvdG9jb2wudXNlcl9kYXRfZmls",
+            "ZS5FbnZpcm9ubWVudENhY2hlSAESOgoDZGV2GAMgASgLMisubWcucHJvdG9j",
+            "b2wudXNlcl9kYXRfZmlsZS5FbnZpcm9ubWVudENhY2hlSAJCBwoFX3Byb2RC",
+            "BgoEX3VhdEIGCgRfZGV2YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserDatFile.UserInfo), global::Uplay.UserDatFile.UserInfo.Parser, new[]{ "Username", "UbiAccountId", "Email", "Name", "PasswordSalt", "PasswordHash", "MigrationEmailHash", "RememberMeTicket", "HashIterationsOffset" }, new[]{ "Username", "UbiAccountId", "Email", "Name", "PasswordSalt", "PasswordHash", "MigrationEmailHash", "RememberMeTicket", "HashIterationsOffset" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserDatFile.UserInfo), global::Uplay.UserDatFile.UserInfo.Parser, new[]{ "Username", "UbiAccountId", "Email", "Name", "PasswordSalt", "PasswordHash", "MigrationEmailHash", "RememberMeTicket", "HashIterationsOffset", "UbiProfileId", "SteamSessionProfileId" }, new[]{ "Username", "UbiAccountId", "Email", "Name", "PasswordSalt", "PasswordHash", "MigrationEmailHash", "RememberMeTicket", "HashIterationsOffset", "UbiProfileId", "SteamSessionProfileId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserDatFile.LegacyVulnerableUnversionedCache), global::Uplay.UserDatFile.LegacyVulnerableUnversionedCache.Parser, new[]{ "Users" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserDatFile.StartupEntry), global::Uplay.UserDatFile.StartupEntry.Parser, new[]{ "IsRememberMe", "IsRestartCredentials", "UserIndex" }, new[]{ "IsRememberMe", "IsRestartCredentials", "UserIndex" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserDatFile.EnvironmentCache), global::Uplay.UserDatFile.EnvironmentCache.Parser, new[]{ "Users", "StartupEntry" }, new[]{ "StartupEntry" }, null, null, null),
@@ -147,6 +150,18 @@ namespace Uplay.UserDatFile {
       switch (other.HashIterationsOffsetCase) {
         case HashIterationsOffsetOneofCase.HashIterationsOffset:
           HashIterationsOffset = other.HashIterationsOffset;
+          break;
+      }
+
+      switch (other.UbiProfileIdCase) {
+        case UbiProfileIdOneofCase.UbiProfileId:
+          UbiProfileId = other.UbiProfileId;
+          break;
+      }
+
+      switch (other.SteamSessionProfileIdCase) {
+        case SteamSessionProfileIdOneofCase.SteamSessionProfileId:
+          SteamSessionProfileId = other.SteamSessionProfileId;
           break;
       }
 
@@ -264,6 +279,30 @@ namespace Uplay.UserDatFile {
       set {
         HashIterationsOffset_ = value;
         HashIterationsOffsetCase_ = HashIterationsOffsetOneofCase.HashIterationsOffset;
+      }
+    }
+
+    /// <summary>Field number for the "ubi_profile_id" field.</summary>
+    public const int UbiProfileIdFieldNumber = 12;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UbiProfileId {
+      get { return UbiProfileIdCase_ == UbiProfileIdOneofCase.UbiProfileId ? (string) UbiProfileId_ : ""; }
+      set {
+        UbiProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        UbiProfileIdCase_ = UbiProfileIdOneofCase.UbiProfileId;
+      }
+    }
+
+    /// <summary>Field number for the "steam_session_profile_id" field.</summary>
+    public const int SteamSessionProfileIdFieldNumber = 13;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SteamSessionProfileId {
+      get { return SteamSessionProfileIdCase_ == SteamSessionProfileIdOneofCase.SteamSessionProfileId ? (string) SteamSessionProfileId_ : ""; }
+      set {
+        SteamSessionProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        SteamSessionProfileIdCase_ = SteamSessionProfileIdOneofCase.SteamSessionProfileId;
       }
     }
 
@@ -447,6 +486,46 @@ namespace Uplay.UserDatFile {
       HashIterationsOffset_ = null;
     }
 
+    private object UbiProfileId_;
+    /// <summary>Enum of possible cases for the "_ubi_profile_id" oneof.</summary>
+    public enum UbiProfileIdOneofCase {
+      None = 0,
+      UbiProfileId = 12,
+    }
+    private UbiProfileIdOneofCase UbiProfileIdCase_ = UbiProfileIdOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UbiProfileIdOneofCase UbiProfileIdCase {
+      get { return UbiProfileIdCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUbiProfileId() {
+      UbiProfileIdCase_ = UbiProfileIdOneofCase.None;
+      UbiProfileId_ = null;
+    }
+
+    private object SteamSessionProfileId_;
+    /// <summary>Enum of possible cases for the "_steam_session_profile_id" oneof.</summary>
+    public enum SteamSessionProfileIdOneofCase {
+      None = 0,
+      SteamSessionProfileId = 13,
+    }
+    private SteamSessionProfileIdOneofCase SteamSessionProfileIdCase_ = SteamSessionProfileIdOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SteamSessionProfileIdOneofCase SteamSessionProfileIdCase {
+      get { return SteamSessionProfileIdCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSteamSessionProfileId() {
+      SteamSessionProfileIdCase_ = SteamSessionProfileIdOneofCase.None;
+      SteamSessionProfileId_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -471,6 +550,8 @@ namespace Uplay.UserDatFile {
       if (MigrationEmailHash != other.MigrationEmailHash) return false;
       if (RememberMeTicket != other.RememberMeTicket) return false;
       if (HashIterationsOffset != other.HashIterationsOffset) return false;
+      if (UbiProfileId != other.UbiProfileId) return false;
+      if (SteamSessionProfileId != other.SteamSessionProfileId) return false;
       if (UsernameCase != other.UsernameCase) return false;
       if (UbiAccountIdCase != other.UbiAccountIdCase) return false;
       if (EmailCase != other.EmailCase) return false;
@@ -480,6 +561,8 @@ namespace Uplay.UserDatFile {
       if (MigrationEmailHashCase != other.MigrationEmailHashCase) return false;
       if (RememberMeTicketCase != other.RememberMeTicketCase) return false;
       if (HashIterationsOffsetCase != other.HashIterationsOffsetCase) return false;
+      if (UbiProfileIdCase != other.UbiProfileIdCase) return false;
+      if (SteamSessionProfileIdCase != other.SteamSessionProfileIdCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -496,6 +579,8 @@ namespace Uplay.UserDatFile {
       if (MigrationEmailHashCase_ == MigrationEmailHashOneofCase.MigrationEmailHash) hash ^= MigrationEmailHash.GetHashCode();
       if (RememberMeTicketCase_ == RememberMeTicketOneofCase.RememberMeTicket) hash ^= RememberMeTicket.GetHashCode();
       if (HashIterationsOffsetCase_ == HashIterationsOffsetOneofCase.HashIterationsOffset) hash ^= HashIterationsOffset.GetHashCode();
+      if (UbiProfileIdCase_ == UbiProfileIdOneofCase.UbiProfileId) hash ^= UbiProfileId.GetHashCode();
+      if (SteamSessionProfileIdCase_ == SteamSessionProfileIdOneofCase.SteamSessionProfileId) hash ^= SteamSessionProfileId.GetHashCode();
       hash ^= (int) UsernameCase_;
       hash ^= (int) UbiAccountIdCase_;
       hash ^= (int) EmailCase_;
@@ -505,6 +590,8 @@ namespace Uplay.UserDatFile {
       hash ^= (int) MigrationEmailHashCase_;
       hash ^= (int) RememberMeTicketCase_;
       hash ^= (int) HashIterationsOffsetCase_;
+      hash ^= (int) UbiProfileIdCase_;
+      hash ^= (int) SteamSessionProfileIdCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -559,6 +646,14 @@ namespace Uplay.UserDatFile {
         output.WriteRawTag(88);
         output.WriteUInt32(HashIterationsOffset);
       }
+      if (UbiProfileIdCase_ == UbiProfileIdOneofCase.UbiProfileId) {
+        output.WriteRawTag(98);
+        output.WriteString(UbiProfileId);
+      }
+      if (SteamSessionProfileIdCase_ == SteamSessionProfileIdOneofCase.SteamSessionProfileId) {
+        output.WriteRawTag(106);
+        output.WriteString(SteamSessionProfileId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -605,6 +700,14 @@ namespace Uplay.UserDatFile {
         output.WriteRawTag(88);
         output.WriteUInt32(HashIterationsOffset);
       }
+      if (UbiProfileIdCase_ == UbiProfileIdOneofCase.UbiProfileId) {
+        output.WriteRawTag(98);
+        output.WriteString(UbiProfileId);
+      }
+      if (SteamSessionProfileIdCase_ == SteamSessionProfileIdOneofCase.SteamSessionProfileId) {
+        output.WriteRawTag(106);
+        output.WriteString(SteamSessionProfileId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -641,6 +744,12 @@ namespace Uplay.UserDatFile {
       }
       if (HashIterationsOffsetCase_ == HashIterationsOffsetOneofCase.HashIterationsOffset) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HashIterationsOffset);
+      }
+      if (UbiProfileIdCase_ == UbiProfileIdOneofCase.UbiProfileId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UbiProfileId);
+      }
+      if (SteamSessionProfileIdCase_ == SteamSessionProfileIdOneofCase.SteamSessionProfileId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SteamSessionProfileId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -708,6 +817,18 @@ namespace Uplay.UserDatFile {
           break;
       }
 
+      switch (other.UbiProfileIdCase) {
+        case UbiProfileIdOneofCase.UbiProfileId:
+          UbiProfileId = other.UbiProfileId;
+          break;
+      }
+
+      switch (other.SteamSessionProfileIdCase) {
+        case SteamSessionProfileIdOneofCase.SteamSessionProfileId:
+          SteamSessionProfileId = other.SteamSessionProfileId;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -759,6 +880,14 @@ namespace Uplay.UserDatFile {
             HashIterationsOffset = input.ReadUInt32();
             break;
           }
+          case 98: {
+            UbiProfileId = input.ReadString();
+            break;
+          }
+          case 106: {
+            SteamSessionProfileId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -808,6 +937,14 @@ namespace Uplay.UserDatFile {
           }
           case 88: {
             HashIterationsOffset = input.ReadUInt32();
+            break;
+          }
+          case 98: {
+            UbiProfileId = input.ReadString();
+            break;
+          }
+          case 106: {
+            SteamSessionProfileId = input.ReadString();
             break;
           }
         }

@@ -24,11 +24,11 @@ namespace Uplay.Configuration {
     static ConfigurationReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNjb25maWd1cmF0aW9uLnByb3RvEhltZy5wcm90b2NvbC5jb25maWd1cmF0",
-            "aW9uIkwKDUNvbmZpZ3VyYXRpb24SEgoKcHJvZHVjdF9pZBgBIAEoDRIQCgh1",
-            "cGxheV9pZBgCIAEoDRIVCg1jb25maWd1cmF0aW9uGAMgAigJIlYKEkNvbmZp",
-            "Z3VyYXRpb25DYWNoZRJACg5jb25maWd1cmF0aW9ucxgBIAMoCzIoLm1nLnBy",
-            "b3RvY29sLmNvbmZpZ3VyYXRpb24uQ29uZmlndXJhdGlvbg=="));
+            "Chl1cGxheS9jb25maWd1cmF0aW9uLnByb3RvEhltZy5wcm90b2NvbC5jb25m",
+            "aWd1cmF0aW9uIkwKDUNvbmZpZ3VyYXRpb24SEgoKcHJvZHVjdF9pZBgBIAEo",
+            "DRIQCgh1cGxheV9pZBgCIAEoDRIVCg1jb25maWd1cmF0aW9uGAMgAigJIlYK",
+            "EkNvbmZpZ3VyYXRpb25DYWNoZRJACg5jb25maWd1cmF0aW9ucxgBIAMoCzIo",
+            "Lm1nLnByb3RvY29sLmNvbmZpZ3VyYXRpb24uQ29uZmlndXJhdGlvbg=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
