@@ -10,3 +10,6 @@ Dependend on Google.Protobuf!
 Current version description is:
 
 UbisoftLatestVersion.Revision
+
+Current Used Protoc generator:
+libprotoc 3.19.4
