@@ -25,56 +25,145 @@ namespace Uplay.UplayService {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chl1cGxheS91cGxheV9zZXJ2aWNlLnByb3RvEhltZy5wcm90b2NvbC51cGxh",
-            "eV9zZXJ2aWNlIiAKDFN0YXJ0SW5zdGFsbBIQCgh1cGxheV9pZBgBIAIoDSJb",
-            "ChRJbnN0YWxsaW5nRGVwZW5kZW5jeRITCgtkZXNjcmlwdGlvbhgBIAIoCRIU",
-            "CgxpbmRleF9udW1iZXIYAiACKA0SGAoQaW5zdGFsbGVyc19jb3VudBgDIAIo",
-            "DSJWChNEZXBlbmRlbmN5SW5zdGFsbGVkEhQKDGluc3RhbGxlcl9pZBgBIAIo",
-            "CRIPCgd2ZXJzaW9uGAIgAigNEhgKEHJlc3RhcnRfcmVxdWlyZWQYAyACKAgi",
-            "LAoQSW5zdGFsbENvbXBsZXRlZBIYChByZXN0YXJ0X3JlcXVpcmVkGAEgAigI",
-            "IhwKCkdlYXJSZXN1bHQSDgoGcmVzdWx0GAEgAigJIucCCgNSZXESPgoNc3Rh",
-            "cnRfaW5zdGFsbBgBIAEoCzInLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2Uu",
-            "U3RhcnRJbnN0YWxsEk4KFWluc3RhbGxpbmdfZGVwZW5kZW5jeRgCIAEoCzIv",
-            "Lm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2UuSW5zdGFsbGluZ0RlcGVuZGVu",
-            "Y3kSTAoUZGVwZW5kZW5jeV9pbnN0YWxsZWQYAyABKAsyLi5tZy5wcm90b2Nv",
-            "bC51cGxheV9zZXJ2aWNlLkRlcGVuZGVuY3lJbnN0YWxsZWQSRgoRaW5zdGFs",
-            "bF9jb21wbGV0ZWQYBCABKAsyKy5tZy5wcm90b2NvbC51cGxheV9zZXJ2aWNl",
-            "Lkluc3RhbGxDb21wbGV0ZWQSOgoLZ2Vhcl9yZXN1bHQYBSABKAsyJS5tZy5w",
-            "cm90b2NvbC51cGxheV9zZXJ2aWNlLkdlYXJSZXN1bHQifgoHTWV0cmljcxIQ",
-            "CghjYXRlZ29yeRgBIAIoCRIMCgRuYW1lGAIgAigJEjMKBHR5cGUYAyACKA4y",
-            "JS5tZy5wcm90b2NvbC51cGxheV9zZXJ2aWNlLk1ldHJpY1R5cGUSDwoHdmVy",
-            "c2lvbhgEIAIoDRINCgV2YWx1ZRgFIAIoDSJACglUZWxlbWV0cnkSMwoHbWV0",
-            "cmljcxgBIAMoCzIiLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2UuTWV0cmlj",
-            "cyIrChREZXBlbmRlbmN5UmVzdGFydFJzcBITCgtpc19hcHByb3ZlZBgBIAEo",
-            "CCJHCgNSc3ASQAoHcmVzdGFydBgBIAEoCzIvLm1nLnByb3RvY29sLnVwbGF5",
-            "X3NlcnZpY2UuRGVwZW5kZW5jeVJlc3RhcnRSc3AiEwoRQ2FuY2VsSW5zdGFs",
-            "bFB1c2giUAoIRG93blB1c2gSRAoOY2FuY2VsX2luc3RhbGwYASABKAsyLC5t",
-            "Zy5wcm90b2NvbC51cGxheV9zZXJ2aWNlLkNhbmNlbEluc3RhbGxQdXNoIkEK",
-            "BlVwUHVzaBI3Cgl0ZWxlbWV0cnkYASABKAsyJC5tZy5wcm90b2NvbC51cGxh",
-            "eV9zZXJ2aWNlLlRlbGVtZXRyeSJoCghVcHN0cmVhbRIrCgNyZXEYASABKAsy",
-            "Hi5tZy5wcm90b2NvbC51cGxheV9zZXJ2aWNlLlJlcRIvCgRwdXNoGAIgASgL",
-            "MiEubWcucHJvdG9jb2wudXBsYXlfc2VydmljZS5VcFB1c2gibAoKRG93bnN0",
-            "cmVhbRIrCgNyc3AYASABKAsyHi5tZy5wcm90b2NvbC51cGxheV9zZXJ2aWNl",
-            "LlJzcBIxCgRwdXNoGAIgASgLMiMubWcucHJvdG9jb2wudXBsYXlfc2Vydmlj",
-            "ZS5Eb3duUHVzaCo9CgpNZXRyaWNUeXBlEg0KCVVuZGVmaW5lZBAAEg0KCVVw",
-            "Q291bnRlchABEhEKDVVwRG93bkNvdW50ZXIQAg=="));
+            "eV9zZXJ2aWNlIn4KB01ldHJpY3MSEAoIY2F0ZWdvcnkYASABKAkSDAoEbmFt",
+            "ZRgCIAEoCRIzCgR0eXBlGAMgASgOMiUubWcucHJvdG9jb2wudXBsYXlfc2Vy",
+            "dmljZS5NZXRyaWNUeXBlEg8KB3ZlcnNpb24YBCABKA0SDQoFdmFsdWUYBSAB",
+            "KA0iQAoJVGVsZW1ldHJ5EjMKB21ldHJpY3MYASADKAsyIi5tZy5wcm90b2Nv",
+            "bC51cGxheV9zZXJ2aWNlLk1ldHJpY3MiIAoMU3RhcnRJbnN0YWxsEhAKCHVw",
+            "bGF5X2lkGAEgASgNIlsKFEluc3RhbGxpbmdEZXBlbmRlbmN5EhMKC2Rlc2Ny",
+            "aXB0aW9uGAEgASgJEhQKDGluZGV4X251bWJlchgCIAEoDRIYChBpbnN0YWxs",
+            "ZXJzX2NvdW50GAMgASgNIlYKE0RlcGVuZGVuY3lJbnN0YWxsZWQSFAoMaW5z",
+            "dGFsbGVyX2lkGAEgASgJEg8KB3ZlcnNpb24YAiABKA0SGAoQcmVzdGFydF9y",
+            "ZXF1aXJlZBgDIAEoCCIsChBJbnN0YWxsQ29tcGxldGVkEhgKEHJlc3RhcnRf",
+            "cmVxdWlyZWQYASABKAgiHAoKR2VhclJlc3VsdBIOCgZyZXN1bHQYASABKAwi",
+            "3AMKA1JlcRJACg1zdGFydF9pbnN0YWxsGAEgASgLMicubWcucHJvdG9jb2wu",
+            "dXBsYXlfc2VydmljZS5TdGFydEluc3RhbGxIABJQChVpbnN0YWxsaW5nX2Rl",
+            "cGVuZGVuY3kYAiABKAsyLy5tZy5wcm90b2NvbC51cGxheV9zZXJ2aWNlLklu",
+            "c3RhbGxpbmdEZXBlbmRlbmN5SAESTgoUZGVwZW5kZW5jeV9pbnN0YWxsZWQY",
+            "AyABKAsyLi5tZy5wcm90b2NvbC51cGxheV9zZXJ2aWNlLkRlcGVuZGVuY3lJ",
+            "bnN0YWxsZWRIAhJIChFpbnN0YWxsX2NvbXBsZXRlZBgEIAEoCzIrLm1nLnBy",
+            "b3RvY29sLnVwbGF5X3NlcnZpY2UuSW5zdGFsbENvbXBsZXRlZEgDEjwKC2dl",
+            "YXJfcmVzdWx0GAUgASgLMiUubWcucHJvdG9jb2wudXBsYXlfc2VydmljZS5H",
+            "ZWFyUmVzdWx0SARCEAoOX3N0YXJ0X2luc3RhbGxCGAoWX2luc3RhbGxpbmdf",
+            "ZGVwZW5kZW5jeUIXChVfZGVwZW5kZW5jeV9pbnN0YWxsZWRCFAoSX2luc3Rh",
+            "bGxfY29tcGxldGVkQg4KDF9nZWFyX3Jlc3VsdCI9ChREZXBlbmRlbmN5UmVz",
+            "dGFydFJzcBIVCgtpc19hcHByb3ZlZBgBIAEoCEgAQg4KDF9pc19hcHByb3Zl",
+            "ZCJVCgNSc3ASQgoHcmVzdGFydBgBIAEoCzIvLm1nLnByb3RvY29sLnVwbGF5",
+            "X3NlcnZpY2UuRGVwZW5kZW5jeVJlc3RhcnRSc3BIAEIKCghfcmVzdGFydCIT",
+            "ChFDYW5jZWxJbnN0YWxsUHVzaCJlCghEb3duUHVzaBJGCg5jYW5jZWxfaW5z",
+            "dGFsbBgBIAEoCzIsLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2UuQ2FuY2Vs",
+            "SW5zdGFsbFB1c2hIAEIRCg9fY2FuY2VsX2luc3RhbGwiUQoGVXBQdXNoEjkK",
+            "CXRlbGVtZXRyeRgBIAEoCzIkLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2Uu",
+            "VGVsZW1ldHJ5SABCDAoKX3RlbGVtZXRyeSJOCgdHZWFyUmVxEhMKC291dHB1",
+            "dF9maWxlGAEgASgJEhIKCmNhY2hlX2ZpbGUYAiABKAkSGgoSY2hlY2tfdGVz",
+            "dF9zaWduaW5nGAMgASgIIhkKB0dlYXJSc3ASDgoGcmVzdWx0GAEgASgMIigK",
+            "ElVwZGF0ZUdlYXJDYWNoZVJlcRISCgpjYWNoZV9maWxlGAEgASgJIhQKElVw",
+            "ZGF0ZUdlYXJDYWNoZVJzcCI0Cg5HYW1lSW5zdGFsbFJlcRIQCgh1cGxheV9p",
+            "ZBgBIAEoDRIQCghsYW5ndWFnZRgCIAEoCSIxCg5HYW1lSW5zdGFsbFJzcBIf",
+            "ChdzeXN0ZW1fcmVzdGFydF9yZXF1aXJlZBgBIAEoCCKBAQoUV3JpdGVHYW1l",
+            "UmVnaXN0cnlSZXESEAoIdXBsYXlfaWQYASABKA0SDAoEbmFtZRgCIAEoCRIR",
+            "CglwdWJsaXNoZXIYAyABKAkSEQoJaWNvbl9maWxlGAQgASgJEhAKCGhlbHBf",
+            "dXJsGAUgASgJEhEKCWFib3V0X3VybBgGIAEoCSIWChRXcml0ZUdhbWVSZWdp",
+            "c3RyeVJzcCISChBTeXN0ZW1SZXN0YXJ0UmVxIhIKEFN5c3RlbVJlc3RhcnRS",
+            "c3AiJAoQR2FtZVVuaW5zdGFsbFJlcRIQCgh1cGxheV9pZBgBIAEoDSISChBH",
+            "YW1lVW5pbnN0YWxsUnNwIicKF0dyYW50RmlsZVBlcm1pc3Npb25zUmVxEgwK",
+            "BHBhdGgYASABKAkiGQoXR3JhbnRGaWxlUGVybWlzc2lvbnNSc3AidgodRGVw",
+            "ZW5kZW5jeUluc3RhbGxhdGlvblN0YXJ0ZWQSEAoIdXBsYXlfaWQYASABKA0S",
+            "EwoLZGVzY3JpcHRpb24YAiABKAkSFAoMaW5kZXhfbnVtYmVyGAMgASgNEhgK",
+            "EGluc3RhbGxlcnNfY291bnQYBCABKA0iWgofRGVwZW5kZW5jeUluc3RhbGxh",
+            "dGlvbkNvbXBsZXRlZBIQCgh1cGxheV9pZBgBIAEoDRIUCgxpbnN0YWxsZXJf",
+            "aWQYAiABKAkSDwoHdmVyc2lvbhgDIAEoDSIXChVHYW1lSW5zdGFsbEludGVy",
+            "cnVwZWQinQQKBXYxUmVxEhIKCnJlcXVlc3RfaWQYASABKA0SMgoEZ2VhchgC",
+            "IAEoCzIiLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2UuR2VhclJlcUgAEkoK",
+            "EXVwZGF0ZV9nZWFyX2NhY2hlGAMgASgLMi0ubWcucHJvdG9jb2wudXBsYXlf",
+            "c2VydmljZS5VcGRhdGVHZWFyQ2FjaGVSZXFIABJBCgxnYW1lX2luc3RhbGwY",
+            "BCABKAsyKS5tZy5wcm90b2NvbC51cGxheV9zZXJ2aWNlLkdhbWVJbnN0YWxs",
+            "UmVxSAASTgoTd3JpdGVfZ2FtZV9yZWdpc3RyeRgFIAEoCzIvLm1nLnByb3Rv",
+            "Y29sLnVwbGF5X3NlcnZpY2UuV3JpdGVHYW1lUmVnaXN0cnlSZXFIABJFCg5z",
+            "eXN0ZW1fcmVzdGFydBgGIAEoCzIrLm1nLnByb3RvY29sLnVwbGF5X3NlcnZp",
+            "Y2UuU3lzdGVtUmVzdGFydFJlcUgAEkUKDmdhbWVfdW5pbnN0YWxsGAcgASgL",
+            "MisubWcucHJvdG9jb2wudXBsYXlfc2VydmljZS5HYW1lVW5pbnN0YWxsUmVx",
+            "SAASVAoWZ3JhbnRfZmlsZV9wZXJtaXNzaW9ucxgIIAEoCzIyLm1nLnByb3Rv",
+            "Y29sLnVwbGF5X3NlcnZpY2UuR3JhbnRGaWxlUGVybWlzc2lvbnNSZXFIAEIJ",
+            "CgdyZXF1ZXN0IuIECgV2MVJzcBISCgpyZXF1ZXN0X2lkGAEgASgNEkIKCWV4",
+            "aXRfY29kZRgCIAEoDjIvLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2UuVXBs",
+            "YXlTZXJ2aWNlRXhpdENvZGUSMgoEZ2VhchgDIAEoCzIiLm1nLnByb3RvY29s",
+            "LnVwbGF5X3NlcnZpY2UuR2VhclJzcEgAEkoKEXVwZGF0ZV9nZWFyX2NhY2hl",
+            "GAQgASgLMi0ubWcucHJvdG9jb2wudXBsYXlfc2VydmljZS5VcGRhdGVHZWFy",
+            "Q2FjaGVSc3BIABJBCgxnYW1lX2luc3RhbGwYBSABKAsyKS5tZy5wcm90b2Nv",
+            "bC51cGxheV9zZXJ2aWNlLkdhbWVJbnN0YWxsUnNwSAASTgoTd3JpdGVfZ2Ft",
+            "ZV9yZWdpc3RyeRgGIAEoCzIvLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2Uu",
+            "V3JpdGVHYW1lUmVnaXN0cnlSc3BIABJFCg5zeXN0ZW1fcmVzdGFydBgHIAEo",
+            "CzIrLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2UuU3lzdGVtUmVzdGFydFJz",
+            "cEgAEkUKDmdhbWVfdW5pbnN0YWxsGAggASgLMisubWcucHJvdG9jb2wudXBs",
+            "YXlfc2VydmljZS5HYW1lVW5pbnN0YWxsUnNwSAASVAoWZ3JhbnRfZmlsZV9w",
+            "ZXJtaXNzaW9ucxgJIAEoCzIyLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2Uu",
+            "R3JhbnRGaWxlUGVybWlzc2lvbnNSc3BIAEIKCghyZXNwb25zZSKZAgoGdjFQ",
+            "dXNoEjkKCXRlbGVtZXRyeRgBIAEoCzIkLm1nLnByb3RvY29sLnVwbGF5X3Nl",
+            "cnZpY2UuVGVsZW1ldHJ5SAASYwofZGVwZW5kZW5jeV9pbnN0YWxsYXRpb25f",
+            "c3RhcnRlZBgCIAEoCzI4Lm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2UuRGVw",
+            "ZW5kZW5jeUluc3RhbGxhdGlvblN0YXJ0ZWRIABJnCiFkZXBlbmRlbmN5X2lu",
+            "c3RhbGxhdGlvbl9jb21wbGV0ZWQYAyABKAsyOi5tZy5wcm90b2NvbC51cGxh",
+            "eV9zZXJ2aWNlLkRlcGVuZGVuY3lJbnN0YWxsYXRpb25Db21wbGV0ZWRIAEIG",
+            "CgRwdXNoInkKC3YxSW50ZXJydXB0EhIKCnJlcXVlc3RfaWQYASABKA0SSAoM",
+            "Z2FtZV9pbnN0YWxsGAIgASgLMjAubWcucHJvdG9jb2wudXBsYXlfc2Vydmlj",
+            "ZS5HYW1lSW5zdGFsbEludGVycnVwZWRIAEIMCgppbnRlcnJ1cGVkIv4BCghV",
+            "cHN0cmVhbRIyCgZ2MV9yZXEYAyABKAsyIC5tZy5wcm90b2NvbC51cGxheV9z",
+            "ZXJ2aWNlLnYxUmVxSAASPgoMdjFfaW50ZXJydXB0GAQgASgLMiYubWcucHJv",
+            "dG9jb2wudXBsYXlfc2VydmljZS52MUludGVycnVwdEgAEi0KA3JzcBgBIAEo",
+            "CzIeLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2UuUnNwSAESMwoEcHVzaBgC",
+            "IAEoCzIjLm1nLnByb3RvY29sLnVwbGF5X3NlcnZpY2UuRG93blB1c2hIAkIJ",
+            "CgdtZXNzYWdlQgYKBF9yc3BCBwoFX3B1c2gi9AEKCkRvd25zdHJlYW0SMgoG",
+            "djFfcnNwGAMgASgLMiAubWcucHJvdG9jb2wudXBsYXlfc2VydmljZS52MVJz",
+            "cEgAEjQKB3YxX3B1c2gYBCABKAsyIS5tZy5wcm90b2NvbC51cGxheV9zZXJ2",
+            "aWNlLnYxUHVzaEgAEi0KA3JlcRgBIAEoCzIeLm1nLnByb3RvY29sLnVwbGF5",
+            "X3NlcnZpY2UuUmVxSAESMQoEcHVzaBgCIAEoCzIhLm1nLnByb3RvY29sLnVw",
+            "bGF5X3NlcnZpY2UuVXBQdXNoSAJCCQoHbWVzc2FnZUIGCgRfcmVxQgcKBV9w",
+            "dXNoKj0KCk1ldHJpY1R5cGUSDQoJVW5kZWZpbmVkEAASDQoJVXBDb3VudGVy",
+            "EAESEQoNVXBEb3duQ291bnRlchACKrcBChRVcGxheVNlcnZpY2VFeGl0Q29k",
+            "ZRIJCgVVbnNldBAAEgsKB1N1Y2Nlc3MQARIaChZJbnN1ZmZpY2llbnRQcml2",
+            "aWxlZ2VzEAISEAoMR2VuZXJpY0Vycm9yEAMSEwoPSW5zdGFsbGVyRmFpbGVk",
+            "EAQSEwoPVW5leHBlY3RlZEVycm9yEAUSHAoYVGFyZ2V0RGlyTmFtZUxlbmd0",
+            "aEVycm9yEAYSEQoNRmFpbGVkVG9TdGFydBAHYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Uplay.UplayService.MetricType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Uplay.UplayService.MetricType), typeof(global::Uplay.UplayService.UplayServiceExitCode), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Metrics), global::Uplay.UplayService.Metrics.Parser, new[]{ "Category", "Name", "Type", "Version", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Telemetry), global::Uplay.UplayService.Telemetry.Parser, new[]{ "Metrics" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.StartInstall), global::Uplay.UplayService.StartInstall.Parser, new[]{ "UplayId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.InstallingDependency), global::Uplay.UplayService.InstallingDependency.Parser, new[]{ "Description", "IndexNumber", "InstallersCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.DependencyInstalled), global::Uplay.UplayService.DependencyInstalled.Parser, new[]{ "InstallerId", "Version", "RestartRequired" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.InstallCompleted), global::Uplay.UplayService.InstallCompleted.Parser, new[]{ "RestartRequired" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.GearResult), global::Uplay.UplayService.GearResult.Parser, new[]{ "Result" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Req), global::Uplay.UplayService.Req.Parser, new[]{ "StartInstall", "InstallingDependency", "DependencyInstalled", "InstallCompleted", "GearResult" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Metrics), global::Uplay.UplayService.Metrics.Parser, new[]{ "Category", "Name", "Type", "Version", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Telemetry), global::Uplay.UplayService.Telemetry.Parser, new[]{ "Metrics" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.DependencyRestartRsp), global::Uplay.UplayService.DependencyRestartRsp.Parser, new[]{ "IsApproved" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Rsp), global::Uplay.UplayService.Rsp.Parser, new[]{ "Restart" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Req), global::Uplay.UplayService.Req.Parser, new[]{ "StartInstall", "InstallingDependency", "DependencyInstalled", "InstallCompleted", "GearResult" }, new[]{ "StartInstall", "InstallingDependency", "DependencyInstalled", "InstallCompleted", "GearResult" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.DependencyRestartRsp), global::Uplay.UplayService.DependencyRestartRsp.Parser, new[]{ "IsApproved" }, new[]{ "IsApproved" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Rsp), global::Uplay.UplayService.Rsp.Parser, new[]{ "Restart" }, new[]{ "Restart" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.CancelInstallPush), global::Uplay.UplayService.CancelInstallPush.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.DownPush), global::Uplay.UplayService.DownPush.Parser, new[]{ "CancelInstall" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.UpPush), global::Uplay.UplayService.UpPush.Parser, new[]{ "Telemetry" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Upstream), global::Uplay.UplayService.Upstream.Parser, new[]{ "Req", "Push" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Downstream), global::Uplay.UplayService.Downstream.Parser, new[]{ "Rsp", "Push" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.DownPush), global::Uplay.UplayService.DownPush.Parser, new[]{ "CancelInstall" }, new[]{ "CancelInstall" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.UpPush), global::Uplay.UplayService.UpPush.Parser, new[]{ "Telemetry" }, new[]{ "Telemetry" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.GearReq), global::Uplay.UplayService.GearReq.Parser, new[]{ "OutputFile", "CacheFile", "CheckTestSigning" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.GearRsp), global::Uplay.UplayService.GearRsp.Parser, new[]{ "Result" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.UpdateGearCacheReq), global::Uplay.UplayService.UpdateGearCacheReq.Parser, new[]{ "CacheFile" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.UpdateGearCacheRsp), global::Uplay.UplayService.UpdateGearCacheRsp.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.GameInstallReq), global::Uplay.UplayService.GameInstallReq.Parser, new[]{ "UplayId", "Language" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.GameInstallRsp), global::Uplay.UplayService.GameInstallRsp.Parser, new[]{ "SystemRestartRequired" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.WriteGameRegistryReq), global::Uplay.UplayService.WriteGameRegistryReq.Parser, new[]{ "UplayId", "Name", "Publisher", "IconFile", "HelpUrl", "AboutUrl" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.WriteGameRegistryRsp), global::Uplay.UplayService.WriteGameRegistryRsp.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.SystemRestartReq), global::Uplay.UplayService.SystemRestartReq.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.SystemRestartRsp), global::Uplay.UplayService.SystemRestartRsp.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.GameUninstallReq), global::Uplay.UplayService.GameUninstallReq.Parser, new[]{ "UplayId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.GameUninstallRsp), global::Uplay.UplayService.GameUninstallRsp.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.GrantFilePermissionsReq), global::Uplay.UplayService.GrantFilePermissionsReq.Parser, new[]{ "Path" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.GrantFilePermissionsRsp), global::Uplay.UplayService.GrantFilePermissionsRsp.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.DependencyInstallationStarted), global::Uplay.UplayService.DependencyInstallationStarted.Parser, new[]{ "UplayId", "Description", "IndexNumber", "InstallersCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.DependencyInstallationCompleted), global::Uplay.UplayService.DependencyInstallationCompleted.Parser, new[]{ "UplayId", "InstallerId", "Version" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.GameInstallInterruped), global::Uplay.UplayService.GameInstallInterruped.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.v1Req), global::Uplay.UplayService.v1Req.Parser, new[]{ "RequestId", "Gear", "UpdateGearCache", "GameInstall", "WriteGameRegistry", "SystemRestart", "GameUninstall", "GrantFilePermissions" }, new[]{ "Request" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.v1Rsp), global::Uplay.UplayService.v1Rsp.Parser, new[]{ "RequestId", "ExitCode", "Gear", "UpdateGearCache", "GameInstall", "WriteGameRegistry", "SystemRestart", "GameUninstall", "GrantFilePermissions" }, new[]{ "Response" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.v1Push), global::Uplay.UplayService.v1Push.Parser, new[]{ "Telemetry", "DependencyInstallationStarted", "DependencyInstallationCompleted" }, new[]{ "Push" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.v1Interrupt), global::Uplay.UplayService.v1Interrupt.Parser, new[]{ "RequestId", "GameInstall" }, new[]{ "Interruped" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Upstream), global::Uplay.UplayService.Upstream.Parser, new[]{ "V1Req", "V1Interrupt", "Rsp", "Push" }, new[]{ "Message", "Rsp", "Push" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UplayService.Downstream), global::Uplay.UplayService.Downstream.Parser, new[]{ "V1Rsp", "V1Push", "Req", "Push" }, new[]{ "Message", "Req", "Push" }, null, null, null)
           }));
     }
     #endregion
@@ -87,1624 +176,20 @@ namespace Uplay.UplayService {
     [pbr::OriginalName("UpDownCounter")] UpDownCounter = 2,
   }
 
+  public enum UplayServiceExitCode {
+    [pbr::OriginalName("Unset")] Unset = 0,
+    [pbr::OriginalName("Success")] Success = 1,
+    [pbr::OriginalName("InsufficientPrivileges")] InsufficientPrivileges = 2,
+    [pbr::OriginalName("GenericError")] GenericError = 3,
+    [pbr::OriginalName("InstallerFailed")] InstallerFailed = 4,
+    [pbr::OriginalName("UnexpectedError")] UnexpectedError = 5,
+    [pbr::OriginalName("TargetDirNameLengthError")] TargetDirNameLengthError = 6,
+    [pbr::OriginalName("FailedToStart")] FailedToStart = 7,
+  }
+
   #endregion
 
   #region Messages
-  public sealed partial class StartInstall : pb::IMessage<StartInstall>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<StartInstall> _parser = new pb::MessageParser<StartInstall>(() => new StartInstall());
-    private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<StartInstall> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StartInstall() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StartInstall(StartInstall other) : this() {
-      _hasBits0 = other._hasBits0;
-      uplayId_ = other.uplayId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public StartInstall Clone() {
-      return new StartInstall(this);
-    }
-
-    /// <summary>Field number for the "uplay_id" field.</summary>
-    public const int UplayIdFieldNumber = 1;
-    private readonly static uint UplayIdDefaultValue = 0;
-
-    private uint uplayId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint UplayId {
-      get { if ((_hasBits0 & 1) != 0) { return uplayId_; } else { return UplayIdDefaultValue; } }
-      set {
-        _hasBits0 |= 1;
-        uplayId_ = value;
-      }
-    }
-    /// <summary>Gets whether the "uplay_id" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasUplayId {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "uplay_id" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearUplayId() {
-      _hasBits0 &= ~1;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as StartInstall);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(StartInstall other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (UplayId != other.UplayId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (HasUplayId) hash ^= UplayId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (HasUplayId) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(UplayId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasUplayId) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(UplayId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (HasUplayId) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UplayId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(StartInstall other) {
-      if (other == null) {
-        return;
-      }
-      if (other.HasUplayId) {
-        UplayId = other.UplayId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            UplayId = input.ReadUInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            UplayId = input.ReadUInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class InstallingDependency : pb::IMessage<InstallingDependency>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<InstallingDependency> _parser = new pb::MessageParser<InstallingDependency>(() => new InstallingDependency());
-    private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<InstallingDependency> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InstallingDependency() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InstallingDependency(InstallingDependency other) : this() {
-      _hasBits0 = other._hasBits0;
-      description_ = other.description_;
-      indexNumber_ = other.indexNumber_;
-      installersCount_ = other.installersCount_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InstallingDependency Clone() {
-      return new InstallingDependency(this);
-    }
-
-    /// <summary>Field number for the "description" field.</summary>
-    public const int DescriptionFieldNumber = 1;
-    private readonly static string DescriptionDefaultValue = "";
-
-    private string description_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Description {
-      get { return description_ ?? DescriptionDefaultValue; }
-      set {
-        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "description" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasDescription {
-      get { return description_ != null; }
-    }
-    /// <summary>Clears the value of the "description" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearDescription() {
-      description_ = null;
-    }
-
-    /// <summary>Field number for the "index_number" field.</summary>
-    public const int IndexNumberFieldNumber = 2;
-    private readonly static uint IndexNumberDefaultValue = 0;
-
-    private uint indexNumber_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IndexNumber {
-      get { if ((_hasBits0 & 1) != 0) { return indexNumber_; } else { return IndexNumberDefaultValue; } }
-      set {
-        _hasBits0 |= 1;
-        indexNumber_ = value;
-      }
-    }
-    /// <summary>Gets whether the "index_number" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasIndexNumber {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "index_number" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearIndexNumber() {
-      _hasBits0 &= ~1;
-    }
-
-    /// <summary>Field number for the "installers_count" field.</summary>
-    public const int InstallersCountFieldNumber = 3;
-    private readonly static uint InstallersCountDefaultValue = 0;
-
-    private uint installersCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint InstallersCount {
-      get { if ((_hasBits0 & 2) != 0) { return installersCount_; } else { return InstallersCountDefaultValue; } }
-      set {
-        _hasBits0 |= 2;
-        installersCount_ = value;
-      }
-    }
-    /// <summary>Gets whether the "installers_count" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasInstallersCount {
-      get { return (_hasBits0 & 2) != 0; }
-    }
-    /// <summary>Clears the value of the "installers_count" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearInstallersCount() {
-      _hasBits0 &= ~2;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as InstallingDependency);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(InstallingDependency other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Description != other.Description) return false;
-      if (IndexNumber != other.IndexNumber) return false;
-      if (InstallersCount != other.InstallersCount) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (HasDescription) hash ^= Description.GetHashCode();
-      if (HasIndexNumber) hash ^= IndexNumber.GetHashCode();
-      if (HasInstallersCount) hash ^= InstallersCount.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (HasDescription) {
-        output.WriteRawTag(10);
-        output.WriteString(Description);
-      }
-      if (HasIndexNumber) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(IndexNumber);
-      }
-      if (HasInstallersCount) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(InstallersCount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasDescription) {
-        output.WriteRawTag(10);
-        output.WriteString(Description);
-      }
-      if (HasIndexNumber) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(IndexNumber);
-      }
-      if (HasInstallersCount) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(InstallersCount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (HasDescription) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
-      }
-      if (HasIndexNumber) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IndexNumber);
-      }
-      if (HasInstallersCount) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InstallersCount);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(InstallingDependency other) {
-      if (other == null) {
-        return;
-      }
-      if (other.HasDescription) {
-        Description = other.Description;
-      }
-      if (other.HasIndexNumber) {
-        IndexNumber = other.IndexNumber;
-      }
-      if (other.HasInstallersCount) {
-        InstallersCount = other.InstallersCount;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Description = input.ReadString();
-            break;
-          }
-          case 16: {
-            IndexNumber = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            InstallersCount = input.ReadUInt32();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Description = input.ReadString();
-            break;
-          }
-          case 16: {
-            IndexNumber = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            InstallersCount = input.ReadUInt32();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class DependencyInstalled : pb::IMessage<DependencyInstalled>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<DependencyInstalled> _parser = new pb::MessageParser<DependencyInstalled>(() => new DependencyInstalled());
-    private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<DependencyInstalled> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DependencyInstalled() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DependencyInstalled(DependencyInstalled other) : this() {
-      _hasBits0 = other._hasBits0;
-      installerId_ = other.installerId_;
-      version_ = other.version_;
-      restartRequired_ = other.restartRequired_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DependencyInstalled Clone() {
-      return new DependencyInstalled(this);
-    }
-
-    /// <summary>Field number for the "installer_id" field.</summary>
-    public const int InstallerIdFieldNumber = 1;
-    private readonly static string InstallerIdDefaultValue = "";
-
-    private string installerId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string InstallerId {
-      get { return installerId_ ?? InstallerIdDefaultValue; }
-      set {
-        installerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "installer_id" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasInstallerId {
-      get { return installerId_ != null; }
-    }
-    /// <summary>Clears the value of the "installer_id" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearInstallerId() {
-      installerId_ = null;
-    }
-
-    /// <summary>Field number for the "version" field.</summary>
-    public const int VersionFieldNumber = 2;
-    private readonly static uint VersionDefaultValue = 0;
-
-    private uint version_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Version {
-      get { if ((_hasBits0 & 1) != 0) { return version_; } else { return VersionDefaultValue; } }
-      set {
-        _hasBits0 |= 1;
-        version_ = value;
-      }
-    }
-    /// <summary>Gets whether the "version" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasVersion {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "version" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearVersion() {
-      _hasBits0 &= ~1;
-    }
-
-    /// <summary>Field number for the "restart_required" field.</summary>
-    public const int RestartRequiredFieldNumber = 3;
-    private readonly static bool RestartRequiredDefaultValue = false;
-
-    private bool restartRequired_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool RestartRequired {
-      get { if ((_hasBits0 & 2) != 0) { return restartRequired_; } else { return RestartRequiredDefaultValue; } }
-      set {
-        _hasBits0 |= 2;
-        restartRequired_ = value;
-      }
-    }
-    /// <summary>Gets whether the "restart_required" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasRestartRequired {
-      get { return (_hasBits0 & 2) != 0; }
-    }
-    /// <summary>Clears the value of the "restart_required" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearRestartRequired() {
-      _hasBits0 &= ~2;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as DependencyInstalled);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(DependencyInstalled other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (InstallerId != other.InstallerId) return false;
-      if (Version != other.Version) return false;
-      if (RestartRequired != other.RestartRequired) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (HasInstallerId) hash ^= InstallerId.GetHashCode();
-      if (HasVersion) hash ^= Version.GetHashCode();
-      if (HasRestartRequired) hash ^= RestartRequired.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (HasInstallerId) {
-        output.WriteRawTag(10);
-        output.WriteString(InstallerId);
-      }
-      if (HasVersion) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Version);
-      }
-      if (HasRestartRequired) {
-        output.WriteRawTag(24);
-        output.WriteBool(RestartRequired);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasInstallerId) {
-        output.WriteRawTag(10);
-        output.WriteString(InstallerId);
-      }
-      if (HasVersion) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Version);
-      }
-      if (HasRestartRequired) {
-        output.WriteRawTag(24);
-        output.WriteBool(RestartRequired);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (HasInstallerId) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(InstallerId);
-      }
-      if (HasVersion) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Version);
-      }
-      if (HasRestartRequired) {
-        size += 1 + 1;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(DependencyInstalled other) {
-      if (other == null) {
-        return;
-      }
-      if (other.HasInstallerId) {
-        InstallerId = other.InstallerId;
-      }
-      if (other.HasVersion) {
-        Version = other.Version;
-      }
-      if (other.HasRestartRequired) {
-        RestartRequired = other.RestartRequired;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            InstallerId = input.ReadString();
-            break;
-          }
-          case 16: {
-            Version = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            RestartRequired = input.ReadBool();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            InstallerId = input.ReadString();
-            break;
-          }
-          case 16: {
-            Version = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            RestartRequired = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class InstallCompleted : pb::IMessage<InstallCompleted>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<InstallCompleted> _parser = new pb::MessageParser<InstallCompleted>(() => new InstallCompleted());
-    private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<InstallCompleted> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InstallCompleted() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InstallCompleted(InstallCompleted other) : this() {
-      _hasBits0 = other._hasBits0;
-      restartRequired_ = other.restartRequired_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public InstallCompleted Clone() {
-      return new InstallCompleted(this);
-    }
-
-    /// <summary>Field number for the "restart_required" field.</summary>
-    public const int RestartRequiredFieldNumber = 1;
-    private readonly static bool RestartRequiredDefaultValue = false;
-
-    private bool restartRequired_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool RestartRequired {
-      get { if ((_hasBits0 & 1) != 0) { return restartRequired_; } else { return RestartRequiredDefaultValue; } }
-      set {
-        _hasBits0 |= 1;
-        restartRequired_ = value;
-      }
-    }
-    /// <summary>Gets whether the "restart_required" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasRestartRequired {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "restart_required" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearRestartRequired() {
-      _hasBits0 &= ~1;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as InstallCompleted);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(InstallCompleted other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (RestartRequired != other.RestartRequired) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (HasRestartRequired) hash ^= RestartRequired.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (HasRestartRequired) {
-        output.WriteRawTag(8);
-        output.WriteBool(RestartRequired);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasRestartRequired) {
-        output.WriteRawTag(8);
-        output.WriteBool(RestartRequired);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (HasRestartRequired) {
-        size += 1 + 1;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(InstallCompleted other) {
-      if (other == null) {
-        return;
-      }
-      if (other.HasRestartRequired) {
-        RestartRequired = other.RestartRequired;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            RestartRequired = input.ReadBool();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            RestartRequired = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class GearResult : pb::IMessage<GearResult>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GearResult> _parser = new pb::MessageParser<GearResult>(() => new GearResult());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GearResult> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GearResult() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GearResult(GearResult other) : this() {
-      result_ = other.result_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GearResult Clone() {
-      return new GearResult(this);
-    }
-
-    /// <summary>Field number for the "result" field.</summary>
-    public const int ResultFieldNumber = 1;
-    private readonly static string ResultDefaultValue = "";
-
-    private string result_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Result {
-      get { return result_ ?? ResultDefaultValue; }
-      set {
-        result_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "result" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasResult {
-      get { return result_ != null; }
-    }
-    /// <summary>Clears the value of the "result" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearResult() {
-      result_ = null;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as GearResult);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GearResult other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Result != other.Result) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (HasResult) hash ^= Result.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (HasResult) {
-        output.WriteRawTag(10);
-        output.WriteString(Result);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasResult) {
-        output.WriteRawTag(10);
-        output.WriteString(Result);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (HasResult) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Result);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GearResult other) {
-      if (other == null) {
-        return;
-      }
-      if (other.HasResult) {
-        Result = other.Result;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Result = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Result = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class Req : pb::IMessage<Req>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<Req> _parser = new pb::MessageParser<Req>(() => new Req());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<Req> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Req() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Req(Req other) : this() {
-      startInstall_ = other.startInstall_ != null ? other.startInstall_.Clone() : null;
-      installingDependency_ = other.installingDependency_ != null ? other.installingDependency_.Clone() : null;
-      dependencyInstalled_ = other.dependencyInstalled_ != null ? other.dependencyInstalled_.Clone() : null;
-      installCompleted_ = other.installCompleted_ != null ? other.installCompleted_.Clone() : null;
-      gearResult_ = other.gearResult_ != null ? other.gearResult_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public Req Clone() {
-      return new Req(this);
-    }
-
-    /// <summary>Field number for the "start_install" field.</summary>
-    public const int StartInstallFieldNumber = 1;
-    private global::Uplay.UplayService.StartInstall startInstall_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.UplayService.StartInstall StartInstall {
-      get { return startInstall_; }
-      set {
-        startInstall_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "installing_dependency" field.</summary>
-    public const int InstallingDependencyFieldNumber = 2;
-    private global::Uplay.UplayService.InstallingDependency installingDependency_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.UplayService.InstallingDependency InstallingDependency {
-      get { return installingDependency_; }
-      set {
-        installingDependency_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "dependency_installed" field.</summary>
-    public const int DependencyInstalledFieldNumber = 3;
-    private global::Uplay.UplayService.DependencyInstalled dependencyInstalled_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.UplayService.DependencyInstalled DependencyInstalled {
-      get { return dependencyInstalled_; }
-      set {
-        dependencyInstalled_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "install_completed" field.</summary>
-    public const int InstallCompletedFieldNumber = 4;
-    private global::Uplay.UplayService.InstallCompleted installCompleted_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.UplayService.InstallCompleted InstallCompleted {
-      get { return installCompleted_; }
-      set {
-        installCompleted_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "gear_result" field.</summary>
-    public const int GearResultFieldNumber = 5;
-    private global::Uplay.UplayService.GearResult gearResult_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.UplayService.GearResult GearResult {
-      get { return gearResult_; }
-      set {
-        gearResult_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as Req);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(Req other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(StartInstall, other.StartInstall)) return false;
-      if (!object.Equals(InstallingDependency, other.InstallingDependency)) return false;
-      if (!object.Equals(DependencyInstalled, other.DependencyInstalled)) return false;
-      if (!object.Equals(InstallCompleted, other.InstallCompleted)) return false;
-      if (!object.Equals(GearResult, other.GearResult)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (startInstall_ != null) hash ^= StartInstall.GetHashCode();
-      if (installingDependency_ != null) hash ^= InstallingDependency.GetHashCode();
-      if (dependencyInstalled_ != null) hash ^= DependencyInstalled.GetHashCode();
-      if (installCompleted_ != null) hash ^= InstallCompleted.GetHashCode();
-      if (gearResult_ != null) hash ^= GearResult.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (startInstall_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(StartInstall);
-      }
-      if (installingDependency_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(InstallingDependency);
-      }
-      if (dependencyInstalled_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(DependencyInstalled);
-      }
-      if (installCompleted_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(InstallCompleted);
-      }
-      if (gearResult_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(GearResult);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (startInstall_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(StartInstall);
-      }
-      if (installingDependency_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(InstallingDependency);
-      }
-      if (dependencyInstalled_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(DependencyInstalled);
-      }
-      if (installCompleted_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(InstallCompleted);
-      }
-      if (gearResult_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(GearResult);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (startInstall_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartInstall);
-      }
-      if (installingDependency_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstallingDependency);
-      }
-      if (dependencyInstalled_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DependencyInstalled);
-      }
-      if (installCompleted_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstallCompleted);
-      }
-      if (gearResult_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GearResult);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(Req other) {
-      if (other == null) {
-        return;
-      }
-      if (other.startInstall_ != null) {
-        if (startInstall_ == null) {
-          StartInstall = new global::Uplay.UplayService.StartInstall();
-        }
-        StartInstall.MergeFrom(other.StartInstall);
-      }
-      if (other.installingDependency_ != null) {
-        if (installingDependency_ == null) {
-          InstallingDependency = new global::Uplay.UplayService.InstallingDependency();
-        }
-        InstallingDependency.MergeFrom(other.InstallingDependency);
-      }
-      if (other.dependencyInstalled_ != null) {
-        if (dependencyInstalled_ == null) {
-          DependencyInstalled = new global::Uplay.UplayService.DependencyInstalled();
-        }
-        DependencyInstalled.MergeFrom(other.DependencyInstalled);
-      }
-      if (other.installCompleted_ != null) {
-        if (installCompleted_ == null) {
-          InstallCompleted = new global::Uplay.UplayService.InstallCompleted();
-        }
-        InstallCompleted.MergeFrom(other.InstallCompleted);
-      }
-      if (other.gearResult_ != null) {
-        if (gearResult_ == null) {
-          GearResult = new global::Uplay.UplayService.GearResult();
-        }
-        GearResult.MergeFrom(other.GearResult);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (startInstall_ == null) {
-              StartInstall = new global::Uplay.UplayService.StartInstall();
-            }
-            input.ReadMessage(StartInstall);
-            break;
-          }
-          case 18: {
-            if (installingDependency_ == null) {
-              InstallingDependency = new global::Uplay.UplayService.InstallingDependency();
-            }
-            input.ReadMessage(InstallingDependency);
-            break;
-          }
-          case 26: {
-            if (dependencyInstalled_ == null) {
-              DependencyInstalled = new global::Uplay.UplayService.DependencyInstalled();
-            }
-            input.ReadMessage(DependencyInstalled);
-            break;
-          }
-          case 34: {
-            if (installCompleted_ == null) {
-              InstallCompleted = new global::Uplay.UplayService.InstallCompleted();
-            }
-            input.ReadMessage(InstallCompleted);
-            break;
-          }
-          case 42: {
-            if (gearResult_ == null) {
-              GearResult = new global::Uplay.UplayService.GearResult();
-            }
-            input.ReadMessage(GearResult);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            if (startInstall_ == null) {
-              StartInstall = new global::Uplay.UplayService.StartInstall();
-            }
-            input.ReadMessage(StartInstall);
-            break;
-          }
-          case 18: {
-            if (installingDependency_ == null) {
-              InstallingDependency = new global::Uplay.UplayService.InstallingDependency();
-            }
-            input.ReadMessage(InstallingDependency);
-            break;
-          }
-          case 26: {
-            if (dependencyInstalled_ == null) {
-              DependencyInstalled = new global::Uplay.UplayService.DependencyInstalled();
-            }
-            input.ReadMessage(DependencyInstalled);
-            break;
-          }
-          case 34: {
-            if (installCompleted_ == null) {
-              InstallCompleted = new global::Uplay.UplayService.InstallCompleted();
-            }
-            input.ReadMessage(InstallCompleted);
-            break;
-          }
-          case 42: {
-            if (gearResult_ == null) {
-              GearResult = new global::Uplay.UplayService.GearResult();
-            }
-            input.ReadMessage(GearResult);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class Metrics : pb::IMessage<Metrics>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1712,7 +197,6 @@ namespace Uplay.UplayService {
   {
     private static readonly pb::MessageParser<Metrics> _parser = new pb::MessageParser<Metrics>(() => new Metrics());
     private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Metrics> Parser { get { return _parser; } }
@@ -1720,7 +204,7 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1740,7 +224,6 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Metrics(Metrics other) : this() {
-      _hasBits0 = other._hasBits0;
       category_ = other.category_;
       name_ = other.name_;
       type_ = other.type_;
@@ -1757,135 +240,62 @@ namespace Uplay.UplayService {
 
     /// <summary>Field number for the "category" field.</summary>
     public const int CategoryFieldNumber = 1;
-    private readonly static string CategoryDefaultValue = "";
-
-    private string category_;
+    private string category_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Category {
-      get { return category_ ?? CategoryDefaultValue; }
+      get { return category_; }
       set {
         category_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
-    /// <summary>Gets whether the "category" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasCategory {
-      get { return category_ != null; }
-    }
-    /// <summary>Clears the value of the "category" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearCategory() {
-      category_ = null;
-    }
 
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 2;
-    private readonly static string NameDefaultValue = "";
-
-    private string name_;
+    private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
-      get { return name_ ?? NameDefaultValue; }
+      get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
-    /// <summary>Gets whether the "name" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasName {
-      get { return name_ != null; }
-    }
-    /// <summary>Clears the value of the "name" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearName() {
-      name_ = null;
-    }
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 3;
-    private readonly static global::Uplay.UplayService.MetricType TypeDefaultValue = global::Uplay.UplayService.MetricType.Undefined;
-
-    private global::Uplay.UplayService.MetricType type_;
+    private global::Uplay.UplayService.MetricType type_ = global::Uplay.UplayService.MetricType.Undefined;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Uplay.UplayService.MetricType Type {
-      get { if ((_hasBits0 & 1) != 0) { return type_; } else { return TypeDefaultValue; } }
+      get { return type_; }
       set {
-        _hasBits0 |= 1;
         type_ = value;
       }
-    }
-    /// <summary>Gets whether the "type" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasType {
-      get { return (_hasBits0 & 1) != 0; }
-    }
-    /// <summary>Clears the value of the "type" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearType() {
-      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "version" field.</summary>
     public const int VersionFieldNumber = 4;
-    private readonly static uint VersionDefaultValue = 0;
-
     private uint version_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint Version {
-      get { if ((_hasBits0 & 2) != 0) { return version_; } else { return VersionDefaultValue; } }
+      get { return version_; }
       set {
-        _hasBits0 |= 2;
         version_ = value;
       }
-    }
-    /// <summary>Gets whether the "version" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasVersion {
-      get { return (_hasBits0 & 2) != 0; }
-    }
-    /// <summary>Clears the value of the "version" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearVersion() {
-      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 5;
-    private readonly static uint ValueDefaultValue = 0;
-
     private uint value_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint Value {
-      get { if ((_hasBits0 & 4) != 0) { return value_; } else { return ValueDefaultValue; } }
+      get { return value_; }
       set {
-        _hasBits0 |= 4;
         value_ = value;
       }
-    }
-    /// <summary>Gets whether the "value" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasValue {
-      get { return (_hasBits0 & 4) != 0; }
-    }
-    /// <summary>Clears the value of the "value" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearValue() {
-      _hasBits0 &= ~4;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1915,11 +325,11 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HasCategory) hash ^= Category.GetHashCode();
-      if (HasName) hash ^= Name.GetHashCode();
-      if (HasType) hash ^= Type.GetHashCode();
-      if (HasVersion) hash ^= Version.GetHashCode();
-      if (HasValue) hash ^= Value.GetHashCode();
+      if (Category.Length != 0) hash ^= Category.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Type != global::Uplay.UplayService.MetricType.Undefined) hash ^= Type.GetHashCode();
+      if (Version != 0) hash ^= Version.GetHashCode();
+      if (Value != 0) hash ^= Value.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1938,23 +348,23 @@ namespace Uplay.UplayService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HasCategory) {
+      if (Category.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Category);
       }
-      if (HasName) {
+      if (Name.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (HasType) {
+      if (Type != global::Uplay.UplayService.MetricType.Undefined) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
-      if (HasVersion) {
+      if (Version != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(Version);
       }
-      if (HasValue) {
+      if (Value != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(Value);
       }
@@ -1968,23 +378,23 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasCategory) {
+      if (Category.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Category);
       }
-      if (HasName) {
+      if (Name.Length != 0) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (HasType) {
+      if (Type != global::Uplay.UplayService.MetricType.Undefined) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
-      if (HasVersion) {
+      if (Version != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(Version);
       }
-      if (HasValue) {
+      if (Value != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(Value);
       }
@@ -1998,19 +408,19 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HasCategory) {
+      if (Category.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Category);
       }
-      if (HasName) {
+      if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (HasType) {
+      if (Type != global::Uplay.UplayService.MetricType.Undefined) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      if (HasVersion) {
+      if (Version != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Version);
       }
-      if (HasValue) {
+      if (Value != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Value);
       }
       if (_unknownFields != null) {
@@ -2025,19 +435,19 @@ namespace Uplay.UplayService {
       if (other == null) {
         return;
       }
-      if (other.HasCategory) {
+      if (other.Category.Length != 0) {
         Category = other.Category;
       }
-      if (other.HasName) {
+      if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.HasType) {
+      if (other.Type != global::Uplay.UplayService.MetricType.Undefined) {
         Type = other.Type;
       }
-      if (other.HasVersion) {
+      if (other.Version != 0) {
         Version = other.Version;
       }
-      if (other.HasValue) {
+      if (other.Value != 0) {
         Value = other.Value;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2131,7 +541,7 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2295,6 +705,1651 @@ namespace Uplay.UplayService {
 
   }
 
+  public sealed partial class StartInstall : pb::IMessage<StartInstall>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StartInstall> _parser = new pb::MessageParser<StartInstall>(() => new StartInstall());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StartInstall> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StartInstall() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StartInstall(StartInstall other) : this() {
+      uplayId_ = other.uplayId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StartInstall Clone() {
+      return new StartInstall(this);
+    }
+
+    /// <summary>Field number for the "uplay_id" field.</summary>
+    public const int UplayIdFieldNumber = 1;
+    private uint uplayId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UplayId {
+      get { return uplayId_; }
+      set {
+        uplayId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StartInstall);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StartInstall other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UplayId != other.UplayId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UplayId != 0) hash ^= UplayId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UplayId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UplayId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StartInstall other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UplayId != 0) {
+        UplayId = other.UplayId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class InstallingDependency : pb::IMessage<InstallingDependency>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InstallingDependency> _parser = new pb::MessageParser<InstallingDependency>(() => new InstallingDependency());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InstallingDependency> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstallingDependency() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstallingDependency(InstallingDependency other) : this() {
+      description_ = other.description_;
+      indexNumber_ = other.indexNumber_;
+      installersCount_ = other.installersCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstallingDependency Clone() {
+      return new InstallingDependency(this);
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 1;
+    private string description_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "index_number" field.</summary>
+    public const int IndexNumberFieldNumber = 2;
+    private uint indexNumber_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint IndexNumber {
+      get { return indexNumber_; }
+      set {
+        indexNumber_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "installers_count" field.</summary>
+    public const int InstallersCountFieldNumber = 3;
+    private uint installersCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint InstallersCount {
+      get { return installersCount_; }
+      set {
+        installersCount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InstallingDependency);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InstallingDependency other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Description != other.Description) return false;
+      if (IndexNumber != other.IndexNumber) return false;
+      if (InstallersCount != other.InstallersCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (IndexNumber != 0) hash ^= IndexNumber.GetHashCode();
+      if (InstallersCount != 0) hash ^= InstallersCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Description.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Description);
+      }
+      if (IndexNumber != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(IndexNumber);
+      }
+      if (InstallersCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(InstallersCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Description.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Description);
+      }
+      if (IndexNumber != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(IndexNumber);
+      }
+      if (InstallersCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(InstallersCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (IndexNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IndexNumber);
+      }
+      if (InstallersCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InstallersCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InstallingDependency other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.IndexNumber != 0) {
+        IndexNumber = other.IndexNumber;
+      }
+      if (other.InstallersCount != 0) {
+        InstallersCount = other.InstallersCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Description = input.ReadString();
+            break;
+          }
+          case 16: {
+            IndexNumber = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            InstallersCount = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Description = input.ReadString();
+            break;
+          }
+          case 16: {
+            IndexNumber = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            InstallersCount = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class DependencyInstalled : pb::IMessage<DependencyInstalled>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DependencyInstalled> _parser = new pb::MessageParser<DependencyInstalled>(() => new DependencyInstalled());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DependencyInstalled> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInstalled() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInstalled(DependencyInstalled other) : this() {
+      installerId_ = other.installerId_;
+      version_ = other.version_;
+      restartRequired_ = other.restartRequired_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInstalled Clone() {
+      return new DependencyInstalled(this);
+    }
+
+    /// <summary>Field number for the "installer_id" field.</summary>
+    public const int InstallerIdFieldNumber = 1;
+    private string installerId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InstallerId {
+      get { return installerId_; }
+      set {
+        installerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 2;
+    private uint version_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Version {
+      get { return version_; }
+      set {
+        version_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "restart_required" field.</summary>
+    public const int RestartRequiredFieldNumber = 3;
+    private bool restartRequired_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RestartRequired {
+      get { return restartRequired_; }
+      set {
+        restartRequired_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DependencyInstalled);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DependencyInstalled other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (InstallerId != other.InstallerId) return false;
+      if (Version != other.Version) return false;
+      if (RestartRequired != other.RestartRequired) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (InstallerId.Length != 0) hash ^= InstallerId.GetHashCode();
+      if (Version != 0) hash ^= Version.GetHashCode();
+      if (RestartRequired != false) hash ^= RestartRequired.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (InstallerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InstallerId);
+      }
+      if (Version != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Version);
+      }
+      if (RestartRequired != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(RestartRequired);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (InstallerId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(InstallerId);
+      }
+      if (Version != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Version);
+      }
+      if (RestartRequired != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(RestartRequired);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (InstallerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InstallerId);
+      }
+      if (Version != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Version);
+      }
+      if (RestartRequired != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DependencyInstalled other) {
+      if (other == null) {
+        return;
+      }
+      if (other.InstallerId.Length != 0) {
+        InstallerId = other.InstallerId;
+      }
+      if (other.Version != 0) {
+        Version = other.Version;
+      }
+      if (other.RestartRequired != false) {
+        RestartRequired = other.RestartRequired;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            InstallerId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Version = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            RestartRequired = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            InstallerId = input.ReadString();
+            break;
+          }
+          case 16: {
+            Version = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            RestartRequired = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class InstallCompleted : pb::IMessage<InstallCompleted>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InstallCompleted> _parser = new pb::MessageParser<InstallCompleted>(() => new InstallCompleted());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InstallCompleted> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstallCompleted() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstallCompleted(InstallCompleted other) : this() {
+      restartRequired_ = other.restartRequired_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstallCompleted Clone() {
+      return new InstallCompleted(this);
+    }
+
+    /// <summary>Field number for the "restart_required" field.</summary>
+    public const int RestartRequiredFieldNumber = 1;
+    private bool restartRequired_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RestartRequired {
+      get { return restartRequired_; }
+      set {
+        restartRequired_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InstallCompleted);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InstallCompleted other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RestartRequired != other.RestartRequired) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RestartRequired != false) hash ^= RestartRequired.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RestartRequired != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(RestartRequired);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RestartRequired != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(RestartRequired);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RestartRequired != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InstallCompleted other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RestartRequired != false) {
+        RestartRequired = other.RestartRequired;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RestartRequired = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RestartRequired = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GearResult : pb::IMessage<GearResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GearResult> _parser = new pb::MessageParser<GearResult>(() => new GearResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GearResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GearResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GearResult(GearResult other) : this() {
+      result_ = other.result_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GearResult Clone() {
+      return new GearResult(this);
+    }
+
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 1;
+    private pb::ByteString result_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Result {
+      get { return result_; }
+      set {
+        result_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GearResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GearResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Result != other.Result) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Result.Length != 0) hash ^= Result.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Result.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Result);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Result.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Result);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Result.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Result);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GearResult other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Result.Length != 0) {
+        Result = other.Result;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Result = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Result = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class Req : pb::IMessage<Req>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Req> _parser = new pb::MessageParser<Req>(() => new Req());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Req> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Req() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Req(Req other) : this() {
+      switch (other.StartInstallCase) {
+        case StartInstallOneofCase.StartInstall:
+          StartInstall = other.StartInstall.Clone();
+          break;
+      }
+
+      switch (other.InstallingDependencyCase) {
+        case InstallingDependencyOneofCase.InstallingDependency:
+          InstallingDependency = other.InstallingDependency.Clone();
+          break;
+      }
+
+      switch (other.DependencyInstalledCase) {
+        case DependencyInstalledOneofCase.DependencyInstalled:
+          DependencyInstalled = other.DependencyInstalled.Clone();
+          break;
+      }
+
+      switch (other.InstallCompletedCase) {
+        case InstallCompletedOneofCase.InstallCompleted:
+          InstallCompleted = other.InstallCompleted.Clone();
+          break;
+      }
+
+      switch (other.GearResultCase) {
+        case GearResultOneofCase.GearResult:
+          GearResult = other.GearResult.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Req Clone() {
+      return new Req(this);
+    }
+
+    /// <summary>Field number for the "start_install" field.</summary>
+    public const int StartInstallFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.StartInstall StartInstall {
+      get { return StartInstallCase_ == StartInstallOneofCase.StartInstall ? (global::Uplay.UplayService.StartInstall) StartInstall_ : null; }
+      set {
+        StartInstall_ = value;
+        StartInstallCase_ = value == null ? StartInstallOneofCase.None : StartInstallOneofCase.StartInstall;
+      }
+    }
+
+    /// <summary>Field number for the "installing_dependency" field.</summary>
+    public const int InstallingDependencyFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.InstallingDependency InstallingDependency {
+      get { return InstallingDependencyCase_ == InstallingDependencyOneofCase.InstallingDependency ? (global::Uplay.UplayService.InstallingDependency) InstallingDependency_ : null; }
+      set {
+        InstallingDependency_ = value;
+        InstallingDependencyCase_ = value == null ? InstallingDependencyOneofCase.None : InstallingDependencyOneofCase.InstallingDependency;
+      }
+    }
+
+    /// <summary>Field number for the "dependency_installed" field.</summary>
+    public const int DependencyInstalledFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.DependencyInstalled DependencyInstalled {
+      get { return DependencyInstalledCase_ == DependencyInstalledOneofCase.DependencyInstalled ? (global::Uplay.UplayService.DependencyInstalled) DependencyInstalled_ : null; }
+      set {
+        DependencyInstalled_ = value;
+        DependencyInstalledCase_ = value == null ? DependencyInstalledOneofCase.None : DependencyInstalledOneofCase.DependencyInstalled;
+      }
+    }
+
+    /// <summary>Field number for the "install_completed" field.</summary>
+    public const int InstallCompletedFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.InstallCompleted InstallCompleted {
+      get { return InstallCompletedCase_ == InstallCompletedOneofCase.InstallCompleted ? (global::Uplay.UplayService.InstallCompleted) InstallCompleted_ : null; }
+      set {
+        InstallCompleted_ = value;
+        InstallCompletedCase_ = value == null ? InstallCompletedOneofCase.None : InstallCompletedOneofCase.InstallCompleted;
+      }
+    }
+
+    /// <summary>Field number for the "gear_result" field.</summary>
+    public const int GearResultFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.GearResult GearResult {
+      get { return GearResultCase_ == GearResultOneofCase.GearResult ? (global::Uplay.UplayService.GearResult) GearResult_ : null; }
+      set {
+        GearResult_ = value;
+        GearResultCase_ = value == null ? GearResultOneofCase.None : GearResultOneofCase.GearResult;
+      }
+    }
+
+    private object StartInstall_;
+    /// <summary>Enum of possible cases for the "_start_install" oneof.</summary>
+    public enum StartInstallOneofCase {
+      None = 0,
+      StartInstall = 1,
+    }
+    private StartInstallOneofCase StartInstallCase_ = StartInstallOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StartInstallOneofCase StartInstallCase {
+      get { return StartInstallCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStartInstall() {
+      StartInstallCase_ = StartInstallOneofCase.None;
+      StartInstall_ = null;
+    }
+
+    private object InstallingDependency_;
+    /// <summary>Enum of possible cases for the "_installing_dependency" oneof.</summary>
+    public enum InstallingDependencyOneofCase {
+      None = 0,
+      InstallingDependency = 2,
+    }
+    private InstallingDependencyOneofCase InstallingDependencyCase_ = InstallingDependencyOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstallingDependencyOneofCase InstallingDependencyCase {
+      get { return InstallingDependencyCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInstallingDependency() {
+      InstallingDependencyCase_ = InstallingDependencyOneofCase.None;
+      InstallingDependency_ = null;
+    }
+
+    private object DependencyInstalled_;
+    /// <summary>Enum of possible cases for the "_dependency_installed" oneof.</summary>
+    public enum DependencyInstalledOneofCase {
+      None = 0,
+      DependencyInstalled = 3,
+    }
+    private DependencyInstalledOneofCase DependencyInstalledCase_ = DependencyInstalledOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInstalledOneofCase DependencyInstalledCase {
+      get { return DependencyInstalledCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDependencyInstalled() {
+      DependencyInstalledCase_ = DependencyInstalledOneofCase.None;
+      DependencyInstalled_ = null;
+    }
+
+    private object InstallCompleted_;
+    /// <summary>Enum of possible cases for the "_install_completed" oneof.</summary>
+    public enum InstallCompletedOneofCase {
+      None = 0,
+      InstallCompleted = 4,
+    }
+    private InstallCompletedOneofCase InstallCompletedCase_ = InstallCompletedOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstallCompletedOneofCase InstallCompletedCase {
+      get { return InstallCompletedCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInstallCompleted() {
+      InstallCompletedCase_ = InstallCompletedOneofCase.None;
+      InstallCompleted_ = null;
+    }
+
+    private object GearResult_;
+    /// <summary>Enum of possible cases for the "_gear_result" oneof.</summary>
+    public enum GearResultOneofCase {
+      None = 0,
+      GearResult = 5,
+    }
+    private GearResultOneofCase GearResultCase_ = GearResultOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GearResultOneofCase GearResultCase {
+      get { return GearResultCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGearResult() {
+      GearResultCase_ = GearResultOneofCase.None;
+      GearResult_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Req);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Req other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(StartInstall, other.StartInstall)) return false;
+      if (!object.Equals(InstallingDependency, other.InstallingDependency)) return false;
+      if (!object.Equals(DependencyInstalled, other.DependencyInstalled)) return false;
+      if (!object.Equals(InstallCompleted, other.InstallCompleted)) return false;
+      if (!object.Equals(GearResult, other.GearResult)) return false;
+      if (StartInstallCase != other.StartInstallCase) return false;
+      if (InstallingDependencyCase != other.InstallingDependencyCase) return false;
+      if (DependencyInstalledCase != other.DependencyInstalledCase) return false;
+      if (InstallCompletedCase != other.InstallCompletedCase) return false;
+      if (GearResultCase != other.GearResultCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StartInstallCase_ == StartInstallOneofCase.StartInstall) hash ^= StartInstall.GetHashCode();
+      if (InstallingDependencyCase_ == InstallingDependencyOneofCase.InstallingDependency) hash ^= InstallingDependency.GetHashCode();
+      if (DependencyInstalledCase_ == DependencyInstalledOneofCase.DependencyInstalled) hash ^= DependencyInstalled.GetHashCode();
+      if (InstallCompletedCase_ == InstallCompletedOneofCase.InstallCompleted) hash ^= InstallCompleted.GetHashCode();
+      if (GearResultCase_ == GearResultOneofCase.GearResult) hash ^= GearResult.GetHashCode();
+      hash ^= (int) StartInstallCase_;
+      hash ^= (int) InstallingDependencyCase_;
+      hash ^= (int) DependencyInstalledCase_;
+      hash ^= (int) InstallCompletedCase_;
+      hash ^= (int) GearResultCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (StartInstallCase_ == StartInstallOneofCase.StartInstall) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartInstall);
+      }
+      if (InstallingDependencyCase_ == InstallingDependencyOneofCase.InstallingDependency) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InstallingDependency);
+      }
+      if (DependencyInstalledCase_ == DependencyInstalledOneofCase.DependencyInstalled) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DependencyInstalled);
+      }
+      if (InstallCompletedCase_ == InstallCompletedOneofCase.InstallCompleted) {
+        output.WriteRawTag(34);
+        output.WriteMessage(InstallCompleted);
+      }
+      if (GearResultCase_ == GearResultOneofCase.GearResult) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GearResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (StartInstallCase_ == StartInstallOneofCase.StartInstall) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartInstall);
+      }
+      if (InstallingDependencyCase_ == InstallingDependencyOneofCase.InstallingDependency) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InstallingDependency);
+      }
+      if (DependencyInstalledCase_ == DependencyInstalledOneofCase.DependencyInstalled) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DependencyInstalled);
+      }
+      if (InstallCompletedCase_ == InstallCompletedOneofCase.InstallCompleted) {
+        output.WriteRawTag(34);
+        output.WriteMessage(InstallCompleted);
+      }
+      if (GearResultCase_ == GearResultOneofCase.GearResult) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GearResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (StartInstallCase_ == StartInstallOneofCase.StartInstall) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartInstall);
+      }
+      if (InstallingDependencyCase_ == InstallingDependencyOneofCase.InstallingDependency) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstallingDependency);
+      }
+      if (DependencyInstalledCase_ == DependencyInstalledOneofCase.DependencyInstalled) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DependencyInstalled);
+      }
+      if (InstallCompletedCase_ == InstallCompletedOneofCase.InstallCompleted) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstallCompleted);
+      }
+      if (GearResultCase_ == GearResultOneofCase.GearResult) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GearResult);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Req other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.StartInstallCase) {
+        case StartInstallOneofCase.StartInstall:
+          if (StartInstall == null) {
+            StartInstall = new global::Uplay.UplayService.StartInstall();
+          }
+          StartInstall.MergeFrom(other.StartInstall);
+          break;
+      }
+
+      switch (other.InstallingDependencyCase) {
+        case InstallingDependencyOneofCase.InstallingDependency:
+          if (InstallingDependency == null) {
+            InstallingDependency = new global::Uplay.UplayService.InstallingDependency();
+          }
+          InstallingDependency.MergeFrom(other.InstallingDependency);
+          break;
+      }
+
+      switch (other.DependencyInstalledCase) {
+        case DependencyInstalledOneofCase.DependencyInstalled:
+          if (DependencyInstalled == null) {
+            DependencyInstalled = new global::Uplay.UplayService.DependencyInstalled();
+          }
+          DependencyInstalled.MergeFrom(other.DependencyInstalled);
+          break;
+      }
+
+      switch (other.InstallCompletedCase) {
+        case InstallCompletedOneofCase.InstallCompleted:
+          if (InstallCompleted == null) {
+            InstallCompleted = new global::Uplay.UplayService.InstallCompleted();
+          }
+          InstallCompleted.MergeFrom(other.InstallCompleted);
+          break;
+      }
+
+      switch (other.GearResultCase) {
+        case GearResultOneofCase.GearResult:
+          if (GearResult == null) {
+            GearResult = new global::Uplay.UplayService.GearResult();
+          }
+          GearResult.MergeFrom(other.GearResult);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Uplay.UplayService.StartInstall subBuilder = new global::Uplay.UplayService.StartInstall();
+            if (StartInstallCase_ == StartInstallOneofCase.StartInstall) {
+              subBuilder.MergeFrom(StartInstall);
+            }
+            input.ReadMessage(subBuilder);
+            StartInstall = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Uplay.UplayService.InstallingDependency subBuilder = new global::Uplay.UplayService.InstallingDependency();
+            if (InstallingDependencyCase_ == InstallingDependencyOneofCase.InstallingDependency) {
+              subBuilder.MergeFrom(InstallingDependency);
+            }
+            input.ReadMessage(subBuilder);
+            InstallingDependency = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.DependencyInstalled subBuilder = new global::Uplay.UplayService.DependencyInstalled();
+            if (DependencyInstalledCase_ == DependencyInstalledOneofCase.DependencyInstalled) {
+              subBuilder.MergeFrom(DependencyInstalled);
+            }
+            input.ReadMessage(subBuilder);
+            DependencyInstalled = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Uplay.UplayService.InstallCompleted subBuilder = new global::Uplay.UplayService.InstallCompleted();
+            if (InstallCompletedCase_ == InstallCompletedOneofCase.InstallCompleted) {
+              subBuilder.MergeFrom(InstallCompleted);
+            }
+            input.ReadMessage(subBuilder);
+            InstallCompleted = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Uplay.UplayService.GearResult subBuilder = new global::Uplay.UplayService.GearResult();
+            if (GearResultCase_ == GearResultOneofCase.GearResult) {
+              subBuilder.MergeFrom(GearResult);
+            }
+            input.ReadMessage(subBuilder);
+            GearResult = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Uplay.UplayService.StartInstall subBuilder = new global::Uplay.UplayService.StartInstall();
+            if (StartInstallCase_ == StartInstallOneofCase.StartInstall) {
+              subBuilder.MergeFrom(StartInstall);
+            }
+            input.ReadMessage(subBuilder);
+            StartInstall = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Uplay.UplayService.InstallingDependency subBuilder = new global::Uplay.UplayService.InstallingDependency();
+            if (InstallingDependencyCase_ == InstallingDependencyOneofCase.InstallingDependency) {
+              subBuilder.MergeFrom(InstallingDependency);
+            }
+            input.ReadMessage(subBuilder);
+            InstallingDependency = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.DependencyInstalled subBuilder = new global::Uplay.UplayService.DependencyInstalled();
+            if (DependencyInstalledCase_ == DependencyInstalledOneofCase.DependencyInstalled) {
+              subBuilder.MergeFrom(DependencyInstalled);
+            }
+            input.ReadMessage(subBuilder);
+            DependencyInstalled = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Uplay.UplayService.InstallCompleted subBuilder = new global::Uplay.UplayService.InstallCompleted();
+            if (InstallCompletedCase_ == InstallCompletedOneofCase.InstallCompleted) {
+              subBuilder.MergeFrom(InstallCompleted);
+            }
+            input.ReadMessage(subBuilder);
+            InstallCompleted = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Uplay.UplayService.GearResult subBuilder = new global::Uplay.UplayService.GearResult();
+            if (GearResultCase_ == GearResultOneofCase.GearResult) {
+              subBuilder.MergeFrom(GearResult);
+            }
+            input.ReadMessage(subBuilder);
+            GearResult = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class DependencyRestartRsp : pb::IMessage<DependencyRestartRsp>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2302,7 +2357,6 @@ namespace Uplay.UplayService {
   {
     private static readonly pb::MessageParser<DependencyRestartRsp> _parser = new pb::MessageParser<DependencyRestartRsp>(() => new DependencyRestartRsp());
     private pb::UnknownFieldSet _unknownFields;
-    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DependencyRestartRsp> Parser { get { return _parser; } }
@@ -2330,8 +2384,12 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DependencyRestartRsp(DependencyRestartRsp other) : this() {
-      _hasBits0 = other._hasBits0;
-      isApproved_ = other.isApproved_;
+      switch (other.IsApprovedCase) {
+        case IsApprovedOneofCase.IsApproved:
+          IsApproved = other.IsApproved;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2343,29 +2401,34 @@ namespace Uplay.UplayService {
 
     /// <summary>Field number for the "is_approved" field.</summary>
     public const int IsApprovedFieldNumber = 1;
-    private readonly static bool IsApprovedDefaultValue = false;
-
-    private bool isApproved_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IsApproved {
-      get { if ((_hasBits0 & 1) != 0) { return isApproved_; } else { return IsApprovedDefaultValue; } }
+      get { return IsApprovedCase_ == IsApprovedOneofCase.IsApproved ? (bool) IsApproved_ : false; }
       set {
-        _hasBits0 |= 1;
-        isApproved_ = value;
+        IsApproved_ = value;
+        IsApprovedCase_ = IsApprovedOneofCase.IsApproved;
       }
     }
-    /// <summary>Gets whether the "is_approved" field is set</summary>
+
+    private object IsApproved_;
+    /// <summary>Enum of possible cases for the "_is_approved" oneof.</summary>
+    public enum IsApprovedOneofCase {
+      None = 0,
+      IsApproved = 1,
+    }
+    private IsApprovedOneofCase IsApprovedCase_ = IsApprovedOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasIsApproved {
-      get { return (_hasBits0 & 1) != 0; }
+    public IsApprovedOneofCase IsApprovedCase {
+      get { return IsApprovedCase_; }
     }
-    /// <summary>Clears the value of the "is_approved" field</summary>
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearIsApproved() {
-      _hasBits0 &= ~1;
+      IsApprovedCase_ = IsApprovedOneofCase.None;
+      IsApproved_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2384,6 +2447,7 @@ namespace Uplay.UplayService {
         return true;
       }
       if (IsApproved != other.IsApproved) return false;
+      if (IsApprovedCase != other.IsApprovedCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2391,7 +2455,8 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HasIsApproved) hash ^= IsApproved.GetHashCode();
+      if (IsApprovedCase_ == IsApprovedOneofCase.IsApproved) hash ^= IsApproved.GetHashCode();
+      hash ^= (int) IsApprovedCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2410,7 +2475,7 @@ namespace Uplay.UplayService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HasIsApproved) {
+      if (IsApprovedCase_ == IsApprovedOneofCase.IsApproved) {
         output.WriteRawTag(8);
         output.WriteBool(IsApproved);
       }
@@ -2424,7 +2489,7 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasIsApproved) {
+      if (IsApprovedCase_ == IsApprovedOneofCase.IsApproved) {
         output.WriteRawTag(8);
         output.WriteBool(IsApproved);
       }
@@ -2438,7 +2503,7 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HasIsApproved) {
+      if (IsApprovedCase_ == IsApprovedOneofCase.IsApproved) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -2453,9 +2518,12 @@ namespace Uplay.UplayService {
       if (other == null) {
         return;
       }
-      if (other.HasIsApproved) {
-        IsApproved = other.IsApproved;
+      switch (other.IsApprovedCase) {
+        case IsApprovedOneofCase.IsApproved:
+          IsApproved = other.IsApproved;
+          break;
       }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2535,7 +2603,12 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Rsp(Rsp other) : this() {
-      restart_ = other.restart_ != null ? other.restart_.Clone() : null;
+      switch (other.RestartCase) {
+        case RestartOneofCase.Restart:
+          Restart = other.Restart.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2547,14 +2620,34 @@ namespace Uplay.UplayService {
 
     /// <summary>Field number for the "restart" field.</summary>
     public const int RestartFieldNumber = 1;
-    private global::Uplay.UplayService.DependencyRestartRsp restart_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Uplay.UplayService.DependencyRestartRsp Restart {
-      get { return restart_; }
+      get { return RestartCase_ == RestartOneofCase.Restart ? (global::Uplay.UplayService.DependencyRestartRsp) Restart_ : null; }
       set {
-        restart_ = value;
+        Restart_ = value;
+        RestartCase_ = value == null ? RestartOneofCase.None : RestartOneofCase.Restart;
       }
+    }
+
+    private object Restart_;
+    /// <summary>Enum of possible cases for the "_restart" oneof.</summary>
+    public enum RestartOneofCase {
+      None = 0,
+      Restart = 1,
+    }
+    private RestartOneofCase RestartCase_ = RestartOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RestartOneofCase RestartCase {
+      get { return RestartCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRestart() {
+      RestartCase_ = RestartOneofCase.None;
+      Restart_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2573,6 +2666,7 @@ namespace Uplay.UplayService {
         return true;
       }
       if (!object.Equals(Restart, other.Restart)) return false;
+      if (RestartCase != other.RestartCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2580,7 +2674,8 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (restart_ != null) hash ^= Restart.GetHashCode();
+      if (RestartCase_ == RestartOneofCase.Restart) hash ^= Restart.GetHashCode();
+      hash ^= (int) RestartCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2599,7 +2694,7 @@ namespace Uplay.UplayService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (restart_ != null) {
+      if (RestartCase_ == RestartOneofCase.Restart) {
         output.WriteRawTag(10);
         output.WriteMessage(Restart);
       }
@@ -2613,7 +2708,7 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (restart_ != null) {
+      if (RestartCase_ == RestartOneofCase.Restart) {
         output.WriteRawTag(10);
         output.WriteMessage(Restart);
       }
@@ -2627,7 +2722,7 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (restart_ != null) {
+      if (RestartCase_ == RestartOneofCase.Restart) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Restart);
       }
       if (_unknownFields != null) {
@@ -2642,12 +2737,15 @@ namespace Uplay.UplayService {
       if (other == null) {
         return;
       }
-      if (other.restart_ != null) {
-        if (restart_ == null) {
-          Restart = new global::Uplay.UplayService.DependencyRestartRsp();
-        }
-        Restart.MergeFrom(other.Restart);
+      switch (other.RestartCase) {
+        case RestartOneofCase.Restart:
+          if (Restart == null) {
+            Restart = new global::Uplay.UplayService.DependencyRestartRsp();
+          }
+          Restart.MergeFrom(other.Restart);
+          break;
       }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2664,10 +2762,12 @@ namespace Uplay.UplayService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (restart_ == null) {
-              Restart = new global::Uplay.UplayService.DependencyRestartRsp();
+            global::Uplay.UplayService.DependencyRestartRsp subBuilder = new global::Uplay.UplayService.DependencyRestartRsp();
+            if (RestartCase_ == RestartOneofCase.Restart) {
+              subBuilder.MergeFrom(Restart);
             }
-            input.ReadMessage(Restart);
+            input.ReadMessage(subBuilder);
+            Restart = subBuilder;
             break;
           }
         }
@@ -2686,10 +2786,12 @@ namespace Uplay.UplayService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (restart_ == null) {
-              Restart = new global::Uplay.UplayService.DependencyRestartRsp();
+            global::Uplay.UplayService.DependencyRestartRsp subBuilder = new global::Uplay.UplayService.DependencyRestartRsp();
+            if (RestartCase_ == RestartOneofCase.Restart) {
+              subBuilder.MergeFrom(Restart);
             }
-            input.ReadMessage(Restart);
+            input.ReadMessage(subBuilder);
+            Restart = subBuilder;
             break;
           }
         }
@@ -2885,7 +2987,12 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DownPush(DownPush other) : this() {
-      cancelInstall_ = other.cancelInstall_ != null ? other.cancelInstall_.Clone() : null;
+      switch (other.CancelInstallCase) {
+        case CancelInstallOneofCase.CancelInstall:
+          CancelInstall = other.CancelInstall.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2897,14 +3004,34 @@ namespace Uplay.UplayService {
 
     /// <summary>Field number for the "cancel_install" field.</summary>
     public const int CancelInstallFieldNumber = 1;
-    private global::Uplay.UplayService.CancelInstallPush cancelInstall_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Uplay.UplayService.CancelInstallPush CancelInstall {
-      get { return cancelInstall_; }
+      get { return CancelInstallCase_ == CancelInstallOneofCase.CancelInstall ? (global::Uplay.UplayService.CancelInstallPush) CancelInstall_ : null; }
       set {
-        cancelInstall_ = value;
+        CancelInstall_ = value;
+        CancelInstallCase_ = value == null ? CancelInstallOneofCase.None : CancelInstallOneofCase.CancelInstall;
       }
+    }
+
+    private object CancelInstall_;
+    /// <summary>Enum of possible cases for the "_cancel_install" oneof.</summary>
+    public enum CancelInstallOneofCase {
+      None = 0,
+      CancelInstall = 1,
+    }
+    private CancelInstallOneofCase CancelInstallCase_ = CancelInstallOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelInstallOneofCase CancelInstallCase {
+      get { return CancelInstallCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCancelInstall() {
+      CancelInstallCase_ = CancelInstallOneofCase.None;
+      CancelInstall_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2923,6 +3050,7 @@ namespace Uplay.UplayService {
         return true;
       }
       if (!object.Equals(CancelInstall, other.CancelInstall)) return false;
+      if (CancelInstallCase != other.CancelInstallCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2930,7 +3058,8 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (cancelInstall_ != null) hash ^= CancelInstall.GetHashCode();
+      if (CancelInstallCase_ == CancelInstallOneofCase.CancelInstall) hash ^= CancelInstall.GetHashCode();
+      hash ^= (int) CancelInstallCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2949,7 +3078,7 @@ namespace Uplay.UplayService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (cancelInstall_ != null) {
+      if (CancelInstallCase_ == CancelInstallOneofCase.CancelInstall) {
         output.WriteRawTag(10);
         output.WriteMessage(CancelInstall);
       }
@@ -2963,7 +3092,7 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (cancelInstall_ != null) {
+      if (CancelInstallCase_ == CancelInstallOneofCase.CancelInstall) {
         output.WriteRawTag(10);
         output.WriteMessage(CancelInstall);
       }
@@ -2977,7 +3106,7 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (cancelInstall_ != null) {
+      if (CancelInstallCase_ == CancelInstallOneofCase.CancelInstall) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CancelInstall);
       }
       if (_unknownFields != null) {
@@ -2992,12 +3121,15 @@ namespace Uplay.UplayService {
       if (other == null) {
         return;
       }
-      if (other.cancelInstall_ != null) {
-        if (cancelInstall_ == null) {
-          CancelInstall = new global::Uplay.UplayService.CancelInstallPush();
-        }
-        CancelInstall.MergeFrom(other.CancelInstall);
+      switch (other.CancelInstallCase) {
+        case CancelInstallOneofCase.CancelInstall:
+          if (CancelInstall == null) {
+            CancelInstall = new global::Uplay.UplayService.CancelInstallPush();
+          }
+          CancelInstall.MergeFrom(other.CancelInstall);
+          break;
       }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3014,10 +3146,12 @@ namespace Uplay.UplayService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (cancelInstall_ == null) {
-              CancelInstall = new global::Uplay.UplayService.CancelInstallPush();
+            global::Uplay.UplayService.CancelInstallPush subBuilder = new global::Uplay.UplayService.CancelInstallPush();
+            if (CancelInstallCase_ == CancelInstallOneofCase.CancelInstall) {
+              subBuilder.MergeFrom(CancelInstall);
             }
-            input.ReadMessage(CancelInstall);
+            input.ReadMessage(subBuilder);
+            CancelInstall = subBuilder;
             break;
           }
         }
@@ -3036,10 +3170,12 @@ namespace Uplay.UplayService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (cancelInstall_ == null) {
-              CancelInstall = new global::Uplay.UplayService.CancelInstallPush();
+            global::Uplay.UplayService.CancelInstallPush subBuilder = new global::Uplay.UplayService.CancelInstallPush();
+            if (CancelInstallCase_ == CancelInstallOneofCase.CancelInstall) {
+              subBuilder.MergeFrom(CancelInstall);
             }
-            input.ReadMessage(CancelInstall);
+            input.ReadMessage(subBuilder);
+            CancelInstall = subBuilder;
             break;
           }
         }
@@ -3083,7 +3219,12 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpPush(UpPush other) : this() {
-      telemetry_ = other.telemetry_ != null ? other.telemetry_.Clone() : null;
+      switch (other.TelemetryCase) {
+        case TelemetryOneofCase.Telemetry:
+          Telemetry = other.Telemetry.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3095,14 +3236,34 @@ namespace Uplay.UplayService {
 
     /// <summary>Field number for the "telemetry" field.</summary>
     public const int TelemetryFieldNumber = 1;
-    private global::Uplay.UplayService.Telemetry telemetry_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Uplay.UplayService.Telemetry Telemetry {
-      get { return telemetry_; }
+      get { return TelemetryCase_ == TelemetryOneofCase.Telemetry ? (global::Uplay.UplayService.Telemetry) Telemetry_ : null; }
       set {
-        telemetry_ = value;
+        Telemetry_ = value;
+        TelemetryCase_ = value == null ? TelemetryOneofCase.None : TelemetryOneofCase.Telemetry;
       }
+    }
+
+    private object Telemetry_;
+    /// <summary>Enum of possible cases for the "_telemetry" oneof.</summary>
+    public enum TelemetryOneofCase {
+      None = 0,
+      Telemetry = 1,
+    }
+    private TelemetryOneofCase TelemetryCase_ = TelemetryOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TelemetryOneofCase TelemetryCase {
+      get { return TelemetryCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTelemetry() {
+      TelemetryCase_ = TelemetryOneofCase.None;
+      Telemetry_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3121,6 +3282,7 @@ namespace Uplay.UplayService {
         return true;
       }
       if (!object.Equals(Telemetry, other.Telemetry)) return false;
+      if (TelemetryCase != other.TelemetryCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3128,7 +3290,8 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (telemetry_ != null) hash ^= Telemetry.GetHashCode();
+      if (TelemetryCase_ == TelemetryOneofCase.Telemetry) hash ^= Telemetry.GetHashCode();
+      hash ^= (int) TelemetryCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3147,7 +3310,7 @@ namespace Uplay.UplayService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (telemetry_ != null) {
+      if (TelemetryCase_ == TelemetryOneofCase.Telemetry) {
         output.WriteRawTag(10);
         output.WriteMessage(Telemetry);
       }
@@ -3161,7 +3324,7 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (telemetry_ != null) {
+      if (TelemetryCase_ == TelemetryOneofCase.Telemetry) {
         output.WriteRawTag(10);
         output.WriteMessage(Telemetry);
       }
@@ -3175,7 +3338,7 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (telemetry_ != null) {
+      if (TelemetryCase_ == TelemetryOneofCase.Telemetry) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Telemetry);
       }
       if (_unknownFields != null) {
@@ -3190,12 +3353,15 @@ namespace Uplay.UplayService {
       if (other == null) {
         return;
       }
-      if (other.telemetry_ != null) {
-        if (telemetry_ == null) {
-          Telemetry = new global::Uplay.UplayService.Telemetry();
-        }
-        Telemetry.MergeFrom(other.Telemetry);
+      switch (other.TelemetryCase) {
+        case TelemetryOneofCase.Telemetry:
+          if (Telemetry == null) {
+            Telemetry = new global::Uplay.UplayService.Telemetry();
+          }
+          Telemetry.MergeFrom(other.Telemetry);
+          break;
       }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3212,10 +3378,12 @@ namespace Uplay.UplayService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (telemetry_ == null) {
-              Telemetry = new global::Uplay.UplayService.Telemetry();
+            global::Uplay.UplayService.Telemetry subBuilder = new global::Uplay.UplayService.Telemetry();
+            if (TelemetryCase_ == TelemetryOneofCase.Telemetry) {
+              subBuilder.MergeFrom(Telemetry);
             }
-            input.ReadMessage(Telemetry);
+            input.ReadMessage(subBuilder);
+            Telemetry = subBuilder;
             break;
           }
         }
@@ -3234,10 +3402,5265 @@ namespace Uplay.UplayService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (telemetry_ == null) {
-              Telemetry = new global::Uplay.UplayService.Telemetry();
+            global::Uplay.UplayService.Telemetry subBuilder = new global::Uplay.UplayService.Telemetry();
+            if (TelemetryCase_ == TelemetryOneofCase.Telemetry) {
+              subBuilder.MergeFrom(Telemetry);
             }
-            input.ReadMessage(Telemetry);
+            input.ReadMessage(subBuilder);
+            Telemetry = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GearReq : pb::IMessage<GearReq>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GearReq> _parser = new pb::MessageParser<GearReq>(() => new GearReq());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GearReq> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GearReq() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GearReq(GearReq other) : this() {
+      outputFile_ = other.outputFile_;
+      cacheFile_ = other.cacheFile_;
+      checkTestSigning_ = other.checkTestSigning_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GearReq Clone() {
+      return new GearReq(this);
+    }
+
+    /// <summary>Field number for the "output_file" field.</summary>
+    public const int OutputFileFieldNumber = 1;
+    private string outputFile_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OutputFile {
+      get { return outputFile_; }
+      set {
+        outputFile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cache_file" field.</summary>
+    public const int CacheFileFieldNumber = 2;
+    private string cacheFile_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CacheFile {
+      get { return cacheFile_; }
+      set {
+        cacheFile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "check_test_signing" field.</summary>
+    public const int CheckTestSigningFieldNumber = 3;
+    private bool checkTestSigning_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CheckTestSigning {
+      get { return checkTestSigning_; }
+      set {
+        checkTestSigning_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GearReq);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GearReq other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (OutputFile != other.OutputFile) return false;
+      if (CacheFile != other.CacheFile) return false;
+      if (CheckTestSigning != other.CheckTestSigning) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (OutputFile.Length != 0) hash ^= OutputFile.GetHashCode();
+      if (CacheFile.Length != 0) hash ^= CacheFile.GetHashCode();
+      if (CheckTestSigning != false) hash ^= CheckTestSigning.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (OutputFile.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(OutputFile);
+      }
+      if (CacheFile.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CacheFile);
+      }
+      if (CheckTestSigning != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(CheckTestSigning);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (OutputFile.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(OutputFile);
+      }
+      if (CacheFile.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CacheFile);
+      }
+      if (CheckTestSigning != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(CheckTestSigning);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (OutputFile.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputFile);
+      }
+      if (CacheFile.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CacheFile);
+      }
+      if (CheckTestSigning != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GearReq other) {
+      if (other == null) {
+        return;
+      }
+      if (other.OutputFile.Length != 0) {
+        OutputFile = other.OutputFile;
+      }
+      if (other.CacheFile.Length != 0) {
+        CacheFile = other.CacheFile;
+      }
+      if (other.CheckTestSigning != false) {
+        CheckTestSigning = other.CheckTestSigning;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            OutputFile = input.ReadString();
+            break;
+          }
+          case 18: {
+            CacheFile = input.ReadString();
+            break;
+          }
+          case 24: {
+            CheckTestSigning = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            OutputFile = input.ReadString();
+            break;
+          }
+          case 18: {
+            CacheFile = input.ReadString();
+            break;
+          }
+          case 24: {
+            CheckTestSigning = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GearRsp : pb::IMessage<GearRsp>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GearRsp> _parser = new pb::MessageParser<GearRsp>(() => new GearRsp());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GearRsp> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GearRsp() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GearRsp(GearRsp other) : this() {
+      result_ = other.result_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GearRsp Clone() {
+      return new GearRsp(this);
+    }
+
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 1;
+    private pb::ByteString result_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Result {
+      get { return result_; }
+      set {
+        result_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GearRsp);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GearRsp other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Result != other.Result) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Result.Length != 0) hash ^= Result.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Result.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Result);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Result.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Result);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Result.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Result);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GearRsp other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Result.Length != 0) {
+        Result = other.Result;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Result = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Result = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class UpdateGearCacheReq : pb::IMessage<UpdateGearCacheReq>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateGearCacheReq> _parser = new pb::MessageParser<UpdateGearCacheReq>(() => new UpdateGearCacheReq());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateGearCacheReq> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGearCacheReq() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGearCacheReq(UpdateGearCacheReq other) : this() {
+      cacheFile_ = other.cacheFile_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGearCacheReq Clone() {
+      return new UpdateGearCacheReq(this);
+    }
+
+    /// <summary>Field number for the "cache_file" field.</summary>
+    public const int CacheFileFieldNumber = 1;
+    private string cacheFile_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CacheFile {
+      get { return cacheFile_; }
+      set {
+        cacheFile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateGearCacheReq);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateGearCacheReq other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CacheFile != other.CacheFile) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CacheFile.Length != 0) hash ^= CacheFile.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CacheFile.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CacheFile);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CacheFile.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CacheFile);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CacheFile.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CacheFile);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateGearCacheReq other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CacheFile.Length != 0) {
+        CacheFile = other.CacheFile;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            CacheFile = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CacheFile = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class UpdateGearCacheRsp : pb::IMessage<UpdateGearCacheRsp>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateGearCacheRsp> _parser = new pb::MessageParser<UpdateGearCacheRsp>(() => new UpdateGearCacheRsp());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateGearCacheRsp> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGearCacheRsp() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGearCacheRsp(UpdateGearCacheRsp other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateGearCacheRsp Clone() {
+      return new UpdateGearCacheRsp(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateGearCacheRsp);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateGearCacheRsp other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateGearCacheRsp other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GameInstallReq : pb::IMessage<GameInstallReq>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GameInstallReq> _parser = new pb::MessageParser<GameInstallReq>(() => new GameInstallReq());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GameInstallReq> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameInstallReq() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameInstallReq(GameInstallReq other) : this() {
+      uplayId_ = other.uplayId_;
+      language_ = other.language_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameInstallReq Clone() {
+      return new GameInstallReq(this);
+    }
+
+    /// <summary>Field number for the "uplay_id" field.</summary>
+    public const int UplayIdFieldNumber = 1;
+    private uint uplayId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UplayId {
+      get { return uplayId_; }
+      set {
+        uplayId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "language" field.</summary>
+    public const int LanguageFieldNumber = 2;
+    private string language_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Language {
+      get { return language_; }
+      set {
+        language_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GameInstallReq);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GameInstallReq other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UplayId != other.UplayId) return false;
+      if (Language != other.Language) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UplayId != 0) hash ^= UplayId.GetHashCode();
+      if (Language.Length != 0) hash ^= Language.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (Language.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Language);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (Language.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Language);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UplayId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UplayId);
+      }
+      if (Language.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Language);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GameInstallReq other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UplayId != 0) {
+        UplayId = other.UplayId;
+      }
+      if (other.Language.Length != 0) {
+        Language = other.Language;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            Language = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            Language = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GameInstallRsp : pb::IMessage<GameInstallRsp>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GameInstallRsp> _parser = new pb::MessageParser<GameInstallRsp>(() => new GameInstallRsp());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GameInstallRsp> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameInstallRsp() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameInstallRsp(GameInstallRsp other) : this() {
+      systemRestartRequired_ = other.systemRestartRequired_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameInstallRsp Clone() {
+      return new GameInstallRsp(this);
+    }
+
+    /// <summary>Field number for the "system_restart_required" field.</summary>
+    public const int SystemRestartRequiredFieldNumber = 1;
+    private bool systemRestartRequired_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SystemRestartRequired {
+      get { return systemRestartRequired_; }
+      set {
+        systemRestartRequired_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GameInstallRsp);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GameInstallRsp other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SystemRestartRequired != other.SystemRestartRequired) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SystemRestartRequired != false) hash ^= SystemRestartRequired.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SystemRestartRequired != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(SystemRestartRequired);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SystemRestartRequired != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(SystemRestartRequired);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SystemRestartRequired != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GameInstallRsp other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SystemRestartRequired != false) {
+        SystemRestartRequired = other.SystemRestartRequired;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            SystemRestartRequired = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            SystemRestartRequired = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class WriteGameRegistryReq : pb::IMessage<WriteGameRegistryReq>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<WriteGameRegistryReq> _parser = new pb::MessageParser<WriteGameRegistryReq>(() => new WriteGameRegistryReq());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<WriteGameRegistryReq> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WriteGameRegistryReq() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WriteGameRegistryReq(WriteGameRegistryReq other) : this() {
+      uplayId_ = other.uplayId_;
+      name_ = other.name_;
+      publisher_ = other.publisher_;
+      iconFile_ = other.iconFile_;
+      helpUrl_ = other.helpUrl_;
+      aboutUrl_ = other.aboutUrl_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WriteGameRegistryReq Clone() {
+      return new WriteGameRegistryReq(this);
+    }
+
+    /// <summary>Field number for the "uplay_id" field.</summary>
+    public const int UplayIdFieldNumber = 1;
+    private uint uplayId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UplayId {
+      get { return uplayId_; }
+      set {
+        uplayId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "publisher" field.</summary>
+    public const int PublisherFieldNumber = 3;
+    private string publisher_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Publisher {
+      get { return publisher_; }
+      set {
+        publisher_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "icon_file" field.</summary>
+    public const int IconFileFieldNumber = 4;
+    private string iconFile_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IconFile {
+      get { return iconFile_; }
+      set {
+        iconFile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "help_url" field.</summary>
+    public const int HelpUrlFieldNumber = 5;
+    private string helpUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string HelpUrl {
+      get { return helpUrl_; }
+      set {
+        helpUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "about_url" field.</summary>
+    public const int AboutUrlFieldNumber = 6;
+    private string aboutUrl_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AboutUrl {
+      get { return aboutUrl_; }
+      set {
+        aboutUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as WriteGameRegistryReq);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(WriteGameRegistryReq other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UplayId != other.UplayId) return false;
+      if (Name != other.Name) return false;
+      if (Publisher != other.Publisher) return false;
+      if (IconFile != other.IconFile) return false;
+      if (HelpUrl != other.HelpUrl) return false;
+      if (AboutUrl != other.AboutUrl) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UplayId != 0) hash ^= UplayId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Publisher.Length != 0) hash ^= Publisher.GetHashCode();
+      if (IconFile.Length != 0) hash ^= IconFile.GetHashCode();
+      if (HelpUrl.Length != 0) hash ^= HelpUrl.GetHashCode();
+      if (AboutUrl.Length != 0) hash ^= AboutUrl.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Publisher.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Publisher);
+      }
+      if (IconFile.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IconFile);
+      }
+      if (HelpUrl.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(HelpUrl);
+      }
+      if (AboutUrl.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(AboutUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (Publisher.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Publisher);
+      }
+      if (IconFile.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IconFile);
+      }
+      if (HelpUrl.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(HelpUrl);
+      }
+      if (AboutUrl.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(AboutUrl);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UplayId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UplayId);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Publisher.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Publisher);
+      }
+      if (IconFile.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IconFile);
+      }
+      if (HelpUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HelpUrl);
+      }
+      if (AboutUrl.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AboutUrl);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(WriteGameRegistryReq other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UplayId != 0) {
+        UplayId = other.UplayId;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Publisher.Length != 0) {
+        Publisher = other.Publisher;
+      }
+      if (other.IconFile.Length != 0) {
+        IconFile = other.IconFile;
+      }
+      if (other.HelpUrl.Length != 0) {
+        HelpUrl = other.HelpUrl;
+      }
+      if (other.AboutUrl.Length != 0) {
+        AboutUrl = other.AboutUrl;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Publisher = input.ReadString();
+            break;
+          }
+          case 34: {
+            IconFile = input.ReadString();
+            break;
+          }
+          case 42: {
+            HelpUrl = input.ReadString();
+            break;
+          }
+          case 50: {
+            AboutUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            Publisher = input.ReadString();
+            break;
+          }
+          case 34: {
+            IconFile = input.ReadString();
+            break;
+          }
+          case 42: {
+            HelpUrl = input.ReadString();
+            break;
+          }
+          case 50: {
+            AboutUrl = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class WriteGameRegistryRsp : pb::IMessage<WriteGameRegistryRsp>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<WriteGameRegistryRsp> _parser = new pb::MessageParser<WriteGameRegistryRsp>(() => new WriteGameRegistryRsp());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<WriteGameRegistryRsp> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WriteGameRegistryRsp() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WriteGameRegistryRsp(WriteGameRegistryRsp other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WriteGameRegistryRsp Clone() {
+      return new WriteGameRegistryRsp(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as WriteGameRegistryRsp);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(WriteGameRegistryRsp other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(WriteGameRegistryRsp other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class SystemRestartReq : pb::IMessage<SystemRestartReq>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SystemRestartReq> _parser = new pb::MessageParser<SystemRestartReq>(() => new SystemRestartReq());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SystemRestartReq> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SystemRestartReq() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SystemRestartReq(SystemRestartReq other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SystemRestartReq Clone() {
+      return new SystemRestartReq(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SystemRestartReq);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SystemRestartReq other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SystemRestartReq other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class SystemRestartRsp : pb::IMessage<SystemRestartRsp>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SystemRestartRsp> _parser = new pb::MessageParser<SystemRestartRsp>(() => new SystemRestartRsp());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SystemRestartRsp> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SystemRestartRsp() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SystemRestartRsp(SystemRestartRsp other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SystemRestartRsp Clone() {
+      return new SystemRestartRsp(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SystemRestartRsp);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SystemRestartRsp other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SystemRestartRsp other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GameUninstallReq : pb::IMessage<GameUninstallReq>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GameUninstallReq> _parser = new pb::MessageParser<GameUninstallReq>(() => new GameUninstallReq());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GameUninstallReq> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameUninstallReq() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameUninstallReq(GameUninstallReq other) : this() {
+      uplayId_ = other.uplayId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameUninstallReq Clone() {
+      return new GameUninstallReq(this);
+    }
+
+    /// <summary>Field number for the "uplay_id" field.</summary>
+    public const int UplayIdFieldNumber = 1;
+    private uint uplayId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UplayId {
+      get { return uplayId_; }
+      set {
+        uplayId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GameUninstallReq);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GameUninstallReq other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UplayId != other.UplayId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UplayId != 0) hash ^= UplayId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UplayId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UplayId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GameUninstallReq other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UplayId != 0) {
+        UplayId = other.UplayId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GameUninstallRsp : pb::IMessage<GameUninstallRsp>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GameUninstallRsp> _parser = new pb::MessageParser<GameUninstallRsp>(() => new GameUninstallRsp());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GameUninstallRsp> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameUninstallRsp() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameUninstallRsp(GameUninstallRsp other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameUninstallRsp Clone() {
+      return new GameUninstallRsp(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GameUninstallRsp);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GameUninstallRsp other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GameUninstallRsp other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GrantFilePermissionsReq : pb::IMessage<GrantFilePermissionsReq>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GrantFilePermissionsReq> _parser = new pb::MessageParser<GrantFilePermissionsReq>(() => new GrantFilePermissionsReq());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GrantFilePermissionsReq> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GrantFilePermissionsReq() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GrantFilePermissionsReq(GrantFilePermissionsReq other) : this() {
+      path_ = other.path_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GrantFilePermissionsReq Clone() {
+      return new GrantFilePermissionsReq(this);
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 1;
+    private string path_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Path {
+      get { return path_; }
+      set {
+        path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GrantFilePermissionsReq);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GrantFilePermissionsReq other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Path != other.Path) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Path.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Path.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GrantFilePermissionsReq other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Path.Length != 0) {
+        Path = other.Path;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GrantFilePermissionsRsp : pb::IMessage<GrantFilePermissionsRsp>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GrantFilePermissionsRsp> _parser = new pb::MessageParser<GrantFilePermissionsRsp>(() => new GrantFilePermissionsRsp());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GrantFilePermissionsRsp> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GrantFilePermissionsRsp() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GrantFilePermissionsRsp(GrantFilePermissionsRsp other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GrantFilePermissionsRsp Clone() {
+      return new GrantFilePermissionsRsp(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GrantFilePermissionsRsp);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GrantFilePermissionsRsp other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GrantFilePermissionsRsp other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class DependencyInstallationStarted : pb::IMessage<DependencyInstallationStarted>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DependencyInstallationStarted> _parser = new pb::MessageParser<DependencyInstallationStarted>(() => new DependencyInstallationStarted());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DependencyInstallationStarted> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInstallationStarted() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInstallationStarted(DependencyInstallationStarted other) : this() {
+      uplayId_ = other.uplayId_;
+      description_ = other.description_;
+      indexNumber_ = other.indexNumber_;
+      installersCount_ = other.installersCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInstallationStarted Clone() {
+      return new DependencyInstallationStarted(this);
+    }
+
+    /// <summary>Field number for the "uplay_id" field.</summary>
+    public const int UplayIdFieldNumber = 1;
+    private uint uplayId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UplayId {
+      get { return uplayId_; }
+      set {
+        uplayId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "index_number" field.</summary>
+    public const int IndexNumberFieldNumber = 3;
+    private uint indexNumber_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint IndexNumber {
+      get { return indexNumber_; }
+      set {
+        indexNumber_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "installers_count" field.</summary>
+    public const int InstallersCountFieldNumber = 4;
+    private uint installersCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint InstallersCount {
+      get { return installersCount_; }
+      set {
+        installersCount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DependencyInstallationStarted);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DependencyInstallationStarted other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UplayId != other.UplayId) return false;
+      if (Description != other.Description) return false;
+      if (IndexNumber != other.IndexNumber) return false;
+      if (InstallersCount != other.InstallersCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UplayId != 0) hash ^= UplayId.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (IndexNumber != 0) hash ^= IndexNumber.GetHashCode();
+      if (InstallersCount != 0) hash ^= InstallersCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (IndexNumber != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(IndexNumber);
+      }
+      if (InstallersCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(InstallersCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (IndexNumber != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(IndexNumber);
+      }
+      if (InstallersCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(InstallersCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UplayId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UplayId);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (IndexNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IndexNumber);
+      }
+      if (InstallersCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InstallersCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DependencyInstallationStarted other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UplayId != 0) {
+        UplayId = other.UplayId;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.IndexNumber != 0) {
+        IndexNumber = other.IndexNumber;
+      }
+      if (other.InstallersCount != 0) {
+        InstallersCount = other.InstallersCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 24: {
+            IndexNumber = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            InstallersCount = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 24: {
+            IndexNumber = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            InstallersCount = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class DependencyInstallationCompleted : pb::IMessage<DependencyInstallationCompleted>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DependencyInstallationCompleted> _parser = new pb::MessageParser<DependencyInstallationCompleted>(() => new DependencyInstallationCompleted());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DependencyInstallationCompleted> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[28]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInstallationCompleted() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInstallationCompleted(DependencyInstallationCompleted other) : this() {
+      uplayId_ = other.uplayId_;
+      installerId_ = other.installerId_;
+      version_ = other.version_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInstallationCompleted Clone() {
+      return new DependencyInstallationCompleted(this);
+    }
+
+    /// <summary>Field number for the "uplay_id" field.</summary>
+    public const int UplayIdFieldNumber = 1;
+    private uint uplayId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UplayId {
+      get { return uplayId_; }
+      set {
+        uplayId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "installer_id" field.</summary>
+    public const int InstallerIdFieldNumber = 2;
+    private string installerId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InstallerId {
+      get { return installerId_; }
+      set {
+        installerId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "version" field.</summary>
+    public const int VersionFieldNumber = 3;
+    private uint version_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Version {
+      get { return version_; }
+      set {
+        version_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DependencyInstallationCompleted);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DependencyInstallationCompleted other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UplayId != other.UplayId) return false;
+      if (InstallerId != other.InstallerId) return false;
+      if (Version != other.Version) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UplayId != 0) hash ^= UplayId.GetHashCode();
+      if (InstallerId.Length != 0) hash ^= InstallerId.GetHashCode();
+      if (Version != 0) hash ^= Version.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (InstallerId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(InstallerId);
+      }
+      if (Version != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Version);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UplayId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(UplayId);
+      }
+      if (InstallerId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(InstallerId);
+      }
+      if (Version != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Version);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UplayId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UplayId);
+      }
+      if (InstallerId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InstallerId);
+      }
+      if (Version != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Version);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DependencyInstallationCompleted other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UplayId != 0) {
+        UplayId = other.UplayId;
+      }
+      if (other.InstallerId.Length != 0) {
+        InstallerId = other.InstallerId;
+      }
+      if (other.Version != 0) {
+        Version = other.Version;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            InstallerId = input.ReadString();
+            break;
+          }
+          case 24: {
+            Version = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            UplayId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            InstallerId = input.ReadString();
+            break;
+          }
+          case 24: {
+            Version = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GameInstallInterruped : pb::IMessage<GameInstallInterruped>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GameInstallInterruped> _parser = new pb::MessageParser<GameInstallInterruped>(() => new GameInstallInterruped());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GameInstallInterruped> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[29]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameInstallInterruped() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameInstallInterruped(GameInstallInterruped other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GameInstallInterruped Clone() {
+      return new GameInstallInterruped(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GameInstallInterruped);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GameInstallInterruped other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GameInstallInterruped other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class v1Req : pb::IMessage<v1Req>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<v1Req> _parser = new pb::MessageParser<v1Req>(() => new v1Req());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<v1Req> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[30]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Req() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Req(v1Req other) : this() {
+      requestId_ = other.requestId_;
+      switch (other.RequestCase) {
+        case RequestOneofCase.Gear:
+          Gear = other.Gear.Clone();
+          break;
+        case RequestOneofCase.UpdateGearCache:
+          UpdateGearCache = other.UpdateGearCache.Clone();
+          break;
+        case RequestOneofCase.GameInstall:
+          GameInstall = other.GameInstall.Clone();
+          break;
+        case RequestOneofCase.WriteGameRegistry:
+          WriteGameRegistry = other.WriteGameRegistry.Clone();
+          break;
+        case RequestOneofCase.SystemRestart:
+          SystemRestart = other.SystemRestart.Clone();
+          break;
+        case RequestOneofCase.GameUninstall:
+          GameUninstall = other.GameUninstall.Clone();
+          break;
+        case RequestOneofCase.GrantFilePermissions:
+          GrantFilePermissions = other.GrantFilePermissions.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Req Clone() {
+      return new v1Req(this);
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 1;
+    private uint requestId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gear" field.</summary>
+    public const int GearFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.GearReq Gear {
+      get { return requestCase_ == RequestOneofCase.Gear ? (global::Uplay.UplayService.GearReq) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Gear;
+      }
+    }
+
+    /// <summary>Field number for the "update_gear_cache" field.</summary>
+    public const int UpdateGearCacheFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.UpdateGearCacheReq UpdateGearCache {
+      get { return requestCase_ == RequestOneofCase.UpdateGearCache ? (global::Uplay.UplayService.UpdateGearCacheReq) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.UpdateGearCache;
+      }
+    }
+
+    /// <summary>Field number for the "game_install" field.</summary>
+    public const int GameInstallFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.GameInstallReq GameInstall {
+      get { return requestCase_ == RequestOneofCase.GameInstall ? (global::Uplay.UplayService.GameInstallReq) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.GameInstall;
+      }
+    }
+
+    /// <summary>Field number for the "write_game_registry" field.</summary>
+    public const int WriteGameRegistryFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.WriteGameRegistryReq WriteGameRegistry {
+      get { return requestCase_ == RequestOneofCase.WriteGameRegistry ? (global::Uplay.UplayService.WriteGameRegistryReq) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.WriteGameRegistry;
+      }
+    }
+
+    /// <summary>Field number for the "system_restart" field.</summary>
+    public const int SystemRestartFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.SystemRestartReq SystemRestart {
+      get { return requestCase_ == RequestOneofCase.SystemRestart ? (global::Uplay.UplayService.SystemRestartReq) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.SystemRestart;
+      }
+    }
+
+    /// <summary>Field number for the "game_uninstall" field.</summary>
+    public const int GameUninstallFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.GameUninstallReq GameUninstall {
+      get { return requestCase_ == RequestOneofCase.GameUninstall ? (global::Uplay.UplayService.GameUninstallReq) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.GameUninstall;
+      }
+    }
+
+    /// <summary>Field number for the "grant_file_permissions" field.</summary>
+    public const int GrantFilePermissionsFieldNumber = 8;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.GrantFilePermissionsReq GrantFilePermissions {
+      get { return requestCase_ == RequestOneofCase.GrantFilePermissions ? (global::Uplay.UplayService.GrantFilePermissionsReq) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.GrantFilePermissions;
+      }
+    }
+
+    private object request_;
+    /// <summary>Enum of possible cases for the "request" oneof.</summary>
+    public enum RequestOneofCase {
+      None = 0,
+      Gear = 2,
+      UpdateGearCache = 3,
+      GameInstall = 4,
+      WriteGameRegistry = 5,
+      SystemRestart = 6,
+      GameUninstall = 7,
+      GrantFilePermissions = 8,
+    }
+    private RequestOneofCase requestCase_ = RequestOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RequestOneofCase RequestCase {
+      get { return requestCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRequest() {
+      requestCase_ = RequestOneofCase.None;
+      request_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as v1Req);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(v1Req other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RequestId != other.RequestId) return false;
+      if (!object.Equals(Gear, other.Gear)) return false;
+      if (!object.Equals(UpdateGearCache, other.UpdateGearCache)) return false;
+      if (!object.Equals(GameInstall, other.GameInstall)) return false;
+      if (!object.Equals(WriteGameRegistry, other.WriteGameRegistry)) return false;
+      if (!object.Equals(SystemRestart, other.SystemRestart)) return false;
+      if (!object.Equals(GameUninstall, other.GameUninstall)) return false;
+      if (!object.Equals(GrantFilePermissions, other.GrantFilePermissions)) return false;
+      if (RequestCase != other.RequestCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RequestId != 0) hash ^= RequestId.GetHashCode();
+      if (requestCase_ == RequestOneofCase.Gear) hash ^= Gear.GetHashCode();
+      if (requestCase_ == RequestOneofCase.UpdateGearCache) hash ^= UpdateGearCache.GetHashCode();
+      if (requestCase_ == RequestOneofCase.GameInstall) hash ^= GameInstall.GetHashCode();
+      if (requestCase_ == RequestOneofCase.WriteGameRegistry) hash ^= WriteGameRegistry.GetHashCode();
+      if (requestCase_ == RequestOneofCase.SystemRestart) hash ^= SystemRestart.GetHashCode();
+      if (requestCase_ == RequestOneofCase.GameUninstall) hash ^= GameUninstall.GetHashCode();
+      if (requestCase_ == RequestOneofCase.GrantFilePermissions) hash ^= GrantFilePermissions.GetHashCode();
+      hash ^= (int) requestCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RequestId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RequestId);
+      }
+      if (requestCase_ == RequestOneofCase.Gear) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Gear);
+      }
+      if (requestCase_ == RequestOneofCase.UpdateGearCache) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateGearCache);
+      }
+      if (requestCase_ == RequestOneofCase.GameInstall) {
+        output.WriteRawTag(34);
+        output.WriteMessage(GameInstall);
+      }
+      if (requestCase_ == RequestOneofCase.WriteGameRegistry) {
+        output.WriteRawTag(42);
+        output.WriteMessage(WriteGameRegistry);
+      }
+      if (requestCase_ == RequestOneofCase.SystemRestart) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SystemRestart);
+      }
+      if (requestCase_ == RequestOneofCase.GameUninstall) {
+        output.WriteRawTag(58);
+        output.WriteMessage(GameUninstall);
+      }
+      if (requestCase_ == RequestOneofCase.GrantFilePermissions) {
+        output.WriteRawTag(66);
+        output.WriteMessage(GrantFilePermissions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RequestId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RequestId);
+      }
+      if (requestCase_ == RequestOneofCase.Gear) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Gear);
+      }
+      if (requestCase_ == RequestOneofCase.UpdateGearCache) {
+        output.WriteRawTag(26);
+        output.WriteMessage(UpdateGearCache);
+      }
+      if (requestCase_ == RequestOneofCase.GameInstall) {
+        output.WriteRawTag(34);
+        output.WriteMessage(GameInstall);
+      }
+      if (requestCase_ == RequestOneofCase.WriteGameRegistry) {
+        output.WriteRawTag(42);
+        output.WriteMessage(WriteGameRegistry);
+      }
+      if (requestCase_ == RequestOneofCase.SystemRestart) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SystemRestart);
+      }
+      if (requestCase_ == RequestOneofCase.GameUninstall) {
+        output.WriteRawTag(58);
+        output.WriteMessage(GameUninstall);
+      }
+      if (requestCase_ == RequestOneofCase.GrantFilePermissions) {
+        output.WriteRawTag(66);
+        output.WriteMessage(GrantFilePermissions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RequestId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RequestId);
+      }
+      if (requestCase_ == RequestOneofCase.Gear) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gear);
+      }
+      if (requestCase_ == RequestOneofCase.UpdateGearCache) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateGearCache);
+      }
+      if (requestCase_ == RequestOneofCase.GameInstall) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameInstall);
+      }
+      if (requestCase_ == RequestOneofCase.WriteGameRegistry) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WriteGameRegistry);
+      }
+      if (requestCase_ == RequestOneofCase.SystemRestart) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SystemRestart);
+      }
+      if (requestCase_ == RequestOneofCase.GameUninstall) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameUninstall);
+      }
+      if (requestCase_ == RequestOneofCase.GrantFilePermissions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GrantFilePermissions);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(v1Req other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RequestId != 0) {
+        RequestId = other.RequestId;
+      }
+      switch (other.RequestCase) {
+        case RequestOneofCase.Gear:
+          if (Gear == null) {
+            Gear = new global::Uplay.UplayService.GearReq();
+          }
+          Gear.MergeFrom(other.Gear);
+          break;
+        case RequestOneofCase.UpdateGearCache:
+          if (UpdateGearCache == null) {
+            UpdateGearCache = new global::Uplay.UplayService.UpdateGearCacheReq();
+          }
+          UpdateGearCache.MergeFrom(other.UpdateGearCache);
+          break;
+        case RequestOneofCase.GameInstall:
+          if (GameInstall == null) {
+            GameInstall = new global::Uplay.UplayService.GameInstallReq();
+          }
+          GameInstall.MergeFrom(other.GameInstall);
+          break;
+        case RequestOneofCase.WriteGameRegistry:
+          if (WriteGameRegistry == null) {
+            WriteGameRegistry = new global::Uplay.UplayService.WriteGameRegistryReq();
+          }
+          WriteGameRegistry.MergeFrom(other.WriteGameRegistry);
+          break;
+        case RequestOneofCase.SystemRestart:
+          if (SystemRestart == null) {
+            SystemRestart = new global::Uplay.UplayService.SystemRestartReq();
+          }
+          SystemRestart.MergeFrom(other.SystemRestart);
+          break;
+        case RequestOneofCase.GameUninstall:
+          if (GameUninstall == null) {
+            GameUninstall = new global::Uplay.UplayService.GameUninstallReq();
+          }
+          GameUninstall.MergeFrom(other.GameUninstall);
+          break;
+        case RequestOneofCase.GrantFilePermissions:
+          if (GrantFilePermissions == null) {
+            GrantFilePermissions = new global::Uplay.UplayService.GrantFilePermissionsReq();
+          }
+          GrantFilePermissions.MergeFrom(other.GrantFilePermissions);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RequestId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            global::Uplay.UplayService.GearReq subBuilder = new global::Uplay.UplayService.GearReq();
+            if (requestCase_ == RequestOneofCase.Gear) {
+              subBuilder.MergeFrom(Gear);
+            }
+            input.ReadMessage(subBuilder);
+            Gear = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.UpdateGearCacheReq subBuilder = new global::Uplay.UplayService.UpdateGearCacheReq();
+            if (requestCase_ == RequestOneofCase.UpdateGearCache) {
+              subBuilder.MergeFrom(UpdateGearCache);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateGearCache = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Uplay.UplayService.GameInstallReq subBuilder = new global::Uplay.UplayService.GameInstallReq();
+            if (requestCase_ == RequestOneofCase.GameInstall) {
+              subBuilder.MergeFrom(GameInstall);
+            }
+            input.ReadMessage(subBuilder);
+            GameInstall = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Uplay.UplayService.WriteGameRegistryReq subBuilder = new global::Uplay.UplayService.WriteGameRegistryReq();
+            if (requestCase_ == RequestOneofCase.WriteGameRegistry) {
+              subBuilder.MergeFrom(WriteGameRegistry);
+            }
+            input.ReadMessage(subBuilder);
+            WriteGameRegistry = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Uplay.UplayService.SystemRestartReq subBuilder = new global::Uplay.UplayService.SystemRestartReq();
+            if (requestCase_ == RequestOneofCase.SystemRestart) {
+              subBuilder.MergeFrom(SystemRestart);
+            }
+            input.ReadMessage(subBuilder);
+            SystemRestart = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Uplay.UplayService.GameUninstallReq subBuilder = new global::Uplay.UplayService.GameUninstallReq();
+            if (requestCase_ == RequestOneofCase.GameUninstall) {
+              subBuilder.MergeFrom(GameUninstall);
+            }
+            input.ReadMessage(subBuilder);
+            GameUninstall = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Uplay.UplayService.GrantFilePermissionsReq subBuilder = new global::Uplay.UplayService.GrantFilePermissionsReq();
+            if (requestCase_ == RequestOneofCase.GrantFilePermissions) {
+              subBuilder.MergeFrom(GrantFilePermissions);
+            }
+            input.ReadMessage(subBuilder);
+            GrantFilePermissions = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RequestId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            global::Uplay.UplayService.GearReq subBuilder = new global::Uplay.UplayService.GearReq();
+            if (requestCase_ == RequestOneofCase.Gear) {
+              subBuilder.MergeFrom(Gear);
+            }
+            input.ReadMessage(subBuilder);
+            Gear = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.UpdateGearCacheReq subBuilder = new global::Uplay.UplayService.UpdateGearCacheReq();
+            if (requestCase_ == RequestOneofCase.UpdateGearCache) {
+              subBuilder.MergeFrom(UpdateGearCache);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateGearCache = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Uplay.UplayService.GameInstallReq subBuilder = new global::Uplay.UplayService.GameInstallReq();
+            if (requestCase_ == RequestOneofCase.GameInstall) {
+              subBuilder.MergeFrom(GameInstall);
+            }
+            input.ReadMessage(subBuilder);
+            GameInstall = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Uplay.UplayService.WriteGameRegistryReq subBuilder = new global::Uplay.UplayService.WriteGameRegistryReq();
+            if (requestCase_ == RequestOneofCase.WriteGameRegistry) {
+              subBuilder.MergeFrom(WriteGameRegistry);
+            }
+            input.ReadMessage(subBuilder);
+            WriteGameRegistry = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Uplay.UplayService.SystemRestartReq subBuilder = new global::Uplay.UplayService.SystemRestartReq();
+            if (requestCase_ == RequestOneofCase.SystemRestart) {
+              subBuilder.MergeFrom(SystemRestart);
+            }
+            input.ReadMessage(subBuilder);
+            SystemRestart = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Uplay.UplayService.GameUninstallReq subBuilder = new global::Uplay.UplayService.GameUninstallReq();
+            if (requestCase_ == RequestOneofCase.GameUninstall) {
+              subBuilder.MergeFrom(GameUninstall);
+            }
+            input.ReadMessage(subBuilder);
+            GameUninstall = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Uplay.UplayService.GrantFilePermissionsReq subBuilder = new global::Uplay.UplayService.GrantFilePermissionsReq();
+            if (requestCase_ == RequestOneofCase.GrantFilePermissions) {
+              subBuilder.MergeFrom(GrantFilePermissions);
+            }
+            input.ReadMessage(subBuilder);
+            GrantFilePermissions = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class v1Rsp : pb::IMessage<v1Rsp>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<v1Rsp> _parser = new pb::MessageParser<v1Rsp>(() => new v1Rsp());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<v1Rsp> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[31]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Rsp() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Rsp(v1Rsp other) : this() {
+      requestId_ = other.requestId_;
+      exitCode_ = other.exitCode_;
+      switch (other.ResponseCase) {
+        case ResponseOneofCase.Gear:
+          Gear = other.Gear.Clone();
+          break;
+        case ResponseOneofCase.UpdateGearCache:
+          UpdateGearCache = other.UpdateGearCache.Clone();
+          break;
+        case ResponseOneofCase.GameInstall:
+          GameInstall = other.GameInstall.Clone();
+          break;
+        case ResponseOneofCase.WriteGameRegistry:
+          WriteGameRegistry = other.WriteGameRegistry.Clone();
+          break;
+        case ResponseOneofCase.SystemRestart:
+          SystemRestart = other.SystemRestart.Clone();
+          break;
+        case ResponseOneofCase.GameUninstall:
+          GameUninstall = other.GameUninstall.Clone();
+          break;
+        case ResponseOneofCase.GrantFilePermissions:
+          GrantFilePermissions = other.GrantFilePermissions.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Rsp Clone() {
+      return new v1Rsp(this);
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 1;
+    private uint requestId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "exit_code" field.</summary>
+    public const int ExitCodeFieldNumber = 2;
+    private global::Uplay.UplayService.UplayServiceExitCode exitCode_ = global::Uplay.UplayService.UplayServiceExitCode.Unset;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.UplayServiceExitCode ExitCode {
+      get { return exitCode_; }
+      set {
+        exitCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gear" field.</summary>
+    public const int GearFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.GearRsp Gear {
+      get { return responseCase_ == ResponseOneofCase.Gear ? (global::Uplay.UplayService.GearRsp) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Gear;
+      }
+    }
+
+    /// <summary>Field number for the "update_gear_cache" field.</summary>
+    public const int UpdateGearCacheFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.UpdateGearCacheRsp UpdateGearCache {
+      get { return responseCase_ == ResponseOneofCase.UpdateGearCache ? (global::Uplay.UplayService.UpdateGearCacheRsp) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.UpdateGearCache;
+      }
+    }
+
+    /// <summary>Field number for the "game_install" field.</summary>
+    public const int GameInstallFieldNumber = 5;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.GameInstallRsp GameInstall {
+      get { return responseCase_ == ResponseOneofCase.GameInstall ? (global::Uplay.UplayService.GameInstallRsp) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.GameInstall;
+      }
+    }
+
+    /// <summary>Field number for the "write_game_registry" field.</summary>
+    public const int WriteGameRegistryFieldNumber = 6;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.WriteGameRegistryRsp WriteGameRegistry {
+      get { return responseCase_ == ResponseOneofCase.WriteGameRegistry ? (global::Uplay.UplayService.WriteGameRegistryRsp) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.WriteGameRegistry;
+      }
+    }
+
+    /// <summary>Field number for the "system_restart" field.</summary>
+    public const int SystemRestartFieldNumber = 7;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.SystemRestartRsp SystemRestart {
+      get { return responseCase_ == ResponseOneofCase.SystemRestart ? (global::Uplay.UplayService.SystemRestartRsp) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.SystemRestart;
+      }
+    }
+
+    /// <summary>Field number for the "game_uninstall" field.</summary>
+    public const int GameUninstallFieldNumber = 8;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.GameUninstallRsp GameUninstall {
+      get { return responseCase_ == ResponseOneofCase.GameUninstall ? (global::Uplay.UplayService.GameUninstallRsp) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.GameUninstall;
+      }
+    }
+
+    /// <summary>Field number for the "grant_file_permissions" field.</summary>
+    public const int GrantFilePermissionsFieldNumber = 9;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.GrantFilePermissionsRsp GrantFilePermissions {
+      get { return responseCase_ == ResponseOneofCase.GrantFilePermissions ? (global::Uplay.UplayService.GrantFilePermissionsRsp) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.GrantFilePermissions;
+      }
+    }
+
+    private object response_;
+    /// <summary>Enum of possible cases for the "response" oneof.</summary>
+    public enum ResponseOneofCase {
+      None = 0,
+      Gear = 3,
+      UpdateGearCache = 4,
+      GameInstall = 5,
+      WriteGameRegistry = 6,
+      SystemRestart = 7,
+      GameUninstall = 8,
+      GrantFilePermissions = 9,
+    }
+    private ResponseOneofCase responseCase_ = ResponseOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResponseOneofCase ResponseCase {
+      get { return responseCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearResponse() {
+      responseCase_ = ResponseOneofCase.None;
+      response_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as v1Rsp);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(v1Rsp other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RequestId != other.RequestId) return false;
+      if (ExitCode != other.ExitCode) return false;
+      if (!object.Equals(Gear, other.Gear)) return false;
+      if (!object.Equals(UpdateGearCache, other.UpdateGearCache)) return false;
+      if (!object.Equals(GameInstall, other.GameInstall)) return false;
+      if (!object.Equals(WriteGameRegistry, other.WriteGameRegistry)) return false;
+      if (!object.Equals(SystemRestart, other.SystemRestart)) return false;
+      if (!object.Equals(GameUninstall, other.GameUninstall)) return false;
+      if (!object.Equals(GrantFilePermissions, other.GrantFilePermissions)) return false;
+      if (ResponseCase != other.ResponseCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RequestId != 0) hash ^= RequestId.GetHashCode();
+      if (ExitCode != global::Uplay.UplayService.UplayServiceExitCode.Unset) hash ^= ExitCode.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.Gear) hash ^= Gear.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.UpdateGearCache) hash ^= UpdateGearCache.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.GameInstall) hash ^= GameInstall.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.WriteGameRegistry) hash ^= WriteGameRegistry.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.SystemRestart) hash ^= SystemRestart.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.GameUninstall) hash ^= GameUninstall.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.GrantFilePermissions) hash ^= GrantFilePermissions.GetHashCode();
+      hash ^= (int) responseCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RequestId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RequestId);
+      }
+      if (ExitCode != global::Uplay.UplayService.UplayServiceExitCode.Unset) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ExitCode);
+      }
+      if (responseCase_ == ResponseOneofCase.Gear) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Gear);
+      }
+      if (responseCase_ == ResponseOneofCase.UpdateGearCache) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateGearCache);
+      }
+      if (responseCase_ == ResponseOneofCase.GameInstall) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GameInstall);
+      }
+      if (responseCase_ == ResponseOneofCase.WriteGameRegistry) {
+        output.WriteRawTag(50);
+        output.WriteMessage(WriteGameRegistry);
+      }
+      if (responseCase_ == ResponseOneofCase.SystemRestart) {
+        output.WriteRawTag(58);
+        output.WriteMessage(SystemRestart);
+      }
+      if (responseCase_ == ResponseOneofCase.GameUninstall) {
+        output.WriteRawTag(66);
+        output.WriteMessage(GameUninstall);
+      }
+      if (responseCase_ == ResponseOneofCase.GrantFilePermissions) {
+        output.WriteRawTag(74);
+        output.WriteMessage(GrantFilePermissions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RequestId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RequestId);
+      }
+      if (ExitCode != global::Uplay.UplayService.UplayServiceExitCode.Unset) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ExitCode);
+      }
+      if (responseCase_ == ResponseOneofCase.Gear) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Gear);
+      }
+      if (responseCase_ == ResponseOneofCase.UpdateGearCache) {
+        output.WriteRawTag(34);
+        output.WriteMessage(UpdateGearCache);
+      }
+      if (responseCase_ == ResponseOneofCase.GameInstall) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GameInstall);
+      }
+      if (responseCase_ == ResponseOneofCase.WriteGameRegistry) {
+        output.WriteRawTag(50);
+        output.WriteMessage(WriteGameRegistry);
+      }
+      if (responseCase_ == ResponseOneofCase.SystemRestart) {
+        output.WriteRawTag(58);
+        output.WriteMessage(SystemRestart);
+      }
+      if (responseCase_ == ResponseOneofCase.GameUninstall) {
+        output.WriteRawTag(66);
+        output.WriteMessage(GameUninstall);
+      }
+      if (responseCase_ == ResponseOneofCase.GrantFilePermissions) {
+        output.WriteRawTag(74);
+        output.WriteMessage(GrantFilePermissions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RequestId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RequestId);
+      }
+      if (ExitCode != global::Uplay.UplayService.UplayServiceExitCode.Unset) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExitCode);
+      }
+      if (responseCase_ == ResponseOneofCase.Gear) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gear);
+      }
+      if (responseCase_ == ResponseOneofCase.UpdateGearCache) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateGearCache);
+      }
+      if (responseCase_ == ResponseOneofCase.GameInstall) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameInstall);
+      }
+      if (responseCase_ == ResponseOneofCase.WriteGameRegistry) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WriteGameRegistry);
+      }
+      if (responseCase_ == ResponseOneofCase.SystemRestart) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SystemRestart);
+      }
+      if (responseCase_ == ResponseOneofCase.GameUninstall) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameUninstall);
+      }
+      if (responseCase_ == ResponseOneofCase.GrantFilePermissions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GrantFilePermissions);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(v1Rsp other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RequestId != 0) {
+        RequestId = other.RequestId;
+      }
+      if (other.ExitCode != global::Uplay.UplayService.UplayServiceExitCode.Unset) {
+        ExitCode = other.ExitCode;
+      }
+      switch (other.ResponseCase) {
+        case ResponseOneofCase.Gear:
+          if (Gear == null) {
+            Gear = new global::Uplay.UplayService.GearRsp();
+          }
+          Gear.MergeFrom(other.Gear);
+          break;
+        case ResponseOneofCase.UpdateGearCache:
+          if (UpdateGearCache == null) {
+            UpdateGearCache = new global::Uplay.UplayService.UpdateGearCacheRsp();
+          }
+          UpdateGearCache.MergeFrom(other.UpdateGearCache);
+          break;
+        case ResponseOneofCase.GameInstall:
+          if (GameInstall == null) {
+            GameInstall = new global::Uplay.UplayService.GameInstallRsp();
+          }
+          GameInstall.MergeFrom(other.GameInstall);
+          break;
+        case ResponseOneofCase.WriteGameRegistry:
+          if (WriteGameRegistry == null) {
+            WriteGameRegistry = new global::Uplay.UplayService.WriteGameRegistryRsp();
+          }
+          WriteGameRegistry.MergeFrom(other.WriteGameRegistry);
+          break;
+        case ResponseOneofCase.SystemRestart:
+          if (SystemRestart == null) {
+            SystemRestart = new global::Uplay.UplayService.SystemRestartRsp();
+          }
+          SystemRestart.MergeFrom(other.SystemRestart);
+          break;
+        case ResponseOneofCase.GameUninstall:
+          if (GameUninstall == null) {
+            GameUninstall = new global::Uplay.UplayService.GameUninstallRsp();
+          }
+          GameUninstall.MergeFrom(other.GameUninstall);
+          break;
+        case ResponseOneofCase.GrantFilePermissions:
+          if (GrantFilePermissions == null) {
+            GrantFilePermissions = new global::Uplay.UplayService.GrantFilePermissionsRsp();
+          }
+          GrantFilePermissions.MergeFrom(other.GrantFilePermissions);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RequestId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            ExitCode = (global::Uplay.UplayService.UplayServiceExitCode) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.GearRsp subBuilder = new global::Uplay.UplayService.GearRsp();
+            if (responseCase_ == ResponseOneofCase.Gear) {
+              subBuilder.MergeFrom(Gear);
+            }
+            input.ReadMessage(subBuilder);
+            Gear = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Uplay.UplayService.UpdateGearCacheRsp subBuilder = new global::Uplay.UplayService.UpdateGearCacheRsp();
+            if (responseCase_ == ResponseOneofCase.UpdateGearCache) {
+              subBuilder.MergeFrom(UpdateGearCache);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateGearCache = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Uplay.UplayService.GameInstallRsp subBuilder = new global::Uplay.UplayService.GameInstallRsp();
+            if (responseCase_ == ResponseOneofCase.GameInstall) {
+              subBuilder.MergeFrom(GameInstall);
+            }
+            input.ReadMessage(subBuilder);
+            GameInstall = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Uplay.UplayService.WriteGameRegistryRsp subBuilder = new global::Uplay.UplayService.WriteGameRegistryRsp();
+            if (responseCase_ == ResponseOneofCase.WriteGameRegistry) {
+              subBuilder.MergeFrom(WriteGameRegistry);
+            }
+            input.ReadMessage(subBuilder);
+            WriteGameRegistry = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Uplay.UplayService.SystemRestartRsp subBuilder = new global::Uplay.UplayService.SystemRestartRsp();
+            if (responseCase_ == ResponseOneofCase.SystemRestart) {
+              subBuilder.MergeFrom(SystemRestart);
+            }
+            input.ReadMessage(subBuilder);
+            SystemRestart = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Uplay.UplayService.GameUninstallRsp subBuilder = new global::Uplay.UplayService.GameUninstallRsp();
+            if (responseCase_ == ResponseOneofCase.GameUninstall) {
+              subBuilder.MergeFrom(GameUninstall);
+            }
+            input.ReadMessage(subBuilder);
+            GameUninstall = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Uplay.UplayService.GrantFilePermissionsRsp subBuilder = new global::Uplay.UplayService.GrantFilePermissionsRsp();
+            if (responseCase_ == ResponseOneofCase.GrantFilePermissions) {
+              subBuilder.MergeFrom(GrantFilePermissions);
+            }
+            input.ReadMessage(subBuilder);
+            GrantFilePermissions = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RequestId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            ExitCode = (global::Uplay.UplayService.UplayServiceExitCode) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.GearRsp subBuilder = new global::Uplay.UplayService.GearRsp();
+            if (responseCase_ == ResponseOneofCase.Gear) {
+              subBuilder.MergeFrom(Gear);
+            }
+            input.ReadMessage(subBuilder);
+            Gear = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Uplay.UplayService.UpdateGearCacheRsp subBuilder = new global::Uplay.UplayService.UpdateGearCacheRsp();
+            if (responseCase_ == ResponseOneofCase.UpdateGearCache) {
+              subBuilder.MergeFrom(UpdateGearCache);
+            }
+            input.ReadMessage(subBuilder);
+            UpdateGearCache = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Uplay.UplayService.GameInstallRsp subBuilder = new global::Uplay.UplayService.GameInstallRsp();
+            if (responseCase_ == ResponseOneofCase.GameInstall) {
+              subBuilder.MergeFrom(GameInstall);
+            }
+            input.ReadMessage(subBuilder);
+            GameInstall = subBuilder;
+            break;
+          }
+          case 50: {
+            global::Uplay.UplayService.WriteGameRegistryRsp subBuilder = new global::Uplay.UplayService.WriteGameRegistryRsp();
+            if (responseCase_ == ResponseOneofCase.WriteGameRegistry) {
+              subBuilder.MergeFrom(WriteGameRegistry);
+            }
+            input.ReadMessage(subBuilder);
+            WriteGameRegistry = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Uplay.UplayService.SystemRestartRsp subBuilder = new global::Uplay.UplayService.SystemRestartRsp();
+            if (responseCase_ == ResponseOneofCase.SystemRestart) {
+              subBuilder.MergeFrom(SystemRestart);
+            }
+            input.ReadMessage(subBuilder);
+            SystemRestart = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Uplay.UplayService.GameUninstallRsp subBuilder = new global::Uplay.UplayService.GameUninstallRsp();
+            if (responseCase_ == ResponseOneofCase.GameUninstall) {
+              subBuilder.MergeFrom(GameUninstall);
+            }
+            input.ReadMessage(subBuilder);
+            GameUninstall = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Uplay.UplayService.GrantFilePermissionsRsp subBuilder = new global::Uplay.UplayService.GrantFilePermissionsRsp();
+            if (responseCase_ == ResponseOneofCase.GrantFilePermissions) {
+              subBuilder.MergeFrom(GrantFilePermissions);
+            }
+            input.ReadMessage(subBuilder);
+            GrantFilePermissions = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class v1Push : pb::IMessage<v1Push>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<v1Push> _parser = new pb::MessageParser<v1Push>(() => new v1Push());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<v1Push> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[32]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Push() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Push(v1Push other) : this() {
+      switch (other.PushCase) {
+        case PushOneofCase.Telemetry:
+          Telemetry = other.Telemetry.Clone();
+          break;
+        case PushOneofCase.DependencyInstallationStarted:
+          DependencyInstallationStarted = other.DependencyInstallationStarted.Clone();
+          break;
+        case PushOneofCase.DependencyInstallationCompleted:
+          DependencyInstallationCompleted = other.DependencyInstallationCompleted.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Push Clone() {
+      return new v1Push(this);
+    }
+
+    /// <summary>Field number for the "telemetry" field.</summary>
+    public const int TelemetryFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.Telemetry Telemetry {
+      get { return pushCase_ == PushOneofCase.Telemetry ? (global::Uplay.UplayService.Telemetry) push_ : null; }
+      set {
+        push_ = value;
+        pushCase_ = value == null ? PushOneofCase.None : PushOneofCase.Telemetry;
+      }
+    }
+
+    /// <summary>Field number for the "dependency_installation_started" field.</summary>
+    public const int DependencyInstallationStartedFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.DependencyInstallationStarted DependencyInstallationStarted {
+      get { return pushCase_ == PushOneofCase.DependencyInstallationStarted ? (global::Uplay.UplayService.DependencyInstallationStarted) push_ : null; }
+      set {
+        push_ = value;
+        pushCase_ = value == null ? PushOneofCase.None : PushOneofCase.DependencyInstallationStarted;
+      }
+    }
+
+    /// <summary>Field number for the "dependency_installation_completed" field.</summary>
+    public const int DependencyInstallationCompletedFieldNumber = 3;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.DependencyInstallationCompleted DependencyInstallationCompleted {
+      get { return pushCase_ == PushOneofCase.DependencyInstallationCompleted ? (global::Uplay.UplayService.DependencyInstallationCompleted) push_ : null; }
+      set {
+        push_ = value;
+        pushCase_ = value == null ? PushOneofCase.None : PushOneofCase.DependencyInstallationCompleted;
+      }
+    }
+
+    private object push_;
+    /// <summary>Enum of possible cases for the "push" oneof.</summary>
+    public enum PushOneofCase {
+      None = 0,
+      Telemetry = 1,
+      DependencyInstallationStarted = 2,
+      DependencyInstallationCompleted = 3,
+    }
+    private PushOneofCase pushCase_ = PushOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PushOneofCase PushCase {
+      get { return pushCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPush() {
+      pushCase_ = PushOneofCase.None;
+      push_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as v1Push);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(v1Push other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Telemetry, other.Telemetry)) return false;
+      if (!object.Equals(DependencyInstallationStarted, other.DependencyInstallationStarted)) return false;
+      if (!object.Equals(DependencyInstallationCompleted, other.DependencyInstallationCompleted)) return false;
+      if (PushCase != other.PushCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (pushCase_ == PushOneofCase.Telemetry) hash ^= Telemetry.GetHashCode();
+      if (pushCase_ == PushOneofCase.DependencyInstallationStarted) hash ^= DependencyInstallationStarted.GetHashCode();
+      if (pushCase_ == PushOneofCase.DependencyInstallationCompleted) hash ^= DependencyInstallationCompleted.GetHashCode();
+      hash ^= (int) pushCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (pushCase_ == PushOneofCase.Telemetry) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Telemetry);
+      }
+      if (pushCase_ == PushOneofCase.DependencyInstallationStarted) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DependencyInstallationStarted);
+      }
+      if (pushCase_ == PushOneofCase.DependencyInstallationCompleted) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DependencyInstallationCompleted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (pushCase_ == PushOneofCase.Telemetry) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Telemetry);
+      }
+      if (pushCase_ == PushOneofCase.DependencyInstallationStarted) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DependencyInstallationStarted);
+      }
+      if (pushCase_ == PushOneofCase.DependencyInstallationCompleted) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DependencyInstallationCompleted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (pushCase_ == PushOneofCase.Telemetry) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Telemetry);
+      }
+      if (pushCase_ == PushOneofCase.DependencyInstallationStarted) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DependencyInstallationStarted);
+      }
+      if (pushCase_ == PushOneofCase.DependencyInstallationCompleted) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DependencyInstallationCompleted);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(v1Push other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.PushCase) {
+        case PushOneofCase.Telemetry:
+          if (Telemetry == null) {
+            Telemetry = new global::Uplay.UplayService.Telemetry();
+          }
+          Telemetry.MergeFrom(other.Telemetry);
+          break;
+        case PushOneofCase.DependencyInstallationStarted:
+          if (DependencyInstallationStarted == null) {
+            DependencyInstallationStarted = new global::Uplay.UplayService.DependencyInstallationStarted();
+          }
+          DependencyInstallationStarted.MergeFrom(other.DependencyInstallationStarted);
+          break;
+        case PushOneofCase.DependencyInstallationCompleted:
+          if (DependencyInstallationCompleted == null) {
+            DependencyInstallationCompleted = new global::Uplay.UplayService.DependencyInstallationCompleted();
+          }
+          DependencyInstallationCompleted.MergeFrom(other.DependencyInstallationCompleted);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Uplay.UplayService.Telemetry subBuilder = new global::Uplay.UplayService.Telemetry();
+            if (pushCase_ == PushOneofCase.Telemetry) {
+              subBuilder.MergeFrom(Telemetry);
+            }
+            input.ReadMessage(subBuilder);
+            Telemetry = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Uplay.UplayService.DependencyInstallationStarted subBuilder = new global::Uplay.UplayService.DependencyInstallationStarted();
+            if (pushCase_ == PushOneofCase.DependencyInstallationStarted) {
+              subBuilder.MergeFrom(DependencyInstallationStarted);
+            }
+            input.ReadMessage(subBuilder);
+            DependencyInstallationStarted = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.DependencyInstallationCompleted subBuilder = new global::Uplay.UplayService.DependencyInstallationCompleted();
+            if (pushCase_ == PushOneofCase.DependencyInstallationCompleted) {
+              subBuilder.MergeFrom(DependencyInstallationCompleted);
+            }
+            input.ReadMessage(subBuilder);
+            DependencyInstallationCompleted = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Uplay.UplayService.Telemetry subBuilder = new global::Uplay.UplayService.Telemetry();
+            if (pushCase_ == PushOneofCase.Telemetry) {
+              subBuilder.MergeFrom(Telemetry);
+            }
+            input.ReadMessage(subBuilder);
+            Telemetry = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Uplay.UplayService.DependencyInstallationStarted subBuilder = new global::Uplay.UplayService.DependencyInstallationStarted();
+            if (pushCase_ == PushOneofCase.DependencyInstallationStarted) {
+              subBuilder.MergeFrom(DependencyInstallationStarted);
+            }
+            input.ReadMessage(subBuilder);
+            DependencyInstallationStarted = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.DependencyInstallationCompleted subBuilder = new global::Uplay.UplayService.DependencyInstallationCompleted();
+            if (pushCase_ == PushOneofCase.DependencyInstallationCompleted) {
+              subBuilder.MergeFrom(DependencyInstallationCompleted);
+            }
+            input.ReadMessage(subBuilder);
+            DependencyInstallationCompleted = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class v1Interrupt : pb::IMessage<v1Interrupt>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<v1Interrupt> _parser = new pb::MessageParser<v1Interrupt>(() => new v1Interrupt());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<v1Interrupt> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[33]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Interrupt() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Interrupt(v1Interrupt other) : this() {
+      requestId_ = other.requestId_;
+      switch (other.InterrupedCase) {
+        case InterrupedOneofCase.GameInstall:
+          GameInstall = other.GameInstall.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public v1Interrupt Clone() {
+      return new v1Interrupt(this);
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 1;
+    private uint requestId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "game_install" field.</summary>
+    public const int GameInstallFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.GameInstallInterruped GameInstall {
+      get { return interrupedCase_ == InterrupedOneofCase.GameInstall ? (global::Uplay.UplayService.GameInstallInterruped) interruped_ : null; }
+      set {
+        interruped_ = value;
+        interrupedCase_ = value == null ? InterrupedOneofCase.None : InterrupedOneofCase.GameInstall;
+      }
+    }
+
+    private object interruped_;
+    /// <summary>Enum of possible cases for the "interruped" oneof.</summary>
+    public enum InterrupedOneofCase {
+      None = 0,
+      GameInstall = 2,
+    }
+    private InterrupedOneofCase interrupedCase_ = InterrupedOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InterrupedOneofCase InterrupedCase {
+      get { return interrupedCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInterruped() {
+      interrupedCase_ = InterrupedOneofCase.None;
+      interruped_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as v1Interrupt);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(v1Interrupt other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RequestId != other.RequestId) return false;
+      if (!object.Equals(GameInstall, other.GameInstall)) return false;
+      if (InterrupedCase != other.InterrupedCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RequestId != 0) hash ^= RequestId.GetHashCode();
+      if (interrupedCase_ == InterrupedOneofCase.GameInstall) hash ^= GameInstall.GetHashCode();
+      hash ^= (int) interrupedCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RequestId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RequestId);
+      }
+      if (interrupedCase_ == InterrupedOneofCase.GameInstall) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GameInstall);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RequestId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RequestId);
+      }
+      if (interrupedCase_ == InterrupedOneofCase.GameInstall) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GameInstall);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RequestId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RequestId);
+      }
+      if (interrupedCase_ == InterrupedOneofCase.GameInstall) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameInstall);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(v1Interrupt other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RequestId != 0) {
+        RequestId = other.RequestId;
+      }
+      switch (other.InterrupedCase) {
+        case InterrupedOneofCase.GameInstall:
+          if (GameInstall == null) {
+            GameInstall = new global::Uplay.UplayService.GameInstallInterruped();
+          }
+          GameInstall.MergeFrom(other.GameInstall);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RequestId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            global::Uplay.UplayService.GameInstallInterruped subBuilder = new global::Uplay.UplayService.GameInstallInterruped();
+            if (interrupedCase_ == InterrupedOneofCase.GameInstall) {
+              subBuilder.MergeFrom(GameInstall);
+            }
+            input.ReadMessage(subBuilder);
+            GameInstall = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RequestId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            global::Uplay.UplayService.GameInstallInterruped subBuilder = new global::Uplay.UplayService.GameInstallInterruped();
+            if (interrupedCase_ == InterrupedOneofCase.GameInstall) {
+              subBuilder.MergeFrom(GameInstall);
+            }
+            input.ReadMessage(subBuilder);
+            GameInstall = subBuilder;
             break;
           }
         }
@@ -3261,7 +8684,7 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3281,8 +8704,27 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Upstream(Upstream other) : this() {
-      req_ = other.req_ != null ? other.req_.Clone() : null;
-      push_ = other.push_ != null ? other.push_.Clone() : null;
+      switch (other.MessageCase) {
+        case MessageOneofCase.V1Req:
+          V1Req = other.V1Req.Clone();
+          break;
+        case MessageOneofCase.V1Interrupt:
+          V1Interrupt = other.V1Interrupt.Clone();
+          break;
+      }
+
+      switch (other.RspCase) {
+        case RspOneofCase.Rsp:
+          Rsp = other.Rsp.Clone();
+          break;
+      }
+
+      switch (other.PushCase) {
+        case PushOneofCase.Push:
+          Push = other.Push.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3292,28 +8734,113 @@ namespace Uplay.UplayService {
       return new Upstream(this);
     }
 
-    /// <summary>Field number for the "req" field.</summary>
-    public const int ReqFieldNumber = 1;
-    private global::Uplay.UplayService.Req req_;
+    /// <summary>Field number for the "v1_req" field.</summary>
+    public const int V1ReqFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.UplayService.Req Req {
-      get { return req_; }
+    public global::Uplay.UplayService.v1Req V1Req {
+      get { return messageCase_ == MessageOneofCase.V1Req ? (global::Uplay.UplayService.v1Req) message_ : null; }
       set {
-        req_ = value;
+        message_ = value;
+        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.V1Req;
+      }
+    }
+
+    /// <summary>Field number for the "v1_interrupt" field.</summary>
+    public const int V1InterruptFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.v1Interrupt V1Interrupt {
+      get { return messageCase_ == MessageOneofCase.V1Interrupt ? (global::Uplay.UplayService.v1Interrupt) message_ : null; }
+      set {
+        message_ = value;
+        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.V1Interrupt;
+      }
+    }
+
+    /// <summary>Field number for the "rsp" field.</summary>
+    public const int RspFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.Rsp Rsp {
+      get { return RspCase_ == RspOneofCase.Rsp ? (global::Uplay.UplayService.Rsp) Rsp_ : null; }
+      set {
+        Rsp_ = value;
+        RspCase_ = value == null ? RspOneofCase.None : RspOneofCase.Rsp;
       }
     }
 
     /// <summary>Field number for the "push" field.</summary>
     public const int PushFieldNumber = 2;
-    private global::Uplay.UplayService.UpPush push_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.UplayService.UpPush Push {
-      get { return push_; }
+    public global::Uplay.UplayService.DownPush Push {
+      get { return PushCase_ == PushOneofCase.Push ? (global::Uplay.UplayService.DownPush) Push_ : null; }
       set {
-        push_ = value;
+        Push_ = value;
+        PushCase_ = value == null ? PushOneofCase.None : PushOneofCase.Push;
       }
+    }
+
+    private object message_;
+    /// <summary>Enum of possible cases for the "message" oneof.</summary>
+    public enum MessageOneofCase {
+      None = 0,
+      V1Req = 3,
+      V1Interrupt = 4,
+    }
+    private MessageOneofCase messageCase_ = MessageOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageOneofCase MessageCase {
+      get { return messageCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMessage() {
+      messageCase_ = MessageOneofCase.None;
+      message_ = null;
+    }
+
+    private object Rsp_;
+    /// <summary>Enum of possible cases for the "_rsp" oneof.</summary>
+    public enum RspOneofCase {
+      None = 0,
+      Rsp = 1,
+    }
+    private RspOneofCase RspCase_ = RspOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RspOneofCase RspCase {
+      get { return RspCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRsp() {
+      RspCase_ = RspOneofCase.None;
+      Rsp_ = null;
+    }
+
+    private object Push_;
+    /// <summary>Enum of possible cases for the "_push" oneof.</summary>
+    public enum PushOneofCase {
+      None = 0,
+      Push = 2,
+    }
+    private PushOneofCase PushCase_ = PushOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PushOneofCase PushCase {
+      get { return PushCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPush() {
+      PushCase_ = PushOneofCase.None;
+      Push_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3331,8 +8858,13 @@ namespace Uplay.UplayService {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Req, other.Req)) return false;
+      if (!object.Equals(V1Req, other.V1Req)) return false;
+      if (!object.Equals(V1Interrupt, other.V1Interrupt)) return false;
+      if (!object.Equals(Rsp, other.Rsp)) return false;
       if (!object.Equals(Push, other.Push)) return false;
+      if (MessageCase != other.MessageCase) return false;
+      if (RspCase != other.RspCase) return false;
+      if (PushCase != other.PushCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3340,8 +8872,13 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (req_ != null) hash ^= Req.GetHashCode();
-      if (push_ != null) hash ^= Push.GetHashCode();
+      if (messageCase_ == MessageOneofCase.V1Req) hash ^= V1Req.GetHashCode();
+      if (messageCase_ == MessageOneofCase.V1Interrupt) hash ^= V1Interrupt.GetHashCode();
+      if (RspCase_ == RspOneofCase.Rsp) hash ^= Rsp.GetHashCode();
+      if (PushCase_ == PushOneofCase.Push) hash ^= Push.GetHashCode();
+      hash ^= (int) messageCase_;
+      hash ^= (int) RspCase_;
+      hash ^= (int) PushCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3360,13 +8897,21 @@ namespace Uplay.UplayService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (req_ != null) {
+      if (RspCase_ == RspOneofCase.Rsp) {
         output.WriteRawTag(10);
-        output.WriteMessage(Req);
+        output.WriteMessage(Rsp);
       }
-      if (push_ != null) {
+      if (PushCase_ == PushOneofCase.Push) {
         output.WriteRawTag(18);
         output.WriteMessage(Push);
+      }
+      if (messageCase_ == MessageOneofCase.V1Req) {
+        output.WriteRawTag(26);
+        output.WriteMessage(V1Req);
+      }
+      if (messageCase_ == MessageOneofCase.V1Interrupt) {
+        output.WriteRawTag(34);
+        output.WriteMessage(V1Interrupt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3378,13 +8923,21 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (req_ != null) {
+      if (RspCase_ == RspOneofCase.Rsp) {
         output.WriteRawTag(10);
-        output.WriteMessage(Req);
+        output.WriteMessage(Rsp);
       }
-      if (push_ != null) {
+      if (PushCase_ == PushOneofCase.Push) {
         output.WriteRawTag(18);
         output.WriteMessage(Push);
+      }
+      if (messageCase_ == MessageOneofCase.V1Req) {
+        output.WriteRawTag(26);
+        output.WriteMessage(V1Req);
+      }
+      if (messageCase_ == MessageOneofCase.V1Interrupt) {
+        output.WriteRawTag(34);
+        output.WriteMessage(V1Interrupt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3396,10 +8949,16 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (req_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Req);
+      if (messageCase_ == MessageOneofCase.V1Req) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(V1Req);
       }
-      if (push_ != null) {
+      if (messageCase_ == MessageOneofCase.V1Interrupt) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(V1Interrupt);
+      }
+      if (RspCase_ == RspOneofCase.Rsp) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rsp);
+      }
+      if (PushCase_ == PushOneofCase.Push) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Push);
       }
       if (_unknownFields != null) {
@@ -3414,18 +8973,39 @@ namespace Uplay.UplayService {
       if (other == null) {
         return;
       }
-      if (other.req_ != null) {
-        if (req_ == null) {
-          Req = new global::Uplay.UplayService.Req();
-        }
-        Req.MergeFrom(other.Req);
+      switch (other.MessageCase) {
+        case MessageOneofCase.V1Req:
+          if (V1Req == null) {
+            V1Req = new global::Uplay.UplayService.v1Req();
+          }
+          V1Req.MergeFrom(other.V1Req);
+          break;
+        case MessageOneofCase.V1Interrupt:
+          if (V1Interrupt == null) {
+            V1Interrupt = new global::Uplay.UplayService.v1Interrupt();
+          }
+          V1Interrupt.MergeFrom(other.V1Interrupt);
+          break;
       }
-      if (other.push_ != null) {
-        if (push_ == null) {
-          Push = new global::Uplay.UplayService.UpPush();
-        }
-        Push.MergeFrom(other.Push);
+
+      switch (other.RspCase) {
+        case RspOneofCase.Rsp:
+          if (Rsp == null) {
+            Rsp = new global::Uplay.UplayService.Rsp();
+          }
+          Rsp.MergeFrom(other.Rsp);
+          break;
       }
+
+      switch (other.PushCase) {
+        case PushOneofCase.Push:
+          if (Push == null) {
+            Push = new global::Uplay.UplayService.DownPush();
+          }
+          Push.MergeFrom(other.Push);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3442,17 +9022,39 @@ namespace Uplay.UplayService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (req_ == null) {
-              Req = new global::Uplay.UplayService.Req();
+            global::Uplay.UplayService.Rsp subBuilder = new global::Uplay.UplayService.Rsp();
+            if (RspCase_ == RspOneofCase.Rsp) {
+              subBuilder.MergeFrom(Rsp);
             }
-            input.ReadMessage(Req);
+            input.ReadMessage(subBuilder);
+            Rsp = subBuilder;
             break;
           }
           case 18: {
-            if (push_ == null) {
-              Push = new global::Uplay.UplayService.UpPush();
+            global::Uplay.UplayService.DownPush subBuilder = new global::Uplay.UplayService.DownPush();
+            if (PushCase_ == PushOneofCase.Push) {
+              subBuilder.MergeFrom(Push);
             }
-            input.ReadMessage(Push);
+            input.ReadMessage(subBuilder);
+            Push = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.v1Req subBuilder = new global::Uplay.UplayService.v1Req();
+            if (messageCase_ == MessageOneofCase.V1Req) {
+              subBuilder.MergeFrom(V1Req);
+            }
+            input.ReadMessage(subBuilder);
+            V1Req = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Uplay.UplayService.v1Interrupt subBuilder = new global::Uplay.UplayService.v1Interrupt();
+            if (messageCase_ == MessageOneofCase.V1Interrupt) {
+              subBuilder.MergeFrom(V1Interrupt);
+            }
+            input.ReadMessage(subBuilder);
+            V1Interrupt = subBuilder;
             break;
           }
         }
@@ -3471,17 +9073,39 @@ namespace Uplay.UplayService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (req_ == null) {
-              Req = new global::Uplay.UplayService.Req();
+            global::Uplay.UplayService.Rsp subBuilder = new global::Uplay.UplayService.Rsp();
+            if (RspCase_ == RspOneofCase.Rsp) {
+              subBuilder.MergeFrom(Rsp);
             }
-            input.ReadMessage(Req);
+            input.ReadMessage(subBuilder);
+            Rsp = subBuilder;
             break;
           }
           case 18: {
-            if (push_ == null) {
-              Push = new global::Uplay.UplayService.UpPush();
+            global::Uplay.UplayService.DownPush subBuilder = new global::Uplay.UplayService.DownPush();
+            if (PushCase_ == PushOneofCase.Push) {
+              subBuilder.MergeFrom(Push);
             }
-            input.ReadMessage(Push);
+            input.ReadMessage(subBuilder);
+            Push = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.v1Req subBuilder = new global::Uplay.UplayService.v1Req();
+            if (messageCase_ == MessageOneofCase.V1Req) {
+              subBuilder.MergeFrom(V1Req);
+            }
+            input.ReadMessage(subBuilder);
+            V1Req = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Uplay.UplayService.v1Interrupt subBuilder = new global::Uplay.UplayService.v1Interrupt();
+            if (messageCase_ == MessageOneofCase.V1Interrupt) {
+              subBuilder.MergeFrom(V1Interrupt);
+            }
+            input.ReadMessage(subBuilder);
+            V1Interrupt = subBuilder;
             break;
           }
         }
@@ -3505,7 +9129,7 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Uplay.UplayService.UplayServiceReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3525,8 +9149,27 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Downstream(Downstream other) : this() {
-      rsp_ = other.rsp_ != null ? other.rsp_.Clone() : null;
-      push_ = other.push_ != null ? other.push_.Clone() : null;
+      switch (other.MessageCase) {
+        case MessageOneofCase.V1Rsp:
+          V1Rsp = other.V1Rsp.Clone();
+          break;
+        case MessageOneofCase.V1Push:
+          V1Push = other.V1Push.Clone();
+          break;
+      }
+
+      switch (other.ReqCase) {
+        case ReqOneofCase.Req:
+          Req = other.Req.Clone();
+          break;
+      }
+
+      switch (other.PushCase) {
+        case PushOneofCase.Push:
+          Push = other.Push.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3536,28 +9179,113 @@ namespace Uplay.UplayService {
       return new Downstream(this);
     }
 
-    /// <summary>Field number for the "rsp" field.</summary>
-    public const int RspFieldNumber = 1;
-    private global::Uplay.UplayService.Rsp rsp_;
+    /// <summary>Field number for the "v1_rsp" field.</summary>
+    public const int V1RspFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.UplayService.Rsp Rsp {
-      get { return rsp_; }
+    public global::Uplay.UplayService.v1Rsp V1Rsp {
+      get { return messageCase_ == MessageOneofCase.V1Rsp ? (global::Uplay.UplayService.v1Rsp) message_ : null; }
       set {
-        rsp_ = value;
+        message_ = value;
+        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.V1Rsp;
+      }
+    }
+
+    /// <summary>Field number for the "v1_push" field.</summary>
+    public const int V1PushFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.v1Push V1Push {
+      get { return messageCase_ == MessageOneofCase.V1Push ? (global::Uplay.UplayService.v1Push) message_ : null; }
+      set {
+        message_ = value;
+        messageCase_ = value == null ? MessageOneofCase.None : MessageOneofCase.V1Push;
+      }
+    }
+
+    /// <summary>Field number for the "req" field.</summary>
+    public const int ReqFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.UplayService.Req Req {
+      get { return ReqCase_ == ReqOneofCase.Req ? (global::Uplay.UplayService.Req) Req_ : null; }
+      set {
+        Req_ = value;
+        ReqCase_ = value == null ? ReqOneofCase.None : ReqOneofCase.Req;
       }
     }
 
     /// <summary>Field number for the "push" field.</summary>
     public const int PushFieldNumber = 2;
-    private global::Uplay.UplayService.DownPush push_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.UplayService.DownPush Push {
-      get { return push_; }
+    public global::Uplay.UplayService.UpPush Push {
+      get { return PushCase_ == PushOneofCase.Push ? (global::Uplay.UplayService.UpPush) Push_ : null; }
       set {
-        push_ = value;
+        Push_ = value;
+        PushCase_ = value == null ? PushOneofCase.None : PushOneofCase.Push;
       }
+    }
+
+    private object message_;
+    /// <summary>Enum of possible cases for the "message" oneof.</summary>
+    public enum MessageOneofCase {
+      None = 0,
+      V1Rsp = 3,
+      V1Push = 4,
+    }
+    private MessageOneofCase messageCase_ = MessageOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MessageOneofCase MessageCase {
+      get { return messageCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMessage() {
+      messageCase_ = MessageOneofCase.None;
+      message_ = null;
+    }
+
+    private object Req_;
+    /// <summary>Enum of possible cases for the "_req" oneof.</summary>
+    public enum ReqOneofCase {
+      None = 0,
+      Req = 1,
+    }
+    private ReqOneofCase ReqCase_ = ReqOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReqOneofCase ReqCase {
+      get { return ReqCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReq() {
+      ReqCase_ = ReqOneofCase.None;
+      Req_ = null;
+    }
+
+    private object Push_;
+    /// <summary>Enum of possible cases for the "_push" oneof.</summary>
+    public enum PushOneofCase {
+      None = 0,
+      Push = 2,
+    }
+    private PushOneofCase PushCase_ = PushOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PushOneofCase PushCase {
+      get { return PushCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPush() {
+      PushCase_ = PushOneofCase.None;
+      Push_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3575,8 +9303,13 @@ namespace Uplay.UplayService {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Rsp, other.Rsp)) return false;
+      if (!object.Equals(V1Rsp, other.V1Rsp)) return false;
+      if (!object.Equals(V1Push, other.V1Push)) return false;
+      if (!object.Equals(Req, other.Req)) return false;
       if (!object.Equals(Push, other.Push)) return false;
+      if (MessageCase != other.MessageCase) return false;
+      if (ReqCase != other.ReqCase) return false;
+      if (PushCase != other.PushCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3584,8 +9317,13 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (rsp_ != null) hash ^= Rsp.GetHashCode();
-      if (push_ != null) hash ^= Push.GetHashCode();
+      if (messageCase_ == MessageOneofCase.V1Rsp) hash ^= V1Rsp.GetHashCode();
+      if (messageCase_ == MessageOneofCase.V1Push) hash ^= V1Push.GetHashCode();
+      if (ReqCase_ == ReqOneofCase.Req) hash ^= Req.GetHashCode();
+      if (PushCase_ == PushOneofCase.Push) hash ^= Push.GetHashCode();
+      hash ^= (int) messageCase_;
+      hash ^= (int) ReqCase_;
+      hash ^= (int) PushCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3604,13 +9342,21 @@ namespace Uplay.UplayService {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (rsp_ != null) {
+      if (ReqCase_ == ReqOneofCase.Req) {
         output.WriteRawTag(10);
-        output.WriteMessage(Rsp);
+        output.WriteMessage(Req);
       }
-      if (push_ != null) {
+      if (PushCase_ == PushOneofCase.Push) {
         output.WriteRawTag(18);
         output.WriteMessage(Push);
+      }
+      if (messageCase_ == MessageOneofCase.V1Rsp) {
+        output.WriteRawTag(26);
+        output.WriteMessage(V1Rsp);
+      }
+      if (messageCase_ == MessageOneofCase.V1Push) {
+        output.WriteRawTag(34);
+        output.WriteMessage(V1Push);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3622,13 +9368,21 @@ namespace Uplay.UplayService {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (rsp_ != null) {
+      if (ReqCase_ == ReqOneofCase.Req) {
         output.WriteRawTag(10);
-        output.WriteMessage(Rsp);
+        output.WriteMessage(Req);
       }
-      if (push_ != null) {
+      if (PushCase_ == PushOneofCase.Push) {
         output.WriteRawTag(18);
         output.WriteMessage(Push);
+      }
+      if (messageCase_ == MessageOneofCase.V1Rsp) {
+        output.WriteRawTag(26);
+        output.WriteMessage(V1Rsp);
+      }
+      if (messageCase_ == MessageOneofCase.V1Push) {
+        output.WriteRawTag(34);
+        output.WriteMessage(V1Push);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3640,10 +9394,16 @@ namespace Uplay.UplayService {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (rsp_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rsp);
+      if (messageCase_ == MessageOneofCase.V1Rsp) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(V1Rsp);
       }
-      if (push_ != null) {
+      if (messageCase_ == MessageOneofCase.V1Push) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(V1Push);
+      }
+      if (ReqCase_ == ReqOneofCase.Req) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Req);
+      }
+      if (PushCase_ == PushOneofCase.Push) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Push);
       }
       if (_unknownFields != null) {
@@ -3658,18 +9418,39 @@ namespace Uplay.UplayService {
       if (other == null) {
         return;
       }
-      if (other.rsp_ != null) {
-        if (rsp_ == null) {
-          Rsp = new global::Uplay.UplayService.Rsp();
-        }
-        Rsp.MergeFrom(other.Rsp);
+      switch (other.MessageCase) {
+        case MessageOneofCase.V1Rsp:
+          if (V1Rsp == null) {
+            V1Rsp = new global::Uplay.UplayService.v1Rsp();
+          }
+          V1Rsp.MergeFrom(other.V1Rsp);
+          break;
+        case MessageOneofCase.V1Push:
+          if (V1Push == null) {
+            V1Push = new global::Uplay.UplayService.v1Push();
+          }
+          V1Push.MergeFrom(other.V1Push);
+          break;
       }
-      if (other.push_ != null) {
-        if (push_ == null) {
-          Push = new global::Uplay.UplayService.DownPush();
-        }
-        Push.MergeFrom(other.Push);
+
+      switch (other.ReqCase) {
+        case ReqOneofCase.Req:
+          if (Req == null) {
+            Req = new global::Uplay.UplayService.Req();
+          }
+          Req.MergeFrom(other.Req);
+          break;
       }
+
+      switch (other.PushCase) {
+        case PushOneofCase.Push:
+          if (Push == null) {
+            Push = new global::Uplay.UplayService.UpPush();
+          }
+          Push.MergeFrom(other.Push);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3686,17 +9467,39 @@ namespace Uplay.UplayService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (rsp_ == null) {
-              Rsp = new global::Uplay.UplayService.Rsp();
+            global::Uplay.UplayService.Req subBuilder = new global::Uplay.UplayService.Req();
+            if (ReqCase_ == ReqOneofCase.Req) {
+              subBuilder.MergeFrom(Req);
             }
-            input.ReadMessage(Rsp);
+            input.ReadMessage(subBuilder);
+            Req = subBuilder;
             break;
           }
           case 18: {
-            if (push_ == null) {
-              Push = new global::Uplay.UplayService.DownPush();
+            global::Uplay.UplayService.UpPush subBuilder = new global::Uplay.UplayService.UpPush();
+            if (PushCase_ == PushOneofCase.Push) {
+              subBuilder.MergeFrom(Push);
             }
-            input.ReadMessage(Push);
+            input.ReadMessage(subBuilder);
+            Push = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.v1Rsp subBuilder = new global::Uplay.UplayService.v1Rsp();
+            if (messageCase_ == MessageOneofCase.V1Rsp) {
+              subBuilder.MergeFrom(V1Rsp);
+            }
+            input.ReadMessage(subBuilder);
+            V1Rsp = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Uplay.UplayService.v1Push subBuilder = new global::Uplay.UplayService.v1Push();
+            if (messageCase_ == MessageOneofCase.V1Push) {
+              subBuilder.MergeFrom(V1Push);
+            }
+            input.ReadMessage(subBuilder);
+            V1Push = subBuilder;
             break;
           }
         }
@@ -3715,17 +9518,39 @@ namespace Uplay.UplayService {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (rsp_ == null) {
-              Rsp = new global::Uplay.UplayService.Rsp();
+            global::Uplay.UplayService.Req subBuilder = new global::Uplay.UplayService.Req();
+            if (ReqCase_ == ReqOneofCase.Req) {
+              subBuilder.MergeFrom(Req);
             }
-            input.ReadMessage(Rsp);
+            input.ReadMessage(subBuilder);
+            Req = subBuilder;
             break;
           }
           case 18: {
-            if (push_ == null) {
-              Push = new global::Uplay.UplayService.DownPush();
+            global::Uplay.UplayService.UpPush subBuilder = new global::Uplay.UplayService.UpPush();
+            if (PushCase_ == PushOneofCase.Push) {
+              subBuilder.MergeFrom(Push);
             }
-            input.ReadMessage(Push);
+            input.ReadMessage(subBuilder);
+            Push = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Uplay.UplayService.v1Rsp subBuilder = new global::Uplay.UplayService.v1Rsp();
+            if (messageCase_ == MessageOneofCase.V1Rsp) {
+              subBuilder.MergeFrom(V1Rsp);
+            }
+            input.ReadMessage(subBuilder);
+            V1Rsp = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Uplay.UplayService.v1Push subBuilder = new global::Uplay.UplayService.v1Push();
+            if (messageCase_ == MessageOneofCase.V1Push) {
+              subBuilder.MergeFrom(V1Push);
+            }
+            input.ReadMessage(subBuilder);
+            V1Push = subBuilder;
             break;
           }
         }

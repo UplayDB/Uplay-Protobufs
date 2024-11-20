@@ -40,71 +40,72 @@ namespace Uplay.UserSettings {
             "RGVmYXVsdBgDIAEoCBIQCghwYXNzd29yZBgEIAEoCRITCgticmFuY2hJZFN0",
             "chgFIAEoCRISCgpicmFuY2hVdWlkGAYgASgJIk0KD1Byb2R1Y3RCcmFuY2hl",
             "cxI6CghicmFuY2hlcxgBIAMoCzIoLm1nLnByb3RvY29sLnVzZXJfc2V0dGlu",
-            "Z3MuUHJvZHVjdEJyYW5jaCKBAQoLS25vd25CcmFuY2gSEQoJcHJvZHVjdElk",
+            "Z3MuUHJvZHVjdEJyYW5jaCKUAQoLS25vd25CcmFuY2gSEQoJcHJvZHVjdElk",
             "GAEgAigNEhAKCGJyYW5jaElkGAIgASgNEhIKCmJyYW5jaE5hbWUYAyABKAkS",
             "EAoIcGFzc3dvcmQYBCABKAkSEwoLYnJhbmNoSWRTdHIYBSABKAkSEgoKYnJh",
-            "bmNoVXVpZBgGIAEoCSJJCg1Lbm93bkJyYW5jaGVzEjgKCGJyYW5jaGVzGAEg",
-            "AygLMiYubWcucHJvdG9jb2wudXNlcl9zZXR0aW5ncy5Lbm93bkJyYW5jaCIu",
-            "ChlBdXRvUGF0Y2hCbGFja2xpc3RQcm9kdWN0EhEKCXByb2R1Y3RJZBgBIAIo",
-            "DSJWCgxBdXRvUGF0Y2hpbmcSRgoIcHJvZHVjdHMYASADKAsyNC5tZy5wcm90",
-            "b2NvbC51c2VyX3NldHRpbmdzLkF1dG9QYXRjaEJsYWNrbGlzdFByb2R1Y3Qi",
-            "yAMKC0dhbWVMaWJyYXJ5ElMKBXN0eWxlGAEgASgOMisubWcucHJvdG9jb2wu",
-            "dXNlcl9zZXR0aW5ncy5HYW1lTGlicmFyeVN0eWxlOhdHYW1lTGlicmFyeVN0",
-            "eWxlX1RodW1icxJfCgl0aHVtYlNpemUYAiABKA4yLy5tZy5wcm90b2NvbC51",
-            "c2VyX3NldHRpbmdzLkdhbWVMaWJyYXJ5VGh1bWJTaXplOhtHYW1lTGlicmFy",
-            "eVRodW1iU2l6ZV9NZWRpdW0SXQoJbGlzdFN0eWxlGAMgASgOMi8ubWcucHJv",
-            "dG9jb2wudXNlcl9zZXR0aW5ncy5HYW1lTGlicmFyeUxpc3RTdHlsZToZR2Ft",
-            "ZUxpYnJhcnlMaXN0U3R5bGVfV2lkZRIhChNzaG93X2Zhdm9yaXRlX2dhbWVz",
-            "GAQgASgIOgR0cnVlEh4KEHNob3dfb3duZWRfZ2FtZXMYBSABKAg6BHRydWUS",
-            "IgoUc2hvd19pbnN0YWxsZWRfZ2FtZXMYBiABKAg6BHRydWUSHQoPc2hvd19m",
-            "cmVlX2dhbWVzGAcgASgIOgR0cnVlEh4KEHNob3dfb3RoZXJfZ2FtZXMYCCAB",
-            "KAg6BHRydWUiNwoSR2FtZVN0YXJ0QXJndW1lbnRzEg4KBmdhbWVpZBgBIAEo",
-            "DRIRCglhcmd1bWVudHMYAiABKAkiYAoTR2FtZXNTdGFydEFyZ3VtZW50cxJJ",
-            "ChJnYW1lU3RhcnRBcmd1bWVudHMYASADKAsyLS5tZy5wcm90b2NvbC51c2Vy",
-            "X3NldHRpbmdzLkdhbWVTdGFydEFyZ3VtZW50cyIsCgROZXdzEhQKDGRpc3Bs",
-            "YXlfbW9kZRgBIAEoCRIOCgZmaWx0ZXIYAiADKAkiIAoIUHJvbW9UYWISFAoM",
-            "cHJvbW9fdGFiX2lkGAEgASgNIk0KDVNlZW5Qcm9tb1RhYnMSPAoPc2Vlbl9w",
-            "cm9tb190YWJzGAEgAygLMiMubWcucHJvdG9jb2wudXNlcl9zZXR0aW5ncy5Q",
-            "cm9tb1RhYiI7ChhTcG90bGlnaHRTaG93blRpbWVzdGFtcHMSHwoXc3BvdGxp",
-            "Z2h0U2hvd25UaW1lc3RhbXAYASADKAQi7QkKDFVzZXJTZXR0aW5ncxJBCg5m",
-            "YXZvdXJpdGVHYW1lcxgBIAEoCzIpLm1nLnByb3RvY29sLnVzZXJfc2V0dGlu",
-            "Z3MuRmF2b3VyaXRlR2FtZXMSOwoLaGlkZGVuR2FtZXMYAiABKAsyJi5tZy5w",
-            "cm90b2NvbC51c2VyX3NldHRpbmdzLkhpZGRlbkdhbWVzEj8KD2xhc3RQbGF5",
-            "ZWRHYW1lcxgEIAEoCzImLm1nLnByb3RvY29sLnVzZXJfc2V0dGluZ3MuUGxh",
-            "eWVkR2FtZXMSQwoPcHJvZHVjdEJyYW5jaGVzGAUgASgLMioubWcucHJvdG9j",
-            "b2wudXNlcl9zZXR0aW5ncy5Qcm9kdWN0QnJhbmNoZXMSPwoNa25vd25CcmFu",
-            "Y2hlcxgGIAEoCzIoLm1nLnByb3RvY29sLnVzZXJfc2V0dGluZ3MuS25vd25C",
-            "cmFuY2hlcxIeChZkb250VXBsb2FkQ3Jhc2hSZXBvcnRzGAcgASgIEj0KDGF1",
-            "dG9QYXRjaGluZxgIIAEoCzInLm1nLnByb3RvY29sLnVzZXJfc2V0dGluZ3Mu",
-            "QXV0b1BhdGNoaW5nEhYKDmFjdGl2aXR5U3RhdHVzGAkgASgJEh4KFnJlbWlu",
-            "ZE1lT2ZTdGVhbUxpbmtpbmcYDSABKAgSOwoLZ2FtZUxpYnJhcnkYDiABKAsy",
-            "Ji5tZy5wcm90b2NvbC51c2VyX3NldHRpbmdzLkdhbWVMaWJyYXJ5EksKE2dh",
-            "bWVzU3RhcnRBcmd1bWVudHMYECABKAsyLi5tZy5wcm90b2NvbC51c2VyX3Nl",
-            "dHRpbmdzLkdhbWVzU3RhcnRBcmd1bWVudHMSJgoeZXhwaXJlZFNlY3VyaXR5",
-            "UHJvbXB0VGltZXN0YW1wGBEgASgEEiIKGmxhc3REaXNtaXNzZWRQcm9tb0J1",
-            "YmJsZUlkGBIgASgJEi0KBG5ld3MYEyABKAsyHy5tZy5wcm90b2NvbC51c2Vy",
-            "X3NldHRpbmdzLk5ld3MSaQoXbGFzdFNlY3VyaXR5UHJvbXB0U3RhdGUYFCAB",
-            "KA4yLi5tZy5wcm90b2NvbC51c2VyX3NldHRpbmdzLlNlY3VyaXR5UHJvbXB0",
-            "U3RhdGU6GFNlY3VyaXR5UHJvbXB0U3RhdGVfTm9uZRInCh9sYXN0RW1haWxW",
-            "ZXJpZmljUHJvbXB0VGltZXN0YW1wGBUgASgEEicKH2xhc3RkaXNzbWlzc2Vk",
-            "dXBsYXlwbHVzYnViYmxlaWQYFiABKAkSIgoaaXNleHBpcmF0aW9uYmFubmVy",
-            "ZGlzYWJsZWQYFyABKAgSPwoNc2VlblByb21vVGFicxgYIAEoCzIoLm1nLnBy",
-            "b3RvY29sLnVzZXJfc2V0dGluZ3MuU2VlblByb21vVGFicxIjChtpc3VuYXZh",
-            "aWxhYmxlYmFubmVyZGlzYWJsZWQYGSABKAgSVQoYc3BvdGxpZ2h0U2hvd25U",
-            "aW1lc3RhbXBzGBogASgLMjMubWcucHJvdG9jb2wudXNlcl9zZXR0aW5ncy5T",
-            "cG90bGlnaHRTaG93blRpbWVzdGFtcHMSIQoZY29ubmVjdEJldGFQcm9tb0Rp",
-            "c21pc3NlZBgbIAEoCBI5CgpzdGVhbUdhbWVzGBwgASgLMiUubWcucHJvdG9j",
-            "b2wudXNlcl9zZXR0aW5ncy5TdGVhbUdhbWVzKkoKEEdhbWVMaWJyYXJ5U3R5",
-            "bGUSGwoXR2FtZUxpYnJhcnlTdHlsZV9UaHVtYnMQABIZChVHYW1lTGlicmFy",
-            "eVN0eWxlX0xpc3QQASp3ChRHYW1lTGlicmFyeVRodW1iU2l6ZRIeChpHYW1l",
-            "TGlicmFyeVRodW1iU2l6ZV9TbWFsbBAAEh8KG0dhbWVMaWJyYXJ5VGh1bWJT",
-            "aXplX01lZGl1bRABEh4KGkdhbWVMaWJyYXJ5VGh1bWJTaXplX0xhcmdlEAIq",
-            "VgoUR2FtZUxpYnJhcnlMaXN0U3R5bGUSHQoZR2FtZUxpYnJhcnlMaXN0U3R5",
-            "bGVfV2lkZRAAEh8KG0dhbWVMaWJyYXJ5TGlzdFN0eWxlX05hcnJvdxABKqQB",
-            "ChNTZWN1cml0eVByb21wdFN0YXRlEhwKGFNlY3VyaXR5UHJvbXB0U3RhdGVf",
-            "Tm9uZRAAEhsKF1NlY3VyaXR5UHJvbXB0U3RhdGVfMkZBEAESKQolU2VjdXJp",
-            "dHlQcm9tcHRTdGF0ZV9FbWFpbFZlcmlmaWNhdGlvbhACEicKI1NlY3VyaXR5",
-            "UHJvbXB0U3RhdGVfUGhvbmVDb2xsZWN0aW9uEAM="));
+            "bmNoVXVpZBgGIAEoCRIRCglpc0RlZmF1bHQYByABKAgiSQoNS25vd25CcmFu",
+            "Y2hlcxI4CghicmFuY2hlcxgBIAMoCzImLm1nLnByb3RvY29sLnVzZXJfc2V0",
+            "dGluZ3MuS25vd25CcmFuY2giLgoZQXV0b1BhdGNoQmxhY2tsaXN0UHJvZHVj",
+            "dBIRCglwcm9kdWN0SWQYASACKA0iVgoMQXV0b1BhdGNoaW5nEkYKCHByb2R1",
+            "Y3RzGAEgAygLMjQubWcucHJvdG9jb2wudXNlcl9zZXR0aW5ncy5BdXRvUGF0",
+            "Y2hCbGFja2xpc3RQcm9kdWN0IsgDCgtHYW1lTGlicmFyeRJTCgVzdHlsZRgB",
+            "IAEoDjIrLm1nLnByb3RvY29sLnVzZXJfc2V0dGluZ3MuR2FtZUxpYnJhcnlT",
+            "dHlsZToXR2FtZUxpYnJhcnlTdHlsZV9UaHVtYnMSXwoJdGh1bWJTaXplGAIg",
+            "ASgOMi8ubWcucHJvdG9jb2wudXNlcl9zZXR0aW5ncy5HYW1lTGlicmFyeVRo",
+            "dW1iU2l6ZTobR2FtZUxpYnJhcnlUaHVtYlNpemVfTWVkaXVtEl0KCWxpc3RT",
+            "dHlsZRgDIAEoDjIvLm1nLnByb3RvY29sLnVzZXJfc2V0dGluZ3MuR2FtZUxp",
+            "YnJhcnlMaXN0U3R5bGU6GUdhbWVMaWJyYXJ5TGlzdFN0eWxlX1dpZGUSIQoT",
+            "c2hvd19mYXZvcml0ZV9nYW1lcxgEIAEoCDoEdHJ1ZRIeChBzaG93X293bmVk",
+            "X2dhbWVzGAUgASgIOgR0cnVlEiIKFHNob3dfaW5zdGFsbGVkX2dhbWVzGAYg",
+            "ASgIOgR0cnVlEh0KD3Nob3dfZnJlZV9nYW1lcxgHIAEoCDoEdHJ1ZRIeChBz",
+            "aG93X290aGVyX2dhbWVzGAggASgIOgR0cnVlIjcKEkdhbWVTdGFydEFyZ3Vt",
+            "ZW50cxIOCgZnYW1laWQYASABKA0SEQoJYXJndW1lbnRzGAIgASgJImAKE0dh",
+            "bWVzU3RhcnRBcmd1bWVudHMSSQoSZ2FtZVN0YXJ0QXJndW1lbnRzGAEgAygL",
+            "Mi0ubWcucHJvdG9jb2wudXNlcl9zZXR0aW5ncy5HYW1lU3RhcnRBcmd1bWVu",
+            "dHMiLAoETmV3cxIUCgxkaXNwbGF5X21vZGUYASABKAkSDgoGZmlsdGVyGAIg",
+            "AygJIiAKCFByb21vVGFiEhQKDHByb21vX3RhYl9pZBgBIAEoDSJNCg1TZWVu",
+            "UHJvbW9UYWJzEjwKD3NlZW5fcHJvbW9fdGFicxgBIAMoCzIjLm1nLnByb3Rv",
+            "Y29sLnVzZXJfc2V0dGluZ3MuUHJvbW9UYWIiOwoYU3BvdGxpZ2h0U2hvd25U",
+            "aW1lc3RhbXBzEh8KF3Nwb3RsaWdodFNob3duVGltZXN0YW1wGAEgAygEIu0J",
+            "CgxVc2VyU2V0dGluZ3MSQQoOZmF2b3VyaXRlR2FtZXMYASABKAsyKS5tZy5w",
+            "cm90b2NvbC51c2VyX3NldHRpbmdzLkZhdm91cml0ZUdhbWVzEjsKC2hpZGRl",
+            "bkdhbWVzGAIgASgLMiYubWcucHJvdG9jb2wudXNlcl9zZXR0aW5ncy5IaWRk",
+            "ZW5HYW1lcxI/Cg9sYXN0UGxheWVkR2FtZXMYBCABKAsyJi5tZy5wcm90b2Nv",
+            "bC51c2VyX3NldHRpbmdzLlBsYXllZEdhbWVzEkMKD3Byb2R1Y3RCcmFuY2hl",
+            "cxgFIAEoCzIqLm1nLnByb3RvY29sLnVzZXJfc2V0dGluZ3MuUHJvZHVjdEJy",
+            "YW5jaGVzEj8KDWtub3duQnJhbmNoZXMYBiABKAsyKC5tZy5wcm90b2NvbC51",
+            "c2VyX3NldHRpbmdzLktub3duQnJhbmNoZXMSHgoWZG9udFVwbG9hZENyYXNo",
+            "UmVwb3J0cxgHIAEoCBI9CgxhdXRvUGF0Y2hpbmcYCCABKAsyJy5tZy5wcm90",
+            "b2NvbC51c2VyX3NldHRpbmdzLkF1dG9QYXRjaGluZxIWCg5hY3Rpdml0eVN0",
+            "YXR1cxgJIAEoCRIeChZyZW1pbmRNZU9mU3RlYW1MaW5raW5nGA0gASgIEjsK",
+            "C2dhbWVMaWJyYXJ5GA4gASgLMiYubWcucHJvdG9jb2wudXNlcl9zZXR0aW5n",
+            "cy5HYW1lTGlicmFyeRJLChNnYW1lc1N0YXJ0QXJndW1lbnRzGBAgASgLMi4u",
+            "bWcucHJvdG9jb2wudXNlcl9zZXR0aW5ncy5HYW1lc1N0YXJ0QXJndW1lbnRz",
+            "EiYKHmV4cGlyZWRTZWN1cml0eVByb21wdFRpbWVzdGFtcBgRIAEoBBIiChps",
+            "YXN0RGlzbWlzc2VkUHJvbW9CdWJibGVJZBgSIAEoCRItCgRuZXdzGBMgASgL",
+            "Mh8ubWcucHJvdG9jb2wudXNlcl9zZXR0aW5ncy5OZXdzEmkKF2xhc3RTZWN1",
+            "cml0eVByb21wdFN0YXRlGBQgASgOMi4ubWcucHJvdG9jb2wudXNlcl9zZXR0",
+            "aW5ncy5TZWN1cml0eVByb21wdFN0YXRlOhhTZWN1cml0eVByb21wdFN0YXRl",
+            "X05vbmUSJwofbGFzdEVtYWlsVmVyaWZpY1Byb21wdFRpbWVzdGFtcBgVIAEo",
+            "BBInCh9sYXN0ZGlzc21pc3NlZHVwbGF5cGx1c2J1YmJsZWlkGBYgASgJEiIK",
+            "GmlzZXhwaXJhdGlvbmJhbm5lcmRpc2FibGVkGBcgASgIEj8KDXNlZW5Qcm9t",
+            "b1RhYnMYGCABKAsyKC5tZy5wcm90b2NvbC51c2VyX3NldHRpbmdzLlNlZW5Q",
+            "cm9tb1RhYnMSIwobaXN1bmF2YWlsYWJsZWJhbm5lcmRpc2FibGVkGBkgASgI",
+            "ElUKGHNwb3RsaWdodFNob3duVGltZXN0YW1wcxgaIAEoCzIzLm1nLnByb3Rv",
+            "Y29sLnVzZXJfc2V0dGluZ3MuU3BvdGxpZ2h0U2hvd25UaW1lc3RhbXBzEiEK",
+            "GWNvbm5lY3RCZXRhUHJvbW9EaXNtaXNzZWQYGyABKAgSOQoKc3RlYW1HYW1l",
+            "cxgcIAEoCzIlLm1nLnByb3RvY29sLnVzZXJfc2V0dGluZ3MuU3RlYW1HYW1l",
+            "cypKChBHYW1lTGlicmFyeVN0eWxlEhsKF0dhbWVMaWJyYXJ5U3R5bGVfVGh1",
+            "bWJzEAASGQoVR2FtZUxpYnJhcnlTdHlsZV9MaXN0EAEqdwoUR2FtZUxpYnJh",
+            "cnlUaHVtYlNpemUSHgoaR2FtZUxpYnJhcnlUaHVtYlNpemVfU21hbGwQABIf",
+            "ChtHYW1lTGlicmFyeVRodW1iU2l6ZV9NZWRpdW0QARIeChpHYW1lTGlicmFy",
+            "eVRodW1iU2l6ZV9MYXJnZRACKlYKFEdhbWVMaWJyYXJ5TGlzdFN0eWxlEh0K",
+            "GUdhbWVMaWJyYXJ5TGlzdFN0eWxlX1dpZGUQABIfChtHYW1lTGlicmFyeUxp",
+            "c3RTdHlsZV9OYXJyb3cQASqkAQoTU2VjdXJpdHlQcm9tcHRTdGF0ZRIcChhT",
+            "ZWN1cml0eVByb21wdFN0YXRlX05vbmUQABIbChdTZWN1cml0eVByb21wdFN0",
+            "YXRlXzJGQRABEikKJVNlY3VyaXR5UHJvbXB0U3RhdGVfRW1haWxWZXJpZmlj",
+            "YXRpb24QAhInCiNTZWN1cml0eVByb21wdFN0YXRlX1Bob25lQ29sbGVjdGlv",
+            "bhAD"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Uplay.UserSettings.GameLibraryStyle), typeof(global::Uplay.UserSettings.GameLibraryThumbSize), typeof(global::Uplay.UserSettings.GameLibraryListStyle), typeof(global::Uplay.UserSettings.SecurityPromptState), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -118,7 +119,7 @@ namespace Uplay.UserSettings {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserSettings.PlayedGames), global::Uplay.UserSettings.PlayedGames.Parser, new[]{ "Games" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserSettings.ProductBranch), global::Uplay.UserSettings.ProductBranch.Parser, new[]{ "ProductId", "BranchId", "UseDefault", "Password", "BranchIdStr", "BranchUuid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserSettings.ProductBranches), global::Uplay.UserSettings.ProductBranches.Parser, new[]{ "Branches" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserSettings.KnownBranch), global::Uplay.UserSettings.KnownBranch.Parser, new[]{ "ProductId", "BranchId", "BranchName", "Password", "BranchIdStr", "BranchUuid" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserSettings.KnownBranch), global::Uplay.UserSettings.KnownBranch.Parser, new[]{ "ProductId", "BranchId", "BranchName", "Password", "BranchIdStr", "BranchUuid", "IsDefault" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserSettings.KnownBranches), global::Uplay.UserSettings.KnownBranches.Parser, new[]{ "Branches" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserSettings.AutoPatchBlacklistProduct), global::Uplay.UserSettings.AutoPatchBlacklistProduct.Parser, new[]{ "ProductId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.UserSettings.AutoPatching), global::Uplay.UserSettings.AutoPatching.Parser, new[]{ "Products" }, null, null, null, null),
@@ -2537,6 +2538,7 @@ namespace Uplay.UserSettings {
       password_ = other.password_;
       branchIdStr_ = other.branchIdStr_;
       branchUuid_ = other.branchUuid_;
+      isDefault_ = other.isDefault_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2704,6 +2706,33 @@ namespace Uplay.UserSettings {
       branchUuid_ = null;
     }
 
+    /// <summary>Field number for the "isDefault" field.</summary>
+    public const int IsDefaultFieldNumber = 7;
+    private readonly static bool IsDefaultDefaultValue = false;
+
+    private bool isDefault_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsDefault {
+      get { if ((_hasBits0 & 4) != 0) { return isDefault_; } else { return IsDefaultDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        isDefault_ = value;
+      }
+    }
+    /// <summary>Gets whether the "isDefault" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIsDefault {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "isDefault" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIsDefault() {
+      _hasBits0 &= ~4;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2725,6 +2754,7 @@ namespace Uplay.UserSettings {
       if (Password != other.Password) return false;
       if (BranchIdStr != other.BranchIdStr) return false;
       if (BranchUuid != other.BranchUuid) return false;
+      if (IsDefault != other.IsDefault) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2738,6 +2768,7 @@ namespace Uplay.UserSettings {
       if (HasPassword) hash ^= Password.GetHashCode();
       if (HasBranchIdStr) hash ^= BranchIdStr.GetHashCode();
       if (HasBranchUuid) hash ^= BranchUuid.GetHashCode();
+      if (HasIsDefault) hash ^= IsDefault.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2780,6 +2811,10 @@ namespace Uplay.UserSettings {
         output.WriteRawTag(50);
         output.WriteString(BranchUuid);
       }
+      if (HasIsDefault) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsDefault);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2814,6 +2849,10 @@ namespace Uplay.UserSettings {
         output.WriteRawTag(50);
         output.WriteString(BranchUuid);
       }
+      if (HasIsDefault) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsDefault);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2841,6 +2880,9 @@ namespace Uplay.UserSettings {
       }
       if (HasBranchUuid) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BranchUuid);
+      }
+      if (HasIsDefault) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2871,6 +2913,9 @@ namespace Uplay.UserSettings {
       }
       if (other.HasBranchUuid) {
         BranchUuid = other.BranchUuid;
+      }
+      if (other.HasIsDefault) {
+        IsDefault = other.IsDefault;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2911,6 +2956,10 @@ namespace Uplay.UserSettings {
             BranchUuid = input.ReadString();
             break;
           }
+          case 56: {
+            IsDefault = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2948,6 +2997,10 @@ namespace Uplay.UserSettings {
           }
           case 50: {
             BranchUuid = input.ReadString();
+            break;
+          }
+          case 56: {
+            IsDefault = input.ReadBool();
             break;
           }
         }

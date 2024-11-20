@@ -33,69 +33,70 @@ namespace Uplay.GameStarter {
             "Eg0KBWFwcElkGAEgASgJEg4KBnVzZXJJZBgCIAEoCRIUCgxvY3VsdXNVc2Vy",
             "SWQYAyABKAkSEwoLYWNjZXNzVG9rZW4YBCABKAkiIQoKTnZpZGlhSW5mbxIT",
             "CgthY2Nlc3NUb2tlbhgBIAEoCSIiCgpXZUdhbWVJbmZvEhQKDHJhaWxfZ2Ft",
-            "ZV9pZBgBIAEoBCL4AQoJU3RlYW1JbmZvEhYKDnN0ZWFtUHJvZmlsZUlkGAEg",
+            "ZV9pZBgBIAEoBCKbAgoJU3RlYW1JbmZvEhYKDnN0ZWFtUHJvZmlsZUlkGAEg",
             "ASgJEhMKC3N0ZWFtVGlja2V0GAIgASgJEh8KF3N0ZWFtR2FtZU93bmVyUHJv",
             "ZmlsZUlkGAMgASgJEhMKC3N0ZWFtR2FtZUlkGAQgASgNEhoKEnN0ZWFtRnJl",
             "ZVBhY2thZ2VJZBgFIAEoDRIeChZzdGVhbVJlcXVpcmVkUHJvZHVjdElkGAYg",
             "ASgNEkwKFHN0ZWFtUHJvb2ZPZlB1cmNoYXNlGAcgAygLMi4ubWcucHJvdG9j",
-            "b2wuZ2FtZV9zdGFydGVyLlN0ZWFtUHJvb2ZPZlB1cmNoYXNlIqIFCghTdGFy",
-            "dFJlcRIXCg9sYXVuY2hlclZlcnNpb24YASACKA0SDwoHdXBsYXlJZBgCIAIo",
-            "DRITCgtnYW1lVmVyc2lvbhgEIAIoDRIRCglwcm9kdWN0SWQYBSABKA0SGAoQ",
-            "c2ltdWxhdGlvbkNvbmZpZxgHIAEoCRIWCg5leGVjdXRhYmxlUGF0aBgKIAEo",
-            "CRIbChNleGVjdXRhYmxlQXJndW1lbnRzGAsgASgJEhEKCXRpbWVTdGFydBgM",
-            "IAEoBBI4CgpvY3VsdXNJbmZvGBAgASgLMiQubWcucHJvdG9jb2wuZ2FtZV9z",
-            "dGFydGVyLk9jdWx1c0luZm8SPQoIcGxhdGZvcm0YESABKA4yKy5tZy5wcm90",
-            "b2NvbC5nYW1lX3N0YXJ0ZXIuU3RhcnRSZXEuUGxhdGZvcm0SOAoKbnZpZGlh",
-            "SW5mbxgTIAEoCzIkLm1nLnByb3RvY29sLmdhbWVfc3RhcnRlci5OdmlkaWFJ",
-            "bmZvEjgKCndlR2FtZUluZm8YFCABKAsyJC5tZy5wcm90b2NvbC5nYW1lX3N0",
-            "YXJ0ZXIuV2VHYW1lSW5mbxI2CglzdGVhbUluZm8YFiABKAsyIy5tZy5wcm90",
-            "b2NvbC5nYW1lX3N0YXJ0ZXIuU3RlYW1JbmZvIoYBCghQbGF0Zm9ybRISCg5Q",
-            "bGF0Zm9ybV9VcGxheRABEhIKDlBsYXRmb3JtX1N0ZWFtEAISEwoPUGxhdGZv",
-            "cm1fT2N1bHVzEAMSEwoPUGxhdGZvcm1fTnZpZGlhEAQSEwoPUGxhdGZvcm1f",
-            "U3dpdGNoEAUSEwoPUGxhdGZvcm1fV2VHYW1lEAZKBAgDEARKBAgGEAdKBAgI",
-            "EAlKBAgJEApKBAgNEA5KBAgOEA9KBAgPEBBKBAgSEBNKBAgVEBYiPgoVSG90",
-            "a2V5U3RhdGVDaGFuZ2VkUmVxEhIKCmhvdGtleVR5cGUYASACKAUSEQoJaXNQ",
-            "cmVzc2VkGAIgAigIImkKBkhvdGtleRISCgpob3RrZXlUeXBlGAEgAigFEg8K",
-            "B2tleUNvZGUYAiACKA0SEAoIYWx0U3RhdGUYAyACKAgSEgoKc2hpZnRTdGF0",
-            "ZRgEIAIoCBIUCgxjb250cm9sU3RhdGUYBSACKAgiPAoHSG90a2V5cxIxCgdo",
-            "b3RrZXlzGAEgAygLMiAubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLkhvdGtl",
-            "eSLOAwoPU3RhcnRHcmFudGVkUnNwEhYKDm92ZXJsYXlFbmFibGVkGAEgAigI",
-            "EhQKDHdpbmRvd2VkTW9kZRgCIAIoCBIWCg5leGVjdXRhYmxlUGF0aBgDIAEo",
-            "CRIYChB3b3JraW5nRGlyZWN0b3J5GAQgASgJEhEKCWFyZ3VtZW50cxgFIAEo",
-            "CRIbChNhZGRpdGlvbmFsQXJndW1lbnRzGAYgASgJEhYKDnVwbGF5QXJndW1l",
-            "bnRzGAcgASgJEmAKFm92ZXJsYXlJbmplY3Rpb25NZXRob2QYCCABKA4yQC5t",
-            "Zy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuU3RhcnRHcmFudGVkUnNwLk92ZXJs",
-            "YXlJbmplY3Rpb25NZXRob2QSMgoHaG90a2V5cxgJIAEoCzIhLm1nLnByb3Rv",
-            "Y29sLmdhbWVfc3RhcnRlci5Ib3RrZXlzIn0KFk92ZXJsYXlJbmplY3Rpb25N",
-            "ZXRob2QSHwobT3ZlcmxheUluamVjdGlvbk1ldGhvZF9Ob25lEAESIgoeT3Zl",
-            "cmxheUluamVjdGlvbk1ldGhvZF9EZWZhdWx0EAISHgoaT3ZlcmxheUluamVj",
-            "dGlvbk1ldGhvZF9TREsQAyJyCg5TdGFydERlbmllZFJzcBI/CgZyZWFzb24Y",
-            "ASABKA4yLy5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuU3RhcnREZW5pZWRS",
-            "c3AuUmVhc29uIh8KBlJlYXNvbhIVChFHYW1lUGF0Y2hSZXF1aXJlZBAAIhMK",
-            "EVVwZGF0ZVJlcXVpcmVkUnNwIhEKD0NvbmZpcm1hdGlvblJzcCKLAQoDUmVx",
-            "EjQKCHN0YXJ0UmVxGAEgASgLMiIubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVy",
-            "LlN0YXJ0UmVxEk4KFWhvdGtleVN0YXRlQ2hhbmdlZFJlcRgDIAEoCzIvLm1n",
-            "LnByb3RvY29sLmdhbWVfc3RhcnRlci5Ib3RrZXlTdGF0ZUNoYW5nZWRSZXEi",
-            "DwoNUmVjb25uZWN0UHVzaCIdChtVc2VySW50ZXJhY3Rpb25SZXF1aXJlZFB1",
-            "c2giNwoUU3RlYW1PdmVybGF5U2hvd1B1c2gSCwoDdXJsGAEgASgJEhIKCnN0",
-            "ZWFtQXBwSWQYAiABKA0iRwoRVXBkYXRlSG90S2V5c1B1c2gSMgoHaG90a2V5",
-            "cxgBIAIoCzIhLm1nLnByb3RvY29sLmdhbWVfc3RhcnRlci5Ib3RrZXlzIrgC",
-            "CgRQdXNoEj4KDXJlY29ubmVjdFB1c2gYAiABKAsyJy5tZy5wcm90b2NvbC5n",
-            "YW1lX3N0YXJ0ZXIuUmVjb25uZWN0UHVzaBJaCht1c2VySW50ZXJhY3Rpb25S",
-            "ZXF1aXJlZFB1c2gYAyABKAsyNS5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIu",
-            "VXNlckludGVyYWN0aW9uUmVxdWlyZWRQdXNoEkwKFHN0ZWFtT3ZlcmxheVNo",
-            "b3dQdXNoGAQgASgLMi4ubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlN0ZWFt",
-            "T3ZlcmxheVNob3dQdXNoEkYKEXVwZGF0ZUhvdEtleXNQdXNoGAUgASgLMisu",
-            "bWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlVwZGF0ZUhvdEtleXNQdXNoItcB",
-            "CgNSc3ASQgoPc3RhcnRHcmFudGVkUnNwGAEgASgLMikubWcucHJvdG9jb2wu",
-            "Z2FtZV9zdGFydGVyLlN0YXJ0R3JhbnRlZFJzcBJACg5zdGFydERlbmllZFJz",
-            "cBgCIAEoCzIoLm1nLnByb3RvY29sLmdhbWVfc3RhcnRlci5TdGFydERlbmll",
-            "ZFJzcBJKChNkaXNjb3JkUmljaFByZXNlbmNlGAMgASgLMi0ubWcucHJvdG9j",
-            "b2wuZ2FtZV9zdGFydGVyLkRpc2NvcmRSaWNoUHJlc2VuY2UiNgoIVXBzdHJl",
-            "YW0SKgoDcmVxGAEgASgLMh0ubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlJl",
-            "cSJmCgpEb3duc3RyZWFtEiwKBHB1c2gYASABKAsyHi5tZy5wcm90b2NvbC5n",
-            "YW1lX3N0YXJ0ZXIuUHVzaBIqCgNyc3AYAiABKAsyHS5tZy5wcm90b2NvbC5n",
-            "YW1lX3N0YXJ0ZXIuUnNw"));
+            "b2wuZ2FtZV9zdGFydGVyLlN0ZWFtUHJvb2ZPZlB1cmNoYXNlEiEKGXN0ZWFt",
+            "SXNSdW5uaW5nT25TdGVhbURlY2sYCCABKAgiogUKCFN0YXJ0UmVxEhcKD2xh",
+            "dW5jaGVyVmVyc2lvbhgBIAIoDRIPCgd1cGxheUlkGAIgAigNEhMKC2dhbWVW",
+            "ZXJzaW9uGAQgAigNEhEKCXByb2R1Y3RJZBgFIAEoDRIYChBzaW11bGF0aW9u",
+            "Q29uZmlnGAcgASgJEhYKDmV4ZWN1dGFibGVQYXRoGAogASgJEhsKE2V4ZWN1",
+            "dGFibGVBcmd1bWVudHMYCyABKAkSEQoJdGltZVN0YXJ0GAwgASgEEjgKCm9j",
+            "dWx1c0luZm8YECABKAsyJC5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuT2N1",
+            "bHVzSW5mbxI9CghwbGF0Zm9ybRgRIAEoDjIrLm1nLnByb3RvY29sLmdhbWVf",
+            "c3RhcnRlci5TdGFydFJlcS5QbGF0Zm9ybRI4CgpudmlkaWFJbmZvGBMgASgL",
+            "MiQubWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLk52aWRpYUluZm8SOAoKd2VH",
+            "YW1lSW5mbxgUIAEoCzIkLm1nLnByb3RvY29sLmdhbWVfc3RhcnRlci5XZUdh",
+            "bWVJbmZvEjYKCXN0ZWFtSW5mbxgWIAEoCzIjLm1nLnByb3RvY29sLmdhbWVf",
+            "c3RhcnRlci5TdGVhbUluZm8ihgEKCFBsYXRmb3JtEhIKDlBsYXRmb3JtX1Vw",
+            "bGF5EAESEgoOUGxhdGZvcm1fU3RlYW0QAhITCg9QbGF0Zm9ybV9PY3VsdXMQ",
+            "AxITCg9QbGF0Zm9ybV9OdmlkaWEQBBITCg9QbGF0Zm9ybV9Td2l0Y2gQBRIT",
+            "Cg9QbGF0Zm9ybV9XZUdhbWUQBkoECAMQBEoECAYQB0oECAgQCUoECAkQCkoE",
+            "CA0QDkoECA4QD0oECA8QEEoECBIQE0oECBUQFiI+ChVIb3RrZXlTdGF0ZUNo",
+            "YW5nZWRSZXESEgoKaG90a2V5VHlwZRgBIAIoBRIRCglpc1ByZXNzZWQYAiAC",
+            "KAgiaQoGSG90a2V5EhIKCmhvdGtleVR5cGUYASACKAUSDwoHa2V5Q29kZRgC",
+            "IAIoDRIQCghhbHRTdGF0ZRgDIAIoCBISCgpzaGlmdFN0YXRlGAQgAigIEhQK",
+            "DGNvbnRyb2xTdGF0ZRgFIAIoCCI8CgdIb3RrZXlzEjEKB2hvdGtleXMYASAD",
+            "KAsyIC5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuSG90a2V5Is4DCg9TdGFy",
+            "dEdyYW50ZWRSc3ASFgoOb3ZlcmxheUVuYWJsZWQYASACKAgSFAoMd2luZG93",
+            "ZWRNb2RlGAIgAigIEhYKDmV4ZWN1dGFibGVQYXRoGAMgASgJEhgKEHdvcmtp",
+            "bmdEaXJlY3RvcnkYBCABKAkSEQoJYXJndW1lbnRzGAUgASgJEhsKE2FkZGl0",
+            "aW9uYWxBcmd1bWVudHMYBiABKAkSFgoOdXBsYXlBcmd1bWVudHMYByABKAkS",
+            "YAoWb3ZlcmxheUluamVjdGlvbk1ldGhvZBgIIAEoDjJALm1nLnByb3RvY29s",
+            "LmdhbWVfc3RhcnRlci5TdGFydEdyYW50ZWRSc3AuT3ZlcmxheUluamVjdGlv",
+            "bk1ldGhvZBIyCgdob3RrZXlzGAkgASgLMiEubWcucHJvdG9jb2wuZ2FtZV9z",
+            "dGFydGVyLkhvdGtleXMifQoWT3ZlcmxheUluamVjdGlvbk1ldGhvZBIfChtP",
+            "dmVybGF5SW5qZWN0aW9uTWV0aG9kX05vbmUQARIiCh5PdmVybGF5SW5qZWN0",
+            "aW9uTWV0aG9kX0RlZmF1bHQQAhIeChpPdmVybGF5SW5qZWN0aW9uTWV0aG9k",
+            "X1NESxADInIKDlN0YXJ0RGVuaWVkUnNwEj8KBnJlYXNvbhgBIAEoDjIvLm1n",
+            "LnByb3RvY29sLmdhbWVfc3RhcnRlci5TdGFydERlbmllZFJzcC5SZWFzb24i",
+            "HwoGUmVhc29uEhUKEUdhbWVQYXRjaFJlcXVpcmVkEAAiEwoRVXBkYXRlUmVx",
+            "dWlyZWRSc3AiEQoPQ29uZmlybWF0aW9uUnNwIosBCgNSZXESNAoIc3RhcnRS",
+            "ZXEYASABKAsyIi5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuU3RhcnRSZXES",
+            "TgoVaG90a2V5U3RhdGVDaGFuZ2VkUmVxGAMgASgLMi8ubWcucHJvdG9jb2wu",
+            "Z2FtZV9zdGFydGVyLkhvdGtleVN0YXRlQ2hhbmdlZFJlcSIPCg1SZWNvbm5l",
+            "Y3RQdXNoIh0KG1VzZXJJbnRlcmFjdGlvblJlcXVpcmVkUHVzaCI3ChRTdGVh",
+            "bU92ZXJsYXlTaG93UHVzaBILCgN1cmwYASABKAkSEgoKc3RlYW1BcHBJZBgC",
+            "IAEoDSJHChFVcGRhdGVIb3RLZXlzUHVzaBIyCgdob3RrZXlzGAEgAigLMiEu",
+            "bWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLkhvdGtleXMiuAIKBFB1c2gSPgoN",
+            "cmVjb25uZWN0UHVzaBgCIAEoCzInLm1nLnByb3RvY29sLmdhbWVfc3RhcnRl",
+            "ci5SZWNvbm5lY3RQdXNoEloKG3VzZXJJbnRlcmFjdGlvblJlcXVpcmVkUHVz",
+            "aBgDIAEoCzI1Lm1nLnByb3RvY29sLmdhbWVfc3RhcnRlci5Vc2VySW50ZXJh",
+            "Y3Rpb25SZXF1aXJlZFB1c2gSTAoUc3RlYW1PdmVybGF5U2hvd1B1c2gYBCAB",
+            "KAsyLi5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuU3RlYW1PdmVybGF5U2hv",
+            "d1B1c2gSRgoRdXBkYXRlSG90S2V5c1B1c2gYBSABKAsyKy5tZy5wcm90b2Nv",
+            "bC5nYW1lX3N0YXJ0ZXIuVXBkYXRlSG90S2V5c1B1c2gi1wEKA1JzcBJCCg9z",
+            "dGFydEdyYW50ZWRSc3AYASABKAsyKS5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0",
+            "ZXIuU3RhcnRHcmFudGVkUnNwEkAKDnN0YXJ0RGVuaWVkUnNwGAIgASgLMigu",
+            "bWcucHJvdG9jb2wuZ2FtZV9zdGFydGVyLlN0YXJ0RGVuaWVkUnNwEkoKE2Rp",
+            "c2NvcmRSaWNoUHJlc2VuY2UYAyABKAsyLS5tZy5wcm90b2NvbC5nYW1lX3N0",
+            "YXJ0ZXIuRGlzY29yZFJpY2hQcmVzZW5jZSI2CghVcHN0cmVhbRIqCgNyZXEY",
+            "ASABKAsyHS5tZy5wcm90b2NvbC5nYW1lX3N0YXJ0ZXIuUmVxImYKCkRvd25z",
+            "dHJlYW0SLAoEcHVzaBgBIAEoCzIeLm1nLnByb3RvY29sLmdhbWVfc3RhcnRl",
+            "ci5QdXNoEioKA3JzcBgCIAEoCzIdLm1nLnByb3RvY29sLmdhbWVfc3RhcnRl",
+            "ci5Sc3A="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -105,7 +106,7 @@ namespace Uplay.GameStarter {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.OculusInfo), global::Uplay.GameStarter.OculusInfo.Parser, new[]{ "AppId", "UserId", "OculusUserId", "AccessToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.NvidiaInfo), global::Uplay.GameStarter.NvidiaInfo.Parser, new[]{ "AccessToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.WeGameInfo), global::Uplay.GameStarter.WeGameInfo.Parser, new[]{ "RailGameId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.SteamInfo), global::Uplay.GameStarter.SteamInfo.Parser, new[]{ "SteamProfileId", "SteamTicket", "SteamGameOwnerProfileId", "SteamGameId", "SteamFreePackageId", "SteamRequiredProductId", "SteamProofOfPurchase" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.SteamInfo), global::Uplay.GameStarter.SteamInfo.Parser, new[]{ "SteamProfileId", "SteamTicket", "SteamGameOwnerProfileId", "SteamGameId", "SteamFreePackageId", "SteamRequiredProductId", "SteamProofOfPurchase", "SteamIsRunningOnSteamDeck" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.StartReq), global::Uplay.GameStarter.StartReq.Parser, new[]{ "LauncherVersion", "UplayId", "GameVersion", "ProductId", "SimulationConfig", "ExecutablePath", "ExecutableArguments", "TimeStart", "OculusInfo", "Platform", "NvidiaInfo", "WeGameInfo", "SteamInfo" }, null, new[]{ typeof(global::Uplay.GameStarter.StartReq.Types.Platform) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.HotkeyStateChangedReq), global::Uplay.GameStarter.HotkeyStateChangedReq.Parser, new[]{ "HotkeyType", "IsPressed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.GameStarter.Hotkey), global::Uplay.GameStarter.Hotkey.Parser, new[]{ "HotkeyType", "KeyCode", "AltState", "ShiftState", "ControlState" }, null, null, null, null),
@@ -1804,6 +1805,7 @@ namespace Uplay.GameStarter {
       steamFreePackageId_ = other.steamFreePackageId_;
       steamRequiredProductId_ = other.steamRequiredProductId_;
       steamProofOfPurchase_ = other.steamProofOfPurchase_.Clone();
+      steamIsRunningOnSteamDeck_ = other.steamIsRunningOnSteamDeck_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1983,6 +1985,33 @@ namespace Uplay.GameStarter {
       get { return steamProofOfPurchase_; }
     }
 
+    /// <summary>Field number for the "steamIsRunningOnSteamDeck" field.</summary>
+    public const int SteamIsRunningOnSteamDeckFieldNumber = 8;
+    private readonly static bool SteamIsRunningOnSteamDeckDefaultValue = false;
+
+    private bool steamIsRunningOnSteamDeck_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SteamIsRunningOnSteamDeck {
+      get { if ((_hasBits0 & 8) != 0) { return steamIsRunningOnSteamDeck_; } else { return SteamIsRunningOnSteamDeckDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        steamIsRunningOnSteamDeck_ = value;
+      }
+    }
+    /// <summary>Gets whether the "steamIsRunningOnSteamDeck" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSteamIsRunningOnSteamDeck {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "steamIsRunningOnSteamDeck" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSteamIsRunningOnSteamDeck() {
+      _hasBits0 &= ~8;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2005,6 +2034,7 @@ namespace Uplay.GameStarter {
       if (SteamFreePackageId != other.SteamFreePackageId) return false;
       if (SteamRequiredProductId != other.SteamRequiredProductId) return false;
       if(!steamProofOfPurchase_.Equals(other.steamProofOfPurchase_)) return false;
+      if (SteamIsRunningOnSteamDeck != other.SteamIsRunningOnSteamDeck) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2019,6 +2049,7 @@ namespace Uplay.GameStarter {
       if (HasSteamFreePackageId) hash ^= SteamFreePackageId.GetHashCode();
       if (HasSteamRequiredProductId) hash ^= SteamRequiredProductId.GetHashCode();
       hash ^= steamProofOfPurchase_.GetHashCode();
+      if (HasSteamIsRunningOnSteamDeck) hash ^= SteamIsRunningOnSteamDeck.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2062,6 +2093,10 @@ namespace Uplay.GameStarter {
         output.WriteUInt32(SteamRequiredProductId);
       }
       steamProofOfPurchase_.WriteTo(output, _repeated_steamProofOfPurchase_codec);
+      if (HasSteamIsRunningOnSteamDeck) {
+        output.WriteRawTag(64);
+        output.WriteBool(SteamIsRunningOnSteamDeck);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2097,6 +2132,10 @@ namespace Uplay.GameStarter {
         output.WriteUInt32(SteamRequiredProductId);
       }
       steamProofOfPurchase_.WriteTo(ref output, _repeated_steamProofOfPurchase_codec);
+      if (HasSteamIsRunningOnSteamDeck) {
+        output.WriteRawTag(64);
+        output.WriteBool(SteamIsRunningOnSteamDeck);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2126,6 +2165,9 @@ namespace Uplay.GameStarter {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SteamRequiredProductId);
       }
       size += steamProofOfPurchase_.CalculateSize(_repeated_steamProofOfPurchase_codec);
+      if (HasSteamIsRunningOnSteamDeck) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2157,6 +2199,9 @@ namespace Uplay.GameStarter {
         SteamRequiredProductId = other.SteamRequiredProductId;
       }
       steamProofOfPurchase_.Add(other.steamProofOfPurchase_);
+      if (other.HasSteamIsRunningOnSteamDeck) {
+        SteamIsRunningOnSteamDeck = other.SteamIsRunningOnSteamDeck;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2200,6 +2245,10 @@ namespace Uplay.GameStarter {
             steamProofOfPurchase_.AddEntriesFrom(input, _repeated_steamProofOfPurchase_codec);
             break;
           }
+          case 64: {
+            SteamIsRunningOnSteamDeck = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2241,6 +2290,10 @@ namespace Uplay.GameStarter {
           }
           case 58: {
             steamProofOfPurchase_.AddEntriesFrom(ref input, _repeated_steamProofOfPurchase_codec);
+            break;
+          }
+          case 64: {
+            SteamIsRunningOnSteamDeck = input.ReadBool();
             break;
           }
         }

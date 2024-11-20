@@ -102,134 +102,136 @@ namespace Uplay.Friends {
             "ZHMuRGVwcmVjYXRlZEZyaWVuZHNOaWNrEgoKAm9rGAIgAigIIkAKE0FjY2Vw",
             "dEZyaWVuZHNoaXBSZXESKQoEdXNlchgBIAIoCzIbLm1nLnByb3RvY29sLmZy",
             "aWVuZHMuRnJpZW5kIiEKE0FjY2VwdEZyaWVuZHNoaXBSc3ASCgoCb2sYASAC",
-            "KAgiHwoPR2V0QmxhY2tsaXN0UmVxEgwKBHVzZXIYASABKAkiNQoPR2V0Qmxh",
-            "Y2tsaXN0UnNwEg8KB3N1Y2Nlc3MYASABKAgSEQoJYmxhY2tsaXN0GAIgAygJ",
-            "Ij4KEUFkZFRvQmxhY2tsaXN0UmVxEikKBHVzZXIYASACKAsyGy5tZy5wcm90",
-            "b2NvbC5mcmllbmRzLkZyaWVuZCIfChFBZGRUb0JsYWNrbGlzdFJzcBIKCgJv",
-            "axgBIAIoCCJBChRDbGVhclJlbGF0aW9uc2hpcFJlcRIpCgR1c2VyGAEgAigL",
-            "MhsubWcucHJvdG9jb2wuZnJpZW5kcy5GcmllbmQiIgoUQ2xlYXJSZWxhdGlv",
-            "bnNoaXBSc3ASCgoCb2sYASACKAgiQQoURGVjbGluZUZyaWVuZHNoaXBSZXES",
-            "KQoEdXNlchgBIAIoCzIbLm1nLnByb3RvY29sLmZyaWVuZHMuRnJpZW5kIiIK",
-            "FERlY2xpbmVGcmllbmRzaGlwUnNwEgoKAm9rGAEgAigIIkMKFlJlbW92ZUZy",
-            "b21CbGFja2xpc3RSZXESKQoEdXNlchgBIAIoCzIbLm1nLnByb3RvY29sLmZy",
-            "aWVuZHMuRnJpZW5kIiQKFlJlbW92ZUZyb21CbGFja2xpc3RSc3ASCgoCb2sY",
-            "ASACKAgiQQoUUmVxdWVzdEZyaWVuZHNoaXBSZXESKQoEdXNlchgBIAIoCzIb",
-            "Lm1nLnByb3RvY29sLmZyaWVuZHMuRnJpZW5kIiIKFFJlcXVlc3RGcmllbmRz",
-            "aGlwUnNwEgoKAm9rGAEgAigIIkMKFVJlcXVlc3RGcmllbmRzaGlwc1JlcRIq",
-            "CgV1c2VycxgBIAMoCzIbLm1nLnByb3RvY29sLmZyaWVuZHMuRnJpZW5kIiMK",
-            "FVJlcXVlc3RGcmllbmRzaGlwc1JzcBIKCgJvaxgBIAMoCCJzCg5Kb2luR2Ft",
-            "ZUludml0ZRIXCg9hY2NvdW50X2lkX2Zyb20YASACKAkSJwoEZ2FtZRgDIAIo",
-            "CzIZLm1nLnByb3RvY29sLmZyaWVuZHMuR2FtZRIfChdkZXByZWNhdGVkX3By",
-            "b2R1Y3RfbmFtZRgCIAEoCSJ4ChVKb2luR2FtZUludml0YXRpb25SZXESFQoN",
-            "YWNjb3VudF9pZF90bxgBIAIoCRInCgRnYW1lGAMgAigLMhkubWcucHJvdG9j",
-            "b2wuZnJpZW5kcy5HYW1lEh8KF2RlcHJlY2F0ZWRfcHJvZHVjdF9uYW1lGAIg",
-            "ASgJIiMKFUpvaW5HYW1lSW52aXRhdGlvblJzcBIKCgJvaxgBIAIoCCIqChRE",
-            "ZWNsaW5lR2FtZUludml0ZVJlcRISCgphY2NvdW50X2lkGAEgAigJIicKFERl",
-            "Y2xpbmVHYW1lSW52aXRlUnNwEg8KB3N1Y2Nlc3MYASACKAgiKQoTVWJpVGlj",
-            "a2V0UmVmcmVzaFJlcRISCgp1YmlfdGlja2V0GAEgAigJIiYKE1ViaVRpY2tl",
-            "dFJlZnJlc2hSc3ASDwoHc3VjY2VzcxgBIAIoCCI2Cg5TZXROaWNrbmFtZVJl",
-            "cRISCgphY2NvdW50X2lkGAEgAigJEhAKCG5pY2tuYW1lGAIgAigJIiEKDlNl",
-            "dE5pY2tuYW1lUnNwEg8KB3N1Y2Nlc3MYASACKAgi6wwKA1JlcRISCgpyZXF1",
-            "ZXN0X2lkGAEgAigNEk8KGWRlcHJlY2F0ZWRfaW5pdGlhbGl6ZV9yZXEYAiAB",
-            "KAsyLC5tZy5wcm90b2NvbC5mcmllbmRzLkRlcHJlY2F0ZWRJbml0aWFsaXpl",
-            "UmVxElsKJWRlcHJlY2F0ZWRfZ2V0X3JlbGF0aW9uc2hpcHNfbGlzdF9yZXEY",
-            "AyABKAsyLC5tZy5wcm90b2NvbC5mcmllbmRzLkdldFJlbGF0aW9uc2hpcHNM",
-            "aXN0UmVxEkcKFWFjY2VwdF9mcmllbmRzaGlwX3JlcRgEIAEoCzIoLm1nLnBy",
-            "b3RvY29sLmZyaWVuZHMuQWNjZXB0RnJpZW5kc2hpcFJlcRJEChRhZGRfdG9f",
-            "YmxhY2tsaXN0X3JlcRgFIAEoCzImLm1nLnByb3RvY29sLmZyaWVuZHMuQWRk",
-            "VG9CbGFja2xpc3RSZXESSQoWY2xlYXJfcmVsYXRpb25zaGlwX3JlcRgGIAEo",
-            "CzIpLm1nLnByb3RvY29sLmZyaWVuZHMuQ2xlYXJSZWxhdGlvbnNoaXBSZXES",
-            "SQoWZGVjbGluZV9mcmllbmRzaGlwX3JlcRgHIAEoCzIpLm1nLnByb3RvY29s",
-            "LmZyaWVuZHMuRGVjbGluZUZyaWVuZHNoaXBSZXESTgoZcmVtb3ZlX2Zyb21f",
-            "YmxhY2tsaXN0X3JlcRgIIAEoCzIrLm1nLnByb3RvY29sLmZyaWVuZHMuUmVt",
-            "b3ZlRnJvbUJsYWNrbGlzdFJlcRJUCiFkZXByZWNhdGVkX3JlcXVlc3RfZnJp",
-            "ZW5kc2hpcF9yZXEYCSABKAsyKS5tZy5wcm90b2NvbC5mcmllbmRzLlJlcXVl",
-            "c3RGcmllbmRzaGlwUmVxEjsKD2ZpbmRfZnJpZW5kX3JlcRgKIAEoCzIiLm1n",
-            "LnByb3RvY29sLmZyaWVuZHMuRmluZEZyaWVuZFJlcRJEChlkZXByZWNhdGVk",
-            "X2dldF9zdGF0dXNfcmVxGAsgASgLMiEubWcucHJvdG9jb2wuZnJpZW5kcy5H",
-            "ZXRTdGF0dXNSZXESPwoMZ2V0X25pY2tfcmVxGAwgASgLMikubWcucHJvdG9j",
-            "b2wuZnJpZW5kcy5EZXByZWNhdGVkR2V0Tmlja1JlcRI1CgxzZXRfZ2FtZV9y",
-            "ZXEYDSABKAsyHy5tZy5wcm90b2NvbC5mcmllbmRzLlNldEdhbWVSZXESTAoY",
-            "am9pbl9nYW1lX2ludml0YXRpb25fcmVxGA4gASgLMioubWcucHJvdG9jb2wu",
-            "ZnJpZW5kcy5Kb2luR2FtZUludml0YXRpb25SZXESWwogc2V0X3JpY2hfcHJl",
-            "c2VuY2VfcmVxX2RlcHJlY2F0ZWQYDyABKAsyMS5tZy5wcm90b2NvbC5mcmll",
-            "bmRzLlNldFJpY2hQcmVzZW5jZVJlcURlcHJlY2F0ZWQSSwoXcmVxdWVzdF9m",
-            "cmllbmRzaGlwc19yZXEYESABKAsyKi5tZy5wcm90b2NvbC5mcmllbmRzLlJl",
-            "cXVlc3RGcmllbmRzaGlwc1JlcRJKChdzZXRfYWN0aXZpdHlfc3RhdHVzX3Jl",
-            "cRgSIAEoCzIpLm1nLnByb3RvY29sLmZyaWVuZHMuU2V0QWN0aXZpdHlTdGF0",
-            "dXNSZXESRgoVc2V0X3JpY2hfcHJlc2VuY2VfcmVxGBMgASgLMicubWcucHJv",
-            "dG9jb2wuZnJpZW5kcy5TZXRSaWNoUHJlc2VuY2VSZXESSgoXZGVjbGluZV9n",
-            "YW1lX2ludml0ZV9yZXEYFCABKAsyKS5tZy5wcm90b2NvbC5mcmllbmRzLkRl",
-            "Y2xpbmVHYW1lSW52aXRlUmVxEkgKFnViaV90aWNrZXRfcmVmcmVzaF9yZXEY",
-            "FSABKAsyKC5tZy5wcm90b2NvbC5mcmllbmRzLlViaVRpY2tldFJlZnJlc2hS",
-            "ZXESOgoOaW5pdGlhbGl6ZV9yZXEYFiABKAsyIi5tZy5wcm90b2NvbC5mcmll",
-            "bmRzLkluaXRpYWxpemVSZXESPQoQc2V0X25pY2tuYW1lX3JlcRgXIAEoCzIj",
-            "Lm1nLnByb3RvY29sLmZyaWVuZHMuU2V0Tmlja25hbWVSZXESPwoRZ2V0X2Js",
-            "YWNrbGlzdF9yZXEYGCABKAsyJC5tZy5wcm90b2NvbC5mcmllbmRzLkdldEJs",
-            "YWNrbGlzdFJlcSLqDAoDUnNwEhIKCnJlcXVlc3RfaWQYASACKA0STwoZZGVw",
-            "cmVjYXRlZF9pbml0aWFsaXplX3JzcBgCIAEoCzIsLm1nLnByb3RvY29sLmZy",
-            "aWVuZHMuRGVwcmVjYXRlZEluaXRpYWxpemVSc3ASWwolZGVwcmVjYXRlZF9n",
-            "ZXRfcmVsYXRpb25zaGlwc19saXN0X3JzcBgDIAEoCzIsLm1nLnByb3RvY29s",
-            "LmZyaWVuZHMuR2V0UmVsYXRpb25zaGlwc0xpc3RSc3ASRwoVYWNjZXB0X2Zy",
-            "aWVuZHNoaXBfcnNwGAQgASgLMigubWcucHJvdG9jb2wuZnJpZW5kcy5BY2Nl",
-            "cHRGcmllbmRzaGlwUnNwEkQKFGFkZF90b19ibGFja2xpc3RfcnNwGAUgASgL",
-            "MiYubWcucHJvdG9jb2wuZnJpZW5kcy5BZGRUb0JsYWNrbGlzdFJzcBJJChZj",
-            "bGVhcl9yZWxhdGlvbnNoaXBfcnNwGAYgASgLMikubWcucHJvdG9jb2wuZnJp",
-            "ZW5kcy5DbGVhclJlbGF0aW9uc2hpcFJzcBJJChZkZWNsaW5lX2ZyaWVuZHNo",
-            "aXBfcnNwGAcgASgLMikubWcucHJvdG9jb2wuZnJpZW5kcy5EZWNsaW5lRnJp",
-            "ZW5kc2hpcFJzcBJOChlyZW1vdmVfZnJvbV9ibGFja2xpc3RfcnNwGAggASgL",
-            "MisubWcucHJvdG9jb2wuZnJpZW5kcy5SZW1vdmVGcm9tQmxhY2tsaXN0UnNw",
-            "ElQKIWRlcHJlY2F0ZWRfcmVxdWVzdF9mcmllbmRzaGlwX3JzcBgJIAEoCzIp",
-            "Lm1nLnByb3RvY29sLmZyaWVuZHMuUmVxdWVzdEZyaWVuZHNoaXBSc3ASOwoP",
-            "ZmluZF9mcmllbmRfcnNwGAogASgLMiIubWcucHJvdG9jb2wuZnJpZW5kcy5G",
-            "aW5kRnJpZW5kUnNwEkQKGWRlcHJlY2F0ZWRfZ2V0X3N0YXR1c19yc3AYCyAB",
-            "KAsyIS5tZy5wcm90b2NvbC5mcmllbmRzLkdldFN0YXR1c1JzcBI/CgxnZXRf",
-            "bmlja19yc3AYDCABKAsyKS5tZy5wcm90b2NvbC5mcmllbmRzLkRlcHJlY2F0",
-            "ZWRHZXROaWNrUnNwEjUKDHNldF9nYW1lX3JzcBgNIAEoCzIfLm1nLnByb3Rv",
-            "Y29sLmZyaWVuZHMuU2V0R2FtZVJzcBJMChhqb2luX2dhbWVfaW52aXRhdGlv",
-            "bl9yc3AYDiABKAsyKi5tZy5wcm90b2NvbC5mcmllbmRzLkpvaW5HYW1lSW52",
-            "aXRhdGlvblJzcBJaCh9zZXRfcmljaF9wcmVzZW5jZV9yc3BfZGVwcmVjdGVk",
-            "GA8gASgLMjEubWcucHJvdG9jb2wuZnJpZW5kcy5TZXRSaWNoUHJlc2VuY2VS",
-            "c3BEZXByZWNhdGVkEksKF3JlcXVlc3RfZnJpZW5kc2hpcHNfcnNwGBEgASgL",
-            "MioubWcucHJvdG9jb2wuZnJpZW5kcy5SZXF1ZXN0RnJpZW5kc2hpcHNSc3AS",
-            "SgoXc2V0X2FjdGl2aXR5X3N0YXR1c19yc3AYEiABKAsyKS5tZy5wcm90b2Nv",
-            "bC5mcmllbmRzLlNldEFjdGl2aXR5U3RhdHVzUnNwEkYKFXNldF9yaWNoX3By",
-            "ZXNlbmNlX3JzcBgTIAEoCzInLm1nLnByb3RvY29sLmZyaWVuZHMuU2V0Umlj",
-            "aFByZXNlbmNlUnNwEkoKF2RlY2xpbmVfZ2FtZV9pbnZpdGVfcnNwGBQgASgL",
-            "MikubWcucHJvdG9jb2wuZnJpZW5kcy5EZWNsaW5lR2FtZUludml0ZVJzcBJI",
-            "ChZ1YmlfdGlja2V0X3JlZnJlc2hfcnNwGBUgASgLMigubWcucHJvdG9jb2wu",
-            "ZnJpZW5kcy5VYmlUaWNrZXRSZWZyZXNoUnNwEjoKDmluaXRpYWxpemVfcnNw",
-            "GBYgASgLMiIubWcucHJvdG9jb2wuZnJpZW5kcy5Jbml0aWFsaXplUnNwEj0K",
-            "EHNldF9uaWNrbmFtZV9yc3AYFyABKAsyIy5tZy5wcm90b2NvbC5mcmllbmRz",
-            "LlNldE5pY2tuYW1lUnNwEj8KEWdldF9ibGFja2xpc3RfcnNwGBggASgLMiQu",
-            "bWcucHJvdG9jb2wuZnJpZW5kcy5HZXRCbGFja2xpc3RSc3AiUgoXUHVzaFVw",
-            "ZGF0ZWRSZWxhdGlvbnNoaXASNwoMcmVsYXRpb25zaGlwGAEgAigLMiEubWcu",
-            "cHJvdG9jb2wuZnJpZW5kcy5SZWxhdGlvbnNoaXAiYwoRUHVzaFVwZGF0ZWRT",
-            "dGF0dXMSMwoOdXBkYXRlc19zdGF0dXMYASACKAsyGy5tZy5wcm90b2NvbC5m",
-            "cmllbmRzLlN0YXR1cxIZChFpc19pbml0aWFsX3N0YXR1cxgCIAEoCCJNChZQ",
-            "dXNoSm9pbkdhbWVJbnZpdGF0aW9uEjMKBmludml0ZRgBIAIoCzIjLm1nLnBy",
-            "b3RvY29sLmZyaWVuZHMuSm9pbkdhbWVJbnZpdGUiPwoWUHVzaFJlY2VudGx5",
-            "TWV0UGxheWVycxIQCgh1cGxheV9pZBgBIAIoDRITCgthY2NvdW50X2lkcxgC",
-            "IAMoCSIsChZQdXNoR2FtZUludml0ZURlY2xpbmVkEhIKCmFjY291bnRfaWQY",
-            "ASACKAkiQQoSUHVzaE5pY2tuYW1lVXBkYXRlEhkKEWZyaWVuZF9hY2NvdW50",
-            "X2lkGAEgAigJEhAKCG5pY2tuYW1lGAIgAigJIkUKFFB1c2hJc0Zhdm9yaXRl",
-            "VXBkYXRlEhkKEWZyaWVuZF9hY2NvdW50X2lkGAEgAigJEhIKCmlzRmF2b3Jp",
-            "dGUYAiACKAgingQKBFB1c2gSTwoZcHVzaF91cGRhdGVkX3JlbGF0aW9uc2hp",
-            "cBgBIAEoCzIsLm1nLnByb3RvY29sLmZyaWVuZHMuUHVzaFVwZGF0ZWRSZWxh",
-            "dGlvbnNoaXASQwoTcHVzaF91cGRhdGVkX3N0YXR1cxgCIAEoCzImLm1nLnBy",
-            "b3RvY29sLmZyaWVuZHMuUHVzaFVwZGF0ZWRTdGF0dXMSTgoZcHVzaF9qb2lu",
-            "X2dhbWVfaW52aXRhdGlvbhgDIAEoCzIrLm1nLnByb3RvY29sLmZyaWVuZHMu",
-            "UHVzaEpvaW5HYW1lSW52aXRhdGlvbhJOChlwdXNoX3JlY2VudGx5X21ldF9w",
-            "bGF5ZXJzGAQgASgLMisubWcucHJvdG9jb2wuZnJpZW5kcy5QdXNoUmVjZW50",
-            "bHlNZXRQbGF5ZXJzEk4KGXB1c2hfZ2FtZV9pbnZpdGVfZGVjbGluZWQYBSAB",
-            "KAsyKy5tZy5wcm90b2NvbC5mcmllbmRzLlB1c2hHYW1lSW52aXRlRGVjbGlu",
-            "ZWQSRQoUcHVzaF9uaWNrbmFtZV91cGRhdGUYBiABKAsyJy5tZy5wcm90b2Nv",
-            "bC5mcmllbmRzLlB1c2hOaWNrbmFtZVVwZGF0ZRJJChZwdXNoX2lzRmF2b3Jp",
-            "dGVfdXBkYXRlGAcgASgLMikubWcucHJvdG9jb2wuZnJpZW5kcy5QdXNoSXNG",
-            "YXZvcml0ZVVwZGF0ZSI1CghVcHN0cmVhbRIpCgdyZXF1ZXN0GAEgASgLMhgu",
-            "bWcucHJvdG9jb2wuZnJpZW5kcy5SZXEiYQoKRG93bnN0cmVhbRIqCghyZXNw",
-            "b25zZRgBIAEoCzIYLm1nLnByb3RvY29sLmZyaWVuZHMuUnNwEicKBHB1c2gY",
-            "AiABKAsyGS5tZy5wcm90b2NvbC5mcmllbmRzLlB1c2g="));
+            "KAgiHwoPR2V0QmxhY2tsaXN0UmVxEgwKBHVzZXIYASABKAkiPwoZRGVwcmVj",
+            "YXRlZEdldEJsYWNrbGlzdFJzcBIPCgdzdWNjZXNzGAEgASgIEhEKCWJsYWNr",
+            "bGlzdBgCIAMoCSI+ChFBZGRUb0JsYWNrbGlzdFJlcRIpCgR1c2VyGAEgAigL",
+            "MhsubWcucHJvdG9jb2wuZnJpZW5kcy5GcmllbmQiKQobRGVwcmVjYXRlZEFk",
+            "ZFRvQmxhY2tsaXN0UnNwEgoKAm9rGAEgAigIIkEKFENsZWFyUmVsYXRpb25z",
+            "aGlwUmVxEikKBHVzZXIYASACKAsyGy5tZy5wcm90b2NvbC5mcmllbmRzLkZy",
+            "aWVuZCIiChRDbGVhclJlbGF0aW9uc2hpcFJzcBIKCgJvaxgBIAIoCCJBChRE",
+            "ZWNsaW5lRnJpZW5kc2hpcFJlcRIpCgR1c2VyGAEgAigLMhsubWcucHJvdG9j",
+            "b2wuZnJpZW5kcy5GcmllbmQiIgoURGVjbGluZUZyaWVuZHNoaXBSc3ASCgoC",
+            "b2sYASACKAgiQwoWUmVtb3ZlRnJvbUJsYWNrbGlzdFJlcRIpCgR1c2VyGAEg",
+            "AigLMhsubWcucHJvdG9jb2wuZnJpZW5kcy5GcmllbmQiLgogRGVwcmVjYXRl",
+            "ZFJlbW92ZUZyb21CbGFja2xpc3RSc3ASCgoCb2sYASACKAgiQQoUUmVxdWVz",
+            "dEZyaWVuZHNoaXBSZXESKQoEdXNlchgBIAIoCzIbLm1nLnByb3RvY29sLmZy",
+            "aWVuZHMuRnJpZW5kIiIKFFJlcXVlc3RGcmllbmRzaGlwUnNwEgoKAm9rGAEg",
+            "AigIIkMKFVJlcXVlc3RGcmllbmRzaGlwc1JlcRIqCgV1c2VycxgBIAMoCzIb",
+            "Lm1nLnByb3RvY29sLmZyaWVuZHMuRnJpZW5kIiMKFVJlcXVlc3RGcmllbmRz",
+            "aGlwc1JzcBIKCgJvaxgBIAMoCCJzCg5Kb2luR2FtZUludml0ZRIXCg9hY2Nv",
+            "dW50X2lkX2Zyb20YASACKAkSJwoEZ2FtZRgDIAIoCzIZLm1nLnByb3RvY29s",
+            "LmZyaWVuZHMuR2FtZRIfChdkZXByZWNhdGVkX3Byb2R1Y3RfbmFtZRgCIAEo",
+            "CSJ4ChVKb2luR2FtZUludml0YXRpb25SZXESFQoNYWNjb3VudF9pZF90bxgB",
+            "IAIoCRInCgRnYW1lGAMgAigLMhkubWcucHJvdG9jb2wuZnJpZW5kcy5HYW1l",
+            "Eh8KF2RlcHJlY2F0ZWRfcHJvZHVjdF9uYW1lGAIgASgJIiMKFUpvaW5HYW1l",
+            "SW52aXRhdGlvblJzcBIKCgJvaxgBIAIoCCIqChREZWNsaW5lR2FtZUludml0",
+            "ZVJlcRISCgphY2NvdW50X2lkGAEgAigJIicKFERlY2xpbmVHYW1lSW52aXRl",
+            "UnNwEg8KB3N1Y2Nlc3MYASACKAgiKQoTVWJpVGlja2V0UmVmcmVzaFJlcRIS",
+            "Cgp1YmlfdGlja2V0GAEgAigJIiYKE1ViaVRpY2tldFJlZnJlc2hSc3ASDwoH",
+            "c3VjY2VzcxgBIAIoCCI2Cg5TZXROaWNrbmFtZVJlcRISCgphY2NvdW50X2lk",
+            "GAEgAigJEhAKCG5pY2tuYW1lGAIgAigJIiEKDlNldE5pY2tuYW1lUnNwEg8K",
+            "B3N1Y2Nlc3MYASACKAgi6wwKA1JlcRISCgpyZXF1ZXN0X2lkGAEgAigNEk8K",
+            "GWRlcHJlY2F0ZWRfaW5pdGlhbGl6ZV9yZXEYAiABKAsyLC5tZy5wcm90b2Nv",
+            "bC5mcmllbmRzLkRlcHJlY2F0ZWRJbml0aWFsaXplUmVxElsKJWRlcHJlY2F0",
+            "ZWRfZ2V0X3JlbGF0aW9uc2hpcHNfbGlzdF9yZXEYAyABKAsyLC5tZy5wcm90",
+            "b2NvbC5mcmllbmRzLkdldFJlbGF0aW9uc2hpcHNMaXN0UmVxEkcKFWFjY2Vw",
+            "dF9mcmllbmRzaGlwX3JlcRgEIAEoCzIoLm1nLnByb3RvY29sLmZyaWVuZHMu",
+            "QWNjZXB0RnJpZW5kc2hpcFJlcRJEChRhZGRfdG9fYmxhY2tsaXN0X3JlcRgF",
+            "IAEoCzImLm1nLnByb3RvY29sLmZyaWVuZHMuQWRkVG9CbGFja2xpc3RSZXES",
+            "SQoWY2xlYXJfcmVsYXRpb25zaGlwX3JlcRgGIAEoCzIpLm1nLnByb3RvY29s",
+            "LmZyaWVuZHMuQ2xlYXJSZWxhdGlvbnNoaXBSZXESSQoWZGVjbGluZV9mcmll",
+            "bmRzaGlwX3JlcRgHIAEoCzIpLm1nLnByb3RvY29sLmZyaWVuZHMuRGVjbGlu",
+            "ZUZyaWVuZHNoaXBSZXESTgoZcmVtb3ZlX2Zyb21fYmxhY2tsaXN0X3JlcRgI",
+            "IAEoCzIrLm1nLnByb3RvY29sLmZyaWVuZHMuUmVtb3ZlRnJvbUJsYWNrbGlz",
+            "dFJlcRJUCiFkZXByZWNhdGVkX3JlcXVlc3RfZnJpZW5kc2hpcF9yZXEYCSAB",
+            "KAsyKS5tZy5wcm90b2NvbC5mcmllbmRzLlJlcXVlc3RGcmllbmRzaGlwUmVx",
+            "EjsKD2ZpbmRfZnJpZW5kX3JlcRgKIAEoCzIiLm1nLnByb3RvY29sLmZyaWVu",
+            "ZHMuRmluZEZyaWVuZFJlcRJEChlkZXByZWNhdGVkX2dldF9zdGF0dXNfcmVx",
+            "GAsgASgLMiEubWcucHJvdG9jb2wuZnJpZW5kcy5HZXRTdGF0dXNSZXESPwoM",
+            "Z2V0X25pY2tfcmVxGAwgASgLMikubWcucHJvdG9jb2wuZnJpZW5kcy5EZXBy",
+            "ZWNhdGVkR2V0Tmlja1JlcRI1CgxzZXRfZ2FtZV9yZXEYDSABKAsyHy5tZy5w",
+            "cm90b2NvbC5mcmllbmRzLlNldEdhbWVSZXESTAoYam9pbl9nYW1lX2ludml0",
+            "YXRpb25fcmVxGA4gASgLMioubWcucHJvdG9jb2wuZnJpZW5kcy5Kb2luR2Ft",
+            "ZUludml0YXRpb25SZXESWwogc2V0X3JpY2hfcHJlc2VuY2VfcmVxX2RlcHJl",
+            "Y2F0ZWQYDyABKAsyMS5tZy5wcm90b2NvbC5mcmllbmRzLlNldFJpY2hQcmVz",
+            "ZW5jZVJlcURlcHJlY2F0ZWQSSwoXcmVxdWVzdF9mcmllbmRzaGlwc19yZXEY",
+            "ESABKAsyKi5tZy5wcm90b2NvbC5mcmllbmRzLlJlcXVlc3RGcmllbmRzaGlw",
+            "c1JlcRJKChdzZXRfYWN0aXZpdHlfc3RhdHVzX3JlcRgSIAEoCzIpLm1nLnBy",
+            "b3RvY29sLmZyaWVuZHMuU2V0QWN0aXZpdHlTdGF0dXNSZXESRgoVc2V0X3Jp",
+            "Y2hfcHJlc2VuY2VfcmVxGBMgASgLMicubWcucHJvdG9jb2wuZnJpZW5kcy5T",
+            "ZXRSaWNoUHJlc2VuY2VSZXESSgoXZGVjbGluZV9nYW1lX2ludml0ZV9yZXEY",
+            "FCABKAsyKS5tZy5wcm90b2NvbC5mcmllbmRzLkRlY2xpbmVHYW1lSW52aXRl",
+            "UmVxEkgKFnViaV90aWNrZXRfcmVmcmVzaF9yZXEYFSABKAsyKC5tZy5wcm90",
+            "b2NvbC5mcmllbmRzLlViaVRpY2tldFJlZnJlc2hSZXESOgoOaW5pdGlhbGl6",
+            "ZV9yZXEYFiABKAsyIi5tZy5wcm90b2NvbC5mcmllbmRzLkluaXRpYWxpemVS",
+            "ZXESPQoQc2V0X25pY2tuYW1lX3JlcRgXIAEoCzIjLm1nLnByb3RvY29sLmZy",
+            "aWVuZHMuU2V0Tmlja25hbWVSZXESPwoRZ2V0X2JsYWNrbGlzdF9yZXEYGCAB",
+            "KAsyJC5tZy5wcm90b2NvbC5mcmllbmRzLkdldEJsYWNrbGlzdFJlcSKIDQoD",
+            "UnNwEhIKCnJlcXVlc3RfaWQYASACKA0STwoZZGVwcmVjYXRlZF9pbml0aWFs",
+            "aXplX3JzcBgCIAEoCzIsLm1nLnByb3RvY29sLmZyaWVuZHMuRGVwcmVjYXRl",
+            "ZEluaXRpYWxpemVSc3ASWwolZGVwcmVjYXRlZF9nZXRfcmVsYXRpb25zaGlw",
+            "c19saXN0X3JzcBgDIAEoCzIsLm1nLnByb3RvY29sLmZyaWVuZHMuR2V0UmVs",
+            "YXRpb25zaGlwc0xpc3RSc3ASRwoVYWNjZXB0X2ZyaWVuZHNoaXBfcnNwGAQg",
+            "ASgLMigubWcucHJvdG9jb2wuZnJpZW5kcy5BY2NlcHRGcmllbmRzaGlwUnNw",
+            "Ek4KFGFkZF90b19ibGFja2xpc3RfcnNwGAUgASgLMjAubWcucHJvdG9jb2wu",
+            "ZnJpZW5kcy5EZXByZWNhdGVkQWRkVG9CbGFja2xpc3RSc3ASSQoWY2xlYXJf",
+            "cmVsYXRpb25zaGlwX3JzcBgGIAEoCzIpLm1nLnByb3RvY29sLmZyaWVuZHMu",
+            "Q2xlYXJSZWxhdGlvbnNoaXBSc3ASSQoWZGVjbGluZV9mcmllbmRzaGlwX3Jz",
+            "cBgHIAEoCzIpLm1nLnByb3RvY29sLmZyaWVuZHMuRGVjbGluZUZyaWVuZHNo",
+            "aXBSc3ASWAoZcmVtb3ZlX2Zyb21fYmxhY2tsaXN0X3JzcBgIIAEoCzI1Lm1n",
+            "LnByb3RvY29sLmZyaWVuZHMuRGVwcmVjYXRlZFJlbW92ZUZyb21CbGFja2xp",
+            "c3RSc3ASVAohZGVwcmVjYXRlZF9yZXF1ZXN0X2ZyaWVuZHNoaXBfcnNwGAkg",
+            "ASgLMikubWcucHJvdG9jb2wuZnJpZW5kcy5SZXF1ZXN0RnJpZW5kc2hpcFJz",
+            "cBI7Cg9maW5kX2ZyaWVuZF9yc3AYCiABKAsyIi5tZy5wcm90b2NvbC5mcmll",
+            "bmRzLkZpbmRGcmllbmRSc3ASRAoZZGVwcmVjYXRlZF9nZXRfc3RhdHVzX3Jz",
+            "cBgLIAEoCzIhLm1nLnByb3RvY29sLmZyaWVuZHMuR2V0U3RhdHVzUnNwEj8K",
+            "DGdldF9uaWNrX3JzcBgMIAEoCzIpLm1nLnByb3RvY29sLmZyaWVuZHMuRGVw",
+            "cmVjYXRlZEdldE5pY2tSc3ASNQoMc2V0X2dhbWVfcnNwGA0gASgLMh8ubWcu",
+            "cHJvdG9jb2wuZnJpZW5kcy5TZXRHYW1lUnNwEkwKGGpvaW5fZ2FtZV9pbnZp",
+            "dGF0aW9uX3JzcBgOIAEoCzIqLm1nLnByb3RvY29sLmZyaWVuZHMuSm9pbkdh",
+            "bWVJbnZpdGF0aW9uUnNwEloKH3NldF9yaWNoX3ByZXNlbmNlX3JzcF9kZXBy",
+            "ZWN0ZWQYDyABKAsyMS5tZy5wcm90b2NvbC5mcmllbmRzLlNldFJpY2hQcmVz",
+            "ZW5jZVJzcERlcHJlY2F0ZWQSSwoXcmVxdWVzdF9mcmllbmRzaGlwc19yc3AY",
+            "ESABKAsyKi5tZy5wcm90b2NvbC5mcmllbmRzLlJlcXVlc3RGcmllbmRzaGlw",
+            "c1JzcBJKChdzZXRfYWN0aXZpdHlfc3RhdHVzX3JzcBgSIAEoCzIpLm1nLnBy",
+            "b3RvY29sLmZyaWVuZHMuU2V0QWN0aXZpdHlTdGF0dXNSc3ASRgoVc2V0X3Jp",
+            "Y2hfcHJlc2VuY2VfcnNwGBMgASgLMicubWcucHJvdG9jb2wuZnJpZW5kcy5T",
+            "ZXRSaWNoUHJlc2VuY2VSc3ASSgoXZGVjbGluZV9nYW1lX2ludml0ZV9yc3AY",
+            "FCABKAsyKS5tZy5wcm90b2NvbC5mcmllbmRzLkRlY2xpbmVHYW1lSW52aXRl",
+            "UnNwEkgKFnViaV90aWNrZXRfcmVmcmVzaF9yc3AYFSABKAsyKC5tZy5wcm90",
+            "b2NvbC5mcmllbmRzLlViaVRpY2tldFJlZnJlc2hSc3ASOgoOaW5pdGlhbGl6",
+            "ZV9yc3AYFiABKAsyIi5tZy5wcm90b2NvbC5mcmllbmRzLkluaXRpYWxpemVS",
+            "c3ASPQoQc2V0X25pY2tuYW1lX3JzcBgXIAEoCzIjLm1nLnByb3RvY29sLmZy",
+            "aWVuZHMuU2V0Tmlja25hbWVSc3ASSQoRZ2V0X2JsYWNrbGlzdF9yc3AYGCAB",
+            "KAsyLi5tZy5wcm90b2NvbC5mcmllbmRzLkRlcHJlY2F0ZWRHZXRCbGFja2xp",
+            "c3RSc3AiUgoXUHVzaFVwZGF0ZWRSZWxhdGlvbnNoaXASNwoMcmVsYXRpb25z",
+            "aGlwGAEgAigLMiEubWcucHJvdG9jb2wuZnJpZW5kcy5SZWxhdGlvbnNoaXAi",
+            "YwoRUHVzaFVwZGF0ZWRTdGF0dXMSMwoOdXBkYXRlc19zdGF0dXMYASACKAsy",
+            "Gy5tZy5wcm90b2NvbC5mcmllbmRzLlN0YXR1cxIZChFpc19pbml0aWFsX3N0",
+            "YXR1cxgCIAEoCCJNChZQdXNoSm9pbkdhbWVJbnZpdGF0aW9uEjMKBmludml0",
+            "ZRgBIAIoCzIjLm1nLnByb3RvY29sLmZyaWVuZHMuSm9pbkdhbWVJbnZpdGUi",
+            "PwoWUHVzaFJlY2VudGx5TWV0UGxheWVycxIQCgh1cGxheV9pZBgBIAIoDRIT",
+            "CgthY2NvdW50X2lkcxgCIAMoCSIsChZQdXNoR2FtZUludml0ZURlY2xpbmVk",
+            "EhIKCmFjY291bnRfaWQYASACKAkiQQoSUHVzaE5pY2tuYW1lVXBkYXRlEhkK",
+            "EWZyaWVuZF9hY2NvdW50X2lkGAEgAigJEhAKCG5pY2tuYW1lGAIgAigJIkUK",
+            "FFB1c2hJc0Zhdm9yaXRlVXBkYXRlEhkKEWZyaWVuZF9hY2NvdW50X2lkGAEg",
+            "AigJEhIKCmlzRmF2b3JpdGUYAiACKAgingQKBFB1c2gSTwoZcHVzaF91cGRh",
+            "dGVkX3JlbGF0aW9uc2hpcBgBIAEoCzIsLm1nLnByb3RvY29sLmZyaWVuZHMu",
+            "UHVzaFVwZGF0ZWRSZWxhdGlvbnNoaXASQwoTcHVzaF91cGRhdGVkX3N0YXR1",
+            "cxgCIAEoCzImLm1nLnByb3RvY29sLmZyaWVuZHMuUHVzaFVwZGF0ZWRTdGF0",
+            "dXMSTgoZcHVzaF9qb2luX2dhbWVfaW52aXRhdGlvbhgDIAEoCzIrLm1nLnBy",
+            "b3RvY29sLmZyaWVuZHMuUHVzaEpvaW5HYW1lSW52aXRhdGlvbhJOChlwdXNo",
+            "X3JlY2VudGx5X21ldF9wbGF5ZXJzGAQgASgLMisubWcucHJvdG9jb2wuZnJp",
+            "ZW5kcy5QdXNoUmVjZW50bHlNZXRQbGF5ZXJzEk4KGXB1c2hfZ2FtZV9pbnZp",
+            "dGVfZGVjbGluZWQYBSABKAsyKy5tZy5wcm90b2NvbC5mcmllbmRzLlB1c2hH",
+            "YW1lSW52aXRlRGVjbGluZWQSRQoUcHVzaF9uaWNrbmFtZV91cGRhdGUYBiAB",
+            "KAsyJy5tZy5wcm90b2NvbC5mcmllbmRzLlB1c2hOaWNrbmFtZVVwZGF0ZRJJ",
+            "ChZwdXNoX2lzRmF2b3JpdGVfdXBkYXRlGAcgASgLMikubWcucHJvdG9jb2wu",
+            "ZnJpZW5kcy5QdXNoSXNGYXZvcml0ZVVwZGF0ZSI1CghVcHN0cmVhbRIpCgdy",
+            "ZXF1ZXN0GAEgASgLMhgubWcucHJvdG9jb2wuZnJpZW5kcy5SZXEiYQoKRG93",
+            "bnN0cmVhbRIqCghyZXNwb25zZRgBIAEoCzIYLm1nLnByb3RvY29sLmZyaWVu",
+            "ZHMuUnNwEicKBHB1c2gYAiABKAsyGS5tZy5wcm90b2NvbC5mcmllbmRzLlB1",
+            "c2g="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -265,15 +267,15 @@ namespace Uplay.Friends {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.AcceptFriendshipReq), global::Uplay.Friends.AcceptFriendshipReq.Parser, new[]{ "User" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.AcceptFriendshipRsp), global::Uplay.Friends.AcceptFriendshipRsp.Parser, new[]{ "Ok" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.GetBlacklistReq), global::Uplay.Friends.GetBlacklistReq.Parser, new[]{ "User" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.GetBlacklistRsp), global::Uplay.Friends.GetBlacklistRsp.Parser, new[]{ "Success", "Blacklist" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.DeprecatedGetBlacklistRsp), global::Uplay.Friends.DeprecatedGetBlacklistRsp.Parser, new[]{ "Success", "Blacklist" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.AddToBlacklistReq), global::Uplay.Friends.AddToBlacklistReq.Parser, new[]{ "User" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.AddToBlacklistRsp), global::Uplay.Friends.AddToBlacklistRsp.Parser, new[]{ "Ok" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.DeprecatedAddToBlacklistRsp), global::Uplay.Friends.DeprecatedAddToBlacklistRsp.Parser, new[]{ "Ok" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.ClearRelationshipReq), global::Uplay.Friends.ClearRelationshipReq.Parser, new[]{ "User" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.ClearRelationshipRsp), global::Uplay.Friends.ClearRelationshipRsp.Parser, new[]{ "Ok" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.DeclineFriendshipReq), global::Uplay.Friends.DeclineFriendshipReq.Parser, new[]{ "User" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.DeclineFriendshipRsp), global::Uplay.Friends.DeclineFriendshipRsp.Parser, new[]{ "Ok" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.RemoveFromBlacklistReq), global::Uplay.Friends.RemoveFromBlacklistReq.Parser, new[]{ "User" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.RemoveFromBlacklistRsp), global::Uplay.Friends.RemoveFromBlacklistRsp.Parser, new[]{ "Ok" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.DeprecatedRemoveFromBlacklistRsp), global::Uplay.Friends.DeprecatedRemoveFromBlacklistRsp.Parser, new[]{ "Ok" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.RequestFriendshipReq), global::Uplay.Friends.RequestFriendshipReq.Parser, new[]{ "User" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.RequestFriendshipRsp), global::Uplay.Friends.RequestFriendshipRsp.Parser, new[]{ "Ok" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Friends.RequestFriendshipsReq), global::Uplay.Friends.RequestFriendshipsReq.Parser, new[]{ "Users" }, null, null, null, null),
@@ -9037,17 +9039,17 @@ namespace Uplay.Friends {
 
   }
 
-  public sealed partial class GetBlacklistRsp : pb::IMessage<GetBlacklistRsp>
+  public sealed partial class DeprecatedGetBlacklistRsp : pb::IMessage<DeprecatedGetBlacklistRsp>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GetBlacklistRsp> _parser = new pb::MessageParser<GetBlacklistRsp>(() => new GetBlacklistRsp());
+    private static readonly pb::MessageParser<DeprecatedGetBlacklistRsp> _parser = new pb::MessageParser<DeprecatedGetBlacklistRsp>(() => new DeprecatedGetBlacklistRsp());
     private pb::UnknownFieldSet _unknownFields;
     private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetBlacklistRsp> Parser { get { return _parser; } }
+    public static pb::MessageParser<DeprecatedGetBlacklistRsp> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9063,7 +9065,7 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetBlacklistRsp() {
+    public DeprecatedGetBlacklistRsp() {
       OnConstruction();
     }
 
@@ -9071,7 +9073,7 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetBlacklistRsp(GetBlacklistRsp other) : this() {
+    public DeprecatedGetBlacklistRsp(DeprecatedGetBlacklistRsp other) : this() {
       _hasBits0 = other._hasBits0;
       success_ = other.success_;
       blacklist_ = other.blacklist_.Clone();
@@ -9080,8 +9082,8 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetBlacklistRsp Clone() {
-      return new GetBlacklistRsp(this);
+    public DeprecatedGetBlacklistRsp Clone() {
+      return new DeprecatedGetBlacklistRsp(this);
     }
 
     /// <summary>Field number for the "success" field.</summary>
@@ -9125,12 +9127,12 @@ namespace Uplay.Friends {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as GetBlacklistRsp);
+      return Equals(other as DeprecatedGetBlacklistRsp);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetBlacklistRsp other) {
+    public bool Equals(DeprecatedGetBlacklistRsp other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -9208,7 +9210,7 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetBlacklistRsp other) {
+    public void MergeFrom(DeprecatedGetBlacklistRsp other) {
       if (other == null) {
         return;
       }
@@ -9467,17 +9469,17 @@ namespace Uplay.Friends {
 
   }
 
-  public sealed partial class AddToBlacklistRsp : pb::IMessage<AddToBlacklistRsp>
+  public sealed partial class DeprecatedAddToBlacklistRsp : pb::IMessage<DeprecatedAddToBlacklistRsp>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<AddToBlacklistRsp> _parser = new pb::MessageParser<AddToBlacklistRsp>(() => new AddToBlacklistRsp());
+    private static readonly pb::MessageParser<DeprecatedAddToBlacklistRsp> _parser = new pb::MessageParser<DeprecatedAddToBlacklistRsp>(() => new DeprecatedAddToBlacklistRsp());
     private pb::UnknownFieldSet _unknownFields;
     private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AddToBlacklistRsp> Parser { get { return _parser; } }
+    public static pb::MessageParser<DeprecatedAddToBlacklistRsp> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9493,7 +9495,7 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AddToBlacklistRsp() {
+    public DeprecatedAddToBlacklistRsp() {
       OnConstruction();
     }
 
@@ -9501,7 +9503,7 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AddToBlacklistRsp(AddToBlacklistRsp other) : this() {
+    public DeprecatedAddToBlacklistRsp(DeprecatedAddToBlacklistRsp other) : this() {
       _hasBits0 = other._hasBits0;
       ok_ = other.ok_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -9509,8 +9511,8 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AddToBlacklistRsp Clone() {
-      return new AddToBlacklistRsp(this);
+    public DeprecatedAddToBlacklistRsp Clone() {
+      return new DeprecatedAddToBlacklistRsp(this);
     }
 
     /// <summary>Field number for the "ok" field.</summary>
@@ -9543,12 +9545,12 @@ namespace Uplay.Friends {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as AddToBlacklistRsp);
+      return Equals(other as DeprecatedAddToBlacklistRsp);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AddToBlacklistRsp other) {
+    public bool Equals(DeprecatedAddToBlacklistRsp other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -9621,7 +9623,7 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AddToBlacklistRsp other) {
+    public void MergeFrom(DeprecatedAddToBlacklistRsp other) {
       if (other == null) {
         return;
       }
@@ -10679,17 +10681,17 @@ namespace Uplay.Friends {
 
   }
 
-  public sealed partial class RemoveFromBlacklistRsp : pb::IMessage<RemoveFromBlacklistRsp>
+  public sealed partial class DeprecatedRemoveFromBlacklistRsp : pb::IMessage<DeprecatedRemoveFromBlacklistRsp>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<RemoveFromBlacklistRsp> _parser = new pb::MessageParser<RemoveFromBlacklistRsp>(() => new RemoveFromBlacklistRsp());
+    private static readonly pb::MessageParser<DeprecatedRemoveFromBlacklistRsp> _parser = new pb::MessageParser<DeprecatedRemoveFromBlacklistRsp>(() => new DeprecatedRemoveFromBlacklistRsp());
     private pb::UnknownFieldSet _unknownFields;
     private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<RemoveFromBlacklistRsp> Parser { get { return _parser; } }
+    public static pb::MessageParser<DeprecatedRemoveFromBlacklistRsp> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10705,7 +10707,7 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RemoveFromBlacklistRsp() {
+    public DeprecatedRemoveFromBlacklistRsp() {
       OnConstruction();
     }
 
@@ -10713,7 +10715,7 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RemoveFromBlacklistRsp(RemoveFromBlacklistRsp other) : this() {
+    public DeprecatedRemoveFromBlacklistRsp(DeprecatedRemoveFromBlacklistRsp other) : this() {
       _hasBits0 = other._hasBits0;
       ok_ = other.ok_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -10721,8 +10723,8 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public RemoveFromBlacklistRsp Clone() {
-      return new RemoveFromBlacklistRsp(this);
+    public DeprecatedRemoveFromBlacklistRsp Clone() {
+      return new DeprecatedRemoveFromBlacklistRsp(this);
     }
 
     /// <summary>Field number for the "ok" field.</summary>
@@ -10755,12 +10757,12 @@ namespace Uplay.Friends {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as RemoveFromBlacklistRsp);
+      return Equals(other as DeprecatedRemoveFromBlacklistRsp);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(RemoveFromBlacklistRsp other) {
+    public bool Equals(DeprecatedRemoveFromBlacklistRsp other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -10833,7 +10835,7 @@ namespace Uplay.Friends {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(RemoveFromBlacklistRsp other) {
+    public void MergeFrom(DeprecatedRemoveFromBlacklistRsp other) {
       if (other == null) {
         return;
       }
@@ -15082,10 +15084,10 @@ namespace Uplay.Friends {
 
     /// <summary>Field number for the "add_to_blacklist_rsp" field.</summary>
     public const int AddToBlacklistRspFieldNumber = 5;
-    private global::Uplay.Friends.AddToBlacklistRsp addToBlacklistRsp_;
+    private global::Uplay.Friends.DeprecatedAddToBlacklistRsp addToBlacklistRsp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.Friends.AddToBlacklistRsp AddToBlacklistRsp {
+    public global::Uplay.Friends.DeprecatedAddToBlacklistRsp AddToBlacklistRsp {
       get { return addToBlacklistRsp_; }
       set {
         addToBlacklistRsp_ = value;
@@ -15118,10 +15120,10 @@ namespace Uplay.Friends {
 
     /// <summary>Field number for the "remove_from_blacklist_rsp" field.</summary>
     public const int RemoveFromBlacklistRspFieldNumber = 8;
-    private global::Uplay.Friends.RemoveFromBlacklistRsp removeFromBlacklistRsp_;
+    private global::Uplay.Friends.DeprecatedRemoveFromBlacklistRsp removeFromBlacklistRsp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.Friends.RemoveFromBlacklistRsp RemoveFromBlacklistRsp {
+    public global::Uplay.Friends.DeprecatedRemoveFromBlacklistRsp RemoveFromBlacklistRsp {
       get { return removeFromBlacklistRsp_; }
       set {
         removeFromBlacklistRsp_ = value;
@@ -15298,10 +15300,10 @@ namespace Uplay.Friends {
 
     /// <summary>Field number for the "get_blacklist_rsp" field.</summary>
     public const int GetBlacklistRspFieldNumber = 24;
-    private global::Uplay.Friends.GetBlacklistRsp getBlacklistRsp_;
+    private global::Uplay.Friends.DeprecatedGetBlacklistRsp getBlacklistRsp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Uplay.Friends.GetBlacklistRsp GetBlacklistRsp {
+    public global::Uplay.Friends.DeprecatedGetBlacklistRsp GetBlacklistRsp {
       get { return getBlacklistRsp_; }
       set {
         getBlacklistRsp_ = value;
@@ -15702,7 +15704,7 @@ namespace Uplay.Friends {
       }
       if (other.addToBlacklistRsp_ != null) {
         if (addToBlacklistRsp_ == null) {
-          AddToBlacklistRsp = new global::Uplay.Friends.AddToBlacklistRsp();
+          AddToBlacklistRsp = new global::Uplay.Friends.DeprecatedAddToBlacklistRsp();
         }
         AddToBlacklistRsp.MergeFrom(other.AddToBlacklistRsp);
       }
@@ -15720,7 +15722,7 @@ namespace Uplay.Friends {
       }
       if (other.removeFromBlacklistRsp_ != null) {
         if (removeFromBlacklistRsp_ == null) {
-          RemoveFromBlacklistRsp = new global::Uplay.Friends.RemoveFromBlacklistRsp();
+          RemoveFromBlacklistRsp = new global::Uplay.Friends.DeprecatedRemoveFromBlacklistRsp();
         }
         RemoveFromBlacklistRsp.MergeFrom(other.RemoveFromBlacklistRsp);
       }
@@ -15810,7 +15812,7 @@ namespace Uplay.Friends {
       }
       if (other.getBlacklistRsp_ != null) {
         if (getBlacklistRsp_ == null) {
-          GetBlacklistRsp = new global::Uplay.Friends.GetBlacklistRsp();
+          GetBlacklistRsp = new global::Uplay.Friends.DeprecatedGetBlacklistRsp();
         }
         GetBlacklistRsp.MergeFrom(other.GetBlacklistRsp);
       }
@@ -15856,7 +15858,7 @@ namespace Uplay.Friends {
           }
           case 42: {
             if (addToBlacklistRsp_ == null) {
-              AddToBlacklistRsp = new global::Uplay.Friends.AddToBlacklistRsp();
+              AddToBlacklistRsp = new global::Uplay.Friends.DeprecatedAddToBlacklistRsp();
             }
             input.ReadMessage(AddToBlacklistRsp);
             break;
@@ -15877,7 +15879,7 @@ namespace Uplay.Friends {
           }
           case 66: {
             if (removeFromBlacklistRsp_ == null) {
-              RemoveFromBlacklistRsp = new global::Uplay.Friends.RemoveFromBlacklistRsp();
+              RemoveFromBlacklistRsp = new global::Uplay.Friends.DeprecatedRemoveFromBlacklistRsp();
             }
             input.ReadMessage(RemoveFromBlacklistRsp);
             break;
@@ -15982,7 +15984,7 @@ namespace Uplay.Friends {
           }
           case 194: {
             if (getBlacklistRsp_ == null) {
-              GetBlacklistRsp = new global::Uplay.Friends.GetBlacklistRsp();
+              GetBlacklistRsp = new global::Uplay.Friends.DeprecatedGetBlacklistRsp();
             }
             input.ReadMessage(GetBlacklistRsp);
             break;
@@ -16029,7 +16031,7 @@ namespace Uplay.Friends {
           }
           case 42: {
             if (addToBlacklistRsp_ == null) {
-              AddToBlacklistRsp = new global::Uplay.Friends.AddToBlacklistRsp();
+              AddToBlacklistRsp = new global::Uplay.Friends.DeprecatedAddToBlacklistRsp();
             }
             input.ReadMessage(AddToBlacklistRsp);
             break;
@@ -16050,7 +16052,7 @@ namespace Uplay.Friends {
           }
           case 66: {
             if (removeFromBlacklistRsp_ == null) {
-              RemoveFromBlacklistRsp = new global::Uplay.Friends.RemoveFromBlacklistRsp();
+              RemoveFromBlacklistRsp = new global::Uplay.Friends.DeprecatedRemoveFromBlacklistRsp();
             }
             input.ReadMessage(RemoveFromBlacklistRsp);
             break;
@@ -16155,7 +16157,7 @@ namespace Uplay.Friends {
           }
           case 194: {
             if (getBlacklistRsp_ == null) {
-              GetBlacklistRsp = new global::Uplay.Friends.GetBlacklistRsp();
+              GetBlacklistRsp = new global::Uplay.Friends.DeprecatedGetBlacklistRsp();
             }
             input.ReadMessage(GetBlacklistRsp);
             break;

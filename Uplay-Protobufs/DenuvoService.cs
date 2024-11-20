@@ -34,18 +34,18 @@ namespace Uplay.DenuvoService {
             "CnJlcXVlc3RfaWQYASABKA0SRwoSZ2V0X2dhbWVfdG9rZW5fcmVxGAIgASgL",
             "MisubWcucHJvdG9jb2wuZGVudXZvX3NlcnZpY2UuR2V0R2FtZVRva2VuUmVx",
             "ElAKF2dldF9nYW1lX3RpbWVfdG9rZW5fcmVxGAMgASgLMi8ubWcucHJvdG9j",
-            "b2wuZGVudXZvX3NlcnZpY2UuR2V0R2FtZVRpbWVUb2tlblJlcSLVAgoDUnNw",
+            "b2wuZGVudXZvX3NlcnZpY2UuR2V0R2FtZVRpbWVUb2tlblJlcSLlAgoDUnNw",
             "EhIKCnJlcXVlc3RfaWQYASABKA0SNgoGcmVzdWx0GAIgASgOMiYubWcucHJv",
             "dG9jb2wuZGVudXZvX3NlcnZpY2UuUnNwLlJlc3VsdBJHChJnZXRfZ2FtZV90",
             "b2tlbl9yc3AYAyABKAsyKy5tZy5wcm90b2NvbC5kZW51dm9fc2VydmljZS5H",
             "ZXRHYW1lVG9rZW5Sc3ASUAoXZ2V0X2dhbWVfdGltZV90b2tlbl9yc3AYBCAB",
             "KAsyLy5tZy5wcm90b2NvbC5kZW51dm9fc2VydmljZS5HZXRHYW1lVGltZVRv",
-            "a2VuUnNwImcKBlJlc3VsdBILCgdTdWNjZXNzEAASDAoITm90T3duZWQQARIL",
+            "a2VuUnNwIncKBlJlc3VsdBILCgdTdWNjZXNzEAASDAoITm90T3duZWQQARIL",
             "CgdGYWlsdXJlEAISFwoTRXhjZWVkZWRBY3RpdmF0aW9ucxADEgsKB1RpbWVP",
-            "dXQQBBIPCgtTZXJ2ZXJFcnJvchAFIjwKCFVwc3RyZWFtEjAKB3JlcXVlc3QY",
-            "ASABKAsyHy5tZy5wcm90b2NvbC5kZW51dm9fc2VydmljZS5SZXEiPwoKRG93",
-            "bnN0cmVhbRIxCghyZXNwb25zZRgBIAEoCzIfLm1nLnByb3RvY29sLmRlbnV2",
-            "b19zZXJ2aWNlLlJzcGIGcHJvdG8z"));
+            "dXQQBBIPCgtTZXJ2ZXJFcnJvchAFEg4KCk5vU2Vzc2lvbnMQBiI8CghVcHN0",
+            "cmVhbRIwCgdyZXF1ZXN0GAEgASgLMh8ubWcucHJvdG9jb2wuZGVudXZvX3Nl",
+            "cnZpY2UuUmVxIj8KCkRvd25zdHJlYW0SMQoIcmVzcG9uc2UYASABKAsyHy5t",
+            "Zy5wcm90b2NvbC5kZW51dm9fc2VydmljZS5Sc3BiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1539,6 +1539,7 @@ namespace Uplay.DenuvoService {
         [pbr::OriginalName("ExceededActivations")] ExceededActivations = 3,
         [pbr::OriginalName("TimeOut")] TimeOut = 4,
         [pbr::OriginalName("ServerError")] ServerError = 5,
+        [pbr::OriginalName("NoSessions")] NoSessions = 6,
       }
 
     }

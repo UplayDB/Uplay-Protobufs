@@ -658,170 +658,176 @@ namespace Uplay.Uplaydll {
             "dGF0ZVJlcSITChFUZXJtaW5hdGVHYW1lUHVzaCIhCgxMYXVuY2hBcHBSZXES",
             "EQoJcHJvZHVjdElkGAEgAigNIkYKDExhdW5jaEFwcFJzcBI2CgZyZXN1bHQY",
             "ASACKA4yJi5tZy5wcm90b2NvbC51cGxheWRsbC5HYW1lTGF1bmNoUmVzdWx0",
-            "IiMKIUdldFN0cmVhbWluZ0N1cnJlbnRVc2VyQ291bnRyeVJlcSI4CiFHZXRT",
-            "dHJlYW1pbmdDdXJyZW50VXNlckNvdW50cnlSc3ASEwoLdXNlckNvdW50cnkY",
-            "ASABKAkiFQoTR2V0U3RyZWFtaW5nVHlwZVJlcSJRChNHZXRTdHJlYW1pbmdU",
-            "eXBlUnNwEjoKDXN0cmVhbWluZ1R5cGUYASABKA4yIy5tZy5wcm90b2NvbC51",
-            "cGxheWRsbC5TdHJlYW1pbmdUeXBlIiUKI0dldFN0cmVhbWluZ05ldHdvcmtE",
-            "ZWxheUZvcklucHV0UmVxIjQKI0dldFN0cmVhbWluZ05ldHdvcmtEZWxheUZv",
-            "cklucHV0UnNwEg0KBWRlbGF5GAEgASgNIiUKI0dldFN0cmVhbWluZ05ldHdv",
-            "cmtEZWxheUZvclZpZGVvUmVxIjQKI0dldFN0cmVhbWluZ05ldHdvcmtEZWxh",
-            "eUZvclZpZGVvUnNwEg0KBWRlbGF5GAEgASgNIiYKJEdldFN0cmVhbWluZ05l",
-            "dHdvcmtEZWxheVJvdW5kdHJpcFJlcSI1CiRHZXRTdHJlYW1pbmdOZXR3b3Jr",
-            "RGVsYXlSb3VuZHRyaXBSc3ASDQoFZGVsYXkYASABKA0iGwoZR2V0U3RyZWFt",
-            "aW5nRGV2aWNlVHlwZVJlcSJjChlHZXRTdHJlYW1pbmdEZXZpY2VUeXBlUnNw",
-            "EkYKE3N0cmVhbWluZ0RldmljZVR5cGUYASABKA4yKS5tZy5wcm90b2NvbC51",
-            "cGxheWRsbC5TdHJlYW1pbmdEZXZpY2VUeXBlIhoKGEdldFN0cmVhbWluZ0lu",
-            "cHV0VHlwZVJlcSJgChhHZXRTdHJlYW1pbmdJbnB1dFR5cGVSc3ASRAoSc3Ry",
-            "ZWFtaW5nSW5wdXRUeXBlGAEgASgOMigubWcucHJvdG9jb2wudXBsYXlkbGwu",
-            "U3RyZWFtaW5nSW5wdXRUeXBlIiEKH0dldFN0cmVhbWluZ0lucHV0R2FtZXBh",
-            "ZFR5cGVSZXEiZwofR2V0U3RyZWFtaW5nSW5wdXRHYW1lcGFkVHlwZVJzcBJE",
-            "ChlzdHJlYW1pbmdJbnB1dEdhbWVwYWRUeXBlGAEgASgOMiEubWcucHJvdG9j",
-            "b2wudXBsYXlkbGwuR2FtZXBhZFR5cGUiGwoZR2V0U3RyZWFtaW5nUmVzb2x1",
-            "dGlvblJlcSIsCgtEaW1lbnNpb24yZBINCgV3aWR0aBgBIAIoDRIOCgZoZWln",
-            "aHQYAiACKA0iWwoZR2V0U3RyZWFtaW5nUmVzb2x1dGlvblJzcBI+ChNzdHJl",
-            "YW1pbmdSZXNvbHV0aW9uGAEgASgLMiEubWcucHJvdG9jb2wudXBsYXlkbGwu",
-            "RGltZW5zaW9uMmQi+gYKDFN0cmVhbWluZ1JlcRIRCglyZXF1ZXN0SWQYASAC",
-            "KA0SZAohZ2V0U3RyZWFtaW5nQ3VycmVudFVzZXJDb3VudHJ5UmVxGAIgASgL",
-            "MjcubWcucHJvdG9jb2wudXBsYXlkbGwuR2V0U3RyZWFtaW5nQ3VycmVudFVz",
-            "ZXJDb3VudHJ5UmVxSAASSAoTZ2V0U3RyZWFtaW5nVHlwZVJlcRgDIAEoCzIp",
-            "Lm1nLnByb3RvY29sLnVwbGF5ZGxsLkdldFN0cmVhbWluZ1R5cGVSZXFIABJo",
-            "CiNnZXRTdHJlYW1pbmdOZXR3b3JrRGVsYXlGb3JJbnB1dFJlcRgEIAEoCzI5",
-            "Lm1nLnByb3RvY29sLnVwbGF5ZGxsLkdldFN0cmVhbWluZ05ldHdvcmtEZWxh",
-            "eUZvcklucHV0UmVxSAASaAojZ2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5Rm9y",
-            "VmlkZW9SZXEYBSABKAsyOS5tZy5wcm90b2NvbC51cGxheWRsbC5HZXRTdHJl",
-            "YW1pbmdOZXR3b3JrRGVsYXlGb3JWaWRlb1JlcUgAEmoKJGdldFN0cmVhbWlu",
-            "Z05ldHdvcmtEZWxheVJvdW5kdHJpcFJlcRgGIAEoCzI6Lm1nLnByb3RvY29s",
-            "LnVwbGF5ZGxsLkdldFN0cmVhbWluZ05ldHdvcmtEZWxheVJvdW5kdHJpcFJl",
-            "cUgAElQKGWdldFN0cmVhbWluZ0RldmljZVR5cGVSZXEYByABKAsyLy5tZy5w",
-            "cm90b2NvbC51cGxheWRsbC5HZXRTdHJlYW1pbmdEZXZpY2VUeXBlUmVxSAAS",
-            "UgoYZ2V0U3RyZWFtaW5nSW5wdXRUeXBlUmVxGAggASgLMi4ubWcucHJvdG9j",
-            "b2wudXBsYXlkbGwuR2V0U3RyZWFtaW5nSW5wdXRUeXBlUmVxSAASYAofZ2V0",
-            "U3RyZWFtaW5nSW5wdXRHYW1lcGFkVHlwZVJlcRgJIAEoCzI1Lm1nLnByb3Rv",
-            "Y29sLnVwbGF5ZGxsLkdldFN0cmVhbWluZ0lucHV0R2FtZXBhZFR5cGVSZXFI",
-            "ABJUChlHZXRTdHJlYW1pbmdSZXNvbHV0aW9uUmVxGAogASgLMi8ubWcucHJv",
-            "dG9jb2wudXBsYXlkbGwuR2V0U3RyZWFtaW5nUmVzb2x1dGlvblJlcUgAQgUK",
-            "A3JlcSKxBwoMU3RyZWFtaW5nUnNwEhEKCXJlcXVlc3RJZBgBIAIoDRI1CgZy",
-            "ZXN1bHQYAiACKA4yJS5tZy5wcm90b2NvbC51cGxheWRsbC5PcGVyYXRpb25S",
-            "ZXN1bHQSZAohZ2V0U3RyZWFtaW5nQ3VycmVudFVzZXJDb3VudHJ5UnNwGAMg",
-            "ASgLMjcubWcucHJvdG9jb2wudXBsYXlkbGwuR2V0U3RyZWFtaW5nQ3VycmVu",
-            "dFVzZXJDb3VudHJ5UnNwSAASSAoTZ2V0U3RyZWFtaW5nVHlwZVJzcBgEIAEo",
-            "CzIpLm1nLnByb3RvY29sLnVwbGF5ZGxsLkdldFN0cmVhbWluZ1R5cGVSc3BI",
-            "ABJoCiNnZXRTdHJlYW1pbmdOZXR3b3JrRGVsYXlGb3JJbnB1dFJzcBgFIAEo",
+            "IjsKE0Nyb3NzQm9vdEFsbG93ZWRSZXESEQoJcmVxdWVzdElkGAEgAigNEhEK",
+            "CXByb2R1Y3RJZBgCIAIoDSI7ChNDcm9zc0Jvb3RBbGxvd2VkUnNwEhEKCXJl",
+            "cXVlc3RJZBgBIAIoDRIRCglpc0FsbG93ZWQYAiACKAgiIwohR2V0U3RyZWFt",
+            "aW5nQ3VycmVudFVzZXJDb3VudHJ5UmVxIjgKIUdldFN0cmVhbWluZ0N1cnJl",
+            "bnRVc2VyQ291bnRyeVJzcBITCgt1c2VyQ291bnRyeRgBIAEoCSIVChNHZXRT",
+            "dHJlYW1pbmdUeXBlUmVxIlEKE0dldFN0cmVhbWluZ1R5cGVSc3ASOgoNc3Ry",
+            "ZWFtaW5nVHlwZRgBIAEoDjIjLm1nLnByb3RvY29sLnVwbGF5ZGxsLlN0cmVh",
+            "bWluZ1R5cGUiJQojR2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5Rm9ySW5wdXRS",
+            "ZXEiNAojR2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5Rm9ySW5wdXRSc3ASDQoF",
+            "ZGVsYXkYASABKA0iJQojR2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5Rm9yVmlk",
+            "ZW9SZXEiNAojR2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5Rm9yVmlkZW9Sc3AS",
+            "DQoFZGVsYXkYASABKA0iJgokR2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5Um91",
+            "bmR0cmlwUmVxIjUKJEdldFN0cmVhbWluZ05ldHdvcmtEZWxheVJvdW5kdHJp",
+            "cFJzcBINCgVkZWxheRgBIAEoDSIbChlHZXRTdHJlYW1pbmdEZXZpY2VUeXBl",
+            "UmVxImMKGUdldFN0cmVhbWluZ0RldmljZVR5cGVSc3ASRgoTc3RyZWFtaW5n",
+            "RGV2aWNlVHlwZRgBIAEoDjIpLm1nLnByb3RvY29sLnVwbGF5ZGxsLlN0cmVh",
+            "bWluZ0RldmljZVR5cGUiGgoYR2V0U3RyZWFtaW5nSW5wdXRUeXBlUmVxImAK",
+            "GEdldFN0cmVhbWluZ0lucHV0VHlwZVJzcBJEChJzdHJlYW1pbmdJbnB1dFR5",
+            "cGUYASABKA4yKC5tZy5wcm90b2NvbC51cGxheWRsbC5TdHJlYW1pbmdJbnB1",
+            "dFR5cGUiIQofR2V0U3RyZWFtaW5nSW5wdXRHYW1lcGFkVHlwZVJlcSJnCh9H",
+            "ZXRTdHJlYW1pbmdJbnB1dEdhbWVwYWRUeXBlUnNwEkQKGXN0cmVhbWluZ0lu",
+            "cHV0R2FtZXBhZFR5cGUYASABKA4yIS5tZy5wcm90b2NvbC51cGxheWRsbC5H",
+            "YW1lcGFkVHlwZSIbChlHZXRTdHJlYW1pbmdSZXNvbHV0aW9uUmVxIiwKC0Rp",
+            "bWVuc2lvbjJkEg0KBXdpZHRoGAEgAigNEg4KBmhlaWdodBgCIAIoDSJbChlH",
+            "ZXRTdHJlYW1pbmdSZXNvbHV0aW9uUnNwEj4KE3N0cmVhbWluZ1Jlc29sdXRp",
+            "b24YASABKAsyIS5tZy5wcm90b2NvbC51cGxheWRsbC5EaW1lbnNpb24yZCL6",
+            "BgoMU3RyZWFtaW5nUmVxEhEKCXJlcXVlc3RJZBgBIAIoDRJkCiFnZXRTdHJl",
+            "YW1pbmdDdXJyZW50VXNlckNvdW50cnlSZXEYAiABKAsyNy5tZy5wcm90b2Nv",
+            "bC51cGxheWRsbC5HZXRTdHJlYW1pbmdDdXJyZW50VXNlckNvdW50cnlSZXFI",
+            "ABJIChNnZXRTdHJlYW1pbmdUeXBlUmVxGAMgASgLMikubWcucHJvdG9jb2wu",
+            "dXBsYXlkbGwuR2V0U3RyZWFtaW5nVHlwZVJlcUgAEmgKI2dldFN0cmVhbWlu",
+            "Z05ldHdvcmtEZWxheUZvcklucHV0UmVxGAQgASgLMjkubWcucHJvdG9jb2wu",
+            "dXBsYXlkbGwuR2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5Rm9ySW5wdXRSZXFI",
+            "ABJoCiNnZXRTdHJlYW1pbmdOZXR3b3JrRGVsYXlGb3JWaWRlb1JlcRgFIAEo",
             "CzI5Lm1nLnByb3RvY29sLnVwbGF5ZGxsLkdldFN0cmVhbWluZ05ldHdvcmtE",
-            "ZWxheUZvcklucHV0UnNwSAASaAojZ2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5",
-            "Rm9yVmlkZW9Sc3AYBiABKAsyOS5tZy5wcm90b2NvbC51cGxheWRsbC5HZXRT",
-            "dHJlYW1pbmdOZXR3b3JrRGVsYXlGb3JWaWRlb1JzcEgAEmoKJGdldFN0cmVh",
-            "bWluZ05ldHdvcmtEZWxheVJvdW5kdHJpcFJzcBgHIAEoCzI6Lm1nLnByb3Rv",
-            "Y29sLnVwbGF5ZGxsLkdldFN0cmVhbWluZ05ldHdvcmtEZWxheVJvdW5kdHJp",
-            "cFJzcEgAElQKGWdldFN0cmVhbWluZ0RldmljZVR5cGVSc3AYCCABKAsyLy5t",
-            "Zy5wcm90b2NvbC51cGxheWRsbC5HZXRTdHJlYW1pbmdEZXZpY2VUeXBlUnNw",
-            "SAASUgoYZ2V0U3RyZWFtaW5nSW5wdXRUeXBlUnNwGAkgASgLMi4ubWcucHJv",
-            "dG9jb2wudXBsYXlkbGwuR2V0U3RyZWFtaW5nSW5wdXRUeXBlUnNwSAASYAof",
-            "Z2V0U3RyZWFtaW5nSW5wdXRHYW1lcGFkVHlwZVJzcBgKIAEoCzI1Lm1nLnBy",
-            "b3RvY29sLnVwbGF5ZGxsLkdldFN0cmVhbWluZ0lucHV0R2FtZXBhZFR5cGVS",
-            "c3BIABJUChlHZXRTdHJlYW1pbmdSZXNvbHV0aW9uUnNwGAsgASgLMi8ubWcu",
-            "cHJvdG9jb2wudXBsYXlkbGwuR2V0U3RyZWFtaW5nUmVzb2x1dGlvblJzcEgA",
-            "QgUKA3JzcCKNCwoDUmVxEi4KB2luaXRSZXEYASABKAsyHS5tZy5wcm90b2Nv",
-            "bC51cGxheWRsbC5Jbml0UmVxEjwKDmluaXRQcm9jZXNzUmVxGAIgASgLMiQu",
-            "bWcucHJvdG9jb2wudXBsYXlkbGwuSW5pdFByb2Nlc3NSZXESSAoUd3JpdGVB",
-            "Y2hpZXZlbWVudHNSZXEYAyABKAsyKi5tZy5wcm90b2NvbC51cGxheWRsbC5X",
-            "cml0ZUFjaGlldmVtZW50c1JlcRIwCghwYXJ0eVJlcRgEIAEoCzIeLm1nLnBy",
-            "b3RvY29sLnVwbGF5ZGxsLlBhcnR5UmVxEkIKEXNldEdhbWVTZXNzaW9uUmVx",
-            "GAUgASgLMicubWcucHJvdG9jb2wudXBsYXlkbGwuU2V0R2FtZVNlc3Npb25S",
-            "ZXESRgoTY2xlYXJHYW1lU2Vzc2lvblJlcRgGIAEoCzIpLm1nLnByb3RvY29s",
-            "LnVwbGF5ZGxsLkNsZWFyR2FtZVNlc3Npb25SZXESNAoKZnJpZW5kc1JlcRgH",
-            "IAEoCzIgLm1nLnByb3RvY29sLnVwbGF5ZGxsLkZyaWVuZHNSZXESPAoOYWNo",
-            "aWV2ZW1lbnRSZXEYCCABKAsyJC5tZy5wcm90b2NvbC51cGxheWRsbC5BY2hp",
-            "ZXZlbWVudFJlcRI0CgpvdmVybGF5UmVxGAkgASgLMiAubWcucHJvdG9jb2wu",
-            "dXBsYXlkbGwuT3ZlcmxheVJlcRIyCglhdmF0YXJSZXEYCiABKAsyHy5tZy5w",
-            "cm90b2NvbC51cGxheWRsbC5BdmF0YXJSZXESLgoHdXNlclJlcRgLIAEoCzId",
-            "Lm1nLnByb3RvY29sLnVwbGF5ZGxsLlVzZXJSZXESLgoHY2x1YlJlcRgMIAEo",
-            "CzIdLm1nLnByb3RvY29sLnVwbGF5ZGxsLkNsdWJSZXESOAoMaW5zdGFsbGVy",
-            "UmVxGA0gASgLMiIubWcucHJvdG9jb2wudXBsYXlkbGwuSW5zdGFsbGVyUmVx",
-            "EjYKC21ldGFkYXRhUmVxGA4gASgLMiEubWcucHJvdG9jb2wudXBsYXlkbGwu",
-            "TWV0YWRhdGFSZXESQAoQc2RrTW9uaXRvcmluZ1JlcRgRIAEoCzImLm1nLnBy",
-            "b3RvY29sLnVwbGF5ZGxsLlNES01vbml0b3JpbmdSZXESPgoPcmljaFByZXNl",
-            "bmNlUmVxGBIgASgLMiUubWcucHJvdG9jb2wudXBsYXlkbGwuUmljaFByZXNl",
-            "bmNlUmVxEjAKCHN0b3JlUmVxGBQgASgLMh4ubWcucHJvdG9jb2wudXBsYXlk",
-            "bGwuU3RvcmVSZXESPAoOZ2FtZU9wdGlvbnNSZXEYFSABKAsyJC5tZy5wcm90",
-            "b2NvbC51cGxheWRsbC5HYW1lT3B0aW9uc1JlcRJSChlzZXRMYW5ndWFnZUNv",
-            "dW50cnlDb2RlUmVxGBYgASgLMi8ubWcucHJvdG9jb2wudXBsYXlkbGwuU2V0",
-            "TGFuZ3VhZ2VDb3VudHJ5Q29kZVJlcRI0Cgpwcm9kdWN0UmVxGBcgASgLMiAu",
-            "bWcucHJvdG9jb2wudXBsYXlkbGwuUHJvZHVjdFJlcRI8Cg5tdWx0aXBsYXll",
-            "clJlcRgYIAEoCzIkLm1nLnByb3RvY29sLnVwbGF5ZGxsLk11bHRpcGxheWVy",
-            "UmVxEjIKCXVzZXJSZXFWMhgZIAEoCzIfLm1nLnByb3RvY29sLnVwbGF5ZGxs",
-            "LlVzZXJSZXFWMhI4CgxsYXVuY2hBcHBSZXEYGiABKAsyIi5tZy5wcm90b2Nv",
-            "bC51cGxheWRsbC5MYXVuY2hBcHBSZXESOAoMc3RyZWFtaW5nUmVxGBsgASgL",
-            "MiIubWcucHJvdG9jb2wudXBsYXlkbGwuU3RyZWFtaW5nUmVxIrsICgNSc3AS",
-            "LgoHaW5pdFJzcBgBIAEoCzIdLm1nLnByb3RvY29sLnVwbGF5ZGxsLkluaXRS",
-            "c3ASPAoOaW5pdFByb2Nlc3NSc3AYDSABKAsyJC5tZy5wcm90b2NvbC51cGxh",
-            "eWRsbC5Jbml0UHJvY2Vzc1JzcBJIChR3cml0ZUFjaGlldmVtZW50c1JzcBgC",
-            "IAEoCzIqLm1nLnByb3RvY29sLnVwbGF5ZGxsLldyaXRlQWNoaWV2ZW1lbnRz",
-            "UnNwEjAKCHBhcnR5UnNwGAMgASgLMh4ubWcucHJvdG9jb2wudXBsYXlkbGwu",
-            "UGFydHlSc3ASNAoKZnJpZW5kc1JzcBgEIAEoCzIgLm1nLnByb3RvY29sLnVw",
-            "bGF5ZGxsLkZyaWVuZHNSc3ASPAoOYWNoaWV2ZW1lbnRSc3AYBSABKAsyJC5t",
-            "Zy5wcm90b2NvbC51cGxheWRsbC5BY2hpZXZlbWVudFJzcBI0CgpvdmVybGF5",
-            "UnNwGAYgASgLMiAubWcucHJvdG9jb2wudXBsYXlkbGwuT3ZlcmxheVJzcBIy",
-            "CglhdmF0YXJSc3AYByABKAsyHy5tZy5wcm90b2NvbC51cGxheWRsbC5BdmF0",
-            "YXJSc3ASLgoHdXNlclJzcBgIIAEoCzIdLm1nLnByb3RvY29sLnVwbGF5ZGxs",
-            "LlVzZXJSc3ASLgoHY2x1YlJzcBgJIAEoCzIdLm1nLnByb3RvY29sLnVwbGF5",
-            "ZGxsLkNsdWJSc3ASOAoMaW5zdGFsbGVyUnNwGAogASgLMiIubWcucHJvdG9j",
-            "b2wudXBsYXlkbGwuSW5zdGFsbGVyUnNwEkAKEHNka01vbml0b3JpbmdSc3AY",
-            "DCABKAsyJi5tZy5wcm90b2NvbC51cGxheWRsbC5TREtNb25pdG9yaW5nUnNw",
-            "EjAKCHN0b3JlUnNwGA4gASgLMh4ubWcucHJvdG9jb2wudXBsYXlkbGwuU3Rv",
-            "cmVSc3ASNAoKcHJvZHVjdFJzcBgPIAEoCzIgLm1nLnByb3RvY29sLnVwbGF5",
-            "ZGxsLlByb2R1Y3RSc3ASPAoObXVsdGlwbGF5ZXJSc3AYECABKAsyJC5tZy5w",
-            "cm90b2NvbC51cGxheWRsbC5NdWx0aXBsYXllclJzcBIyCgl1c2VyUnNwVjIY",
-            "ESABKAsyHy5tZy5wcm90b2NvbC51cGxheWRsbC5Vc2VyUnNwVjISQgoRdGVy",
-            "bWluYXRlR2FtZVB1c2gYEiABKAsyJy5tZy5wcm90b2NvbC51cGxheWRsbC5U",
-            "ZXJtaW5hdGVHYW1lUHVzaBI4CgxsYXVuY2hBcHBSc3AYEyABKAsyIi5tZy5w",
-            "cm90b2NvbC51cGxheWRsbC5MYXVuY2hBcHBSc3ASOAoMc3RyZWFtaW5nUnNw",
-            "GBQgASgLMiIubWcucHJvdG9jb2wudXBsYXlkbGwuU3RyZWFtaW5nUnNwKs4B",
-            "Cg9PcGVyYXRpb25SZXN1bHQSBgoCb2sQARITCg9pbnZhbGlkQXJndW1lbnQQ",
-            "AhITCg9jb25uZWN0aW9uRXJyb3IQAxIMCghub3RGb3VuZBAEEhMKD25vdEFQ",
-            "YXJ0eUxlYWRlchAFEg0KCXBhcnR5RnVsbBAGEg0KCWZpbGVFcnJvchAHEg8K",
-            "C3VuYXZhaWxhYmxlEAgSDAoIZGVjbGluZWQQCRIRCg1pbnRlcm5hbEVycm9y",
-            "EAoSFgoSdW5hdXRob3JpemVkQWN0aW9uEAsqKAoMUmVzcG9uc2VDb2RlEgsK",
-            "B3N1Y2Nlc3MQARILCgdmYWlsdXJlEAIqjgEKCkluaXRSZXN1bHQSFgoSSW5p",
-            "dFJlc3VsdF9TdWNjZXNzEAESFgoSSW5pdFJlc3VsdF9GYWlsdXJlEAISIAoc",
-            "SW5pdFJlc3VsdF9SZWNvbm5lY3RSZXF1aXJlZBADEi4KKkluaXRSZXN1bHRf",
-            "UmVzdGFydFdpdGhHYW1lTGF1bmNoZXJSZXF1aXJlZBAEKn0KFk92ZXJsYXlJ",
-            "bmplY3Rpb25NZXRob2QSHwobT3ZlcmxheUluamVjdGlvbk1ldGhvZF9Ob25l",
-            "EAESIgoeT3ZlcmxheUluamVjdGlvbk1ldGhvZF9EZWZhdWx0EAISHgoaT3Zl",
-            "cmxheUluamVjdGlvbk1ldGhvZF9TREsQAyqZAQoQR2FtZUxhdW5jaFJlc3Vs",
-            "dBIcChhHYW1lTGF1bmNoUmVzdWx0X1N1Y2Nlc3MQARIgChxHYW1lTGF1bmNo",
-            "UmVzdWx0X1VuYXZhaWxhYmxlEAISHAoYR2FtZUxhdW5jaFJlc3VsdF9BYm9y",
-            "dGVkEAMSJwojR2FtZUxhdW5jaFJlc3VsdF9GYWlsZWRHYW1lTm90T3duZWQQ",
-            "BCpLChZHYW1lU2Vzc2lvbkpvaW5hYmlsaXR5EhUKEUpvaW5hYmxlQnlGcmll",
-            "bmRzEAASDgoKSW52aXRlT25seRABEgoKBkNsb3NlZBACKn4KDFJlbGF0aW9u",
-            "c2hpcBIcChhSZWxhdGlvbnNoaXBfUmVxdWVzdFNlbnQQARIgChxSZWxhdGlv",
-            "bnNoaXBfUmVxdWVzdFJlY2VpdmVkEAISFwoTUmVsYXRpb25zaGlwX0ZyaWVu",
-            "ZBADEhUKEVJlbGF0aW9uc2hpcF9Ob25lEAQqTgoMT25saW5lU3RhdHVzEhMK",
-            "D1ByZXNlbmNlX09ubGluZRABEhQKEFByZXNlbmNlX09mZmxpbmUQAhITCg9Q",
-            "cmVzZW5jZV9JbkdhbWUQAyp5Cg5PbmxpbmVTdGF0dXNWMhIYChRPbmxpbmVT",
-            "dGF0dXNfT2ZmbGluZRABEh0KGU9ubGluZVN0YXR1c19Eb05vdERpc3R1cmIQ",
-            "AhIVChFPbmxpbmVTdGF0dXNfQXdheRAEEhcKE09ubGluZVN0YXR1c19Pbmxp",
-            "bmUQCCpHCgpBdmF0YXJTaXplEhEKDUF2YXRhclNpemVfNjQQARISCg5BdmF0",
-            "YXJTaXplXzEyOBACEhIKDkF2YXRhclNpemVfMjU2EAMqpwEKC1Byb2R1Y3RU",
-            "eXBlEhQKEFByb2R1Y3RUeXBlX0dhbWUQARIVChFQcm9kdWN0VHlwZV9BZGRv",
-            "bhACEhcKE1Byb2R1Y3RUeXBlX1BhY2thZ2UQAxIaChZQcm9kdWN0VHlwZV9D",
-            "b25zdW1hYmxlEAQSHgoaUHJvZHVjdFR5cGVfQ29uc3VtYWJsZVBhY2sQBRIW",
-            "ChJQcm9kdWN0VHlwZV9CdW5kbGUQBip8CgxQcm9kdWN0U3RhdGUSGAoUUHJv",
-            "ZHVjdFN0YXRlX1Zpc2libGUQARIdChlQcm9kdWN0U3RhdGVfRG93bmxvYWRh",
-            "YmxlEAISGQoVUHJvZHVjdFN0YXRlX1BsYXlhYmxlEAMSGAoUUHJvZHVjdFN0",
-            "YXRlX0V4cGlyZWQQBCp1ChFQcm9kdWN0QWN0aXZhdGlvbhIfChtQcm9kdWN0",
-            "QWN0aXZhdGlvbl9QdXJjaGFzZWQQARIbChdQcm9kdWN0QWN0aXZhdGlvbl9U",
-            "cmlhbBACEiIKHlByb2R1Y3RBY3RpdmF0aW9uX1N1YnNjcmlwdGlvbhADKqsB",
-            "ChBQcm9kdWN0T3duZXJzaGlwEhoKFlByb2R1Y3RPd25lcnNoaXBfT3duZWQQ",
-            "ARIfChtQcm9kdWN0T3duZXJzaGlwX1ByZW9yZGVyZWQQAhIeChpQcm9kdWN0",
-            "T3duZXJzaGlwX1N1c3BlbmRlZBADEh0KGVByb2R1Y3RPd25lcnNoaXBfTm90",
-            "T3duZWQQBBIbChdQcm9kdWN0T3duZXJzaGlwX0xvY2tlZBAFKl4KDkNoZWNr",
-            "b3V0UmVzdWx0EhUKEUNoZWNrb3V0UmVzdWx0X09rEAESGQoVQ2hlY2tvdXRS",
-            "ZXN1bHRfRmFpbGVkEAISGgoWQ2hlY2tvdXRSZXN1bHRfVW5rbm93bhADKnsK",
-            "DVRhcmdldFBhcnRuZXISFgoSVGFyZ2V0UGFydG5lcl9Ob25lEAASGwoXVGFy",
-            "Z2V0UGFydG5lcl9FcGljR2FtZXMQARIYChRUYXJnZXRQYXJ0bmVyX05lb3dp",
-            "ehACEhsKF1RhcmdldFBhcnRuZXJfTWljcm9zb2Z0EAMqzgEKHU11bHRpcGxh",
+            "ZWxheUZvclZpZGVvUmVxSAASagokZ2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5",
+            "Um91bmR0cmlwUmVxGAYgASgLMjoubWcucHJvdG9jb2wudXBsYXlkbGwuR2V0",
+            "U3RyZWFtaW5nTmV0d29ya0RlbGF5Um91bmR0cmlwUmVxSAASVAoZZ2V0U3Ry",
+            "ZWFtaW5nRGV2aWNlVHlwZVJlcRgHIAEoCzIvLm1nLnByb3RvY29sLnVwbGF5",
+            "ZGxsLkdldFN0cmVhbWluZ0RldmljZVR5cGVSZXFIABJSChhnZXRTdHJlYW1p",
+            "bmdJbnB1dFR5cGVSZXEYCCABKAsyLi5tZy5wcm90b2NvbC51cGxheWRsbC5H",
+            "ZXRTdHJlYW1pbmdJbnB1dFR5cGVSZXFIABJgCh9nZXRTdHJlYW1pbmdJbnB1",
+            "dEdhbWVwYWRUeXBlUmVxGAkgASgLMjUubWcucHJvdG9jb2wudXBsYXlkbGwu",
+            "R2V0U3RyZWFtaW5nSW5wdXRHYW1lcGFkVHlwZVJlcUgAElQKGUdldFN0cmVh",
+            "bWluZ1Jlc29sdXRpb25SZXEYCiABKAsyLy5tZy5wcm90b2NvbC51cGxheWRs",
+            "bC5HZXRTdHJlYW1pbmdSZXNvbHV0aW9uUmVxSABCBQoDcmVxIrEHCgxTdHJl",
+            "YW1pbmdSc3ASEQoJcmVxdWVzdElkGAEgAigNEjUKBnJlc3VsdBgCIAIoDjIl",
+            "Lm1nLnByb3RvY29sLnVwbGF5ZGxsLk9wZXJhdGlvblJlc3VsdBJkCiFnZXRT",
+            "dHJlYW1pbmdDdXJyZW50VXNlckNvdW50cnlSc3AYAyABKAsyNy5tZy5wcm90",
+            "b2NvbC51cGxheWRsbC5HZXRTdHJlYW1pbmdDdXJyZW50VXNlckNvdW50cnlS",
+            "c3BIABJIChNnZXRTdHJlYW1pbmdUeXBlUnNwGAQgASgLMikubWcucHJvdG9j",
+            "b2wudXBsYXlkbGwuR2V0U3RyZWFtaW5nVHlwZVJzcEgAEmgKI2dldFN0cmVh",
+            "bWluZ05ldHdvcmtEZWxheUZvcklucHV0UnNwGAUgASgLMjkubWcucHJvdG9j",
+            "b2wudXBsYXlkbGwuR2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5Rm9ySW5wdXRS",
+            "c3BIABJoCiNnZXRTdHJlYW1pbmdOZXR3b3JrRGVsYXlGb3JWaWRlb1JzcBgG",
+            "IAEoCzI5Lm1nLnByb3RvY29sLnVwbGF5ZGxsLkdldFN0cmVhbWluZ05ldHdv",
+            "cmtEZWxheUZvclZpZGVvUnNwSAASagokZ2V0U3RyZWFtaW5nTmV0d29ya0Rl",
+            "bGF5Um91bmR0cmlwUnNwGAcgASgLMjoubWcucHJvdG9jb2wudXBsYXlkbGwu",
+            "R2V0U3RyZWFtaW5nTmV0d29ya0RlbGF5Um91bmR0cmlwUnNwSAASVAoZZ2V0",
+            "U3RyZWFtaW5nRGV2aWNlVHlwZVJzcBgIIAEoCzIvLm1nLnByb3RvY29sLnVw",
+            "bGF5ZGxsLkdldFN0cmVhbWluZ0RldmljZVR5cGVSc3BIABJSChhnZXRTdHJl",
+            "YW1pbmdJbnB1dFR5cGVSc3AYCSABKAsyLi5tZy5wcm90b2NvbC51cGxheWRs",
+            "bC5HZXRTdHJlYW1pbmdJbnB1dFR5cGVSc3BIABJgCh9nZXRTdHJlYW1pbmdJ",
+            "bnB1dEdhbWVwYWRUeXBlUnNwGAogASgLMjUubWcucHJvdG9jb2wudXBsYXlk",
+            "bGwuR2V0U3RyZWFtaW5nSW5wdXRHYW1lcGFkVHlwZVJzcEgAElQKGUdldFN0",
+            "cmVhbWluZ1Jlc29sdXRpb25Sc3AYCyABKAsyLy5tZy5wcm90b2NvbC51cGxh",
+            "eWRsbC5HZXRTdHJlYW1pbmdSZXNvbHV0aW9uUnNwSABCBQoDcnNwItULCgNS",
+            "ZXESLgoHaW5pdFJlcRgBIAEoCzIdLm1nLnByb3RvY29sLnVwbGF5ZGxsLklu",
+            "aXRSZXESPAoOaW5pdFByb2Nlc3NSZXEYAiABKAsyJC5tZy5wcm90b2NvbC51",
+            "cGxheWRsbC5Jbml0UHJvY2Vzc1JlcRJIChR3cml0ZUFjaGlldmVtZW50c1Jl",
+            "cRgDIAEoCzIqLm1nLnByb3RvY29sLnVwbGF5ZGxsLldyaXRlQWNoaWV2ZW1l",
+            "bnRzUmVxEjAKCHBhcnR5UmVxGAQgASgLMh4ubWcucHJvdG9jb2wudXBsYXlk",
+            "bGwuUGFydHlSZXESQgoRc2V0R2FtZVNlc3Npb25SZXEYBSABKAsyJy5tZy5w",
+            "cm90b2NvbC51cGxheWRsbC5TZXRHYW1lU2Vzc2lvblJlcRJGChNjbGVhckdh",
+            "bWVTZXNzaW9uUmVxGAYgASgLMikubWcucHJvdG9jb2wudXBsYXlkbGwuQ2xl",
+            "YXJHYW1lU2Vzc2lvblJlcRI0CgpmcmllbmRzUmVxGAcgASgLMiAubWcucHJv",
+            "dG9jb2wudXBsYXlkbGwuRnJpZW5kc1JlcRI8Cg5hY2hpZXZlbWVudFJlcRgI",
+            "IAEoCzIkLm1nLnByb3RvY29sLnVwbGF5ZGxsLkFjaGlldmVtZW50UmVxEjQK",
+            "Cm92ZXJsYXlSZXEYCSABKAsyIC5tZy5wcm90b2NvbC51cGxheWRsbC5PdmVy",
+            "bGF5UmVxEjIKCWF2YXRhclJlcRgKIAEoCzIfLm1nLnByb3RvY29sLnVwbGF5",
+            "ZGxsLkF2YXRhclJlcRIuCgd1c2VyUmVxGAsgASgLMh0ubWcucHJvdG9jb2wu",
+            "dXBsYXlkbGwuVXNlclJlcRIuCgdjbHViUmVxGAwgASgLMh0ubWcucHJvdG9j",
+            "b2wudXBsYXlkbGwuQ2x1YlJlcRI4CgxpbnN0YWxsZXJSZXEYDSABKAsyIi5t",
+            "Zy5wcm90b2NvbC51cGxheWRsbC5JbnN0YWxsZXJSZXESNgoLbWV0YWRhdGFS",
+            "ZXEYDiABKAsyIS5tZy5wcm90b2NvbC51cGxheWRsbC5NZXRhZGF0YVJlcRJA",
+            "ChBzZGtNb25pdG9yaW5nUmVxGBEgASgLMiYubWcucHJvdG9jb2wudXBsYXlk",
+            "bGwuU0RLTW9uaXRvcmluZ1JlcRI+Cg9yaWNoUHJlc2VuY2VSZXEYEiABKAsy",
+            "JS5tZy5wcm90b2NvbC51cGxheWRsbC5SaWNoUHJlc2VuY2VSZXESMAoIc3Rv",
+            "cmVSZXEYFCABKAsyHi5tZy5wcm90b2NvbC51cGxheWRsbC5TdG9yZVJlcRI8",
+            "Cg5nYW1lT3B0aW9uc1JlcRgVIAEoCzIkLm1nLnByb3RvY29sLnVwbGF5ZGxs",
+            "LkdhbWVPcHRpb25zUmVxElIKGXNldExhbmd1YWdlQ291bnRyeUNvZGVSZXEY",
+            "FiABKAsyLy5tZy5wcm90b2NvbC51cGxheWRsbC5TZXRMYW5ndWFnZUNvdW50",
+            "cnlDb2RlUmVxEjQKCnByb2R1Y3RSZXEYFyABKAsyIC5tZy5wcm90b2NvbC51",
+            "cGxheWRsbC5Qcm9kdWN0UmVxEjwKDm11bHRpcGxheWVyUmVxGBggASgLMiQu",
+            "bWcucHJvdG9jb2wudXBsYXlkbGwuTXVsdGlwbGF5ZXJSZXESMgoJdXNlclJl",
+            "cVYyGBkgASgLMh8ubWcucHJvdG9jb2wudXBsYXlkbGwuVXNlclJlcVYyEjgK",
+            "DGxhdW5jaEFwcFJlcRgaIAEoCzIiLm1nLnByb3RvY29sLnVwbGF5ZGxsLkxh",
+            "dW5jaEFwcFJlcRI4CgxzdHJlYW1pbmdSZXEYGyABKAsyIi5tZy5wcm90b2Nv",
+            "bC51cGxheWRsbC5TdHJlYW1pbmdSZXESRgoTY3Jvc3NCb290QWxsb3dlZFJl",
+            "cRgcIAEoCzIpLm1nLnByb3RvY29sLnVwbGF5ZGxsLkNyb3NzQm9vdEFsbG93",
+            "ZWRSZXEigwkKA1JzcBIuCgdpbml0UnNwGAEgASgLMh0ubWcucHJvdG9jb2wu",
+            "dXBsYXlkbGwuSW5pdFJzcBI8Cg5pbml0UHJvY2Vzc1JzcBgNIAEoCzIkLm1n",
+            "LnByb3RvY29sLnVwbGF5ZGxsLkluaXRQcm9jZXNzUnNwEkgKFHdyaXRlQWNo",
+            "aWV2ZW1lbnRzUnNwGAIgASgLMioubWcucHJvdG9jb2wudXBsYXlkbGwuV3Jp",
+            "dGVBY2hpZXZlbWVudHNSc3ASMAoIcGFydHlSc3AYAyABKAsyHi5tZy5wcm90",
+            "b2NvbC51cGxheWRsbC5QYXJ0eVJzcBI0CgpmcmllbmRzUnNwGAQgASgLMiAu",
+            "bWcucHJvdG9jb2wudXBsYXlkbGwuRnJpZW5kc1JzcBI8Cg5hY2hpZXZlbWVu",
+            "dFJzcBgFIAEoCzIkLm1nLnByb3RvY29sLnVwbGF5ZGxsLkFjaGlldmVtZW50",
+            "UnNwEjQKCm92ZXJsYXlSc3AYBiABKAsyIC5tZy5wcm90b2NvbC51cGxheWRs",
+            "bC5PdmVybGF5UnNwEjIKCWF2YXRhclJzcBgHIAEoCzIfLm1nLnByb3RvY29s",
+            "LnVwbGF5ZGxsLkF2YXRhclJzcBIuCgd1c2VyUnNwGAggASgLMh0ubWcucHJv",
+            "dG9jb2wudXBsYXlkbGwuVXNlclJzcBIuCgdjbHViUnNwGAkgASgLMh0ubWcu",
+            "cHJvdG9jb2wudXBsYXlkbGwuQ2x1YlJzcBI4CgxpbnN0YWxsZXJSc3AYCiAB",
+            "KAsyIi5tZy5wcm90b2NvbC51cGxheWRsbC5JbnN0YWxsZXJSc3ASQAoQc2Rr",
+            "TW9uaXRvcmluZ1JzcBgMIAEoCzImLm1nLnByb3RvY29sLnVwbGF5ZGxsLlNE",
+            "S01vbml0b3JpbmdSc3ASMAoIc3RvcmVSc3AYDiABKAsyHi5tZy5wcm90b2Nv",
+            "bC51cGxheWRsbC5TdG9yZVJzcBI0Cgpwcm9kdWN0UnNwGA8gASgLMiAubWcu",
+            "cHJvdG9jb2wudXBsYXlkbGwuUHJvZHVjdFJzcBI8Cg5tdWx0aXBsYXllclJz",
+            "cBgQIAEoCzIkLm1nLnByb3RvY29sLnVwbGF5ZGxsLk11bHRpcGxheWVyUnNw",
+            "EjIKCXVzZXJSc3BWMhgRIAEoCzIfLm1nLnByb3RvY29sLnVwbGF5ZGxsLlVz",
+            "ZXJSc3BWMhJCChF0ZXJtaW5hdGVHYW1lUHVzaBgSIAEoCzInLm1nLnByb3Rv",
+            "Y29sLnVwbGF5ZGxsLlRlcm1pbmF0ZUdhbWVQdXNoEjgKDGxhdW5jaEFwcFJz",
+            "cBgTIAEoCzIiLm1nLnByb3RvY29sLnVwbGF5ZGxsLkxhdW5jaEFwcFJzcBI4",
+            "CgxzdHJlYW1pbmdSc3AYFCABKAsyIi5tZy5wcm90b2NvbC51cGxheWRsbC5T",
+            "dHJlYW1pbmdSc3ASRgoTY3Jvc3NCb290QWxsb3dlZFJzcBgVIAEoCzIpLm1n",
+            "LnByb3RvY29sLnVwbGF5ZGxsLkNyb3NzQm9vdEFsbG93ZWRSc3AqzgEKD09w",
+            "ZXJhdGlvblJlc3VsdBIGCgJvaxABEhMKD2ludmFsaWRBcmd1bWVudBACEhMK",
+            "D2Nvbm5lY3Rpb25FcnJvchADEgwKCG5vdEZvdW5kEAQSEwoPbm90QVBhcnR5",
+            "TGVhZGVyEAUSDQoJcGFydHlGdWxsEAYSDQoJZmlsZUVycm9yEAcSDwoLdW5h",
+            "dmFpbGFibGUQCBIMCghkZWNsaW5lZBAJEhEKDWludGVybmFsRXJyb3IQChIW",
+            "ChJ1bmF1dGhvcml6ZWRBY3Rpb24QCyooCgxSZXNwb25zZUNvZGUSCwoHc3Vj",
+            "Y2VzcxABEgsKB2ZhaWx1cmUQAiqOAQoKSW5pdFJlc3VsdBIWChJJbml0UmVz",
+            "dWx0X1N1Y2Nlc3MQARIWChJJbml0UmVzdWx0X0ZhaWx1cmUQAhIgChxJbml0",
+            "UmVzdWx0X1JlY29ubmVjdFJlcXVpcmVkEAMSLgoqSW5pdFJlc3VsdF9SZXN0",
+            "YXJ0V2l0aEdhbWVMYXVuY2hlclJlcXVpcmVkEAQqfQoWT3ZlcmxheUluamVj",
+            "dGlvbk1ldGhvZBIfChtPdmVybGF5SW5qZWN0aW9uTWV0aG9kX05vbmUQARIi",
+            "Ch5PdmVybGF5SW5qZWN0aW9uTWV0aG9kX0RlZmF1bHQQAhIeChpPdmVybGF5",
+            "SW5qZWN0aW9uTWV0aG9kX1NESxADKpkBChBHYW1lTGF1bmNoUmVzdWx0EhwK",
+            "GEdhbWVMYXVuY2hSZXN1bHRfU3VjY2VzcxABEiAKHEdhbWVMYXVuY2hSZXN1",
+            "bHRfVW5hdmFpbGFibGUQAhIcChhHYW1lTGF1bmNoUmVzdWx0X0Fib3J0ZWQQ",
+            "AxInCiNHYW1lTGF1bmNoUmVzdWx0X0ZhaWxlZEdhbWVOb3RPd25lZBAEKksK",
+            "FkdhbWVTZXNzaW9uSm9pbmFiaWxpdHkSFQoRSm9pbmFibGVCeUZyaWVuZHMQ",
+            "ABIOCgpJbnZpdGVPbmx5EAESCgoGQ2xvc2VkEAIqfgoMUmVsYXRpb25zaGlw",
+            "EhwKGFJlbGF0aW9uc2hpcF9SZXF1ZXN0U2VudBABEiAKHFJlbGF0aW9uc2hp",
+            "cF9SZXF1ZXN0UmVjZWl2ZWQQAhIXChNSZWxhdGlvbnNoaXBfRnJpZW5kEAMS",
+            "FQoRUmVsYXRpb25zaGlwX05vbmUQBCpOCgxPbmxpbmVTdGF0dXMSEwoPUHJl",
+            "c2VuY2VfT25saW5lEAESFAoQUHJlc2VuY2VfT2ZmbGluZRACEhMKD1ByZXNl",
+            "bmNlX0luR2FtZRADKnkKDk9ubGluZVN0YXR1c1YyEhgKFE9ubGluZVN0YXR1",
+            "c19PZmZsaW5lEAESHQoZT25saW5lU3RhdHVzX0RvTm90RGlzdHVyYhACEhUK",
+            "EU9ubGluZVN0YXR1c19Bd2F5EAQSFwoTT25saW5lU3RhdHVzX09ubGluZRAI",
+            "KkcKCkF2YXRhclNpemUSEQoNQXZhdGFyU2l6ZV82NBABEhIKDkF2YXRhclNp",
+            "emVfMTI4EAISEgoOQXZhdGFyU2l6ZV8yNTYQAyqnAQoLUHJvZHVjdFR5cGUS",
+            "FAoQUHJvZHVjdFR5cGVfR2FtZRABEhUKEVByb2R1Y3RUeXBlX0FkZG9uEAIS",
+            "FwoTUHJvZHVjdFR5cGVfUGFja2FnZRADEhoKFlByb2R1Y3RUeXBlX0NvbnN1",
+            "bWFibGUQBBIeChpQcm9kdWN0VHlwZV9Db25zdW1hYmxlUGFjaxAFEhYKElBy",
+            "b2R1Y3RUeXBlX0J1bmRsZRAGKnwKDFByb2R1Y3RTdGF0ZRIYChRQcm9kdWN0",
+            "U3RhdGVfVmlzaWJsZRABEh0KGVByb2R1Y3RTdGF0ZV9Eb3dubG9hZGFibGUQ",
+            "AhIZChVQcm9kdWN0U3RhdGVfUGxheWFibGUQAxIYChRQcm9kdWN0U3RhdGVf",
+            "RXhwaXJlZBAEKnUKEVByb2R1Y3RBY3RpdmF0aW9uEh8KG1Byb2R1Y3RBY3Rp",
+            "dmF0aW9uX1B1cmNoYXNlZBABEhsKF1Byb2R1Y3RBY3RpdmF0aW9uX1RyaWFs",
+            "EAISIgoeUHJvZHVjdEFjdGl2YXRpb25fU3Vic2NyaXB0aW9uEAMqqwEKEFBy",
+            "b2R1Y3RPd25lcnNoaXASGgoWUHJvZHVjdE93bmVyc2hpcF9Pd25lZBABEh8K",
+            "G1Byb2R1Y3RPd25lcnNoaXBfUHJlb3JkZXJlZBACEh4KGlByb2R1Y3RPd25l",
+            "cnNoaXBfU3VzcGVuZGVkEAMSHQoZUHJvZHVjdE93bmVyc2hpcF9Ob3RPd25l",
+            "ZBAEEhsKF1Byb2R1Y3RPd25lcnNoaXBfTG9ja2VkEAUqXgoOQ2hlY2tvdXRS",
+            "ZXN1bHQSFQoRQ2hlY2tvdXRSZXN1bHRfT2sQARIZChVDaGVja291dFJlc3Vs",
+            "dF9GYWlsZWQQAhIaChZDaGVja291dFJlc3VsdF9Vbmtub3duEAMqfwoNVGFy",
+            "Z2V0UGFydG5lchIWChJUYXJnZXRQYXJ0bmVyX05vbmUQABIbChdUYXJnZXRQ",
+            "YXJ0bmVyX0VwaWNHYW1lcxABEhwKFFRhcmdldFBhcnRuZXJfTmVvd2l6EAIa",
+            "AggBEhsKF1RhcmdldFBhcnRuZXJfTWljcm9zb2Z0EAMqzgEKHU11bHRpcGxh",
             "eWVyU2Vzc2lvbkpvaW5hYmlsaXR5EigKJE11bHRpcGxheWVyU2Vzc2lvbkpv",
             "aW5hYmlsaXR5X0Nsb3NlZBABEiwKKE11bHRpcGxheWVyU2Vzc2lvbkpvaW5h",
             "YmlsaXR5X0ludml0ZU9ubHkQAhItCilNdWx0aXBsYXllclNlc3Npb25Kb2lu",
@@ -1084,6 +1090,8 @@ namespace Uplay.Uplaydll {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.TerminateGamePush), global::Uplay.Uplaydll.TerminateGamePush.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.LaunchAppReq), global::Uplay.Uplaydll.LaunchAppReq.Parser, new[]{ "ProductId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.LaunchAppRsp), global::Uplay.Uplaydll.LaunchAppRsp.Parser, new[]{ "Result" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.CrossBootAllowedReq), global::Uplay.Uplaydll.CrossBootAllowedReq.Parser, new[]{ "RequestId", "ProductId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.CrossBootAllowedRsp), global::Uplay.Uplaydll.CrossBootAllowedRsp.Parser, new[]{ "RequestId", "IsAllowed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.GetStreamingCurrentUserCountryReq), global::Uplay.Uplaydll.GetStreamingCurrentUserCountryReq.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.GetStreamingCurrentUserCountryRsp), global::Uplay.Uplaydll.GetStreamingCurrentUserCountryRsp.Parser, new[]{ "UserCountry" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.GetStreamingTypeReq), global::Uplay.Uplaydll.GetStreamingTypeReq.Parser, null, null, null, null, null),
@@ -1105,8 +1113,8 @@ namespace Uplay.Uplaydll {
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.GetStreamingResolutionRsp), global::Uplay.Uplaydll.GetStreamingResolutionRsp.Parser, new[]{ "StreamingResolution" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.StreamingReq), global::Uplay.Uplaydll.StreamingReq.Parser, new[]{ "RequestId", "GetStreamingCurrentUserCountryReq", "GetStreamingTypeReq", "GetStreamingNetworkDelayForInputReq", "GetStreamingNetworkDelayForVideoReq", "GetStreamingNetworkDelayRoundtripReq", "GetStreamingDeviceTypeReq", "GetStreamingInputTypeReq", "GetStreamingInputGamepadTypeReq", "GetStreamingResolutionReq" }, new[]{ "Req" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.StreamingRsp), global::Uplay.Uplaydll.StreamingRsp.Parser, new[]{ "RequestId", "Result", "GetStreamingCurrentUserCountryRsp", "GetStreamingTypeRsp", "GetStreamingNetworkDelayForInputRsp", "GetStreamingNetworkDelayForVideoRsp", "GetStreamingNetworkDelayRoundtripRsp", "GetStreamingDeviceTypeRsp", "GetStreamingInputTypeRsp", "GetStreamingInputGamepadTypeRsp", "GetStreamingResolutionRsp" }, new[]{ "Rsp" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.Req), global::Uplay.Uplaydll.Req.Parser, new[]{ "InitReq", "InitProcessReq", "WriteAchievementsReq", "PartyReq", "SetGameSessionReq", "ClearGameSessionReq", "FriendsReq", "AchievementReq", "OverlayReq", "AvatarReq", "UserReq", "ClubReq", "InstallerReq", "MetadataReq", "SdkMonitoringReq", "RichPresenceReq", "StoreReq", "GameOptionsReq", "SetLanguageCountryCodeReq", "ProductReq", "MultiplayerReq", "UserReqV2", "LaunchAppReq", "StreamingReq" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.Rsp), global::Uplay.Uplaydll.Rsp.Parser, new[]{ "InitRsp", "InitProcessRsp", "WriteAchievementsRsp", "PartyRsp", "FriendsRsp", "AchievementRsp", "OverlayRsp", "AvatarRsp", "UserRsp", "ClubRsp", "InstallerRsp", "SdkMonitoringRsp", "StoreRsp", "ProductRsp", "MultiplayerRsp", "UserRspV2", "TerminateGamePush", "LaunchAppRsp", "StreamingRsp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.Req), global::Uplay.Uplaydll.Req.Parser, new[]{ "InitReq", "InitProcessReq", "WriteAchievementsReq", "PartyReq", "SetGameSessionReq", "ClearGameSessionReq", "FriendsReq", "AchievementReq", "OverlayReq", "AvatarReq", "UserReq", "ClubReq", "InstallerReq", "MetadataReq", "SdkMonitoringReq", "RichPresenceReq", "StoreReq", "GameOptionsReq", "SetLanguageCountryCodeReq", "ProductReq", "MultiplayerReq", "UserReqV2", "LaunchAppReq", "StreamingReq", "CrossBootAllowedReq" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Uplay.Uplaydll.Rsp), global::Uplay.Uplaydll.Rsp.Parser, new[]{ "InitRsp", "InitProcessRsp", "WriteAchievementsRsp", "PartyRsp", "FriendsRsp", "AchievementRsp", "OverlayRsp", "AvatarRsp", "UserRsp", "ClubRsp", "InstallerRsp", "SdkMonitoringRsp", "StoreRsp", "ProductRsp", "MultiplayerRsp", "UserRspV2", "TerminateGamePush", "LaunchAppRsp", "StreamingRsp", "CrossBootAllowedRsp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -65542,6 +65550,522 @@ namespace Uplay.Uplaydll {
 
   }
 
+  public sealed partial class CrossBootAllowedReq : pb::IMessage<CrossBootAllowedReq>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CrossBootAllowedReq> _parser = new pb::MessageParser<CrossBootAllowedReq>(() => new CrossBootAllowedReq());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CrossBootAllowedReq> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[229]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CrossBootAllowedReq() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CrossBootAllowedReq(CrossBootAllowedReq other) : this() {
+      _hasBits0 = other._hasBits0;
+      requestId_ = other.requestId_;
+      productId_ = other.productId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CrossBootAllowedReq Clone() {
+      return new CrossBootAllowedReq(this);
+    }
+
+    /// <summary>Field number for the "requestId" field.</summary>
+    public const int RequestIdFieldNumber = 1;
+    private readonly static uint RequestIdDefaultValue = 0;
+
+    private uint requestId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RequestId {
+      get { if ((_hasBits0 & 1) != 0) { return requestId_; } else { return RequestIdDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        requestId_ = value;
+      }
+    }
+    /// <summary>Gets whether the "requestId" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRequestId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "requestId" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRequestId() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "productId" field.</summary>
+    public const int ProductIdFieldNumber = 2;
+    private readonly static uint ProductIdDefaultValue = 0;
+
+    private uint productId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ProductId {
+      get { if ((_hasBits0 & 2) != 0) { return productId_; } else { return ProductIdDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        productId_ = value;
+      }
+    }
+    /// <summary>Gets whether the "productId" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasProductId {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "productId" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProductId() {
+      _hasBits0 &= ~2;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CrossBootAllowedReq);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CrossBootAllowedReq other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RequestId != other.RequestId) return false;
+      if (ProductId != other.ProductId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasRequestId) hash ^= RequestId.GetHashCode();
+      if (HasProductId) hash ^= ProductId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasRequestId) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RequestId);
+      }
+      if (HasProductId) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(ProductId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasRequestId) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RequestId);
+      }
+      if (HasProductId) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(ProductId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasRequestId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RequestId);
+      }
+      if (HasProductId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ProductId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CrossBootAllowedReq other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasRequestId) {
+        RequestId = other.RequestId;
+      }
+      if (other.HasProductId) {
+        ProductId = other.ProductId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RequestId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            ProductId = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RequestId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            ProductId = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class CrossBootAllowedRsp : pb::IMessage<CrossBootAllowedRsp>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CrossBootAllowedRsp> _parser = new pb::MessageParser<CrossBootAllowedRsp>(() => new CrossBootAllowedRsp());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CrossBootAllowedRsp> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[230]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CrossBootAllowedRsp() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CrossBootAllowedRsp(CrossBootAllowedRsp other) : this() {
+      _hasBits0 = other._hasBits0;
+      requestId_ = other.requestId_;
+      isAllowed_ = other.isAllowed_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CrossBootAllowedRsp Clone() {
+      return new CrossBootAllowedRsp(this);
+    }
+
+    /// <summary>Field number for the "requestId" field.</summary>
+    public const int RequestIdFieldNumber = 1;
+    private readonly static uint RequestIdDefaultValue = 0;
+
+    private uint requestId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RequestId {
+      get { if ((_hasBits0 & 1) != 0) { return requestId_; } else { return RequestIdDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        requestId_ = value;
+      }
+    }
+    /// <summary>Gets whether the "requestId" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRequestId {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "requestId" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRequestId() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "isAllowed" field.</summary>
+    public const int IsAllowedFieldNumber = 2;
+    private readonly static bool IsAllowedDefaultValue = false;
+
+    private bool isAllowed_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsAllowed {
+      get { if ((_hasBits0 & 2) != 0) { return isAllowed_; } else { return IsAllowedDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        isAllowed_ = value;
+      }
+    }
+    /// <summary>Gets whether the "isAllowed" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIsAllowed {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "isAllowed" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIsAllowed() {
+      _hasBits0 &= ~2;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CrossBootAllowedRsp);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CrossBootAllowedRsp other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RequestId != other.RequestId) return false;
+      if (IsAllowed != other.IsAllowed) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasRequestId) hash ^= RequestId.GetHashCode();
+      if (HasIsAllowed) hash ^= IsAllowed.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasRequestId) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RequestId);
+      }
+      if (HasIsAllowed) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsAllowed);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasRequestId) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RequestId);
+      }
+      if (HasIsAllowed) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsAllowed);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasRequestId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RequestId);
+      }
+      if (HasIsAllowed) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CrossBootAllowedRsp other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasRequestId) {
+        RequestId = other.RequestId;
+      }
+      if (other.HasIsAllowed) {
+        IsAllowed = other.IsAllowed;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RequestId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            IsAllowed = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RequestId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            IsAllowed = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class GetStreamingCurrentUserCountryReq : pb::IMessage<GetStreamingCurrentUserCountryReq>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -65556,7 +66080,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[229]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[231]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -65708,7 +66232,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[230]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[232]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -65911,7 +66435,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[231]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[233]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -66064,7 +66588,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[232]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[234]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -66269,7 +66793,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[233]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[235]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -66422,7 +66946,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[234]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[236]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -66627,7 +67151,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[235]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[237]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -66780,7 +67304,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[236]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[238]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -66985,7 +67509,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[237]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[239]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -67138,7 +67662,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[238]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[240]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -67343,7 +67867,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[239]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[241]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -67496,7 +68020,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[240]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[242]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -67701,7 +68225,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[241]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[243]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -67854,7 +68378,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[242]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[244]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -68059,7 +68583,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[243]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[245]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -68212,7 +68736,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[244]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[246]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -68417,7 +68941,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[245]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[247]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -68570,7 +69094,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[246]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[248]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -68827,7 +69351,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[247]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[249]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -69026,7 +69550,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[248]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[250]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -69736,7 +70260,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[249]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[251]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -70497,7 +71021,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[250]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[252]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -70541,6 +71065,7 @@ namespace Uplay.Uplaydll {
       userReqV2_ = other.userReqV2_ != null ? other.userReqV2_.Clone() : null;
       launchAppReq_ = other.launchAppReq_ != null ? other.launchAppReq_.Clone() : null;
       streamingReq_ = other.streamingReq_ != null ? other.streamingReq_.Clone() : null;
+      crossBootAllowedReq_ = other.crossBootAllowedReq_ != null ? other.crossBootAllowedReq_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -70838,6 +71363,18 @@ namespace Uplay.Uplaydll {
       }
     }
 
+    /// <summary>Field number for the "crossBootAllowedReq" field.</summary>
+    public const int CrossBootAllowedReqFieldNumber = 28;
+    private global::Uplay.Uplaydll.CrossBootAllowedReq crossBootAllowedReq_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.Uplaydll.CrossBootAllowedReq CrossBootAllowedReq {
+      get { return crossBootAllowedReq_; }
+      set {
+        crossBootAllowedReq_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -70877,6 +71414,7 @@ namespace Uplay.Uplaydll {
       if (!object.Equals(UserReqV2, other.UserReqV2)) return false;
       if (!object.Equals(LaunchAppReq, other.LaunchAppReq)) return false;
       if (!object.Equals(StreamingReq, other.StreamingReq)) return false;
+      if (!object.Equals(CrossBootAllowedReq, other.CrossBootAllowedReq)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -70908,6 +71446,7 @@ namespace Uplay.Uplaydll {
       if (userReqV2_ != null) hash ^= UserReqV2.GetHashCode();
       if (launchAppReq_ != null) hash ^= LaunchAppReq.GetHashCode();
       if (streamingReq_ != null) hash ^= StreamingReq.GetHashCode();
+      if (crossBootAllowedReq_ != null) hash ^= CrossBootAllowedReq.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -71022,6 +71561,10 @@ namespace Uplay.Uplaydll {
         output.WriteRawTag(218, 1);
         output.WriteMessage(StreamingReq);
       }
+      if (crossBootAllowedReq_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(CrossBootAllowedReq);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -71128,6 +71671,10 @@ namespace Uplay.Uplaydll {
         output.WriteRawTag(218, 1);
         output.WriteMessage(StreamingReq);
       }
+      if (crossBootAllowedReq_ != null) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(CrossBootAllowedReq);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -71209,6 +71756,9 @@ namespace Uplay.Uplaydll {
       }
       if (streamingReq_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(StreamingReq);
+      }
+      if (crossBootAllowedReq_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CrossBootAllowedReq);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -71365,6 +71915,12 @@ namespace Uplay.Uplaydll {
           StreamingReq = new global::Uplay.Uplaydll.StreamingReq();
         }
         StreamingReq.MergeFrom(other.StreamingReq);
+      }
+      if (other.crossBootAllowedReq_ != null) {
+        if (crossBootAllowedReq_ == null) {
+          CrossBootAllowedReq = new global::Uplay.Uplaydll.CrossBootAllowedReq();
+        }
+        CrossBootAllowedReq.MergeFrom(other.CrossBootAllowedReq);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -71547,6 +72103,13 @@ namespace Uplay.Uplaydll {
               StreamingReq = new global::Uplay.Uplaydll.StreamingReq();
             }
             input.ReadMessage(StreamingReq);
+            break;
+          }
+          case 226: {
+            if (crossBootAllowedReq_ == null) {
+              CrossBootAllowedReq = new global::Uplay.Uplaydll.CrossBootAllowedReq();
+            }
+            input.ReadMessage(CrossBootAllowedReq);
             break;
           }
         }
@@ -71732,6 +72295,13 @@ namespace Uplay.Uplaydll {
             input.ReadMessage(StreamingReq);
             break;
           }
+          case 226: {
+            if (crossBootAllowedReq_ == null) {
+              CrossBootAllowedReq = new global::Uplay.Uplaydll.CrossBootAllowedReq();
+            }
+            input.ReadMessage(CrossBootAllowedReq);
+            break;
+          }
         }
       }
     }
@@ -71753,7 +72323,7 @@ namespace Uplay.Uplaydll {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[251]; }
+      get { return global::Uplay.Uplaydll.UplayDllReflection.Descriptor.MessageTypes[253]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -71792,6 +72362,7 @@ namespace Uplay.Uplaydll {
       terminateGamePush_ = other.terminateGamePush_ != null ? other.terminateGamePush_.Clone() : null;
       launchAppRsp_ = other.launchAppRsp_ != null ? other.launchAppRsp_.Clone() : null;
       streamingRsp_ = other.streamingRsp_ != null ? other.streamingRsp_.Clone() : null;
+      crossBootAllowedRsp_ = other.crossBootAllowedRsp_ != null ? other.crossBootAllowedRsp_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -72029,6 +72600,18 @@ namespace Uplay.Uplaydll {
       }
     }
 
+    /// <summary>Field number for the "crossBootAllowedRsp" field.</summary>
+    public const int CrossBootAllowedRspFieldNumber = 21;
+    private global::Uplay.Uplaydll.CrossBootAllowedRsp crossBootAllowedRsp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Uplay.Uplaydll.CrossBootAllowedRsp CrossBootAllowedRsp {
+      get { return crossBootAllowedRsp_; }
+      set {
+        crossBootAllowedRsp_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -72063,6 +72646,7 @@ namespace Uplay.Uplaydll {
       if (!object.Equals(TerminateGamePush, other.TerminateGamePush)) return false;
       if (!object.Equals(LaunchAppRsp, other.LaunchAppRsp)) return false;
       if (!object.Equals(StreamingRsp, other.StreamingRsp)) return false;
+      if (!object.Equals(CrossBootAllowedRsp, other.CrossBootAllowedRsp)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -72089,6 +72673,7 @@ namespace Uplay.Uplaydll {
       if (terminateGamePush_ != null) hash ^= TerminateGamePush.GetHashCode();
       if (launchAppRsp_ != null) hash ^= LaunchAppRsp.GetHashCode();
       if (streamingRsp_ != null) hash ^= StreamingRsp.GetHashCode();
+      if (crossBootAllowedRsp_ != null) hash ^= CrossBootAllowedRsp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -72183,6 +72768,10 @@ namespace Uplay.Uplaydll {
         output.WriteRawTag(162, 1);
         output.WriteMessage(StreamingRsp);
       }
+      if (crossBootAllowedRsp_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(CrossBootAllowedRsp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -72269,6 +72858,10 @@ namespace Uplay.Uplaydll {
         output.WriteRawTag(162, 1);
         output.WriteMessage(StreamingRsp);
       }
+      if (crossBootAllowedRsp_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(CrossBootAllowedRsp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -72335,6 +72928,9 @@ namespace Uplay.Uplaydll {
       }
       if (streamingRsp_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(StreamingRsp);
+      }
+      if (crossBootAllowedRsp_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CrossBootAllowedRsp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -72461,6 +73057,12 @@ namespace Uplay.Uplaydll {
           StreamingRsp = new global::Uplay.Uplaydll.StreamingRsp();
         }
         StreamingRsp.MergeFrom(other.StreamingRsp);
+      }
+      if (other.crossBootAllowedRsp_ != null) {
+        if (crossBootAllowedRsp_ == null) {
+          CrossBootAllowedRsp = new global::Uplay.Uplaydll.CrossBootAllowedRsp();
+        }
+        CrossBootAllowedRsp.MergeFrom(other.CrossBootAllowedRsp);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -72610,6 +73212,13 @@ namespace Uplay.Uplaydll {
             input.ReadMessage(StreamingRsp);
             break;
           }
+          case 170: {
+            if (crossBootAllowedRsp_ == null) {
+              CrossBootAllowedRsp = new global::Uplay.Uplaydll.CrossBootAllowedRsp();
+            }
+            input.ReadMessage(CrossBootAllowedRsp);
+            break;
+          }
         }
       }
     #endif
@@ -72756,6 +73365,13 @@ namespace Uplay.Uplaydll {
               StreamingRsp = new global::Uplay.Uplaydll.StreamingRsp();
             }
             input.ReadMessage(StreamingRsp);
+            break;
+          }
+          case 170: {
+            if (crossBootAllowedRsp_ == null) {
+              CrossBootAllowedRsp = new global::Uplay.Uplaydll.CrossBootAllowedRsp();
+            }
+            input.ReadMessage(CrossBootAllowedRsp);
             break;
           }
         }
